@@ -1,0 +1,23 @@
+{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.MSSqlServer",
+      "Serilog.Enrichers.Environment",
+      "Serilog.Filters.Expressions",
+      "Serilog.Exceptions"
+    ],
+    "MinimumLevel": "Information",
+    "Enrich": [ "FromLogContext", "WithMachineName", "WithExceptionDetails" ],
+    "Properties": {
+      "Aplicativo": "InstantRemote"
+    },
+    "Filter": [
+      {
+        "Name": "ByExcluding",
+        "Args": {
+          "expression": "StartsWith(SourceContext,'Microsoft')"
+        }
+      }
+    ]
+  }
+}
