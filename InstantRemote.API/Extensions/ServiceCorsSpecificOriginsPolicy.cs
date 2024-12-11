@@ -8,6 +8,11 @@ namespace InstantRemote.Api.Extensions
         {
             string[] paramUrl = configuration.GetSection(Constants.OriginsPolicy).GetChildren().Select(i => i.Value).ToArray();
 
+            foreach (var url in paramUrl)
+            {
+                Console.WriteLine($"URL permitida para CORS: {url}");
+            }
+
             services.AddCors(options => {
                 options.AddPolicy(name: Constants.OriginsPolicy, builder => { builder.WithOrigins(paramUrl).AllowAnyHeader().AllowAnyMethod(); });
             });

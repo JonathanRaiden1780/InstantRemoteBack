@@ -5,7 +5,7 @@
         #region StartUp
         public const string AppNombre = "IntegrationService";
         public const string BDControl = "BDControl";
-        public const string OriginsPolicy = "TksOriginsPolicy";
+        public const string OriginsPolicy = "OriginsPolicy";
         public const string CustomSwaggerUi = "custom-swagger-ui";
         public const string VirtualDirectory = "VirtualDirectory";
         public const int CoreId = 1;
