@@ -1,10 +1,10 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using InstantRemote.Repositories.Context;
 using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Contracts.Repositories.Common;
+using AutoMapper;
 
 namespace InstantRemote.Repositories
 {
@@ -15,19 +15,23 @@ namespace InstantRemote.Repositories
 
         private bool _disposed;
         private IDbTransaction transaction = null;
+        private readonly IMapper mapper = null;
 
         private IRepositoryParameter repositoryParameter = null;
+        private IRepositoryCommon repositoryCommon = null;
         private IRepositoryAuth repositoryAuth = null;
      
-        public UnitOfWork(IConfiguration configuration)
+        public UnitOfWork(IConfiguration configuration, IMapper mapper)
         {
+            this.mapper = mapper;
             connection = new SqlConnection(configuration.GetConnectionString("ConexionComunes"));
             if (string.IsNullOrEmpty(connection.ConnectionString))
                 connection.ConnectionString = configuration["ConexionComunes"];
             connection.Open();
         }
 
-        public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction);
+        public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction,mapper);
+        public IRepositoryCommon RepositoryCommon => repositoryCommon ??= new RepositoryCommon(connection, () => transaction,mapper);
 
         public IRepositoryParameter RepositoryParameter => throw new NotImplementedException();
 

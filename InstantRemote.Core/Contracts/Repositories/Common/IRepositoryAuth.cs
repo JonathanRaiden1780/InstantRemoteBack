@@ -1,7 +1,11 @@
-﻿namespace InstantRemote.Core.Contracts.Repositories.Common
+﻿using InstantRemote.Core.Dtos.Common.Request;
+using InstantRemote.Core.Dtos.Common.Response;
+
+namespace InstantRemote.Core.Contracts.Repositories.Common
 {
     public interface IRepositoryAuth
     {
+        PermisosResponseDto Login(SingInReqDto signIn);
         // RoleCode AutenticarUsuario(AuthenticationDto auth);
         // User GetById(int userId);
         // User GetUserByNickNamePassword(string nickname, string password);

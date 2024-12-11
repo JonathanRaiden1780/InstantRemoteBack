@@ -1,17 +1,17 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using InstantRemote.Core.Dtos.Common.Request;
 using Microsoft.IdentityModel.Tokens;
-using TokenDto = InstantRemote.Core.Dtos.Common.Response.TokenDto;
 
 namespace InstantRemote.Core.Helpers.Security
 {
     public static class JwtConfig
     {
-        public static TokenDto ObtenerToken(string scudId, string secretKey, int minutos)
+        public static TokenDto ObtenerToken(string emplid, string secretKey, int minutos)
         {
 
-            string hashscudId = scudId.RandomSeed().Encrypt();
+            string hashscudId = emplid.RandomSeed().Encrypt();
             var claims = new List<Claim>()
                 {                    
                     new Claim("", hashscudId),

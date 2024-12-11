@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using InstantRemote.Core.Helpers;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using InstantRemote.Core.Helpers;
 
 namespace InstantRemote.Api.Extensions
 {

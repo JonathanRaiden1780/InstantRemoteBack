@@ -15,7 +15,8 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "SecretKeyJwt": "kjbckljb923h9o8lf82cb983589345toujnfgreiolouihjvr98hjv593834g95t3ihbv397qbfv7ybg57yuhofujcvh28",
-        "EnvironmentApplication": "DEVELOP"
+        "EnvironmentApplication": "DEVELOP",
+        "SecurityManagerKey": "PuCOFRi$e=lVI4H3&hAb*Aw94+8a2l!?S"
       }
     },
     "IntegrationService.Api": {

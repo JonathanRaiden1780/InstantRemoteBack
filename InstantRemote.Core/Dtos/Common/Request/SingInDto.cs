@@ -3,7 +3,7 @@ using InstantRemote.Core.Messages;
 
 namespace InstantRemote.Core.Dtos.Common.Request
 {
-   public class SingInDto
+   public class SingInReqDto
     {
         [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
         public string Username { get; set; }

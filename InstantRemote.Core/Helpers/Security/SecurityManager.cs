@@ -75,9 +75,7 @@ namespace InstantRemote.Core.Helpers.Security
             using (MemoryStream ms = new MemoryStream())
             {
                 using RijndaelManaged AES = new RijndaelManaged();
-#pragma warning disable S2053 // Hashes should include an unpredictable salt
                 var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
-#pragma warning restore S2053 // Hashes should include an unpredictable salt
 
                 AES.KeySize = 256;
                 AES.BlockSize = 128;

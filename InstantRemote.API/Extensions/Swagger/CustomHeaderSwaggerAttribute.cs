@@ -1,7 +1,6 @@
 ﻿using InstantRemote.Core.Helpers;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Collections.Generic;
 
 namespace InstantRemote.Api.Extensions.Swagger
 {

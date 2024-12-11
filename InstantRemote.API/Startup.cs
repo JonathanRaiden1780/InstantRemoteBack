@@ -36,7 +36,7 @@ namespace InstantRemote.Api
          //   app.UseMiddleware<InspectorMensajesMiddleware>();
             app.UseRouting();
             app.UseCors(Constants.OriginsPolicy);
-            app.AddCustomsMiddelwares();
+       //     app.AddCustomsMiddelwares();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

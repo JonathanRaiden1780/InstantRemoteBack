@@ -1,18 +1,13 @@
-﻿using System;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using InstantRemote.Core.Helpers;
 using InstantRemote.Core.Exceptions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Contracts.Factories.Common;
 using req = InstantRemote.Core.Dtos.Common.Request;
 using res = InstantRemote.Core.Dtos.Common.Response;
-using InstantRemote.Core.Messages;
 using InstantRemote.Core.Helpers.Security;
 using InstantRemote.Core.Dtos;
 using Microsoft.Extensions.Primitives;
-using System.Linq;
 
 namespace InstantRemote.Api.Controllers.security
 {
@@ -26,11 +21,11 @@ namespace InstantRemote.Api.Controllers.security
         }
             
         [HttpPost(Constants.SignIn)]
-        [ProducesResponseType(typeof(res.TokenDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(res.TokenRespDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        private ActionResult SignIn([FromBody]req.SingInDto singInDto)
+        public ActionResult SignIn([FromBody]req.SingInReqDto singInDto)
         {
             
             ActionResult result;
@@ -48,7 +43,7 @@ namespace InstantRemote.Api.Controllers.security
             catch (Exception ex)
             {
                 var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { Constants.InternalServerError }, TrackingCode = trackingCode });
+                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex .ToString()}, TrackingCode = trackingCode });
             }
             finally
             {

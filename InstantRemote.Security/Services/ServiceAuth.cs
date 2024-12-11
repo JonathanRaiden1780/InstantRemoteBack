@@ -8,6 +8,7 @@ using InstantRemote.Core.Exceptions;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Helpers.Security;
 using InstantRemote.Core.EntitiesStore.Common;
+using InstantRemote.Core.Dtos.Common.Response;
 
 namespace InstantRemote.Security.Services
 {
@@ -16,30 +17,20 @@ namespace InstantRemote.Security.Services
         public ServiceAuth(IUnitOfWork UnitOfWork, Func<string, IServiceFactory> serviceFactory, IServiceFactorySecurity serviceFactorySecurity, IMapper mapper, IConfiguration configuration) : base(UnitOfWork, serviceFactorySecurity, mapper, configuration)
         {
         }
-        //método no esta en uso aun
-        public res.TokenDto SignIn(SingInDto singIn)
+        public TokenRespDto SignIn(SingInReqDto singIn)
         {
-            User user = new User(); // UnitOfWork.RepositoryAuth.GetUserByNickNamePassword(singIn.Username, singIn.Password);
-            if (user is null)
+            TokenRespDto response = new TokenRespDto(); 
+            var userData = UnitOfWork.RepositoryAuth.Login(singIn);
+            if (userData is null)
                 throw new BusinessException(MessageServices.KOResponseSignInNull);
 
-            return JwtConfig.ObtenerToken(singIn.Username, SecretKey, expiracionMinutos);
+            var token = JwtConfig.ObtenerToken(singIn.Username, SecretKey, expiracionMinutos);
+            response.User = userData;
+            response.Token = token.Token;
+            return response;
         }
 
-        public res.TokenDto SignInTeChreo(string seed)
-        {
-            string uniqueClientId = seed.Decrypt().GetSeed();
-    /*        var Seed = UnitOfWork.RepositorySeedExpiration.GetSeedExpirationBySeedAndCudId(seed, uniqueClientId);
-            if (Seed == null) throw new BusinessException(MessageServices.KOResponseSignIn);
-            if (Seed.IsActive)
-                UnitOfWork.RepositorySeedExpiration.UpdateSeedExpirationSetActive(seed, uniqueClientId);
-*/
-            res.TokenDto token = JwtConfig.ObtenerToken(uniqueClientId, SecretKey, expiracionMinutos);
-
-            token.CudId = uniqueClientId;
-
-            return token;
-        }
+     
         public void ValidateToken(ValidateTokenDto tokenDto)
         {
             string tokenDecript = tokenDto.Token.DesencriptarToken();

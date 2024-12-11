@@ -1,5 +1,4 @@
 ﻿using InstantRemote.Core.Dtos.Common.Request;
-using Swashbuckle.AspNetCore;
 using Swashbuckle.Examples;
 
 namespace InstantRemote.Api.SampleSwagger.Request.Security
@@ -10,7 +9,7 @@ namespace InstantRemote.Api.SampleSwagger.Request.Security
         {
 
             return new AuthenticationDto {
-                Email = "correo@dominio.com",
+                User = "0000",
                Password = "1234",
 
             };

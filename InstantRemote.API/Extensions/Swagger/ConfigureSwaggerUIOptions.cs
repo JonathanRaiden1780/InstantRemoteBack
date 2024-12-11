@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using InstantRemote.Core.Helpers;
+﻿using InstantRemote.Core.Helpers;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using Microsoft.Extensions.Configuration;
 
 namespace InstantRemote.Api.Extensions.Swagger
 {

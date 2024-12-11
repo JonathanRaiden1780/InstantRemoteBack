@@ -1,8 +1,5 @@
-﻿using System;
-using InstantRemote.Core.Contracts.Factories.Common;
+﻿using InstantRemote.Core.Contracts.Factories.Common;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Helpers;
 
 namespace InstantRemote.Api.Controllers

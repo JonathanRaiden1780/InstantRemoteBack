@@ -1,8 +1,4 @@
-using System.IO;
-using InstantRemote.Api;
 using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 
 
 namespace InstantRemote.Api

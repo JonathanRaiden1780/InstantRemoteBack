@@ -160,7 +160,7 @@
     <value>An error ocurred: EXPIRED_SEED</value>
   </data>
   <data name="KOResponseSignInNull" xml:space="preserve">
-    <value>An error ocurred: empty Seed by entered parameters</value>
+    <value>An error ocurred: empty user by entered parameters</value>
   </data>
   <data name="KOResponseTeChreo" xml:space="preserve">
     <value>KO</value>

@@ -1,5 +1,4 @@
 ﻿using InstantRemote.Api.Middlewares;
-using Microsoft.AspNetCore.Builder;
 
 namespace InstantRemote.Api.Extensions
 {

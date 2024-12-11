@@ -1,90 +1,73 @@
 ﻿using InstantRemote.Core.Contracts.Repositories.Common;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.EntitiesStore.Common;
-using System;
 using System.Data;
 using Dapper;
-using InstantRemote.Core.Helpers;
-using InstantRemote.Core.Helpers.Security;
-using System.Linq;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using InstantRemote.Core.Dtos.Common.Response;
+using AutoMapper;
+using System.Net;
 
 namespace InstantRemote.Repositories.Context
 {
     public class RepositoryAuth : BaseRepository, IRepositoryAuth
     {
-        public RepositoryAuth(IDbConnection connection, Func<IDbTransaction> transaction) : base(connection, transaction)
+        public RepositoryAuth(IDbConnection connection, Func<IDbTransaction> transaction, IMapper mapper) : base(connection, transaction, mapper)
         {
 
         }
-        public string ActivationMail(string exid)
+
+        public PermisosResponseDto Login(SingInReqDto signIn)
         {
-            throw new NotImplementedException();
+            var username = signIn.Username;
+            var password = signIn.Password;
+            var query = "SELECT COUNT(*) FROM tblLoguinInicio WHERE email = '" + username + "' and pass = '" + password + "'";
+            var response = int.Parse(Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault());
+            if (response > 0)
+            {
+                var identUser = IdentUser(username);
+                var permisoVariables = GetpermisoAutorizarVariables(username);
+                var permisosUser = GetUserPermiso(username);
+                var user = mapper.Map<PermisosResponseDto>(permisosUser);
+                user.Nombre = identUser.nombre.Trim();
+                user.Variables = permisoVariables;
+                return user;
+            }
+            else
+            {
+                throw new Exception("Usuario o contraseña incorrecto. Intente de nuevo por favor.");
+            }
+
         }
 
-       
-
-        public string ChangePassword(ChangePasswordDto cambio, string exid)
+        public IdentEmpleadoDto IdentUser(string emplid)
         {
-            throw new NotImplementedException();
+            var query = "SELECT numEmpleado,nombre FROM tblEmpleados WHERE numEmpleado =" + emplid;
+            var response = Connection.Query<IdentEmpleadoDto>(query, commandType: CommandType.Text).FirstOrDefault();
+            return response;
         }
 
-       
-        public User GetById(int userId)
+        public bool GetpermisoAutorizarVariables(string emplid)
         {
-            throw new NotImplementedException();
+            string query = "select COUNT(*) from variables where [idBum/Kam] = '" + emplid + "' or idSubdirector='" + emplid+ "' or idDireccionOperaciones='" + emplid + "' or [IdDireccionP&C] ='" + emplid + "'";
+            var response = int.Parse(Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault());
+            var permiso = response > 0 ? true : false; 
+            return permiso;
         }
-
-        public string GetLogToken(TokenDto token)
+        public PermisosDrmResponseDto GetUserPermiso(string emplid)
         {
-            throw new NotImplementedException();
+
+            string query = "select COUNT(*) from permisosDRM_V2 where numEmpleado = " + emplid;
+            var responseCount = int.Parse(Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault());
+            PermisosDrmResponseDto response = new PermisosDrmResponseDto();
+            if (responseCount > 0)
+            {
+                query = "select * from permisosDRM_V2 where numEmpleado = " + emplid;
+                response = Connection.Query<PermisosDrmResponseDto>(query, commandType: CommandType.Text).FirstOrDefault();
+            }
+
+            return response;
         }
-
-   /*     public User GetUserByNickNamePassword(string nickname, string password)
-        {
-            eventLog.Entrar();
-            var respose = Connection.QueryFirstOrDefault(StoreProcedure.GetUserByNickNamePassword, new { @nickName=nickname, @password=password },commandType:CommandType.StoredProcedure);
-            eventLog.Salir();
-            return respose;
-        }*/
-
-        /*public void RegisterLogToken(TokenDto token)
-        {
-            eventLog.Entrar();
-            Connection.Execute(StoreProcedure.RegisterLogToken);
-            eventLog.Salir();
-        }
-
-        public int Registration(User user)
-        {
-            eventLog.Entrar();
-
-            int userId = Connection.Query<int>(StoreProcedure.RegisterUser, new { 
-                                @nickname = user.Nickname, 
-                                @password = SecurityManager.Encrypt(user.Password) 
-                        },commandType:CommandType.StoredProcedure).FirstOrDefault();
-            
-            eventLog.Salir();
-
-            return userId;
-        }*/
-
-      /*  public string UpdatePassword(UpdatePasswordDto recuperar)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ValidateToken(TokenDto token, string seed)
-        {
-            
-            eventLog.Entrar();
-            var response = Connection.Query<int>(StoreProcedure.ValidateToken, new { 
-                                    @uniqueClientId = token.UniqueClientId,
-                                    @seed = seed 
-                            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
-            
-
-            eventLog.Salir();
-            return (response > 0);
-        }*/
     }
 }

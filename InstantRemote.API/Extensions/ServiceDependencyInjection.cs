@@ -1,16 +1,12 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
 using InstantRemote.Core.Helpers;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using InstantRemote.Core.Contracts.Factories.Common;
-using sec = InstantRemote.Security;
 using InstantRemote.Core.Mapping.Common;
 using InstantRemote.Repositories;
-using enums = InstantRemote.Core.Enums;
+using InstantRemote.Security;
 
 namespace InstantRemote.Api.Extensions
 {
@@ -63,7 +59,7 @@ namespace InstantRemote.Api.Extensions
         }
         private static IServiceCollection DependencyInjection(this IServiceCollection services)
         {
-           // services.AddScoped<IServiceFactorySecurity, sec.ServiceFactory>();
+            services.AddScoped<IServiceFactorySecurity, ServiceFactory>();
             return services;
         }
         private static IServiceCollection AddServiceFactories(this IServiceCollection services)
