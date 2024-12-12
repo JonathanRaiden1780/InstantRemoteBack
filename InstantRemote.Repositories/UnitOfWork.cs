@@ -32,10 +32,7 @@ namespace InstantRemote.Repositories
 
         public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction,mapper);
         public IRepositoryCommon RepositoryCommon => repositoryCommon ??= new RepositoryCommon(connection, () => transaction,mapper);
-
-        public IRepositoryParameter RepositoryParameter => throw new NotImplementedException();
-
-        //   public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction);
+        public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction,mapper);
 
         protected virtual void Dispose(bool disposing)
         {

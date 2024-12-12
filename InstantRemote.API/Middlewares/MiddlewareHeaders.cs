@@ -1,9 +1,5 @@
 ﻿using InstantRemote.Core.Contracts.Factories.Common;
 using System.Text;
-using InstantRemote.Core.EntitiesStore.Security;
-using InstantRemote.Core.Helpers.Security;
-using InstantRemote.Core.Messages;
-using Microsoft.Extensions.Primitives;
 using Constants = InstantRemote.Core.Helpers.Constants;
 
 namespace InstantRemote.Api.Middlewares

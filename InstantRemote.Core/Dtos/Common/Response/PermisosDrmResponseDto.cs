@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using InstantRemote.Core.Messages;
-
-namespace InstantRemote.Core.Dtos.Common.Response
+﻿namespace InstantRemote.Core.Dtos.Common.Response
 {
     public class PermisosDrmResponseDto
     {

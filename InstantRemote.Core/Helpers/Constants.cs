@@ -35,6 +35,7 @@
         public const string SwaggerPathSeguridad = "../swagger/security/swagger.json";
 
         public const string RouteSecurity = "security/auth";
+
         public const string Authentication = "Authentication";
         public const string SignIn = "signin";
         public const string TchAccessControl = "tks-tch-access-control";
@@ -47,10 +48,21 @@
         public const string Encrypt = "encrypt";
         public const string EnvironmentVariable = "environment-variable";
         public const string ValidateToken = "validate-token";
+        #endregion
+
+        #region Common
+        public const string Services = "common";
+
+        public const string ServicesTitle = "Services Manager";
+        public const string SwaggerPathServices = "../swagger/common/swagger.json";
+
+        public const string Common = "common";
+        public const string RouteCommon = "common/";
+        public const string GetReports = "reports";
+        public const string Reportes = "REPORTES";
         
 
         #endregion
-
 
         #endregion
 

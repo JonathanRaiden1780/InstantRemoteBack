@@ -6,7 +6,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Mapping.Common;
 using InstantRemote.Repositories;
-using InstantRemote.Security;
+using sec = InstantRemote.Security;
+using serv = InstantRemote.Services.Common;
+using System;
+using enums = InstantRemote.Core.Enums;
+
 
 namespace InstantRemote.Api.Extensions
 {
@@ -59,7 +63,10 @@ namespace InstantRemote.Api.Extensions
         }
         private static IServiceCollection DependencyInjection(this IServiceCollection services)
         {
-            services.AddScoped<IServiceFactorySecurity, ServiceFactory>();
+            services.AddScoped<serv.ServiceFactory>();
+
+            services.AddScoped<IServiceFactorySecurity, sec.ServiceFactory>();
+
             return services;
         }
         private static IServiceCollection AddServiceFactories(this IServiceCollection services)
@@ -68,10 +75,7 @@ namespace InstantRemote.Api.Extensions
             {
                 return key switch
                 {
-                   // nameof(enums.Towers.Individual) => serviceFactory.GetService<camCI.ServiceFactory>(),
-                   // nameof(enums.Towers.Investment) => serviceFactory.GetService<camIN.ServiceFactory>(),
-                   // nameof(enums.Towers.AccountState) => serviceFactory.GetService<camAS.ServiceFactory>(),
-                   // nameof(enums.Towers.Insurance) => serviceFactory.GetService<camIT.ServiceFactory>()
+                    nameof(enums.Catalogs.IR) => serviceFactory.GetService<serv.ServiceFactory>()
                 };
             });
 

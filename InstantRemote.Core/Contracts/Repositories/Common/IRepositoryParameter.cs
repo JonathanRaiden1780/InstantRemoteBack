@@ -5,10 +5,9 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
 {
     public interface IRepositoryParameter
     {
-        List<GetParameter> GetInternalServiceConfig(ServiceConfigDto parameter);
         GetParameter GetParameter(ParameterDto parameter);
         List<GetParameter> GetParametersByGroup(string group);
         GetParameter GetParameterById(int idParameter);
-
+        GetParameter GetParameterByReference(string reference);
     }
 }

@@ -1,8 +1,10 @@
-﻿namespace InstantRemote.Core.Contracts.Factories.Common
+﻿using InstantRemote.Core.Contracts.Services;
+
+namespace InstantRemote.Core.Contracts.Factories.Common
 {
     public interface IServiceFactory
     {
-       // public IServiceRequest ServiceRequest { get; }
+        public IServiceParameter ServiceParameter { get; }
 
     }
 }

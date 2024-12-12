@@ -12,7 +12,6 @@ namespace InstantRemote.Api.Extensions.Swagger
                 operation.Parameters = new List<OpenApiParameter>();
 
 
-         //   bool webhookDigipro = context.ApiDescription.RelativePath.Contains(Constants.WebhookDigipro);
             bool identityTransfer = context.ApiDescription.RelativePath.Contains(Constants.IdentityTransfer);
             bool generate = context.ApiDescription.RelativePath.Contains(Constants.GenerateRedirect);
 

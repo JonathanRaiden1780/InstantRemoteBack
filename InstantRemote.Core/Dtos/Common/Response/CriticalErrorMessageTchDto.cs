@@ -5,6 +5,6 @@ namespace InstantRemote.Core.Dtos.Common.Response
     public class CriticalErrorMessageDto : FunctionalErrorMessageDto
     {
         [Required]
-        public string Url { get; set; }
+        public string Exception { get; set; }
     }
 }

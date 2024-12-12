@@ -17,7 +17,12 @@ namespace InstantRemote.Api.Extensions.Swagger
                     Title = Constants.SecurityTitle
                 });
 
-              
+                c.SwaggerDoc(Constants.Services, new OpenApiInfo
+                {
+                    Version = Constants.ServiceVersion,
+                    Title = Constants.ServicesTitle
+                });
+
 
 
                 c.AddSecurityDefinition(Constants.Bearer, new OpenApiSecurityScheme

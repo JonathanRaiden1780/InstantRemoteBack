@@ -14,7 +14,7 @@ namespace InstantRemote.Api.SampleSwagger.Response
         {
             return new CriticalErrorMessageDto
             {
-                Url = "https://came.techreo.com.mx/FunctionalError?trackingCode=06e9dbce-cdcf-4960-a6f1-0c806f38444f",
+                Exception = "Error en Server",
             };
         }
     }

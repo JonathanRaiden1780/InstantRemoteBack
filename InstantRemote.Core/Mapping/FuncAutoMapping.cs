@@ -9,7 +9,7 @@ namespace InstantRemote.Core.Mapping
         {
             string valor = string.Empty;
 
-            var endpoint = parametros.FirstOrDefault(x => !x.Reference.Equals(Constants.ReferenceVirtualDirectory) && !x.Reference.Equals(Constants.ReferenceRootPath));
+            var endpoint = parametros.FirstOrDefault(x => !x.Referencia.Equals(Constants.ReferenceVirtualDirectory) && !x.Referencia.Equals(Constants.ReferenceRootPath));
 
        /*     valor = endpoint.Reference switch
             {

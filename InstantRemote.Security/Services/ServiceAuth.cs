@@ -2,12 +2,10 @@
 using InstantRemote.Core.Messages;
 using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Contracts.Services;
-using res = InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Exceptions;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Helpers.Security;
-using InstantRemote.Core.EntitiesStore.Common;
 using InstantRemote.Core.Dtos.Common.Response;
 
 namespace InstantRemote.Security.Services
@@ -27,6 +25,15 @@ namespace InstantRemote.Security.Services
             var token = JwtConfig.ObtenerToken(singIn.Username, SecretKey, expiracionMinutos);
             response.User = userData;
             response.Token = token.Token;
+            UnitOfWork.RepositoryCommon.InsertBitacoraInstantRemote(new BitacoraRequestDto()
+            {
+                Accion = "ACCESO",
+                Pantalla = "LOGUIN",
+                Descripcion = "El empleado " + response.User.NumEmpleado + " ENTRO AL SISTEMA ",
+                DetalleAdicional = "",
+                Fecha = DateTime.Now,
+                Usuario = response.User.NumEmpleado.ToString()
+            });
             return response;
         }
 

@@ -1,13 +1,9 @@
 ﻿using InstantRemote.Core.Contracts.Repositories.Common;
 using InstantRemote.Core.Dtos.Common.Request;
-using InstantRemote.Core.EntitiesStore.Common;
 using System.Data;
 using Dapper;
-using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
 using InstantRemote.Core.Dtos.Common.Response;
 using AutoMapper;
-using System.Net;
 
 namespace InstantRemote.Repositories.Context
 {

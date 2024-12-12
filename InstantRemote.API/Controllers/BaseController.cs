@@ -20,7 +20,6 @@ namespace InstantRemote.Api.Controllers
             this.serviceFactorySecurity = serviceFactorySecurity;
             this.Redirect404 = configuration[Constants.Redirect404];
         }
-
         protected BaseController(Func<string, IServiceFactory> serviceFactory)
         {
             this.serviceFactory = serviceFactory;

@@ -19,9 +19,10 @@ namespace InstantRemote.Repositories.Context
                                 + bitacora.Usuario + "' ,'" 
                                 + bitacora.Accion + "," 
                                 + bitacora.Descripcion + ","
-                                + bitacora.Tipo + ",GETDATE(),'')";
+                                + bitacora.Pantalla + ",GETDATE(),'')";
 
            var x = Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault();
+           var y = x;
 
         }
 

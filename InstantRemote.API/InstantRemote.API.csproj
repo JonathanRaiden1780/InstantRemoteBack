@@ -26,6 +26,8 @@
     <ProjectReference Include="..\InstantRemote.Core\InstantRemote.Core.csproj" />
     <ProjectReference Include="..\InstantRemote.Repositories\InstantRemote.Repositories.csproj" />
     <ProjectReference Include="..\InstantRemote.Security\InstantRemote.Security.csproj" />
+    <ProjectReference Include="..\InstantRemote.Services\InstantRemote.Services.csproj" />
+
   </ItemGroup>
 
 </Project>

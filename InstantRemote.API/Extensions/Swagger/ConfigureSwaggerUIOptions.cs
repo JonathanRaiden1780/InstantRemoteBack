@@ -12,6 +12,7 @@ namespace InstantRemote.Api.Extensions.Swagger
             string virtualDirectory = configuration.GetSection(Constants.VirtualDirectory).Value;
 
             c.SwaggerEndpoint(Constants.SwaggerPathSeguridad, Constants.SecurityTitle);
+            c.SwaggerEndpoint(Constants.SwaggerPathServices, Constants.ServicesTitle);
 
 #if DEBUG
             pahtCssSwagger = pahtCssSwagger.Replace(virtualDirectory, string.Empty);

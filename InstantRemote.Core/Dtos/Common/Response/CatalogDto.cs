@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InstantRemote.Core.EntitiesStore.Common
+namespace InstantRemote.Core.Dtos.Common.Response
 {
-    public class GetParameter
+    public class CatalogRespDto
     {
         public string Referencia { get; set; }
         public string Valor { get; set; }
