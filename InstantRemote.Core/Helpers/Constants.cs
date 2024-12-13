@@ -62,6 +62,12 @@
         public const string Reportes = "REPORTES";
 
         public const string GetCatZonaClientes = "CatZonaClientes";
+        public const string GetClientesXPermisos = "GetClientesXPermisos";
+        public const string GetSucursalesXPermisos = "GetSucursalesXPermisos";
+        public const string GetSucursales = "sucursales";
+        public const string GetSeccion = "seccion";
+        public const string GetSites = "sites";
+        public const string GetServicio = "servicio";
 
 
 

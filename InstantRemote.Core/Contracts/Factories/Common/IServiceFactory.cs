@@ -7,5 +7,6 @@ namespace InstantRemote.Core.Contracts.Factories.Common
         public IServiceParameter ServiceParameter { get; }
         public IServiceFiltros ServiceFiltros { get; }
 
+
     }
 }

@@ -28,7 +28,72 @@ namespace InstantRemote.Services.Common.Filtros
 
             return response;
         }
+        public List<GetCatZonaClientesRespDto> GetClientesXPermisos(int emplid)
+        {
+            List<GetCatZonaClientesRespDto> response = [];
+            var userPermiso = UnitOfWork.RepositoryAuth.GetUserPermiso(emplid.ToString());
+            var nivel = userPermiso.IdCliente;
 
+            switch (nivel)
+            {
+                case "0":
+                    response = UnitOfWork.RepositoryCommon.GetCatZonaClientes(emplid.ToString(), null);
+                    break;
+                case "000":
+                    response = UnitOfWork.RepositoryCommon.GetClienteSeccion(emplid);
+                    break;
+                case "000000":
+                    response = UnitOfWork.RepositoryCommon.GetClienteSite(emplid);
+                    break;
+                default:
+                    response = UnitOfWork.RepositoryCommon.GetClienteJerarquiaOtro(emplid);
+                    break;
+            }
+
+            return response;
+        }
+
+        public List<GetSucursalesRespDto> GetSucursalList(string clientId)
+        {
+            return  UnitOfWork.RepositoryCommon.GetSucursales(clientId);
+        }
+        public List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente)
+        {
+            List<GetSucursalesRespDto> response = [];
+            var userPermiso = UnitOfWork.RepositoryAuth.GetUserPermiso(emplid.ToString());
+            var nivel = userPermiso.IdCliente;
+
+            switch (nivel)
+            {
+                case "0":
+                    response = UnitOfWork.RepositoryCommon.GetSucursales(cliente);
+                    break;
+                case "000":
+                    response = UnitOfWork.RepositoryCommon.GetSucursalesSeccion(emplid, cliente);
+                    break;
+                case "000000":
+                    response = UnitOfWork.RepositoryCommon.GetSucursalesSite(emplid, cliente);
+                    break;
+                default:
+                    response = UnitOfWork.RepositoryCommon.GetSucursalesJerarquiaOtro(emplid, cliente);
+                    break;
+            }
+
+            return response;
+        }
+
+        public List<GetSeccionesRespDto> GetSeccion(int clientId, string otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetSecciones(clientId, otro);
+        }
+        public List<GetSitesRespDto> GetSites(int clientId, string otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetSites(clientId, otro);
+        }
+        public List<GetServicioRespDto> GetServicios(int clientId, string otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetServicio(clientId, otro);
+        }
 
     }
 }

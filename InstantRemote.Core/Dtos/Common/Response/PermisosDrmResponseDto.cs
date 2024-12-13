@@ -6,7 +6,7 @@
         public int NumEmpleado { get; set; }
         public string IdCliente { get; set; }
         public string NomClientes { get; set; }
-        public int IdSucursal { get; set; }
+        public string IdSucursal { get; set; }
         public string NomSucursal { get; set; }
         public bool Dashboard { get; set; }
         public bool Dispositivos { get; set; }
