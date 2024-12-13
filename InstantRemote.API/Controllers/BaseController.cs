@@ -1,10 +1,14 @@
-﻿using InstantRemote.Core.Contracts.Factories.Common;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using InstantRemote.Core.Contracts.Factories.Common;
+using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Helpers;
 
 namespace InstantRemote.Api.Controllers
 {
-   // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public abstract class BaseController : ControllerBase
     {
         protected readonly IServiceFactorySecurity serviceFactorySecurity;

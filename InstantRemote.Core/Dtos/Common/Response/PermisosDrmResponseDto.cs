@@ -4,7 +4,7 @@
     {
         public int IdDRM { get; set; }
         public int NumEmpleado { get; set; }
-        public int IdCliente { get; set; }
+        public string IdCliente { get; set; }
         public string NomClientes { get; set; }
         public int IdSucursal { get; set; }
         public string NomSucursal { get; set; }

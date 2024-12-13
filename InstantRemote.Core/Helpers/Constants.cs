@@ -60,7 +60,10 @@
         public const string RouteCommon = "common/";
         public const string GetReports = "reports";
         public const string Reportes = "REPORTES";
-        
+
+        public const string GetCatZonaClientes = "CatZonaClientes";
+
+
 
         #endregion
 

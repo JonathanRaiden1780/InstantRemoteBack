@@ -19,7 +19,8 @@ namespace InstantRemote.Api.Controllers.security
         public AuthController(IServiceFactorySecurity serviceFactory,  IConfiguration configuration) : base(serviceFactory,  configuration)
         {
         }
-            
+
+        [AllowAnonymous]
         [HttpPost(Constants.SignIn)]
         [ProducesResponseType(typeof(res.TokenRespDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
