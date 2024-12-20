@@ -92,7 +92,7 @@
         public const string GetSucursalesXPermisos = "GetSucursalesXPermisos";
         public const string GetSucursales = "sucursales";
         public const string GetSucursalSecciones = "sucursal-seccion";
-
+        public const string GetSucursalCatalogo = "GetSucursalCatalogo";
 
         public const string GetSeccion = "seccion";
         public const string GetSeccionSucursal = "seccion-sucursal";

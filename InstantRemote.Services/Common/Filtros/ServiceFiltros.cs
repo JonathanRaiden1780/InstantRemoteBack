@@ -117,6 +117,11 @@ namespace InstantRemote.Services.Common.Filtros
             return UnitOfWork.RepositoryCommon.GetSucursalSecciones(emplid, secciones);
         }
 
+        public List<CatalogoSucursaRespDto> GetSucursalCatalogo(int cliente, int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetSucursalCatalogo(cliente, sucursal);
+        }
+
         public List<GetSeccionesRespDto> GetSeccion(int clientId, string otro)
         {
             return UnitOfWork.RepositoryCommon.GetSecciones(clientId, otro);

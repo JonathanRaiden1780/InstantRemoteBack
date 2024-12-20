@@ -92,6 +92,17 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
 
+        public List<CatalogoSucursaRespDto> GetSucursalCatalogo(int cliente, int sucursal)
+        {
+            var response = Connection.Query<CatalogoSucursaRespDto>(StoreProcedure.sp_GetCatalogoSucursal, new
+            {
+                @cliente = cliente,
+                @sucursal = sucursal
+
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+
         #endregion
 
         #region Clientes

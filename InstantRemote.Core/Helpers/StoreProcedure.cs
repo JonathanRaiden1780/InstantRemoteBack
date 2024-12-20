@@ -29,6 +29,7 @@ namespace InstantRemote.Core.Helpers
         
 
         public const string sp_GetSucursalSeccion = "sp_GetSucursalSeccion"; //TODO
+        public const string sp_GetCatalogoSucursal = "sp_GetCatalogoSucursal"; //TODO
 
 
 

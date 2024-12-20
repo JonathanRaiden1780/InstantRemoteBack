@@ -18,7 +18,7 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetSucursalesRespDto> GetSucursalList(string clientId);
         List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente);
         List<GetSucursalesRespDto> GetSucursalSecciones(int emplid, int secciones);
-
+        List<CatalogoSucursaRespDto> GetSucursalCatalogo(int cliente, int sucursal);
 
         List<GetSeccionesRespDto> GetSeccion(int clientId, string otro);
         List<GetSeccionesRespDto> GetSeccionesSucursales(int emplid, int otro);
