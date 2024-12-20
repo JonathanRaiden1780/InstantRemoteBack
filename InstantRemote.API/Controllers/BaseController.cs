@@ -1,9 +1,5 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Mvc;
 using InstantRemote.Core.Contracts.Factories.Common;
-using Microsoft.Extensions.Configuration;
 using InstantRemote.Core.Helpers;
 
 namespace InstantRemote.Api.Controllers
