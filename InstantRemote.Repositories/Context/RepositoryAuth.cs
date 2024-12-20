@@ -65,5 +65,16 @@ namespace InstantRemote.Repositories.Context
 
             return response;
         }
+        public GetTokenRespDto GetTokenStatus(int emplid)
+        {
+            GetTokenRespDto response = new GetTokenRespDto();
+            var query = "select numEmpleado, TokenID, estado, Tipo from dbo.tblToken01 where numEmpleado =" + emplid;
+            response=Connection.Query<GetTokenRespDto>(query, commandType: CommandType.Text).FirstOrDefault();
+            if (response == null)
+            {
+                response = new GetTokenRespDto();
+            }
+            return response;
+        }
     }
 }

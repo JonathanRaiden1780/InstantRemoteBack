@@ -5,7 +5,6 @@ using AutoMapper;
 using Dapper;
 using InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Helpers;
-using System.Net.NetworkInformation;
 
 namespace InstantRemote.Repositories.Context
 {
@@ -25,6 +24,14 @@ namespace InstantRemote.Repositories.Context
                                 + bitacora.Pantalla + "',GETDATE(),'')"; 
             Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault();
         }
+
+
+        public List<GetResponsablesRespDto> GetResponsables( )
+        {
+            var query = "select distinct convert(int,EMPLID1) as id ,convert(varchar(50),convert(int,EMPLID1)) + '-' + NAME1 as responsable from tblJerarquia order by 1 ";
+            return Connection.Query<GetResponsablesRespDto>(query, commandType: CommandType.Text).ToList();
+        }
+
 
         #region sucursales
         //listaSucursalesCombo / listaSucursalesComboBJ admin
@@ -74,8 +81,18 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
 
-        #endregion
+        public List<GetSucursalesRespDto> GetSucursalSecciones(int emplid, int otro)
+        {
+            var response = Connection.Query<GetSucursalesRespDto>(StoreProcedure.sp_GetSucursalSeccion, new
+            {
+                @emplid = emplid,
+                @otro2 = otro
 
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+
+        #endregion
 
         #region Clientes
         //catzonaclientes admin / tambien se uso para el dashcombo
@@ -123,6 +140,55 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public List<GetClienteCatalogoRespDto> GetCatalogoCliente()
+        {
+            var response = Connection.Query<GetClienteCatalogoRespDto>(StoreProcedure.sp_GetCatalogoCliente, new
+            {
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetClienteCatalogoRespDto> GetClienteSecciones(int emplid, int otro)
+        {
+            var response = Connection.Query<GetClienteCatalogoRespDto>(StoreProcedure.sp_GetClienteSeccion, new
+            {
+                @emplid = emplid,
+                @otro2 = otro
+
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public bool InsertCliente(CatalogoClienteReqDto dataCliente)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.sp_InsertaCliente, new
+            {
+                @nomCliente = dataCliente.cliente,
+                @reponsable = dataCliente.responsable,
+                @fechaAlta = DateTime.Now
+
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+
+        public bool UpdateCliente(CatalogoClientUpdateeReqDto dataCliente)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.sp_ActualizaCliente, new
+            {
+                @nomCliente = dataCliente.cliente,
+                @reponsable = dataCliente.responsable,
+                @cliente = dataCliente.id
+
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public bool DeleteCliente(int idCliente)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.sp_EliminaCliente, new
+            {
+                @cliente = idCliente
+
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
 
         #endregion
 
@@ -139,7 +205,15 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
 
-
+        public List<GetSeccionesRespDto> GetSeccionesSucursales(int emplid, int otro)
+        {
+            var response = Connection.Query<GetSeccionesRespDto>(StoreProcedure.sp_GetSeccionesSucursal, new
+            {
+                @emplid = emplid,
+                @otro2 = otro
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         #endregion
 
         #region Site
@@ -155,7 +229,29 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
 
+        public List<GetSitesRespDto> GetSitesCliente(int emplid, string otro)
+        {
+            var response = Connection.Query<GetSitesClienteRespDto>(StoreProcedure.sp_GetSitesCliente, new
+            {
+                @emplid = emplid,
+                @cliente = otro
+            }, commandType: CommandType.StoredProcedure).ToList();
+            var result = mapper.Map<List<GetSitesRespDto>>(response);
 
+            return result;
+        }
+
+        public List<GetSitesRespDto> GetSitesSucursal(int emplid, string sucursal)
+        {
+            var response = Connection.Query<GetSitesSucursalRespDto>(StoreProcedure.sp_GetSitesSucursal, new
+            {
+                @emplid = emplid,
+                @sucursal = sucursal
+            }, commandType: CommandType.StoredProcedure).ToList();
+            var result = mapper.Map<List<GetSitesRespDto>>(response);
+
+            return result;
+        }
         #endregion
 
         #region Servicio
@@ -171,7 +267,26 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
 
+        public List<GetServicioRespDto> GetServicioSucursal(int emplid, int otro)
+        {
+            var response = Connection.Query<GetServicioRespDto>(StoreProcedure.sp_GetTipoServicioSucursal, new
+            {
+                @emplid = emplid,
+                @otro2 = otro
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
 
+        public List<GetServicioRespDto> GetServicioSeccion(int emplid, int otro)
+        {
+            var response = Connection.Query<GetServicioRespDto>(StoreProcedure.sp_GetTipoServicioSeccion, new
+            {
+                @emplid = emplid,
+                @otro2 = otro
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         #endregion
+
     }
 }

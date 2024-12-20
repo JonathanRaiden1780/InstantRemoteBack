@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace InstantRemote.Core.EntitiesStore.Common
+﻿namespace InstantRemote.Core.EntitiesStore.Common
 {
     public class GetParameter
     {

@@ -3,9 +3,6 @@ using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Dtos.Common.Response;
-using enums = InstantRemote.Core.Enums;
-using Newtonsoft.Json;
-using InstantRemote.Core.EntitiesStore.Common;
 
 namespace InstantRemote.Services.Common.Filtros
 {
@@ -14,6 +11,12 @@ namespace InstantRemote.Services.Common.Filtros
         public ServiceFiltros(IUnitOfWork UnitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper) : base(UnitOfWork, serviceFactory, mapper)
         {
         }
+
+        public List<GetResponsablesRespDto> GetResponsables()
+        {
+            return UnitOfWork.RepositoryCommon.GetResponsables();
+        }
+
 
         public List<GetCatZonaClientesRespDto> GetCatZonaClientes(string emplid)
         {
@@ -53,10 +56,36 @@ namespace InstantRemote.Services.Common.Filtros
             return response;
         }
 
+
+        public List<GetClienteCatalogoRespDto> GetCatalogoCliente()
+        {
+            return UnitOfWork.RepositoryCommon.GetCatalogoCliente();
+        }
+
+        public List<GetClienteCatalogoRespDto> GetClienteSecciones(int emplid, int otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetClienteSecciones(emplid, otro);
+        }
+
+        public bool InsertCliente(CatalogoClienteReqDto dataCliente)
+        {
+            return UnitOfWork.RepositoryCommon.InsertCliente(dataCliente);
+        }
+        public bool UpdateCliente(CatalogoClientUpdateeReqDto dataCliente)
+        {
+            return UnitOfWork.RepositoryCommon.UpdateCliente(dataCliente);
+        }
+        public bool DeleteCliente(int idCliente)
+        {
+            return UnitOfWork.RepositoryCommon.DeleteCliente(idCliente);
+        }
+
         public List<GetSucursalesRespDto> GetSucursalList(string clientId)
         {
             return  UnitOfWork.RepositoryCommon.GetSucursales(clientId);
         }
+
+
         public List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente)
         {
             List<GetSucursalesRespDto> response = [];
@@ -82,18 +111,53 @@ namespace InstantRemote.Services.Common.Filtros
             return response;
         }
 
+
+        public List<GetSucursalesRespDto> GetSucursalSecciones(int emplid, int secciones)
+        {
+            return UnitOfWork.RepositoryCommon.GetSucursalSecciones(emplid, secciones);
+        }
+
         public List<GetSeccionesRespDto> GetSeccion(int clientId, string otro)
         {
             return UnitOfWork.RepositoryCommon.GetSecciones(clientId, otro);
         }
+
+        public List<GetSeccionesRespDto> GetSeccionesSucursales(int emplid, int otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetSeccionesSucursales(emplid, otro);
+        }
+
         public List<GetSitesRespDto> GetSites(int clientId, string otro)
         {
             return UnitOfWork.RepositoryCommon.GetSites(clientId, otro);
         }
+
+        public List<GetSitesRespDto> GetSitesCliente(int emplid, string otro)
+        {
+            return UnitOfWork.RepositoryCommon.GetSitesCliente( emplid,  otro);
+        }
+        public List<GetSitesRespDto> GetSitesSucursal(int emplid, string sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetSitesSucursal(emplid, sucursal);
+        }
+
         public List<GetServicioRespDto> GetServicios(int clientId, string otro)
         {
             return UnitOfWork.RepositoryCommon.GetServicio(clientId, otro);
         }
+
+        public List<GetServicioRespDto> GetServicioSucursal(int emplid, int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetServicioSucursal(emplid, sucursal);
+        }
+
+        public List<GetServicioRespDto> GetServicioSeccion(int emplid, int seccion)
+        {
+            return UnitOfWork.RepositoryCommon.GetServicioSeccion(emplid, seccion);
+
+        }
+
+        
 
     }
 }

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using InstantRemote.Core.Contracts.Factories.Common;
-using Microsoft.Extensions.Configuration;
 
 namespace InstantRemote.Services
 {

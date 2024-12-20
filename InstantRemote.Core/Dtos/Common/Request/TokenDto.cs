@@ -8,7 +8,8 @@ namespace InstantRemote.Core.Dtos.Common.Request
         
         [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
         public string Token { get; set; }
-        [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
-        public string UniqueClientId { get; set; }
+
     }
+
+    
 }

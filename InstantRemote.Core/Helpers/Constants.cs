@@ -48,6 +48,8 @@
         public const string Encrypt = "encrypt";
         public const string EnvironmentVariable = "environment-variable";
         public const string ValidateToken = "validate-token";
+        public const string GetTokenStatus = "status-token";
+
         #endregion
 
         #region Common
@@ -58,17 +60,51 @@
 
         public const string Common = "common";
         public const string RouteCommon = "common/";
+
+        public const string Clientes = "Clientes";
+        public const string Servicios = "Servicios";
+        public const string Sites = "Sites";
+        public const string Secciones = "Secciones";
+        public const string Sucursal = "Sucursal";
+
+        public const string RouteClientes = "common/clientes";
+        public const string RouteSecciones = "common/secciones";
+        public const string RouteServicios = "common/servicios";
+        public const string RouteSites = "common/sites";
+        public const string RouteSucursal = "common/sucursal";
+            
         public const string GetReports = "reports";
+        public const string Bitacora = "bitacora";
         public const string Reportes = "REPORTES";
 
         public const string GetCatZonaClientes = "CatZonaClientes";
+        public const string GetResponsables = "responsables";
+        public const string InsertCliente = "insert/cliente";
+        public const string UpdateCliente = "update/cliente";
+        public const string DeleteCliente = "delete/cliente";
+
+
+
+        public const string GetClienteSeccion = "clientes-seccion";
         public const string GetClientesXPermisos = "GetClientesXPermisos";
+        public const string GetCatalogoCliente = "GetCatalogoCliente";
+        
         public const string GetSucursalesXPermisos = "GetSucursalesXPermisos";
         public const string GetSucursales = "sucursales";
-        public const string GetSeccion = "seccion";
-        public const string GetSites = "sites";
-        public const string GetServicio = "servicio";
+        public const string GetSucursalSecciones = "sucursal-seccion";
 
+
+        public const string GetSeccion = "seccion";
+        public const string GetSeccionSucursal = "seccion-sucursal";
+        
+
+        public const string GetSites = "sites";
+        public const string GetSitesCliente = "sites-cliente";
+        public const string GetSitesSucursal = "sites-sucursal";
+
+        public const string GetServicio = "servicio";
+        public const string GetServicioSucursal = "servicio-sucursal";
+        public const string GetServicioSeccion = "servicio-seccion";
 
 
         #endregion

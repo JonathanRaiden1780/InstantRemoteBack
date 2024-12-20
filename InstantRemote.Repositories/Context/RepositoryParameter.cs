@@ -1,12 +1,8 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
+﻿using System.Data;
 using InstantRemote.Core.EntitiesStore.Common;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Contracts.Repositories.Common;
 using Dapper;
-using InstantRemote.Core.Helpers;
-using System.Linq;
 using AutoMapper;
 
 namespace InstantRemote.Repositories.Context

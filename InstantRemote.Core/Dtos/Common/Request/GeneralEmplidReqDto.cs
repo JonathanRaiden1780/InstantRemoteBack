@@ -3,11 +3,17 @@ using InstantRemote.Core.Messages;
 
 namespace InstantRemote.Core.Dtos.Common.Request
 {
-    public class ChangePasswordDto
+    public class GeneralEmplidReqDto
     {
         [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
-        public string Email { get; set; }
+        public int emplid { get; set; }
+        public string otro { get; set; }
+    }
+
+    public class GeneralEmpParamReqDto
+    {
         [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
-        public string Contrasenia { get; set; }
+        public int emplid { get; set; }
+        public string parameter { get; set; }
     }
 }

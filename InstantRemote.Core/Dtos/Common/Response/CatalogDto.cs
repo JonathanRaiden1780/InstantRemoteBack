@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace InstantRemote.Core.Dtos.Common.Response
+﻿namespace InstantRemote.Core.Dtos.Common.Response
 {
     public class CatalogRespDto
     {

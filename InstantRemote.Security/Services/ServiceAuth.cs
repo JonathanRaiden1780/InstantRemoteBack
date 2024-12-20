@@ -31,7 +31,6 @@ namespace InstantRemote.Security.Services
                 Pantalla = "LOGUIN",
                 Descripcion = "El empleado " + response.User.NumEmpleado + " ENTRO AL SISTEMA ",
                 DetalleAdicional = "",
-                Fecha = DateTime.Now,
                 Usuario = response.User.NumEmpleado.ToString()
             });
             return response;
@@ -46,6 +45,11 @@ namespace InstantRemote.Security.Services
           //  if (!isValid)
             //    throw new BusinessException(MessageServices.KOResponseGenerate);
 
+        }
+
+        public GetTokenRespDto GetTokenStatus(int emplid)
+        {
+            return UnitOfWork.RepositoryAuth.GetTokenStatus(emplid);
         }
 
     }

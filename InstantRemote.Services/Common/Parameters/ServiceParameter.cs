@@ -2,9 +2,6 @@
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
-using InstantRemote.Core.Dtos.Common.Response;
-using enums = InstantRemote.Core.Enums;
-using Newtonsoft.Json;
 using InstantRemote.Core.EntitiesStore.Common;
 
 namespace InstantRemote.Services.Common.Parameters
@@ -13,6 +10,10 @@ namespace InstantRemote.Services.Common.Parameters
     {
         public ServiceParameter(IUnitOfWork UnitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper) : base(UnitOfWork, serviceFactory, mapper)
         {
+        }
+        public void InsertBitacora(BitacoraRequestDto bitacora)
+        {
+            UnitOfWork.RepositoryCommon.InsertBitacoraInstantRemote(bitacora);
         }
 
         public List<GetParameter> GetParameterByGroup(string group)
