@@ -15,10 +15,11 @@ namespace InstantRemote.Security.Services
         protected readonly string SecretKey;
         protected readonly int expiracionMinutos;
 
-        protected BaseService(IUnitOfWork UnitOfWork, IServiceFactorySecurity serviceFactorySecurity, IMapper mapper, IConfiguration configuration)
+        protected BaseService(IUnitOfWork UnitOfWork, IServiceFactorySecurity serviceFactorySecurity, Func<string, IServiceFactory> serviceFactory , IMapper mapper, IConfiguration configuration)
         {
             this.UnitOfWork = UnitOfWork;
             this.serviceFactorySecurity = serviceFactorySecurity;
+            this.serviceFactory = serviceFactory;
             this.mapper = mapper;
             this.SecretKey = Environment.GetEnvironmentVariable(Constants.SecretKey);
             this.expiracionMinutos = Convert.ToInt32(configuration[Constants.ExpirationMinutes]);

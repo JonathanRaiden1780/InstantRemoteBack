@@ -9,5 +9,7 @@ namespace InstantRemote.Core.Contracts.Services
         TokenRespDto SignIn(SingInReqDto singIn);
         void ValidateToken(ValidateTokenDto tokenDto);
         GetTokenRespDto GetTokenStatus(int emplid);
+        string SendTokenVerify(int emplid);
+
     }
 }

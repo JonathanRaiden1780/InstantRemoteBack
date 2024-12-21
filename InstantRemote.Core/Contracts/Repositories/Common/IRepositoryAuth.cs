@@ -8,7 +8,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         PermisosResponseDto Login(SingInReqDto signIn);
         PermisosDrmResponseDto GetUserPermiso(string emplid);
         GetTokenRespDto GetTokenStatus(int emplid);
-
-
+        EmpleadoMailRespDto ValidEmail(int emplid);
     }
 }

@@ -48,6 +48,9 @@
         public const string Encrypt = "encrypt";
         public const string EnvironmentVariable = "environment-variable";
         public const string ValidateToken = "validate-token";
+        public const string ValidEmail = "validate-email";
+        public const string SendTokenVerify = "token-email";
+        
         public const string GetTokenStatus = "status-token";
 
         #endregion

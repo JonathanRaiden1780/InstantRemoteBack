@@ -4,7 +4,7 @@ using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Dtos.Common.Response;
 
-namespace InstantRemote.Services.Common.Filtros
+namespace InstantRemote.Services.Filtros
 {
     public class ServiceFiltros : BaseService, IServiceFiltros
     {
@@ -82,7 +82,7 @@ namespace InstantRemote.Services.Common.Filtros
 
         public List<GetSucursalesRespDto> GetSucursalList(string clientId)
         {
-            return  UnitOfWork.RepositoryCommon.GetSucursales(clientId);
+            return UnitOfWork.RepositoryCommon.GetSucursales(clientId);
         }
 
 
@@ -139,7 +139,7 @@ namespace InstantRemote.Services.Common.Filtros
 
         public List<GetSitesRespDto> GetSitesCliente(int emplid, string otro)
         {
-            return UnitOfWork.RepositoryCommon.GetSitesCliente( emplid,  otro);
+            return UnitOfWork.RepositoryCommon.GetSitesCliente(emplid, otro);
         }
         public List<GetSitesRespDto> GetSitesSucursal(int emplid, string sucursal)
         {
@@ -162,7 +162,7 @@ namespace InstantRemote.Services.Common.Filtros
 
         }
 
-        
+
 
     }
 }

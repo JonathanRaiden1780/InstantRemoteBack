@@ -9,6 +9,7 @@ using InstantRemote.Repositories;
 using sec = InstantRemote.Security;
 using serv = InstantRemote.Services.Common;
 using enums = InstantRemote.Core.Enums;
+using InstantRemote.Services;
 
 
 namespace InstantRemote.Api.Extensions
@@ -62,7 +63,7 @@ namespace InstantRemote.Api.Extensions
         }
         private static IServiceCollection DependencyInjection(this IServiceCollection services)
         {
-            services.AddScoped<serv.ServiceFactory>();
+            services.AddScoped<ServiceFactory>();
 
             services.AddScoped<IServiceFactorySecurity, sec.ServiceFactory>();
 
@@ -74,7 +75,7 @@ namespace InstantRemote.Api.Extensions
             {
                 return key switch
                 {
-                    nameof(enums.Catalogs.IR) => serviceFactory.GetService<serv.ServiceFactory>()
+                    nameof(enums.Catalogs.IR) => serviceFactory.GetService<ServiceFactory>()
                 };
             });
 

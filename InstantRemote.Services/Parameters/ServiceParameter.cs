@@ -4,7 +4,7 @@ using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.EntitiesStore.Common;
 
-namespace InstantRemote.Services.Common.Parameters
+namespace InstantRemote.Services.Parameters
 {
     public class ServiceParameter : BaseService, IServiceParameter
     {
