@@ -10,4 +10,11 @@ namespace InstantRemote.Core.Dtos.Common.Request
         [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
         public string Password { get; set; }
     }
+    public class ChangePassReqDto
+    {
+        [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
+        public int  UserId { get; set; }
+        [Required(ErrorMessageResourceName = nameof(MessagesDataAnnotations.Required), ErrorMessageResourceType = typeof(MessagesDataAnnotations))]
+        public string Password { get; set; }
+    }
 }

@@ -10,6 +10,7 @@ namespace InstantRemote.Core.Contracts.Services
         void ValidateToken(ValidateTokenDto tokenDto);
         GetTokenRespDto GetTokenStatus(int emplid);
         string SendTokenVerify(int emplid);
+        bool UpdatePassword(ChangePassReqDto newData);
 
     }
 }

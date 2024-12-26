@@ -32,6 +32,16 @@ namespace InstantRemote.Repositories.Context
             return Connection.Query<GetResponsablesRespDto>(query, commandType: CommandType.Text).ToList();
         }
 
+        public List<TelefonosSucursalN> GetTelefonos (int idSucursal, string empleado)
+        {
+            var response = Connection.Query<TelefonosSucursalN>(StoreProcedure.sp_GetTelefonosRestriccion, new
+            {
+                @idSucursal = idSucursal,
+                @empleado = empleado
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
 
         #region sucursales
         //listaSucursalesCombo / listaSucursalesComboBJ admin
@@ -102,7 +112,87 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        
+        public List<DetalleTelefonosRespDto> GetTelefonosDetalles(int sucursal)
+        {
 
+            var query = "select idTel,numTel from tbl_sucursalTel where idSucursal = @idSucursal";
+
+            return Connection.Query<DetalleTelefonosRespDto>(query, new { @idSucursal = sucursal }).ToList();
+        }
+
+        public List<DetalleBiometricosRespDto> GetBiometricosDetalles(int sucursal)
+        {
+
+            var query = "select idTel,numTel from tbl_sucursalTel where idSucursal = @idSucursal";
+
+            return Connection.Query<DetalleBiometricosRespDto>(query, new { @idSucursal = sucursal }).ToList();
+        }
+        public List<DetalleSitesRespDto> GetSitesDetalles(int sucursal)
+        {
+
+            var query = "select idSite,nameSite from tbl_sucursalSite where idSucursal = @idSucursal";
+
+            return Connection.Query<DetalleSitesRespDto>(query, new { @idSucursal = sucursal }).ToList();
+        }
+        public List<DetalleHorariosRespDto> GetHorariosDetalles(int sucursal)
+        {
+
+            var query = "select idSite,nameSite from tbl_sucursalSite where idSucursal = @idSucursal";
+
+            return Connection.Query<DetalleHorariosRespDto>(query, new { @idSucursal = sucursal }).ToList();
+        }
+        
+        public List<DetalleResponsableRespDto> GetResponsablesDetalles(string Parametros)
+        {
+
+            var response = Connection.Query<DetalleResponsableRespDto>(StoreProcedure.sp_GetResponsablesDetalle, new
+            {
+                @Parametros = Parametros
+
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
+        public List<SitesSucursalN> GetSitesSucursalN(int idSucursal)
+        {
+            var response = Connection.Query<SitesSucursalN>(StoreProcedure.sp_GetSites, new
+            {
+                @idSucursal = idSucursal
+
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<BioSucursalN> GetBioSucursalN(int idSucursal)
+        {
+            var response = Connection.Query<BioSucursalN>(StoreProcedure.sp_GetBiometricos, new
+            {
+                @idSucursal = idSucursal
+
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public bool InsertSucursal(SucursalInsertDTO sucursal)
+        {
+            var rowsAffected = Connection.Execute(StoreProcedure.IR_V2_SP_Add_Sucursal, sucursal, commandType: CommandType.StoredProcedure);
+            return rowsAffected > 0;
+        }
+        public bool UpdateSucursal(SucursaUpdateDto sucursal)
+        {
+            var rowsAffected = Connection.Execute(StoreProcedure.IR_V2_SP_Update_Sucursal, sucursal, commandType: CommandType.StoredProcedure);
+            return rowsAffected > 0;
+        }
+        public bool DeleteSucursal(int idSucursal)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_RP_Elimina_Sucursal, new
+            {
+                @nomCliente = idSucursal,
+
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        
+        
         #endregion
 
         #region Clientes
@@ -214,6 +304,13 @@ namespace InstantRemote.Repositories.Context
                 @otro2 = otro
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
+        }
+        
+        public List<GetSeccionesRespDto> GetSeccion()
+        {
+            var query = "select idSeccion,descripcion as seccion from  catSeccion with (nolock)";
+
+            return Connection.Query<GetSeccionesRespDto>(query, commandType: CommandType.Text).ToList();
         }
 
         public List<GetSeccionesRespDto> GetSeccionesSucursales(int emplid, int otro)

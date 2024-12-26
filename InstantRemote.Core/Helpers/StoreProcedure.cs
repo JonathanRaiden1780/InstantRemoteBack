@@ -30,8 +30,16 @@ namespace InstantRemote.Core.Helpers
 
         public const string sp_GetSucursalSeccion = "sp_GetSucursalSeccion"; //TODO
         public const string sp_GetCatalogoSucursal = "sp_GetCatalogoSucursal"; //TODO
+        public const string sp_GetResponsablesDetalle = "sp_GetResponsablesDetalle"; //TODO
+        public const string IR_V2_SP_Add_Sucursal = "IR_V2_SP_Add_Sucursal"; 
+        public const string IR_V2_SP_Update_Sucursal = "IR_V2_SP_Update_Sucursal";
+        public const string IR_V2_RP_Elimina_Sucursal = "IR_V2_RP_Elimina_Sucursal";
+        public const string sp_GetSites = "sp_GetSites";
+        public const string sp_GetBiometricos = "sp_GetBiometricos";
+        
+        public const string sp_GetTelefonosRestriccion = "sp_GetTelefonosRestriccion"; //TODO
 
-
+        
 
 
     }

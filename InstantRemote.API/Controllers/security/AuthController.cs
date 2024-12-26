@@ -117,6 +117,11 @@ namespace InstantRemote.Api.Controllers.security
         }
 
 
+        /// <summary>
+        /// Enviar token para cambiar contraseña
+        /// </summary>
+        /// <param name="emplid"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet(Constants.SendTokenVerify)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -125,7 +130,7 @@ namespace InstantRemote.Api.Controllers.security
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
         public ActionResult SendTokenVerify(int emplid)
         {
-            ActionResult result = null;
+            ActionResult result;
             try
             {
                 var response = serviceFactorySecurity.ServiceAuth.SendTokenVerify(emplid);
@@ -148,12 +153,45 @@ namespace InstantRemote.Api.Controllers.security
             return result;
         }
 
+        /// <summary>
+        /// Actualiza contraseña
+        /// </summary>
+        /// <param name="newData"></param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpPost(Constants.UpdatePassword)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult UpdatePassword(req.ChangePassReqDto newData)
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactorySecurity.ServiceAuth.UpdatePassword(newData);
+                return Ok(response);
+            }
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { Constants.InternalServerError }, TrackingCode = trackingCode });
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
         [AllowAnonymous]
         [HttpGet(Constants.Encrypt)]
         private ActionResult Encrypt([FromQuery] string value)
         {
-
-            
             ActionResult result;
             try
             {

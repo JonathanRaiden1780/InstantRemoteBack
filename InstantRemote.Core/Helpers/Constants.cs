@@ -42,14 +42,13 @@
         public const string UserAccessControl = "user-access-control";
         public const string GenerateRedirect = "generate-redirect";
         public const string IdentityTransfer = "identity-transfer";
-        public const string IdentityTransferTechreo = "identity-transfer-techreo";
-        public const string SignInTechero = "signin-techreo";
         public const string QueryProductId = "productId";
         public const string Encrypt = "encrypt";
         public const string EnvironmentVariable = "environment-variable";
         public const string ValidateToken = "validate-token";
         public const string ValidEmail = "validate-email";
         public const string SendTokenVerify = "token-email";
+        public const string UpdatePassword = "password-update";
         
         public const string GetTokenStatus = "status-token";
 
@@ -78,6 +77,11 @@
             
         public const string GetReports = "reports";
         public const string Bitacora = "bitacora";
+        public const string GetEstado = "estados";
+        public const string GetMunicipios = "municipios";
+        public const string GetColonia = "colonia";
+        public const string GetCP = "cp";
+        public const string GetZonaHoraria = "zona-horaria";
         public const string Reportes = "REPORTES";
 
         public const string GetCatZonaClientes = "CatZonaClientes";
@@ -96,7 +100,20 @@
         public const string GetSucursales = "sucursales";
         public const string GetSucursalSecciones = "sucursal-seccion";
         public const string GetSucursalCatalogo = "GetSucursalCatalogo";
-
+        public const string GetSitesDetalle = "detalle/site";
+        public const string GetBiometricosDetalle = "detalle/biometricos";
+        public const string GetTelefonoDetalle = "detalle/telefono";
+        public const string GetResponsableDetalle = "detalle/responsable";
+        public const string GetHorarioDetalle = "detalle/horarios";
+        public const string GetTelefonosSucursalN = "telefonos";
+        public const string GetSitesSucursalN = "sites";
+        public const string GetBioSucursalN = "biometricos";
+        public const string InsertSucursal = "insert";
+        public const string UpdateSucursal = "update";
+        public const string DeleteSucursal = "delete";
+        
+        
+        public const string GetSecciones = "secciones";
         public const string GetSeccion = "seccion";
         public const string GetSeccionSucursal = "seccion-sucursal";
         

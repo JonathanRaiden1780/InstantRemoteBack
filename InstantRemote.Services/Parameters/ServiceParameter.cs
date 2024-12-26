@@ -32,6 +32,30 @@ namespace InstantRemote.Services.Parameters
             var getParameter = UnitOfWork.RepositoryParameter.GetParameterByReference(reference);
             return getParameter;
         }
+        
+        public List<GetCP> GetCP(int estado, int mun, int col)
+        {
+            return  UnitOfWork.RepositoryParameter.GetCP(estado,mun,col);
+        }
 
+        public List<GetMunicipio> GetMunicipio(int estado)
+        {
+            return  UnitOfWork.RepositoryParameter.GetMunicipio(estado);
+        }
+
+        public List<GetColonia> GetColonia(int estado, int mun)
+        {
+            return  UnitOfWork.RepositoryParameter.GetColonia(estado,mun);
+        }
+
+        public List<GetEstados> GetEstados()
+        {
+            return  UnitOfWork.RepositoryParameter.GetEstados();
+        }
+
+        public List<GetZonaHoraria> GetZonaHoraria()
+        {
+            return  UnitOfWork.RepositoryParameter.GetZonaHoraria();
+        }
     }
 }

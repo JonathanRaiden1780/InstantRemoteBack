@@ -42,5 +42,41 @@ namespace InstantRemote.Repositories.Context
             var respuesta = Connection.Query<GetParameter>(query, commandType: CommandType.Text).FirstOrDefault();
             return respuesta;
         }
+        
+        public List<GetEstados> GetEstados()
+        {
+            var query = "select id_edo,estado from catEstadoSepo";
+            var respuesta = Connection.Query<GetEstados>(query, commandType: CommandType.Text).ToList();
+            return respuesta;
+        }
+        
+        public List<GetMunicipio> GetMunicipio(int estado)
+        {
+            var query = "select id_mun,UPPER(municipio) as municipio from catMunicipioSepo where id_edo = @estado";
+            return Connection.Query<GetMunicipio>(query, new { @estado = estado }).ToList();
+
+        }
+        
+        public List<GetColonia> GetColonia(int estado, int mun)
+        {
+            var query = "select id_col,UPPER(colonia) as colonia from catColoniaSepo where id_edo = @estado and id_mun = @municipio";
+            return Connection.Query<GetColonia>(query, new { @estado = estado, @municipio = mun }).ToList();
+
+        }
+        
+        public List<GetCP> GetCP(int estado, int mun, int col)
+        {
+            var query = "select id_CP,CP from catCPSepo where id_edo = @estado and id_mun = @municipio and id_col = @colonia";
+            return Connection.Query<GetCP>(query, new { @estado = estado, @municipio = mun, @colonia=col }).ToList();
+
+        }
+        
+        public List<GetZonaHoraria> GetZonaHoraria()
+        {
+            var query = "  select idZonaH as id ,UPPER(descripcion) as descripcion from  catZonaHoraria with (nolock) union select 5,'ZONA CENTRO 0'";
+            return  Connection.Query<GetZonaHoraria>(query, commandType: CommandType.Text).ToList();
+
+        }
+      
     }
 }

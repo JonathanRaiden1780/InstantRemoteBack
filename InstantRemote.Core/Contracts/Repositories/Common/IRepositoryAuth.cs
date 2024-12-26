@@ -9,5 +9,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         PermisosDrmResponseDto GetUserPermiso(string emplid);
         GetTokenRespDto GetTokenStatus(int emplid);
         EmpleadoMailRespDto ValidEmail(int emplid);
+        bool UpdatePassword(ChangePassReqDto newData);
     }
 }

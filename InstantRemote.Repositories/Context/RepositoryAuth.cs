@@ -82,5 +82,12 @@ namespace InstantRemote.Repositories.Context
             var query = "select [CORREO-E] as mail, [NOMBRE COMPLETO] as name from dbo.correos210823 where [NUMERO EMPLEADO] = " + emplid;
             return Connection.Query<EmpleadoMailRespDto>(query, commandType: CommandType.Text).FirstOrDefault();
         }
+
+        public bool UpdatePassword(ChangePassReqDto newData)
+        {
+            var query = "UPDATE tblLoguinInicio SET pass = @Password WHERE usuario = @UserId";
+            var affectedRows = Connection.Execute(query, new { Password = newData.Password, UserId = newData.UserId });
+            return affectedRows > 0;
+        }
     }
 }

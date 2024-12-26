@@ -11,5 +11,11 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetParameter> GetParameterByGroup(string group);
         GetParameter GetParameter(ParameterDto parameter);
         GetParameter GetParameterByReference(string reference);
+        
+        List<GetCP> GetCP(int estado, int mun, int col);
+        List<GetMunicipio> GetMunicipio(int estado);
+        List<GetColonia> GetColonia(int estado, int mun);
+        List<GetEstados> GetEstados();
+        List<GetZonaHoraria> GetZonaHoraria();
     }
 }

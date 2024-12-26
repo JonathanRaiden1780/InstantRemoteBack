@@ -16,8 +16,7 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.GetResponsables();
         }
-
-
+        
         public List<GetCatZonaClientesRespDto> GetCatZonaClientes(string emplid)
         {
             List<GetCatZonaClientesRespDto> response = [];
@@ -122,11 +121,73 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetSucursalCatalogo(cliente, sucursal);
         }
 
-        public List<GetSeccionesRespDto> GetSeccion(int clientId, string otro)
+        public List<DetalleHorariosRespDto> GetHorariosDetalles(int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetHorariosDetalles(sucursal);
+        }
+
+        public List<DetalleTelefonosRespDto> GetTelefonosDetalles(int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetTelefonosDetalles(sucursal);
+        }
+
+        public List<DetalleSitesRespDto> GetSitesDetalles(int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetSitesDetalles(sucursal);
+        }
+
+        public List<DetalleBiometricosRespDto> GetBiometricosDetalles(int sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetBiometricosDetalles(sucursal);
+        }
+
+        public List<DetalleResponsableRespDto> GetResponsablesDetalles(string Parametros)
+        {
+            return UnitOfWork.RepositoryCommon.GetResponsablesDetalles(Parametros);
+        }
+
+        public List<TelefonosSucursalN> GetTelefonosSucursal(int idSucursal, string empleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetTelefonos(idSucursal, empleado);
+        }
+
+        public List<SitesSucursalN> GetSitesSucursalN(int idSucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetSitesSucursalN(idSucursal);
+
+        }
+        public List<BioSucursalN> GetBioSucursalN(int idSucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetBioSucursalN(idSucursal);
+
+        }
+        public bool InsertSucursal(SucursalInsertDTO sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.InsertSucursal(sucursal);
+
+        }
+        public bool UpdateSucursal(SucursaUpdateDto sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.UpdateSucursal(sucursal);
+
+        }
+        public bool DeleteSucursal(int idSucursal)
+        {
+            return UnitOfWork.RepositoryCommon.DeleteSucursal(idSucursal);
+
+        }
+        
+        
+
+        public List<GetSeccionesRespDto> GetSecciones(int clientId, string otro)
         {
             return UnitOfWork.RepositoryCommon.GetSecciones(clientId, otro);
         }
 
+        public List<GetSeccionesRespDto> GetSeccion()
+        {
+            return UnitOfWork.RepositoryCommon.GetSeccion();
+        }
         public List<GetSeccionesRespDto> GetSeccionesSucursales(int emplid, int otro)
         {
             return UnitOfWork.RepositoryCommon.GetSeccionesSucursales(emplid, otro);

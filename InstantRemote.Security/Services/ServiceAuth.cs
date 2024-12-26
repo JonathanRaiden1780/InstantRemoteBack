@@ -73,6 +73,11 @@ namespace InstantRemote.Security.Services
             return token;
         }
 
+        public bool UpdatePassword(ChangePassReqDto newData)
+        {
+            return UnitOfWork.RepositoryAuth.UpdatePassword(newData);
+        }
+
     }
 }
 
