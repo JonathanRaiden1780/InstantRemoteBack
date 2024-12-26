@@ -87,9 +87,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
     
     public class BioSucursalN
     {
-        public int idTel { get; set; }
-        public string numTel { get; set; }
-        public int tipo { get; set; }
+        public string SN { get; set; }
     }
     
     public class SucursaUpdateDto
