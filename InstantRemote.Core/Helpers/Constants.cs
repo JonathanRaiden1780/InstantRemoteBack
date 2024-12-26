@@ -108,6 +108,8 @@
         public const string GetTelefonosSucursalN = "telefonos";
         public const string GetSitesSucursalN = "sites";
         public const string GetBioSucursalN = "biometricos";
+        public const string GetCandados = "candados";
+        public const string InsertTelefonoSucursal = "telefono/insert";
         public const string InsertSucursal = "insert";
         public const string UpdateSucursal = "update";
         public const string DeleteSucursal = "delete";

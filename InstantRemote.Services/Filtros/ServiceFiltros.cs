@@ -161,6 +161,14 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetBioSucursalN(idSucursal);
 
         }
+        public List<GetCandados> GetCandado()
+        {
+            return UnitOfWork.RepositoryCommon.GetCandado();
+        }
+        public bool InsertTelefonoSucursal(NewTelefonoSucursal telefono)
+        {
+            return UnitOfWork.RepositoryCommon.InsertTelefonoSucursal(telefono);
+        }
         public bool InsertSucursal(SucursalInsertDTO sucursal)
         {
             return UnitOfWork.RepositoryCommon.InsertSucursal(sucursal);

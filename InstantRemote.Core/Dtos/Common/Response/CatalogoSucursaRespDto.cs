@@ -159,4 +159,16 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string Estado { get; set; }
         public string Municipio { get; set; }
     }
+
+    public class GetCandados
+    {  
+        public int idOLL { get; set; }
+        public string descripcionOLL { get; set; }
+    }
+    public class NewTelefonoSucursal
+    {  
+        public string numTel { get; set; }
+        public string tipo { get; set; }
+        public string @numSerie { get; set; }
+    }
 }

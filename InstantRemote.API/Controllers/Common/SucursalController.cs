@@ -407,12 +407,76 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.InsertSucursal)]
+        [HttpGet(Constants.GetCandados)]
+        [ProducesResponseType(typeof(List<res.GetCandados>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetCandados()
+        {
+
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceFiltros.GetCandado();
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
+        
+        [HttpPost(Constants.InsertTelefonoSucursal)]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult InsertSucursal(res.SucursalInsertDTO sucursal)
+        public ActionResult InsertTelefonoSucursal([FromBody] res.NewTelefonoSucursal telefono)
+        {
+
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceFiltros.InsertTelefonoSucursal(telefono);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
+        
+        [HttpPost(Constants.InsertSucursal)]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult InsertSucursal([FromBody] res.SucursalInsertDTO sucursal)
         {
 
             ActionResult result;
@@ -439,12 +503,12 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.UpdateSucursal)]
+        [HttpPost(Constants.UpdateSucursal)]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult UpdateSucursal(res.SucursaUpdateDto sucursal)
+        public ActionResult UpdateSucursal([FromBody] res.SucursaUpdateDto sucursal)
         {
 
             ActionResult result;

@@ -34,6 +34,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_Add_Sucursal = "IR_V2_SP_Add_Sucursal"; 
         public const string IR_V2_SP_Update_Sucursal = "IR_V2_SP_Update_Sucursal";
         public const string IR_V2_RP_Elimina_Sucursal = "IR_V2_RP_Elimina_Sucursal";
+        public const string IR_V2_SP_InsertaTelefono = "IR_V2_SP_InsertaTelefono";
         public const string sp_GetSites = "sp_GetSites";
         public const string sp_GetBiometricos = "sp_GetBiometricos";
         

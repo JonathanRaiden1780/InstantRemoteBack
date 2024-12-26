@@ -25,6 +25,8 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<CatalogoSucursaRespDto> GetSucursalCatalogo(int cliente, int sucursal);
         List<SitesSucursalN> GetSitesSucursalN(int idSucursal);
         List<BioSucursalN> GetBioSucursalN(int idSucursal);
+        List<GetCandados> GetCandado();
+        bool InsertTelefonoSucursal(NewTelefonoSucursal telefono);
         bool InsertSucursal(SucursalInsertDTO sucursal);
         bool UpdateSucursal(SucursaUpdateDto sucursal);
         bool DeleteSucursal(int idSucursal);

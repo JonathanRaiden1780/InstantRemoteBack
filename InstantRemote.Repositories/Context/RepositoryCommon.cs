@@ -172,6 +172,18 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        
+        public List<GetCandados> GetCandado()
+        {
+            var query = "select idOLL ,descripcionOLL  from  catOrigenLlamado with (nolock)";
+            return Connection.Query<GetCandados>(query).ToList();
+        }
+        
+        public bool InsertTelefonoSucursal(NewTelefonoSucursal telefono)
+        {
+            var rowsAffected = Connection.Execute(StoreProcedure.IR_V2_SP_InsertaTelefono, telefono, commandType: CommandType.StoredProcedure);
+            return rowsAffected > 0;
+        }
         public bool InsertSucursal(SucursalInsertDTO sucursal)
         {
             var rowsAffected = Connection.Execute(StoreProcedure.IR_V2_SP_Add_Sucursal, sucursal, commandType: CommandType.StoredProcedure);
