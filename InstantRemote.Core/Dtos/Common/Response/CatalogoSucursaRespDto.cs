@@ -22,7 +22,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string Calle { get; set; }
         public string Colonia { get; set; }
         public string NumExt { get; set; }
-        public int IdCP { get; set; }
+        public int Id_CP { get; set; }
         public int IdCliente { get; set; }
         public string Longitud { get; set; }
         public string Latitud { get; set; }
@@ -32,17 +32,17 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public bool AlPlan { get; set; }
         public bool AlTol { get; set; }
         public bool AlPlanI { get; set; }
-        public string SiteHijo1 { get; set; }
-        public string SiteHijo2 { get; set; }
-        public string SiteHijo3 { get; set; }
+        public string Site_Hijo1 { get; set; }
+        public string Site_Hijo2 { get; set; }
+        public string Site_Hijo3 { get; set; }
         public int IdSeccion { get; set; }
         public int IdZonaHoraria { get; set; }
         public string IdTelefonos { get; set; }
         public string IdSites { get; set; }
-        public int IdEdo { get; set; }
-        public int IdMun { get; set; }
+        public int id_edo { get; set; }
+        public int id_mun { get; set; }
         public int IdOLL { get; set; }
-        public int IdCol { get; set; }
+        public int id_col { get; set; }
     }
 
     public class DetalleTelefonosRespDto
