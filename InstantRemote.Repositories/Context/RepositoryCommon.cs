@@ -408,5 +408,63 @@ namespace InstantRemote.Repositories.Context
         }
         #endregion
 
+        #region Horarios
+        public List<HorarioDTO> GetCatalogoHorario(int cliente, int idDeptoSucursal)
+        {
+            var response = Connection.Query<HorarioDTO>(StoreProcedure.IR_V2_SP_GetCatalogoHorario, new
+            {
+                @Cliente = cliente,
+                @idDeptoSucursal = idDeptoSucursal,
+                @siteVarchar= "",
+                @servicioVarchar = ""
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
+        #endregion
+        #region Token
+        public List<CatalogoTokenDto> GetCatalogoToken(string emplid)
+        {
+            var response = Connection.Query<CatalogoTokenDto>(StoreProcedure.IR_V2_SP_GET_Tokens, new
+            {
+                @numempleado = emplid,
+                
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
+        public bool DeleteToken(TokenMod token)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_SP_DELETE_Token, new
+            {
+                @numEmpleado = token.numEmpleado,
+                @numEmpleadoEncargado = token.emplid
+                
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public bool LiberaToken(TokenMod token)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_SP_GET_LiberaToken, new
+            {
+                @numEmpleado = token.numEmpleado,
+                @numEmpleadoEncargado = token.emplid
+                
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        
+        public int SaveToken(TokenAdd token)
+        {
+            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_ADD_Token, new
+            {
+                @numEmpleado = token.numEmpleado,
+                @numEmpleadoEncargado = token.emplid,
+                @tipoToken = token.tipoToken
+                
+            }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        #endregion
     }
 }

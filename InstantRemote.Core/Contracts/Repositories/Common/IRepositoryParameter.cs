@@ -1,4 +1,5 @@
 ﻿using InstantRemote.Core.Dtos.Common.Request;
+using InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.EntitiesStore.Common;
 
 namespace InstantRemote.Core.Contracts.Repositories.Common

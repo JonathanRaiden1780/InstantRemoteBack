@@ -45,5 +45,12 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetServicioRespDto> GetServicios(int clientId, string otro);
         List<GetServicioRespDto> GetServicioSucursal(int emplid, int otro);
         List<GetServicioRespDto> GetServicioSeccion(int emplid, int seccion);
+        List<HorarioDTO> GetCatalogoHorario(int cliente, int idDeptoSucursal);
+        
+        
+        int SaveToken(TokenAdd token);
+        bool LiberaToken(TokenMod token);
+        bool DeleteToken(TokenMod token);
+        List<CatalogoTokenDto> GetCatalogoToken(string emplid);
     }
 }

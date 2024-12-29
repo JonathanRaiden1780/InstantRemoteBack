@@ -67,10 +67,14 @@
         public const string Servicios = "Servicios";
         public const string Sites = "Sites";
         public const string Secciones = "Secciones";
+        public const string Horarios = "Horarios";
+        public const string TokenC = "Token";
         public const string Sucursal = "Sucursal";
 
         public const string RouteClientes = "common/clientes";
         public const string RouteSecciones = "common/secciones";
+        public const string RouteHorarios = "common/horarios";
+        public const string RouteToken = "common/token";
         public const string RouteServicios = "common/servicios";
         public const string RouteSites = "common/sites";
         public const string RouteSucursal = "common/sucursal";
@@ -127,6 +131,15 @@
         public const string GetServicio = "servicio";
         public const string GetServicioSucursal = "servicio-sucursal";
         public const string GetServicioSeccion = "servicio-seccion";
+        
+        
+        public const string GetCatalogoHorario = "catalogo-horario";
+
+        
+        public const string SaveToken = "add";
+        public const string LiberaToken = "release";
+        public const string DeleteToken = "delete";
+        public const string GetCatalogoToken = "get";
 
 
         #endregion

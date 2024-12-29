@@ -37,10 +37,24 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_InsertaTelefono = "IR_V2_SP_InsertaTelefono";
         public const string sp_GetSites = "sp_GetSites";
         public const string sp_GetBiometricos = "sp_GetBiometricos";
-        
         public const string sp_GetTelefonosRestriccion = "sp_GetTelefonosRestriccion"; //TODO
-
         
+        public const string IR_V2_SP_GetCatalogoHorario = "IR_V2_SP_GetCatalogoHorario"; 
+        public const string IR_V2_SP_Elimina_Horario = "IR_V2_SP_Elimina_Horario"; 
+        public const string IR_V2_SP_InsertaCatHorario = "IR_V2_SP_InsertaCatHorario"; 
+        public const string IR_V2_SP_ActualizaCatHorario = "IR_V2_SP_ActualizaCatHorario";
+        
+        
+        public const string IR_V2_SP_GET_Tokens = "IR_V2_SP_GET_Tokens"; //TODO
+        public const string IR_V2_SP_GET_LiberaToken = "IR_V2_SP_GET_LiberaToken"; 
+        public const string IR_V2_SP_DELETE_Token = "IR_V2_SP_DELETE_Token"; 
+        public const string IR_V2_SP_ADD_Token = "IR_V2_SP_ADD_Token"; 
+        
+        
+        
+
+
+
 
 
     }
