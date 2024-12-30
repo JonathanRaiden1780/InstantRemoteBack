@@ -133,7 +133,14 @@
         public const string GetServicioSeccion = "servicio-seccion";
         
         
-        public const string GetCatalogoHorario = "catalogo-horario";
+        public const string GetCatalogoHorario = "catalogo";
+        public const string GetTipoHorario = "tipo";
+        public const string GetTipoCHorario = "tipo-comida";
+        public const string GetNivelHorario = "nivel";
+        public const string GetServicioHorario = "servicio";
+        public const string AddHorario = "add";
+        public const string DeleteHorario = "delete";
+        public const string UpdateHorario = "update";
 
         
         public const string SaveToken = "add";

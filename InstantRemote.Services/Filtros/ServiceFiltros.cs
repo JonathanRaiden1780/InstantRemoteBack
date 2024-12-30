@@ -237,6 +237,41 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetCatalogoHorario(cliente, idDeptoSucursal);
         }
 
+        public List<TipoHorarioDto> GetTipoHorario()
+        {
+            return UnitOfWork.RepositoryCommon.GetTipoHorario();
+        }
+
+        public List<GetNivelHorario> GetNivelHorario()
+        {
+            return UnitOfWork.RepositoryCommon.GetNivelHorario();
+        }
+        public List<GetServicioHorario> GetServicioHorario()
+        {
+            return UnitOfWork.RepositoryCommon.GetServicioHorario();
+        }
+
+        public List<GetTipoCHorario> GetTipoCHorario()
+        {
+            return UnitOfWork.RepositoryCommon.GetTipoCHorario();
+        }
+
+        public bool ActualizaCatHorario(ActualizaCatHorarioDto horario)
+        {
+            return UnitOfWork.RepositoryCommon.ActualizaCatHorario(horario);
+        }
+
+        public bool InsertCatHorario(InsertaCatHorarioDTO horario)
+        {
+            return UnitOfWork.RepositoryCommon.InsertCatHorario(horario);
+
+        }
+        
+        public bool DeleteCatHorario(string horario)
+        {
+            return UnitOfWork.RepositoryCommon.DeleteCatHorario(horario);
+
+        }
         
         public int SaveToken(TokenAdd token)
         {

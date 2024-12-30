@@ -53,6 +53,11 @@ namespace InstantRemote.Core.Helpers
         
         
 
+        public const string sp_GetSucursales = "sp_GetSucursales"; 
+        
+        
+        
+
 
 
 

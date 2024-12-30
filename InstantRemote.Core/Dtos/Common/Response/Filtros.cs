@@ -12,10 +12,29 @@
         public int id { get; set; }
         public string cliente { get; set; }
     }
+
     public class GetSucursalesRespDto
     {
         public int id { get; set; }
         public string sucursal { get; set; }
+    }
+
+    public class GetNivelHorario
+    {
+        public int id { get; set; }
+        public string nivel { get; set; }
+    }
+
+    public class GetServicioHorario
+    {
+        public int id { get; set; }
+        public string tipoServicio { get; set; }
+    }
+
+    public class GetTipoCHorario
+    {
+        public int id { get; set; }
+        public string tipoComida { get; set; }
     }
 
     public class GetSitesRespDto
@@ -56,7 +75,13 @@
         public string responsable { get; set; }
         public string fechaAlta { get; set; }
     }
-    
+
+    public class TipoHorarioDto
+    {
+        public int id { get; set; }
+        public string tipoHorario { get; set; }
+    }
+
     public class HorarioDTO
     {
         public int IdCliente { get; set; }
@@ -96,7 +121,7 @@
         public string Asignacion { get; set; }
         public string IdTipoSer { get; set; }
     }
-    
+
     public class CatalogoHorarioFiltroDto
     {
         public int idDeptoSucursal { get; set; }
@@ -150,13 +175,85 @@
         public string tipo { get; set; }
 
     }
-    
-    public class TokenAdd : TokenMod{
+
+    public class TokenAdd : TokenMod
+    {
         public string tipoToken { get; set; }
     }
-    
-    public class TokenMod {
+
+    public class TokenMod
+    {
         public string emplid { get; set; }
         public string numEmpleado { get; set; }
     }
+
+    public class ActualizaCatHorarioDto
+    {
+        public int idHorario { get; set; }
+        public string nomHorario { get; set; }
+        public string tipoHorario { get; set; }
+        public int idCliente { get; set; }
+        public int idSucursal { get; set; }
+        public string plantillaAuto { get; set; }
+        public string tolerancia { get; set; }
+        public string jornada { get; set; }
+        public string diaDescanso { get; set; }
+        public string difHorario { get; set; }
+        public int nivel { get; set; }
+        public string tipoServicio { get; set; }
+        public string site { get; set; }
+
+        public string lunes { get; set; }
+        public string martes { get; set; }
+        public string miercoles { get; set; }
+        public string jueves { get; set; }
+        public string viernes { get; set; }
+        public string sabado { get; set; }
+        public string domingo { get; set; }
+
+        public string HraEntrada { get; set; }
+        public string HraSalida { get; set; }
+        public string HraMin { get; set; }
+        public string HraMax { get; set; }
+        public string HraCierre { get; set; }
+
+        public string TipoComida { get; set; }
+        public string TiempoComida { get; set; }
+        public string EntradaComida { get; set; }
+        public string SalidaComida { get; set; }
+    }
+    
+    public class InsertaCatHorarioDTO
+    {
+        public string HE { get; set; } = "0";
+        public string HS { get; set; } = "0";
+        public string Tolerancia { get; set; } = "0";
+        public string Tipo { get; set; } = "0";
+        public string Lunes { get; set; } = "0";
+        public string Martes { get; set; } = "0";
+        public string Miercoles { get; set; } = "0";
+        public string Jueves { get; set; } = "0";
+        public string Viernes { get; set; } = "0";
+        public string Sabado { get; set; } = "0";
+        public string Domingo { get; set; } = "0";
+        public string Jornada { get; set; } = "0";
+        public string TipoComida { get; set; }
+        public string HoraEntradaComida { get; set; }
+        public string HoraSalidaComida { get; set; }
+        public string ComidaLibre { get; set; }
+        public string HMinCheck { get; set; }
+        public string HMaxCheck { get; set; }
+        public string CierreChequeo { get; set; }
+        public string Nombre { get; set; }
+        public int IdCliente { get; set; }
+        public int IdSucursal { get; set; }
+        public string PlanAuto { get; set; }
+        public string DiaDescanso { get; set; }
+        public string DifeHorario { get; set; }
+        public int Nivel { get; set; }
+        public string Site { get; set; }
+        public string IdTipoSer { get; set; }
+    }
+
+
 }

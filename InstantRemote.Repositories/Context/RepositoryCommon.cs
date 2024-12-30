@@ -409,6 +409,7 @@ namespace InstantRemote.Repositories.Context
         #endregion
 
         #region Horarios
+       
         public List<HorarioDTO> GetCatalogoHorario(int cliente, int idDeptoSucursal)
         {
             var response = Connection.Query<HorarioDTO>(StoreProcedure.IR_V2_SP_GetCatalogoHorario, new
@@ -421,6 +422,48 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
         
+        public bool ActualizaCatHorario (ActualizaCatHorarioDto horario)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_SP_ActualizaCatHorario,
+           horario, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public bool InsertCatHorario (InsertaCatHorarioDTO horario)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_SP_InsertaCatHorario,
+           horario, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        
+        public bool DeleteCatHorario (string idHorario)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.IR_V2_SP_Elimina_Horario,
+                new
+                {
+                    @idHorario = idHorario
+                }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public List<TipoHorarioDto> GetTipoHorario()
+        {
+            var query = "select id ,tipoHorario  from  catTipoHorarios with (nolock) where tipoHorario not in ('Normal') order by id";
+            return Connection.Query<TipoHorarioDto>(query, commandType: CommandType.Text).ToList();
+        }
+        public List<GetNivelHorario> GetNivelHorario()
+        {
+            var query = "SELECT idNivel as id, Descripcion as nivel FROM catNivel with (nolock) order by idNivel";
+            return Connection.Query<GetNivelHorario>(query, commandType: CommandType.Text).ToList();
+        }
+        public List<GetServicioHorario> GetServicioHorario()
+        {
+            var query = "SELECT idTipoSer as id, Descripcion_long as tipoServicio FROM catTipoServicio with (nolock) order by idTipoSer";
+            return Connection.Query<GetServicioHorario>(query, commandType: CommandType.Text).ToList();
+        }
+        public List<GetTipoCHorario> GetTipoCHorario()
+        {
+            var query = "select id ,descripcion as tipoComida  from  catTipoComida with (nolock) order by id";
+            return Connection.Query<GetTipoCHorario>(query, commandType: CommandType.Text).ToList();
+        }
         #endregion
         #region Token
         public List<CatalogoTokenDto> GetCatalogoToken(string emplid)
