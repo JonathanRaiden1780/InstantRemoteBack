@@ -203,6 +203,14 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
+
+        public List<TelefonosSucursalN> GetTelefonosbyId(string tel)
+        {
+            var telList = tel.Split(',').Select(int.Parse).ToList();
+            var query = "SELECT * FROM dbo.catTelefono WHERE idTel IN @telList";
+            return Connection.Query<TelefonosSucursalN>(query, new { telList }).ToList();
+        }
+
         
         
         #endregion

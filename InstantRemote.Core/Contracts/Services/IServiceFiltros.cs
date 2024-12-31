@@ -31,6 +31,7 @@ namespace InstantRemote.Core.Contracts.Services
         bool InsertSucursal(SucursalInsertDTO sucursal);
         bool UpdateSucursal(SucursaUpdateDto sucursal);
         bool DeleteSucursal(int idSucursal);
+        List<TelefonosSucursalN> GetTelefonosbyId(string tel);
 
         
         

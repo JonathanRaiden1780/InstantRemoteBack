@@ -110,6 +110,7 @@
         public const string GetResponsableDetalle = "detalle/responsable";
         public const string GetHorarioDetalle = "detalle/horarios";
         public const string GetTelefonosSucursalN = "telefonos";
+        public const string GetTelefonosSucursalById = "telefonosbyId";
         public const string GetSitesSucursalN = "sites";
         public const string GetBioSucursalN = "biometricos";
         public const string GetCandados = "candados";

@@ -184,6 +184,12 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.DeleteSucursal(idSucursal);
 
         }
+
+        public List<TelefonosSucursalN> GetTelefonosbyId(string tel)
+        {
+            return UnitOfWork.RepositoryCommon.GetTelefonosbyId(tel);
+        }
+        
         
         
 

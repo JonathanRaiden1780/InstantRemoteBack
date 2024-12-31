@@ -8,6 +8,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetResponsablesRespDto> GetResponsables();
         void InsertBitacoraInstantRemote (BitacoraRequestDto  bitacora);
         List<TelefonosSucursalN> GetTelefonos(int idSucursal, string empleado);
+      
         List<GetCatZonaClientesRespDto> GetCatZonaClientes(string emplid, string parameter);
         List<GetCatZonaClientesRespDto> GetClienteSeccion(int emplid);
         List<GetCatZonaClientesRespDto> GetClienteSite(int emplid);
@@ -17,6 +18,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         bool InsertCliente(CatalogoClienteReqDto dataCliente);
         bool UpdateCliente(CatalogoClientUpdateeReqDto dataCliente);
         bool DeleteCliente(int idCliente);
+        
         List<GetSucursalesRespDto> GetSucursales(string parameter);
         List<GetSucursalesRespDto> GetSucursalesSeccion(int emplid, string cliente);
         List<GetSucursalesRespDto> GetSucursalesSite(int emplid, string cliente);
@@ -30,7 +32,8 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         bool InsertSucursal(SucursalInsertDTO sucursal);
         bool UpdateSucursal(SucursaUpdateDto sucursal);
         bool DeleteSucursal(int idSucursal);
-        
+        List<TelefonosSucursalN> GetTelefonosbyId(string tel);
+
         
 
         List<GetSitesRespDto> GetSites(int emplid, string cliente);
