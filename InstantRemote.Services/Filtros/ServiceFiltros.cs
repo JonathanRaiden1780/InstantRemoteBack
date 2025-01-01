@@ -299,5 +299,41 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.GetCatalogoToken(emplid);
         }
+
+        public List<EmpleadoPermiso> GetEmpleadosCPermisos()
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCPermisos();
+        }
+
+        public List<EmpleadoSNPermiso> GetEmpleadosSNPermisos()
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosSNPermisos();
+        }
+
+        public List<MenuPermisosDto> GetMenusPermisos()
+        {
+            return UnitOfWork.RepositoryCommon.GetMenusPermisos();
+        }
+
+        public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleado);
+        }
+
+        public List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogoTelefonos(telefono);
+        }
+
+        public List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogoEstatus(numEmpleado,estatus);
+        }
+
+        public int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogoEstatus(empleado);
+        }
+
     }
 }

@@ -51,6 +51,17 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_ADD_Token = "IR_V2_SP_ADD_Token"; 
         
         
+        public const string sp_GetEmpleadosTipoPermiso_V2 = "sp_GetEmpleadosTipoPermiso_V2"; 
+        public const string listaEmpleadosParaPermisos = "listaEmpleadosParaPermisos"; 
+        
+        
+        public const string IR_V2_SP_Get_EmpleadoByTelefono = "IR_V2_SP_Get_EmpleadoByTelefono"; 
+        public const string IR_V2_SP_ActualizaCatEmpleado = "IR_V2_SP_ActualizaCatEmpleado"; 
+        public const string IR_V2_SP_GetCatEmpleadosEstatus = "IR_V2_SP_GetCatEmpleadosEstatus"; 
+        public const string IR_V2_SP_GetCatEmpleadosById = "IR_V2_SP_GetCatEmpleadosById"; 
+        
+        
+        
         
 
         public const string sp_GetSucursales = "sp_GetSucursales"; 

@@ -34,8 +34,10 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         bool DeleteSucursal(int idSucursal);
         List<TelefonosSucursalN> GetTelefonosbyId(string tel);
 
+        List<EmpleadoPermiso> GetEmpleadosCPermisos();
+        List<EmpleadoSNPermiso> GetEmpleadosSNPermisos();
+        List<MenuPermisosDto> GetMenusPermisos();
         
-
         List<GetSitesRespDto> GetSites(int emplid, string cliente);
         List<GetSitesRespDto> GetSitesCliente(int emplid, string cliente);
         List<GetSitesRespDto> GetSitesSucursal(int emplid, string sucursal);
@@ -65,5 +67,10 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         bool LiberaToken(TokenMod token);
         bool DeleteToken(TokenMod token);
         List<CatalogoTokenDto> GetCatalogoToken(string emplid);
+        
+        List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch);
+        List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
+        List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
+        int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado);
     }
 }

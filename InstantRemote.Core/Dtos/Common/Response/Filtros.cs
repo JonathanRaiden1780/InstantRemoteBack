@@ -255,5 +255,104 @@
         public string IdTipoSer { get; set; }
     }
 
+    public class MenuPermisosDto
+    {
+        public int idTipoMenu { get; set; }
+        public string descripcion { get; set; }
+        public string path { get; set; }
+        public string tipo { get; set; }
+        public string baja_logica { get; set; }
+    }
+    
+    public class EmpleadoSNPermiso
+    {
+        public long numEmpleado { get; set; }
+        public string nomCompleto { get; set; }
+        public string fechaAlta { get; set; }
+        public string numGrupos { get; set; }
+    }
+    
+    public class EmpleadoPermiso
+    {
+        public long idDRM { get; set; }
+        public string numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string idCliente { get; set; }
+        public string nomClientes { get; set; }
+        public string idSucursal { get; set; }
+        public string nomSucursal { get; set; }
+        public bool dashboard { get; set; }
+        public bool mapa { get; set; }
+        public bool dispositivos { get; set; }
+        public bool empleados { get; set; }
+        public bool libroAsistencia { get; set; }
+        public bool autorizaHrasExtras { get; set; }
+        public bool solicitaHrasExtras { get; set; }
+        public bool catalogosAdmin { get; set; }
+        public bool reportesAdmin { get; set; }
+        public bool bloqueoManual { get; set; }
+    }
+    
+    
+    public class EmpleadosCatalogo
+    {
+        public long numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public int shift { get; set; }
+        public string desDepto { get; set; }
+        public string SERVICIO { get; set; }
+        public string status { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+        public string biometrico { get; set; }
+        public int TOTAL { get; set; }
+        public string telefonia { get; set; }
+        public string APP { get; set; } 
+        public bool whatsapp { get; set; } 
+    }
+    public class EmpleadosCatalogoTelefonos
+    {
+        public int numEmpleado { get; set; }
+        public string status { get; set; }
+        public string apellidoPaterno { get; set; }
+        public string apellidoMaterno { get; set; }
+        public string nombre { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+    }
+    public class EmpleadosCatalogoEstatus
+    {
+        public int numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public int shift { get; set; }
+        public string desDepto { get; set; }
+        public string SERVICIO { get; set; }
+        public string status { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+        public string biometrico { get; set; }
+        public string Total { get; set; }
+        public string telefonia { get; set; }
+        public string APP { get; set; }
+    }
 
+    public class UpdateEmpleadosCatalogo
+    {
+        public int numEmpleado { get; set; } 
+        public int asisWhats { get; set; } 
+        public string correo { get; set; } 
+        public string telefono { get; set; } 
+
+    } 
+    
 }

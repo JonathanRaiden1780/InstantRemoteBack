@@ -473,6 +473,7 @@ namespace InstantRemote.Repositories.Context
             return Connection.Query<GetTipoCHorario>(query, commandType: CommandType.Text).ToList();
         }
         #endregion
+        
         #region Token
         public List<CatalogoTokenDto> GetCatalogoToken(string emplid)
         {
@@ -516,6 +517,65 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
+        #endregion
+        
+        #region Permisos
+        public List<EmpleadoPermiso> GetEmpleadosCPermisos()
+        {
+            var response = Connection.Query<EmpleadoPermiso>(StoreProcedure.sp_GetEmpleadosTipoPermiso_V2, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
+        public List<EmpleadoSNPermiso> GetEmpleadosSNPermisos()
+        {
+            var response = Connection.Query<EmpleadoSNPermiso>(StoreProcedure.listaEmpleadosParaPermisos, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+
+        public List<MenuPermisosDto> GetMenusPermisos()
+        {
+            var query = "SELECT * FROM catTipoMenu WHERE baja_logica = 0";
+            return Connection.Query<MenuPermisosDto>(query, commandType: CommandType.Text).ToList();
+        }
+        
+        #endregion
+
+        #region empleados
+        public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
+        {
+            var response = Connection.Query<EmpleadosCatalogo>(StoreProcedure.IR_V2_SP_GetCatEmpleadosById, new
+            {
+                @numEmpleado = numEmpleado,
+                @numEmpleadoSearch = numEmpleadoSearch
+                
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono)
+        {
+            var response = Connection.Query<EmpleadosCatalogoTelefonos>(StoreProcedure.IR_V2_SP_Get_EmpleadoByTelefono, new
+            {
+                @telefono = telefono
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus)
+        {
+            var response = Connection.Query<EmpleadosCatalogoEstatus>(StoreProcedure.IR_V2_SP_GetCatEmpleadosEstatus, new
+            {
+                @estatus  = estatus ,
+                @numEmpleado = numEmpleado
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado)
+        {
+            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_ActualizaCatEmpleado, empleado, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+
+        
+
         #endregion
     }
 }

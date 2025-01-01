@@ -128,7 +128,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
     public class SucursalInsertDTO
     {
         public string NomSucursal { get; set; }
-        public string Responsable { get; set; }
+        public string reponsable { get; set; }
         public string Calle { get; set; }
         public string Colonia { get; set; }
         public string NumInt { get; set; }
@@ -142,19 +142,19 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string PlanAuto { get; set; }
         public string Notas { get; set; }
         public string ZonaHr { get; set; }
-        public string NomCliente { get; set; }
-        public string IdOrigenLlamado { get; set; }
+        public string? NomCliente { get; set; }
+        public string? IdOrigenLlamado { get; set; }
         public string IdSeccion { get; set; }
         public string Empleado { get; set; }
-        public string SiteHijo1 { get; set; }
-        public string SiteHijo2 { get; set; }
-        public string SiteHijo3 { get; set; }
+        public string Site_hijo1  { get; set; }
+        public string Site_hijo2 { get; set; }
+        public string Site_hijo3  { get; set; }
         public string Ns { get; set; }
-        public int? AlBio { get; set; }
-        public int? AlInc { get; set; }
-        public int? AlTol { get; set; }
-        public int? AlPlan { get; set; }
-        public int? AlPlanI { get; set; }
+        public bool? AlBio { get; set; }
+        public bool? AlInc { get; set; }
+        public bool? AlTol { get; set; }
+        public bool? AlPlan { get; set; }
+        public bool? AlPlanI { get; set; }
         public string Telefonos { get; set; }
         public string Estado { get; set; }
         public string Municipio { get; set; }
