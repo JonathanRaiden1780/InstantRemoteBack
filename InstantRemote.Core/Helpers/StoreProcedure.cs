@@ -59,6 +59,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_ActualizaCatEmpleado = "IR_V2_SP_ActualizaCatEmpleado"; 
         public const string IR_V2_SP_GetCatEmpleadosEstatus = "IR_V2_SP_GetCatEmpleadosEstatus"; 
         public const string IR_V2_SP_GetCatEmpleadosById = "IR_V2_SP_GetCatEmpleadosById"; 
+        public const string sp_updateMasivoEmpleadosXML = "sp_updateMasivoEmpleadosXML"; 
         
         
         

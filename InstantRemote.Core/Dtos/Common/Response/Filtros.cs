@@ -345,7 +345,6 @@
         public string telefonia { get; set; }
         public string APP { get; set; }
     }
-
     public class UpdateEmpleadosCatalogo
     {
         public int numEmpleado { get; set; } 
@@ -354,5 +353,12 @@
         public string telefono { get; set; } 
 
     } 
+    public class UpdateEmpleadosMasive
+    {
+        public int numempleado { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+        public string whatsapp { get; set; } 
+    }
     
 }

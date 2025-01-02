@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Text;
+using AutoMapper;
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
@@ -317,7 +318,7 @@ namespace InstantRemote.Services.Filtros
 
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
-            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleado);
+            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleadoSearch);
         }
 
         public List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono)
@@ -330,9 +331,30 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogoEstatus(numEmpleado,estatus);
         }
 
-        public int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado)
+        public int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado)
         {
-            return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogoEstatus(empleado);
+            return UnitOfWork.RepositoryCommon.UpdateEmpleadosCatalogo(empleado);
+        }
+        public void UpdateMasivoEmpleados(List<UpdateEmpleadosMasive> empleados)
+        {
+            List<Dictionary<string, object>> result = new List<Dictionary<string, object>>();
+            StringBuilder xmlBuilder = new StringBuilder();
+            xmlBuilder.Append("<empleados>");
+
+            foreach (var empleado in empleados)
+            {
+                xmlBuilder.Append("<empleado>");
+                xmlBuilder.AppendFormat("<correo>{0}</correo>", empleado.correo.Trim());
+                xmlBuilder.AppendFormat("<telefono>{0}</telefono>", empleado.telefono.Trim());
+                xmlBuilder.AppendFormat("<whatsapp>{0}</whatsapp>", empleado.whatsapp.Trim());
+                xmlBuilder.AppendFormat("<numempleado>{0}</numempleado>", empleado.numempleado);
+                xmlBuilder.Append("</empleado>");
+            }
+ 
+            xmlBuilder.Append("</empleados>");
+            string empleadosXML = xmlBuilder.ToString();
+            
+            UnitOfWork.RepositoryCommon.UpdateMasivoEmpleados(empleadosXML);
         }
 
     }

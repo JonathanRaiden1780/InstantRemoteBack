@@ -70,12 +70,14 @@
         public const string Horarios = "Horarios";
         public const string Permisos = "Permisos";
         public const string TokenC = "Token";
+        public const string Empleados = "Empleados";
         public const string Sucursal = "Sucursal";
 
         public const string RouteClientes = "common/clientes";
         public const string RouteSecciones = "common/secciones";
         public const string RouteHorarios = "common/horarios";
         public const string RoutePermisos = "common/permisos";
+        public const string RouteEmpleados = "common/empleados";
         public const string RouteToken = "common/token";
         public const string RouteServicios = "common/servicios";
         public const string RouteSites = "common/sites";
@@ -155,7 +157,12 @@
         public const string GetEmpleadosSNPermisos = "empleados/sinPermisos";
         public const string GetMenusPermisos = "menus";
 
-        
+        public const string GetEmpleadosCatalogos = "getCatalogo";
+        public const string GetEmpleadosCatalogoTelefonos = "telefonos";
+        public const string GetEmpleadosCatalogoEstatus = "estatus";
+        public const string UpdateEmpleadosCatalogo = "update";
+        public const string UpdateMasivoEmpleados = "updateMasivo";
+
         
         #endregion
 

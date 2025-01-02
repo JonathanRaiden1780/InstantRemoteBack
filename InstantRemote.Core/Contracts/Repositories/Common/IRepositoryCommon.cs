@@ -71,6 +71,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch);
         List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
-        int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado);
+        int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado);
+        void UpdateMasivoEmpleados(string empleado);
     }
 }

@@ -568,10 +568,14 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
-        public int GetEmpleadosCatalogoEstatus(UpdateEmpleadosCatalogo empleado)
+        public int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado)
         {
             var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_ActualizaCatEmpleado, empleado, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
+        }
+        public void UpdateMasivoEmpleados(string empleadosXML)
+        {
+            Connection.Query(StoreProcedure.sp_updateMasivoEmpleadosXML, empleadosXML, commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
 
         
