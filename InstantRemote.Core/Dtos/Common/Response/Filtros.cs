@@ -361,4 +361,19 @@
         public string whatsapp { get; set; } 
     }
     
+    public class DiasFestivosCatalogo : DiasFestivosCatalogoReqAddDto
+    {
+        public int idDiaFes { get; set; }
+    }
+    public class DiasFestivosCatalogoUpdate : DiasFestivosCatalogoReqAddDto
+    {
+        public int idDia { get; set; }
+    }
+    
+    public class DiasFestivosCatalogoReqAddDto
+    {
+        public string fecha { get; set; }
+        public string Descripcion { get; set; }
+    }
+    
 }

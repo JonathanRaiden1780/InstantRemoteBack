@@ -577,9 +577,35 @@ namespace InstantRemote.Repositories.Context
         {
             Connection.Query(StoreProcedure.sp_updateMasivoEmpleadosXML, empleadosXML, commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
-
-        
-
         #endregion
+
+        #region Dias Festivos
+
+        public bool UpdateDiasFestivos(DiasFestivosCatalogoUpdate fecha)
+        {
+            var query = "UPDATE [dbo].catDiasFestivos SET Descripcion = @Descripcion ,fecha = @fecha WHERE idDiaFes = @idDia";
+            var filasAfectadas = Connection.Execute(query, fecha, commandType: CommandType.Text);
+            return filasAfectadas > 0;
+        
+        }
+        public bool DeleteDiasFestivos(int id)
+        {
+            var query = "DELETE FROM catDiasFestivos WHERE idDiaFes = @id";
+            var filasAfectadas = Connection.Execute(query, id, commandType: CommandType.Text);
+            return filasAfectadas > 0;
+        
+        }
+        public List<DiasFestivosCatalogo> GetDiasFestivos()
+        {
+            var query = "SELECT idDiaFes, fecha, Descripcion FROM catDiasFestivos order by fecha asc";
+            return Connection.Query<DiasFestivosCatalogo>(query, commandType: CommandType.Text).ToList();
+        }
+        public bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.sp_InsertaDiaFestivo, fecha, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        #endregion
+
     }
 }

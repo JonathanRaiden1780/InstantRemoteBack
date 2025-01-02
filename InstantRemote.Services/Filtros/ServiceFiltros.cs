@@ -357,5 +357,21 @@ namespace InstantRemote.Services.Filtros
             UnitOfWork.RepositoryCommon.UpdateMasivoEmpleados(empleadosXML);
         }
 
+        public List<DiasFestivosCatalogo> GetDiasFestivos()
+        {
+            return UnitOfWork.RepositoryCommon.GetDiasFestivos();
+        }
+        public bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha)
+        {
+            return UnitOfWork.RepositoryCommon.AddDiaFestivo(fecha);
+        }
+        public bool UpdateDiasFestivos(DiasFestivosCatalogoUpdate fecha)
+        {
+            return UnitOfWork.RepositoryCommon.UpdateDiasFestivos(fecha);
+        }
+        public bool DeleteDiasFestivos(int id)
+        {
+            return UnitOfWork.RepositoryCommon.DeleteDiasFestivos(id);
+        }
     }
 }

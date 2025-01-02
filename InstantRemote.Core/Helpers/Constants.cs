@@ -72,10 +72,12 @@
         public const string TokenC = "Token";
         public const string Empleados = "Empleados";
         public const string Sucursal = "Sucursal";
+        public const string DiasFestivos = "DiasFestivos";
 
         public const string RouteClientes = "common/clientes";
         public const string RouteSecciones = "common/secciones";
         public const string RouteHorarios = "common/horarios";
+        public const string RouteDiasFestivos = "common/diasFestivos";
         public const string RoutePermisos = "common/permisos";
         public const string RouteEmpleados = "common/empleados";
         public const string RouteToken = "common/token";
@@ -162,6 +164,12 @@
         public const string GetEmpleadosCatalogoEstatus = "estatus";
         public const string UpdateEmpleadosCatalogo = "update";
         public const string UpdateMasivoEmpleados = "updateMasivo";
+
+        
+        public const string GetDiasFestivos = "getCatalogo";
+        public const string UpdateDiasFestivos = "update";
+        public const string AddDiaFestivo = "add";
+        public const string DeleteDiasFestivos = "delete";
 
         
         #endregion

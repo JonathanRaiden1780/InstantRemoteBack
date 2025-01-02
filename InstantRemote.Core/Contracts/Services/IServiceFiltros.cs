@@ -68,6 +68,10 @@ namespace InstantRemote.Core.Contracts.Services
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
         int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado);
         void UpdateMasivoEmpleados(List<UpdateEmpleadosMasive> empleados);
-
+        List<DiasFestivosCatalogo> GetDiasFestivos();
+        bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha);
+        bool UpdateDiasFestivos(DiasFestivosCatalogoUpdate fecha);
+        bool DeleteDiasFestivos(int id);
+        
     }
 }

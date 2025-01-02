@@ -62,6 +62,9 @@ namespace InstantRemote.Core.Helpers
         public const string sp_updateMasivoEmpleadosXML = "sp_updateMasivoEmpleadosXML"; 
         
         
+        public const string sp_InsertaDiaFestivo = "sp_InsertaDiaFestivo"; 
+        
+        
         
         
 
