@@ -271,6 +271,12 @@
         public string fechaAlta { get; set; }
         public string numGrupos { get; set; }
     }
+    public class MenusEmpleado
+    {
+        public string menu { get; set; }
+        public string tipo { get; set; }
+        public string valor { get; set; }
+    }
     
     public class EmpleadoPermiso
     {
@@ -375,5 +381,7 @@
         public string fecha { get; set; }
         public string Descripcion { get; set; }
     }
+    
+    
     
 }

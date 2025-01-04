@@ -37,6 +37,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<EmpleadoPermiso> GetEmpleadosCPermisos();
         List<EmpleadoSNPermiso> GetEmpleadosSNPermisos();
         List<MenuPermisosDto> GetMenusPermisos();
+        List<MenusEmpleado> GetMenusPermisosEmpleado(string numEmpleado);
         
         List<GetSitesRespDto> GetSites(int emplid, string cliente);
         List<GetSitesRespDto> GetSitesCliente(int emplid, string cliente);
@@ -72,6 +73,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
         int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado);
+        
         void UpdateMasivoEmpleados(string empleado);
         List<DiasFestivosCatalogo> GetDiasFestivos();
         bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha);

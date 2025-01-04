@@ -316,6 +316,10 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetMenusPermisos();
         }
 
+        public List<MenusEmpleado> GetMenusPermisosEmpleado(string numEmpleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetMenusPermisosEmpleado(numEmpleado);
+        }
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
             return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleadoSearch);

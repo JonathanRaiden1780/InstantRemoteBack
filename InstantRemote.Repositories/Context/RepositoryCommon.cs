@@ -537,6 +537,11 @@ namespace InstantRemote.Repositories.Context
             var query = "SELECT * FROM catTipoMenu WHERE baja_logica = 0";
             return Connection.Query<MenuPermisosDto>(query, commandType: CommandType.Text).ToList();
         }
+        public List<MenusEmpleado> GetMenusPermisosEmpleado(string numEmpleado)
+        {
+            var response = Connection.Query<MenusEmpleado>(StoreProcedure.sp_GetConfiguracionRepCatEmpleado_v2, new{@numEmpleado= numEmpleado}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         
         #endregion
 
@@ -590,11 +595,12 @@ namespace InstantRemote.Repositories.Context
         }
         public bool DeleteDiasFestivos(int id)
         {
-            var query = "DELETE FROM catDiasFestivos WHERE idDiaFes = @id";
-            var filasAfectadas = Connection.Execute(query, id, commandType: CommandType.Text);
+            var query = "DELETE FROM catDiasFestivos WHERE idDiaFes = "+id;
+            var filasAfectadas = Connection.Execute(query, commandType: CommandType.Text);
             return filasAfectadas > 0;
         
         }
+        
         public List<DiasFestivosCatalogo> GetDiasFestivos()
         {
             var query = "SELECT idDiaFes, fecha, Descripcion FROM catDiasFestivos order by fecha asc";

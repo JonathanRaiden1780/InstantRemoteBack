@@ -158,6 +158,7 @@
         public const string GetEmpleadosCPermisos = "empleados";
         public const string GetEmpleadosSNPermisos = "empleados/sinPermisos";
         public const string GetMenusPermisos = "menus";
+        public const string GetMenusPermisosEmpleado = "menusEmpleado";
 
         public const string GetEmpleadosCatalogos = "getCatalogo";
         public const string GetEmpleadosCatalogoTelefonos = "telefonos";
