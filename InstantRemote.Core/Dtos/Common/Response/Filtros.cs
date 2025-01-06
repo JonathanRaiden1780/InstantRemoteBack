@@ -328,6 +328,60 @@
         public int actualizacionEmpMasiva { get; set; }
 
     }
+    public class UpdatePermisoEmpleadoReq
+    {
+        public string empleados { get; set; }
+        public string tipoPermiso { get; set; }
+        public string oldPermiso { get; set; }
+        public string secciones { get; set; }
+        public string todoSeccion { get; set; }
+        public string clientes { get; set; }
+        public string sucursales { get; set; }
+        public string todoSucursal { get; set; }
+        public int dashboard { get; set; }
+        public int dispositivos { get; set; }
+        public int empleado { get; set; }
+        public int mapa { get; set; }
+        public int libroAsistencia { get; set; }
+        public int acumuladoAsistencia { get; set; }
+        public int reportAsistencia { get; set; }
+        public int asistenciaEstandar { get; set; }
+        public int ausentismos { get; set; }
+        public int repClientes { get; set; }
+        public int EdoEnrolamiento { get; set; }
+        public int fichaAsistencia { get; set; }
+        public int HoraExtra { get; set; }
+        public int huerfanos { get; set; }
+        public int logAsistencia { get; set; }
+        public int RecordAsis { get; set; }
+        public int RecordAsisAnual { get; set; }
+        public int repApp { get; set; }
+        public int repRetardo { get; set; }
+        public int asignaEmpleado { get; set; }
+        public int cliente { get; set; }
+        public int diasFestivos { get; set; }
+        public int empleadosCat { get; set; }
+        public int horario { get; set; }
+        public int permisos { get; set; }
+        public int sucursal { get; set; }
+        public string eml { get; set; }
+        public int token { get; set; }
+        public int temperatura { get; set; }
+        public int ausenOmision { get; set; }
+        public int asignacionTemporal { get; set; }
+        public int constantes { get; set; }
+        public int autorizaHrasExtras { get; set; }
+        public int solicitaHrasExtras { get; set; }
+        public int bloqueoManualEdit { get; set; }
+        public int matrizAprobacionEdit { get; set; }
+        public int capturaManual { get; set; }
+        public int repHrasExtrasAuto { get; set; }
+        public int repHrasExtrasNoProce { get; set; }
+        public int capturaMasiva { get; set; }
+        public int actualizacionEmpMasiva { get; set; }
+    }
+
+
 
 
     public class EmpleadoPermiso
