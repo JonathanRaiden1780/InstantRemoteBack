@@ -542,7 +542,13 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<MenusEmpleado>(StoreProcedure.sp_GetConfiguracionRepCatEmpleado_v2, new{@numEmpleado= numEmpleado}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
-        
+
+        public bool InsertPermisosEmpleado(InsertPermisosEmpleadoReq permisos)
+        {
+            var response = Connection.Query<bool>(StoreProcedure.sp_InsertPermiso_v2,permisos , commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+
         #endregion
 
         #region empleados
