@@ -330,6 +330,10 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.UpdatePermisosEmpleado(permisos);
         }
 
+        public bool DeletePermisosEmpleado(string numEmpleado)
+        {
+            return UnitOfWork.RepositoryCommon.DeletePermisosEmpleado(numEmpleado);
+        }
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
             return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleadoSearch);

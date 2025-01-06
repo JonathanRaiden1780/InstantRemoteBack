@@ -56,6 +56,7 @@ namespace InstantRemote.Core.Helpers
         public const string sp_GetConfiguracionRepCatEmpleado_v2 = "sp_GetConfiguracionRepCatEmpleado_v2"; 
         public const string sp_InsertPermiso_v2 = "sp_InsertPermiso_v2";
         public const string sp_UpdatePermiso_v2 = "sp_UpdatePermiso_v2";
+        public const string sp_EliminaPermiso = "sp_EliminaPermiso";
 
 
         public const string IR_V2_SP_Get_EmpleadoByTelefono = "IR_V2_SP_Get_EmpleadoByTelefono"; 

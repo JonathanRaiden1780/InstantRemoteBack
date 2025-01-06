@@ -161,6 +161,7 @@
         public const string GetMenusPermisosEmpleado = "menusEmpleado";
         public const string InsertPermisosEmpleado = "add";
         public const string UpdatePermisosEmpleado = "update";
+        public const string DeletePermisosEmpleado = "delete";
 
 
         public const string GetEmpleadosCatalogos = "getCatalogo";
