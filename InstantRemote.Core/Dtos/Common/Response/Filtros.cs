@@ -487,6 +487,26 @@
         public string fecha { get; set; }
         public string Descripcion { get; set; }
     }
+    public class GetSeccionesEmpleadoRes
+    {
+        public int id { get; set; }
+        public string descripcion { get; set; }
+        public int valor { get; set; }
+    }
+    public class GetSucursalEmpleadoClientesReq
+    {
+        public string emplid { get; set; }
+        public string cliente { get; set; }
+        public string sucursales { get; set; }
+    }
+    public class GetSucursalEmpleadoClientesRes
+    {
+        public int id { get; set; }
+        public string site { get; set; }
+        public string sucursal { get; set; }
+        public string cliente { get; set; }
+        public int valor { get; set; }
+    }
     
     
     

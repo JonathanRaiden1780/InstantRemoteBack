@@ -559,6 +559,18 @@ namespace InstantRemote.Repositories.Context
             return response;
         
         }
+        public List<GetSeccionesEmpleadoRes> GetSeccionesEmpleado(string numEmpleado)
+        {
+            var response = Connection.Query<GetSeccionesEmpleadoRes>(StoreProcedure.sp_GetSeccionEmpleados, new { @numEmpleado =numEmpleado} , commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        
+        } 
+        public List<GetSucursalEmpleadoClientesRes> GetSucursalEmpleadoClientes(GetSucursalEmpleadoClientesReq empleado)
+        {
+            var response = Connection.Query<GetSucursalEmpleadoClientesRes>(StoreProcedure.IR_V2_SP_GetSucursalesEmpleadoOneOrMoreClientes, empleado , commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        
+        }
 
         #endregion
 

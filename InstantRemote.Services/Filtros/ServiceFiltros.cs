@@ -334,6 +334,14 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.DeletePermisosEmpleado(numEmpleado);
         }
+        public List<GetSeccionesEmpleadoRes> GetSeccionesEmpleado(string numEmpleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetSeccionesEmpleado(numEmpleado);
+        }
+        public List<GetSucursalEmpleadoClientesRes> GetSucursalEmpleadoClientes(GetSucursalEmpleadoClientesReq empleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetSucursalEmpleadoClientes(empleado);
+        }
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
             return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleadoSearch);
