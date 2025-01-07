@@ -325,9 +325,9 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.InsertPermisosEmpleado(permisos);
         }
-        public bool UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos)
+        public void UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos)
         {
-            return UnitOfWork.RepositoryCommon.UpdatePermisosEmpleado(permisos);
+            UnitOfWork.RepositoryCommon.UpdatePermisosEmpleado(permisos);
         }
 
         public bool DeletePermisosEmpleado(string numEmpleado)

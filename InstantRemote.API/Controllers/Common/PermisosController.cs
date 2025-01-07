@@ -194,8 +194,8 @@ namespace InstantRemote.Api.Controllers.Common
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.UpdatePermisosEmpleado(permisos);
-                result = Ok(response);
+                serviceFactory("IR").ServiceFiltros.UpdatePermisosEmpleado(permisos);
+                result = Ok();
             }
 
             catch (BusinessException busex)
@@ -215,12 +215,12 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
 
-       [HttpPost(Constants.DeletePermisosEmpleado)]
+       [HttpGet(Constants.DeletePermisosEmpleado)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult DeletePermisosEmpleado([FromQuery] string numEmpleado)
+        public ActionResult DeletePermisosEmpleado(string numEmpleado)
         {
 
             ActionResult result;

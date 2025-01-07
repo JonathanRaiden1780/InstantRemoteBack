@@ -548,10 +548,10 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<bool>(StoreProcedure.sp_InsertPermiso_v2,permisos , commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
-        public bool UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos)
+        public void UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos)
         {
-            var response = Connection.Query<bool>(StoreProcedure.sp_UpdatePermiso_v2, permisos , commandType: CommandType.StoredProcedure).FirstOrDefault();
-            return response;
+            Connection.Query(StoreProcedure.sp_UpdatePermiso_v2, permisos , commandType: CommandType.StoredProcedure);
+          
         }
         public bool DeletePermisosEmpleado(string numEmpleado)
         {

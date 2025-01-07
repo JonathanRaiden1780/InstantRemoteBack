@@ -306,7 +306,7 @@
         public int repApp { get; set; }
         public int repRetardo { get; set; }
         public int asignaEmpleado { get; set; }
-        public int cliente { get; set; }
+        public int catCliente { get; set; }
         public int diasFestivos { get; set; }
         public int empleadosCat { get; set; }
         public int horario { get; set; }
@@ -321,8 +321,8 @@
         public int solicitaHrasExtras { get; set; }
         public int bloqueoManual { get; set; }
         public int matrizAprobacion { get; set; }
-        public int hrasExtrasAuto { get; set; }
-        public int hrasExtrasNoProce { get; set; }
+        public int rephrasExtrasAuto { get; set; }
+        public int rephrasExtrasNoProcede { get; set; }
         public int capturaManual { get; set; }
         public int capturaMasiva { get; set; }
         public int actualizacionEmpMasiva { get; set; }
@@ -330,7 +330,7 @@
     }
     public class UpdatePermisoEmpleadoReq
     {
-        public string empleados { get; set; }
+        public string numEmpleado { get; set; }
         public string tipoPermiso { get; set; }
         public string oldPermiso { get; set; }
         public string secciones { get; set; }
@@ -367,14 +367,14 @@
         public string eml { get; set; }
         public int token { get; set; }
         public int temperatura { get; set; }
-        public int ausenOmision { get; set; }
+        public int repausenOmision { get; set; }
         public int asignacionTemporal { get; set; }
         public int constantes { get; set; }
         public int autorizaHrasExtras { get; set; }
         public int solicitaHrasExtras { get; set; }
         public int bloqueoManualEdit { get; set; }
         public int matrizAprobacionEdit { get; set; }
-        public int capturaManual { get; set; }
+        public int repcapturaManual { get; set; }
         public int repHrasExtrasAuto { get; set; }
         public int repHrasExtrasNoProce { get; set; }
         public int capturaMasiva { get; set; }

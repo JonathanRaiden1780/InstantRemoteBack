@@ -39,7 +39,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<MenuPermisosDto> GetMenusPermisos();
         List<MenusEmpleado> GetMenusPermisosEmpleado(string numEmpleado);
         bool InsertPermisosEmpleado(InsertPermisosEmpleadoReq permisos);
-        bool UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos);
+        void UpdatePermisosEmpleado(UpdatePermisoEmpleadoReq permisos);
         bool DeletePermisosEmpleado(string numEmpleado);
         List<GetSeccionesEmpleadoRes> GetSeccionesEmpleado(string numEmpleado);
         List<GetSucursalEmpleadoClientesRes> GetSucursalEmpleadoClientes(GetSucursalEmpleadoClientesReq empleado);
