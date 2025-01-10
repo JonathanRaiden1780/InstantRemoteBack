@@ -18,6 +18,47 @@
         public int id { get; set; }
         public string sucursal { get; set; }
     }
+    public class UpdateSucursalMasive
+    {
+        public int idDeptoSucursal { get; set; }
+        public string colonia { get; set; }
+        public string numInt { get; set; }
+        public string numExt { get; set; }
+        public string cp { get; set; }
+        public float longitud { get; set; }
+        public float latitud { get; set; }
+        public string error { get; set; }
+        public string estado { get; set; }
+        public string municipio { get; set; }
+        public string calle { get; set; }
+        public string idEmpleado { get; set; }
+    }
+    public class GetAllSucursalRes
+    {
+        public string idDeptoSucursal { get; set; }
+        public string nomSucursal { get; set; }
+        public int idCliente { get; set; }
+        public string nomCliente { get; set; }
+        public string calle { get; set; }
+        public int numExt { get; set; }
+        public string numInt { get; set; }
+        public string colonia { get; set; }
+        public int cp { get; set; }
+        public string alcaldia_municipio { get; set; }
+        public string estado { get; set; }
+        public double longitud { get; set; }
+        public double latitud { get; set; }
+        public string fechaAlta { get; set; }
+        public string seccion { get; set; }
+        public string NumSiteNuevo { get; set; }
+        public string NumSiteAnterior { get; set; }
+        public int planAuto { get; set; }
+        public string ZonaHoraria { get; set; }
+        public string origenLlamado { get; set; }
+        public string biometricos { get; set; }
+        public string telefonos { get; set; }
+        public string responsables { get; set; }
+    }
 
     public class GetNivelHorario
     {
@@ -404,6 +445,43 @@
         public bool reportesAdmin { get; set; }
         public bool bloqueoManual { get; set; }
     }
+
+    public class EmpleadosRes
+    {
+        public long numEmpleado { get; set; }
+        public string nomCompleto { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string SERVICIO { get; set; }
+        public string desDepto { get; set; }
+        public int totalAsignado { get; set; }
+        public string status { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+    }
+
+    public class EmpleadosReq
+    {
+        public string emplid { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+        public string empEspecifico { get; set; }
+        public string cliente { get; set; }
+        public string sucursal { get; set; }
+    }
+    
+    public class EmpleadosDetalleRes
+    {
+        public string Cliente { get; set; }
+        public string Alias { get; set; }
+        public string SN { get; set; }
+        public string horaEntrada { get; set; }
+        public string horaSalida { get; set; }
+        public string nombre { get; set; }
+    }
+    
     
     
     public class EmpleadosCatalogo
@@ -507,7 +585,50 @@
         public string cliente { get; set; }
         public int valor { get; set; }
     }
-    
-    
-    
+
+    public class GetHorariosAsignaRes
+    {
+        public int idHorario { get; set; }
+        public string horario { get; set; }
+        public string site { get; set; }
+    }
+    public class GetListaAsignaReq:GetListaAsignaUpReq
+    {
+        public string empleado { get; set; }
+    }
+    public class GetListaAsignaUpReq
+    {
+        public int cliente { get; set; }
+        public int sucursal { get; set; }
+        public string horario { get; set; }
+        public string site { get; set; }
+        public string fechaIni { get; set; }
+        public string fechaFin { get; set; }
+    }
+    public class GetListaAsignaRes
+    {
+        public int numEmpleado { get; set; }
+        public string nomCompleto { get; set; }
+        public string fechaAlta { get; set; }
+        public string numero { get; set; }
+    }
+    public class AsignacionReq
+    {
+        public string numEmpleado { get; set; }
+        public string idCliente { get; set; }
+        public string idSucursal { get; set; }
+        public string idHorario { get; set; }
+        public string site { get; set; }
+        public string fechaIn { get; set; }
+        public string fechaFin { get; set; }
+    }
+    public class AsignacionDelReq
+    {
+        public string numEmpleado { get; set; }
+        public string idCliente { get; set; }
+        public string idSucursal { get; set; }
+        public string idHorario { get; set; }
+        public string fechaIni { get; set; }
+        public string fechaFin { get; set; }
+    }
 }

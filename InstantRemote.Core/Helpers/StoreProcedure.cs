@@ -28,6 +28,8 @@ namespace InstantRemote.Core.Helpers
         public const string sp_EliminaCliente = "sp_EliminaCliente";
         
 
+        public const string sp_updateMasivoSucursalesDomicilioXML = "sp_updateMasivoSucursalesDomicilioXML"; 
+        public const string IR_V2_SP_Get_AllCatalogoSucursales = "IR_V2_SP_Get_AllCatalogoSucursales"; 
         public const string sp_GetSucursalSeccion = "sp_GetSucursalSeccion"; //TODO
         public const string sp_GetCatalogoSucursal = "sp_GetCatalogoSucursal"; //TODO
         public const string sp_GetResponsablesDetalle = "sp_GetResponsablesDetalle"; //TODO
@@ -61,6 +63,8 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_GetSucursalesEmpleadoOneOrMoreClientes = "IR_V2_SP_GetSucursalesEmpleadoOneOrMoreClientes";
 
 
+        public const string IR_V2_RP_Lista_Empleados_V3 = "IR_V2_RP_Lista_Empleados_V3"; 
+        public const string IR_V2_SP_Get_DetalleEmpleado = "IR_V2_SP_Get_DetalleEmpleado"; 
         public const string IR_V2_SP_Get_EmpleadoByTelefono = "IR_V2_SP_Get_EmpleadoByTelefono"; 
         public const string IR_V2_SP_ActualizaCatEmpleado = "IR_V2_SP_ActualizaCatEmpleado"; 
         public const string IR_V2_SP_GetCatEmpleadosEstatus = "IR_V2_SP_GetCatEmpleadosEstatus"; 
@@ -70,8 +74,12 @@ namespace InstantRemote.Core.Helpers
         
         public const string sp_InsertaDiaFestivo = "sp_InsertaDiaFestivo"; 
         
-        
-        
+        public const string IR_V2_SP_Get_Lista_Empleados_Para_Asignar = "IR_V2_SP_Get_Lista_Empleados_Para_Asignar"; 
+        public const string IR_V2_SP_Get_Lista_Empleados_Para_Asignar_Edicion = "IR_V2_SP_Get_Lista_Empleados_Para_Asignar_Edicion"; 
+        public const string IR_V2_SP_Asigna_Empleado_Temporal = "IR_V2_SP_Asigna_Empleado_Temporal"; 
+        public const string IR_V2_SP_Asigna_Empleado_Temporal_Edit = "IR_V2_SP_Asigna_Empleado_Temporal_Edit"; 
+        public const string IR_V2_SP_Desasigna_Empleado_Temporal = "IR_V2_SP_Desasigna_Empleado_Temporal"; 
+
         
 
         public const string sp_GetSucursales = "sp_GetSucursales"; 

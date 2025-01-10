@@ -15,6 +15,8 @@ namespace InstantRemote.Core.Contracts.Services
         bool UpdateCliente(CatalogoClientUpdateeReqDto dataCliente);
         bool DeleteCliente(int idCliente);
         List<GetSucursalesRespDto> GetSucursalList(string clientId);
+        List<GetAllSucursalRes> GetAllSucursales();
+        void UpdateMasivoSucursal(List<UpdateSucursalMasive> sucursales);
         List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente);
         List<GetSucursalesRespDto> GetSucursalSecciones(int emplid, int secciones);
         List<CatalogoSucursaRespDto> GetSucursalCatalogo(int cliente, int sucursal);
@@ -70,6 +72,8 @@ namespace InstantRemote.Core.Contracts.Services
         bool DeleteToken(TokenMod token);
         List<CatalogoTokenDto> GetCatalogoToken(string emplid);
 
+        List<EmpleadosRes> GetEmpleados(EmpleadosReq empleado);
+        List<EmpleadosDetalleRes> GetEmpleadosDetalle(string numEmpleado);
         List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch);
         List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
@@ -79,6 +83,13 @@ namespace InstantRemote.Core.Contracts.Services
         bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha);
         bool UpdateDiasFestivos(DiasFestivosCatalogoUpdate fecha);
         bool DeleteDiasFestivos(int id);
-        
+
+        List<GetHorariosAsignaRes> GetHorariosAsigna(string cliente, string sucursal);
+        List<GetListaAsignaRes> GetListaHorariosAsigna(GetListaAsignaReq asigna);
+        List<GetListaAsignaRes> GetListaHorariosAsignaEdit(GetListaAsignaUpReq asigna);
+        int AddAsignacionTemp(AsignacionReq asigna);
+        int UpdateAsignacionTemp(AsignacionReq asigna);
+        int DeleteAsignacionTemp(AsignacionDelReq asigna);
+
     }
 }

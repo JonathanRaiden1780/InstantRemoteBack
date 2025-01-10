@@ -73,6 +73,7 @@
         public const string Empleados = "Empleados";
         public const string Sucursal = "Sucursal";
         public const string DiasFestivos = "DiasFestivos";
+        public const string AsignaEmpleado = "AsignaEmpleado";
 
         public const string RouteClientes = "common/clientes";
         public const string RouteSecciones = "common/secciones";
@@ -80,6 +81,7 @@
         public const string RouteDiasFestivos = "common/diasFestivos";
         public const string RoutePermisos = "common/permisos";
         public const string RouteEmpleados = "common/empleados";
+        public const string RouteAsigna = "common/asignaEmpleados";
         public const string RouteToken = "common/token";
         public const string RouteServicios = "common/servicios";
         public const string RouteSites = "common/sites";
@@ -100,6 +102,12 @@
         public const string UpdateCliente = "update/cliente";
         public const string DeleteCliente = "delete/cliente";
 
+        public const string GetHorariosAsigna = "horarios";
+        public const string GetAsignacion = "get";
+        public const string GetListaHorariosAsignaEdit = "get/edit";
+        public const string AddAsignacion = "temp/add";
+        public const string UpdateAsignacion = "temp/update";
+        public const string DeleteAsignacion = "temp/delete";
 
 
         public const string GetClienteSeccion = "clientes-seccion";
@@ -108,6 +116,8 @@
         
         public const string GetSucursalesXPermisos = "GetSucursalesXPermisos";
         public const string GetSucursales = "sucursales";
+        public const string GetAllSucursales = "all";
+        public const string UpdateMasivoSucursal = "update/masivo";
         public const string GetSucursalSecciones = "sucursal-seccion";
         public const string GetSucursalCatalogo = "GetSucursalCatalogo";
         public const string GetSitesDetalle = "detalle/site";
@@ -167,6 +177,8 @@
 
 
         public const string GetEmpleadosCatalogos = "getCatalogo";
+        public const string GetEmpleados = "get";
+        public const string GetEmpleadosDetalle = "getDetalle";
         public const string GetEmpleadosCatalogoTelefonos = "telefonos";
         public const string GetEmpleadosCatalogoEstatus = "estatus";
         public const string UpdateEmpleadosCatalogo = "update";

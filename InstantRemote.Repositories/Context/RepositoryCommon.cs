@@ -56,6 +56,16 @@ namespace InstantRemote.Repositories.Context
 
             return Connection.Query<GetSucursalesRespDto>(query, commandType: CommandType.Text).ToList();
         }
+        public List<GetAllSucursalRes> GetAllSucursales()
+        {
+            var response = Connection.Query<GetAllSucursalRes>(StoreProcedure.IR_V2_SP_Get_AllCatalogoSucursales, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
+        public void UpdateMasivoSucursales(string sucursales)
+        {
+            Connection.Query(StoreProcedure.sp_updateMasivoSucursalesDomicilioXML, sucursales, commandType: CommandType.StoredProcedure);
+        }
 
         //dividir el SP listaSucursalesComboBJ si es @clie = '000' seccion
         public List<GetSucursalesRespDto> GetSucursalesSeccion(int emplid, string cliente)
@@ -575,6 +585,18 @@ namespace InstantRemote.Repositories.Context
         #endregion
 
         #region empleados
+        
+        public List<EmpleadosRes> GetEmpleados(EmpleadosReq empleado)
+        {
+            var response = Connection.Query<EmpleadosRes>(StoreProcedure.IR_V2_RP_Lista_Empleados_V3, empleado, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<EmpleadosDetalleRes> GetEmpleadosDetalle(string numEmpleado)
+        {
+            var response = Connection.Query<EmpleadosDetalleRes>(StoreProcedure.IR_V2_SP_Get_DetalleEmpleado, new{ @numEmpleado = numEmpleado,@nombreCliente="",@nombreSucur=""}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
             var response = Connection.Query<EmpleadosCatalogo>(StoreProcedure.IR_V2_SP_GetCatEmpleadosById, new
@@ -638,6 +660,41 @@ namespace InstantRemote.Repositories.Context
         public bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha)
         {
             var response = Connection.Query<bool>(StoreProcedure.sp_InsertaDiaFestivo, fecha, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        #endregion
+
+        #region AsignacionEmpleado
+
+        public List<GetHorariosAsignaRes> GetHorariosAsigna(string cliente, string sucursal)
+        {
+            var query = "select idHorario,nombre as horario,isnull(site, 'Sin site') as site from catHorarioCliente where idCliente=@cliente and idSucursal =@sucursal";
+            return Connection.Query<GetHorariosAsignaRes>(query, new { @cliente = cliente, @sucursal = sucursal }).ToList();
+        }
+        
+        public List<GetListaAsignaRes> GetListaHorariosAsigna(GetListaAsignaReq asigna)
+        {
+            var response = Connection.Query<GetListaAsignaRes>(StoreProcedure.IR_V2_SP_Get_Lista_Empleados_Para_Asignar, asigna, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
+        public List<GetListaAsignaRes> GetListaHorariosAsignaEdit(GetListaAsignaUpReq asigna)
+        {
+            var response = Connection.Query<GetListaAsignaRes>(StoreProcedure.IR_V2_SP_Get_Lista_Empleados_Para_Asignar_Edicion, asigna, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
+        public int AddAsignacionTemp(AsignacionReq asigna)
+        {
+            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal, asigna, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        } 
+        public int UpdateAsignacionTemp(AsignacionReq asigna)
+        {
+            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal_Edit, asigna, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        } 
+        public int DeleteAsignacionTemp(AsignacionDelReq asigna)
+        {
+            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Desasigna_Empleado_Temporal, asigna, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
         #endregion

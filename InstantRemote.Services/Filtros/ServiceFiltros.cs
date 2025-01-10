@@ -85,6 +85,11 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetSucursales(clientId);
         }
 
+        public List<GetAllSucursalRes> GetAllSucursales()
+        {
+            return UnitOfWork.RepositoryCommon.GetAllSucursales();
+
+        }
 
         public List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente)
         {
@@ -185,6 +190,36 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.DeleteSucursal(idSucursal);
 
         }
+        public void UpdateMasivoSucursal(List<UpdateSucursalMasive> sucursales)
+        {
+            List<Dictionary<string, object>> result = new List<Dictionary<string, object>>();
+            StringBuilder xmlBuilder = new StringBuilder();
+            xmlBuilder.Append("<sucursales>");
+
+            foreach (var sucursal in sucursales)
+            {
+                xmlBuilder.Append("<sucursal>");
+                xmlBuilder.AppendFormat("<idDeptoSucursal>{0}</idDeptoSucursal>", sucursal.idDeptoSucursal);
+                xmlBuilder.AppendFormat("<calle>{0}</calle>", sucursal.calle.Trim());
+                xmlBuilder.AppendFormat("<numExt>{0}</numExt>", sucursal.numExt.Trim());
+                xmlBuilder.AppendFormat("<numInt>{0}</numInt>", sucursal.numInt.Trim());
+                xmlBuilder.AppendFormat("<colonia>{0}</colonia>", sucursal.colonia.Trim());
+                xmlBuilder.AppendFormat("<cp>{0}</cp>", sucursal.cp.Trim());
+                xmlBuilder.AppendFormat("<municipio>{0}</municipio>", sucursal.municipio.Trim());
+                xmlBuilder.AppendFormat("<estado>{0}</estado>", sucursal.estado.Trim());
+                xmlBuilder.AppendFormat("<latitud>{0}</latitud>", sucursal.latitud);
+                xmlBuilder.AppendFormat("<longitud>{0}</longitud>", sucursal.longitud);
+                xmlBuilder.AppendFormat("<error>{0}</error>", sucursal.error);
+                xmlBuilder.AppendFormat("<idEmpleado>{0}</idEmpleado>", sucursal.idEmpleado);
+                xmlBuilder.Append("</sucursal>");
+            }
+
+            xmlBuilder.Append("</sucursales>");
+            string sucursalesXML = xmlBuilder.ToString();
+            
+            UnitOfWork.RepositoryCommon.UpdateMasivoSucursales(sucursalesXML);
+        }
+        
 
         public List<TelefonosSucursalN> GetTelefonosbyId(string tel)
         {
@@ -342,6 +377,16 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.GetSucursalEmpleadoClientes(empleado);
         }
+
+
+        public List<EmpleadosRes> GetEmpleados(EmpleadosReq empleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleados(empleado);
+        }
+        public List<EmpleadosDetalleRes> GetEmpleadosDetalle(string empleado)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosDetalle(empleado);
+        }
         public List<EmpleadosCatalogo> GetEmpleadosCatalogos(string numEmpleado, string numEmpleadoSearch)
         {
             return UnitOfWork.RepositoryCommon.GetEmpleadosCatalogos(numEmpleado,numEmpleadoSearch);
@@ -399,5 +444,33 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.DeleteDiasFestivos(id);
         }
+        
+        public List<GetHorariosAsignaRes> GetHorariosAsigna(string  cliente, string sucursal)
+        {
+            return UnitOfWork.RepositoryCommon.GetHorariosAsigna(cliente, sucursal);
+        }
+        public List<GetListaAsignaRes> GetListaHorariosAsigna(GetListaAsignaReq asigna)
+        {
+            return UnitOfWork.RepositoryCommon.GetListaHorariosAsigna(asigna);
+        }
+        public List<GetListaAsignaRes> GetListaHorariosAsignaEdit(GetListaAsignaUpReq asigna)
+        {
+            return UnitOfWork.RepositoryCommon.GetListaHorariosAsignaEdit(asigna);
+        }
+        public int AddAsignacionTemp(AsignacionReq asigna)
+        {
+            return UnitOfWork.RepositoryCommon.AddAsignacionTemp(asigna);
+        }
+        public int UpdateAsignacionTemp(AsignacionReq asigna)
+        {
+            return UnitOfWork.RepositoryCommon.UpdateAsignacionTemp(asigna);
+        }
+        public int DeleteAsignacionTemp(AsignacionDelReq asigna)
+        {
+            return UnitOfWork.RepositoryCommon.DeleteAsignacionTemp(asigna);
+        }
+       
+        
+        
     }
 }
