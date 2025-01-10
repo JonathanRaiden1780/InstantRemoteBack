@@ -78,10 +78,11 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_Get_Lista_Empleados_Para_Asignar_Edicion = "IR_V2_SP_Get_Lista_Empleados_Para_Asignar_Edicion"; 
         public const string IR_V2_SP_Asigna_Empleado_Temporal = "IR_V2_SP_Asigna_Empleado_Temporal"; 
         public const string IR_V2_SP_Asigna_Empleado_Temporal_Edit = "IR_V2_SP_Asigna_Empleado_Temporal_Edit"; 
-        public const string IR_V2_SP_Desasigna_Empleado_Temporal = "IR_V2_SP_Desasigna_Empleado_Temporal"; 
+        public const string IR_V2_SP_Desasigna_Empleado_Temporal = "IR_V2_SP_Desasigna_Empleado_Temporal";
 
+        public const string IR_V2_RP_ConstantesEnrolados = "IR_V2_RP_ConstantesEnrolados"; 
         
-
+        
         public const string sp_GetSucursales = "sp_GetSucursales"; 
         
         

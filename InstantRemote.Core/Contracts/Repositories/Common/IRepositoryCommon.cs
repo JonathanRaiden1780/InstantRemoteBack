@@ -8,7 +8,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetResponsablesRespDto> GetResponsables();
         void InsertBitacoraInstantRemote (BitacoraRequestDto  bitacora);
         List<TelefonosSucursalN> GetTelefonos(int idSucursal, string empleado);
-      
+        List<GetConstEnrolaRsp> GetConstEnrola(int tipo);
         List<GetCatZonaClientesRespDto> GetCatZonaClientes(string emplid, string parameter);
         List<GetCatZonaClientesRespDto> GetClienteSeccion(int emplid);
         List<GetCatZonaClientesRespDto> GetClienteSite(int emplid);

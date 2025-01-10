@@ -151,6 +151,7 @@
         
         
         public const string GetCatalogoHorario = "catalogo";
+        public const string GetConstEnrola = "constantes/enrolado";
         public const string GetTipoHorario = "tipo";
         public const string GetTipoCHorario = "tipo-comida";
         public const string GetNivelHorario = "nivel";

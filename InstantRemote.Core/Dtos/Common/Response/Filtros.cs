@@ -7,6 +7,20 @@
         public string responsable { get; set; }
     }
 
+    public class GetConstEnrolaRsp
+    {
+        public int empleados { get; set; }
+        public string nombre { get; set; }
+        public string site { get; set; }
+        public string BUSINESS_UNIT { get; set; }
+        public string seccion { get; set; }
+        public string division { get; set; }
+        public string fecha { get; set; }
+        public string desc_site { get; set; }
+        public string cliente { get; set; }
+        public string con_check { get; set; }
+    }
+
     public class GetCatZonaClientesRespDto
     {
         public int id { get; set; }

@@ -41,6 +41,15 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public List<GetConstEnrolaRsp> GetConstEnrola (int tipo)
+        {
+            var response = Connection.Query<GetConstEnrolaRsp>(StoreProcedure.IR_V2_RP_ConstantesEnrolados, new
+            {
+                @numEmpleado = "",
+                @tipo = tipo
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         
 
         #region sucursales

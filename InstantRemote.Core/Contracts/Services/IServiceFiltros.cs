@@ -6,6 +6,7 @@ namespace InstantRemote.Core.Contracts.Services
 {
     public interface IServiceFiltros
     {
+        List<GetConstEnrolaRsp> GetConstEnrola(int tipo);
         List<GetResponsablesRespDto> GetResponsables();
         List<GetCatZonaClientesRespDto> GetCatZonaClientes (string emplid);
         List<GetCatZonaClientesRespDto> GetClientesXPermisos(int emplid);
