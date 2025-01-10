@@ -54,14 +54,14 @@ namespace InstantRemote.Api.Controllers.Common
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetAllSucursales()
+        public ActionResult GetAllSucursales(int emplid)
         {
 
             ActionResult result;
             try
             {
                 //listaSucursalesCombo
-                var response = serviceFactory("IR").ServiceFiltros.GetAllSucursales();
+                var response = serviceFactory("IR").ServiceFiltros.GetAllSucursales(emplid);
                 result = Ok(response);
             }
 

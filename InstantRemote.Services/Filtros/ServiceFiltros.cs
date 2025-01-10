@@ -85,9 +85,9 @@ namespace InstantRemote.Services.Filtros
             return UnitOfWork.RepositoryCommon.GetSucursales(clientId);
         }
 
-        public List<GetAllSucursalRes> GetAllSucursales()
+        public List<GetAllSucursalRes> GetAllSucursales(int emplid)
         {
-            return UnitOfWork.RepositoryCommon.GetAllSucursales();
+            return UnitOfWork.RepositoryCommon.GetAllSucursales(emplid);
 
         }
 

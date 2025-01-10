@@ -40,19 +40,19 @@
         public int idCliente { get; set; }
         public string nomCliente { get; set; }
         public string calle { get; set; }
-        public int numExt { get; set; }
+        public string numExt { get; set; }
         public string numInt { get; set; }
         public string colonia { get; set; }
-        public int cp { get; set; }
+        public string cp { get; set; }
         public string alcaldia_municipio { get; set; }
         public string estado { get; set; }
-        public double longitud { get; set; }
-        public double latitud { get; set; }
+        public string longitud { get; set; }
+        public string latitud { get; set; }
         public string fechaAlta { get; set; }
         public string seccion { get; set; }
         public string NumSiteNuevo { get; set; }
         public string NumSiteAnterior { get; set; }
-        public int planAuto { get; set; }
+        public string planAuto { get; set; }
         public string ZonaHoraria { get; set; }
         public string origenLlamado { get; set; }
         public string biometricos { get; set; }

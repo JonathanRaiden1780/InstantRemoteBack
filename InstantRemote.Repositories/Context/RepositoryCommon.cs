@@ -56,9 +56,9 @@ namespace InstantRemote.Repositories.Context
 
             return Connection.Query<GetSucursalesRespDto>(query, commandType: CommandType.Text).ToList();
         }
-        public List<GetAllSucursalRes> GetAllSucursales()
+        public List<GetAllSucursalRes> GetAllSucursales(int emplid)
         {
-            var response = Connection.Query<GetAllSucursalRes>(StoreProcedure.IR_V2_SP_Get_AllCatalogoSucursales, commandType: CommandType.StoredProcedure).ToList();
+            var response = Connection.Query<GetAllSucursalRes>(StoreProcedure.IR_V2_SP_Get_AllCatalogoSucursales,new {emplid= emplid}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
         

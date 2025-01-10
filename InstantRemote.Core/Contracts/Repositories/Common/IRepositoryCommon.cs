@@ -20,7 +20,7 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         bool DeleteCliente(int idCliente);
         
         List<GetSucursalesRespDto> GetSucursales(string parameter);
-        List<GetAllSucursalRes> GetAllSucursales();
+        List<GetAllSucursalRes> GetAllSucursales(int emplid);
         void UpdateMasivoSucursales(string sucursales);
 
         List<GetSucursalesRespDto> GetSucursalesSeccion(int emplid, string cliente);

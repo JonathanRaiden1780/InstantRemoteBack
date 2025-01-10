@@ -15,7 +15,7 @@ namespace InstantRemote.Core.Contracts.Services
         bool UpdateCliente(CatalogoClientUpdateeReqDto dataCliente);
         bool DeleteCliente(int idCliente);
         List<GetSucursalesRespDto> GetSucursalList(string clientId);
-        List<GetAllSucursalRes> GetAllSucursales();
+        List<GetAllSucursalRes> GetAllSucursales(int emplid);
         void UpdateMasivoSucursal(List<UpdateSucursalMasive> sucursales);
         List<GetSucursalesRespDto> GetSucursalesXPermisos(int emplid, string cliente);
         List<GetSucursalesRespDto> GetSucursalSecciones(int emplid, int secciones);
