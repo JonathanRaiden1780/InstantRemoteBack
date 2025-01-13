@@ -81,6 +81,8 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_Desasigna_Empleado_Temporal = "IR_V2_SP_Desasigna_Empleado_Temporal";
 
         public const string IR_V2_RP_ConstantesEnrolados = "IR_V2_RP_ConstantesEnrolados"; 
+        public const string sp_GetDispositivos = "sp_GetDispositivos"; 
+        public const string sp_GetEmpleadosPorDispositivo = "sp_GetEmpleadosPorDispositivo"; 
         
         
         public const string sp_GetSucursales = "sp_GetSucursales"; 

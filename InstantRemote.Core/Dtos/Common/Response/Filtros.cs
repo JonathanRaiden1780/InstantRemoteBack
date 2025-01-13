@@ -20,6 +20,33 @@
         public string cliente { get; set; }
         public string con_check { get; set; }
     }
+    
+    public class GetDispositivosResp
+    {
+        public int idDeptoDispositivo { get; set; }
+        public string nomDispositvo { get; set; }
+        public string numSerie { get; set; }
+        public string estadoConexion { get; set; }
+        public string fechaUltimaConexion { get; set; }
+        public string tipo { get; set; }
+        public string longitud { get; set; }
+        public string latitud { get; set; }
+        public string nomCliente { get; set; }
+        public string nomSucursal { get; set; }
+        public int Empleados { get; set; }
+        public int Huellas { get; set; }
+        public int idTipoDispositivo { get; set; }
+        public int planAuto { get; set; }
+        public int deptId { get; set; }
+    }
+    
+    public class GetDispositivoDetalleResp
+    {
+        public int badgenumber { get; set; }
+        public string name { get; set; }
+        public int enrolado { get; set; }
+        public int cuantashuellas { get; set; }
+    }
 
     public class GetCatZonaClientesRespDto
     {

@@ -22,6 +22,15 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.GetConstEnrola(tipo);
         }
+
+        public List<GetDispositivosResp> GetDispositivos(int emplid)
+        {
+            return UnitOfWork.RepositoryCommon.GetDispositivos(emplid);
+        }
+        public List<GetDispositivoDetalleResp> GetDispositivoDetalle (string serie)
+        {
+            return UnitOfWork.RepositoryCommon.GetDispositivoDetalle(serie);
+        }
         public List<GetCatZonaClientesRespDto> GetCatZonaClientes(string emplid)
         {
             List<GetCatZonaClientesRespDto> response = [];

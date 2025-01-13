@@ -50,6 +50,22 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public List<GetDispositivosResp> GetDispositivos (int emplid)
+        {
+            var response = Connection.Query<GetDispositivosResp>(StoreProcedure.sp_GetDispositivos, new
+            {
+                @emplid = emplid
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetDispositivoDetalleResp> GetDispositivoDetalle (string serie)
+        {
+            var response = Connection.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new
+            {
+                @serie = serie
+            }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         
 
         #region sucursales
