@@ -68,14 +68,26 @@ namespace InstantRemote.Security.Services
                     token += random.Next(0, 10).ToString();
                 }
                 htmlBody = htmlBody.Replace("{userName}", user.name).Replace("{nip}", token);
-                //serviceFactory("IR").ServiceCommon.SendMail(user.mail, subject, htmlBody);
+                serviceFactory("IR").ServiceCommon.SendMail(user.mail, subject, htmlBody);
             }
             return token;
         }
 
         public bool UpdatePassword(ChangePassReqDto newData)
         {
-            return UnitOfWork.RepositoryAuth.UpdatePassword(newData);
+            var response = UnitOfWork.RepositoryAuth.UpdatePassword(newData);
+            if (response)
+            {
+                var user =  UnitOfWork.RepositoryAuth.ValidEmail(newData.UserId);
+                var htmlBody = Utils.PasswordSendTemplate;
+                var subject = "Cambio de contraseña de Instant Remote";
+                if (user != null )
+                {
+                    htmlBody = htmlBody.Replace("{userName}", user.name).Replace("{pass}", newData.Password);
+                    serviceFactory("IR").ServiceCommon.SendMail(user.mail, subject, htmlBody);
+                }
+            }
+            return response;
         }
 
     }
