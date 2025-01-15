@@ -38,8 +38,8 @@ namespace InstantRemote.Repositories.Context
 
         public GetParameter GetParameterByReference(string reference)
         {
-            var query = "SELECT Referencia, Valor FROM [dbo].[parametrosIR] WHERE IsActive = 1 AND  Referencia =" + reference;
-            var respuesta = Connection.Query<GetParameter>(query, commandType: CommandType.Text).FirstOrDefault();
+            var query = "SELECT Referencia, Valor FROM [dbo].[parametrosIR] WHERE IsActive = 1 AND  Referencia = @reference";
+            var respuesta = Connection.Query<GetParameter>(query, new  {@reference= reference},commandType: CommandType.Text).FirstOrDefault();
             return respuesta;
         }
         

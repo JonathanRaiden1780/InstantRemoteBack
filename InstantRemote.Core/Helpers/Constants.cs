@@ -154,6 +154,7 @@
         public const string GetConstEnrola = "constantes/enrolado";
         public const string GetDispositivos = "dispositivos";
         public const string GetDispositivoDetalle = "dispositivos/detalles";
+        public const string GetParameterByReference = "parametros";
         public const string GetTipoHorario = "tipo";
         public const string GetTipoCHorario = "tipo-comida";
         public const string GetNivelHorario = "nivel";
