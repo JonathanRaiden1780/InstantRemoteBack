@@ -32,6 +32,11 @@ namespace InstantRemote.Services.Parameters
             var getParameter = UnitOfWork.RepositoryParameter.GetParameterByReference(reference);
             return getParameter;
         }
+        public bool UpdateParameter(string reference, string value)
+        {
+            var getParameter = UnitOfWork.RepositoryParameter.UpdateParameter(reference, value);
+            return getParameter;
+        }
         
         public List<GetCP> GetCP(int estado, int mun, int col)
         {

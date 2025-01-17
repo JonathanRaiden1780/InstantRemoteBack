@@ -42,7 +42,14 @@ namespace InstantRemote.Repositories.Context
             var respuesta = Connection.Query<GetParameter>(query, new  {@reference= reference},commandType: CommandType.Text).FirstOrDefault();
             return respuesta;
         }
-        
+
+        public bool UpdateParameter(string reference, string value)
+        {
+            var query = "UPDATE [dbo].[parametrosIR] SET Valor = @value WHERE Referencia = @reference";
+            var rowsAffected = Connection.Execute(query, new {reference, value}, commandType: CommandType.Text);
+            return rowsAffected > 0;
+        }
+
         public List<GetEstados> GetEstados()
         {
             var query = "select id_edo,estado from catEstadoSepo";
