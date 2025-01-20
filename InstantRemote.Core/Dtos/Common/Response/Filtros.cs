@@ -672,4 +672,37 @@
         public string fechaIni { get; set; }
         public string fechaFin { get; set; }
     }
+    
+    public class FiltrosReq
+    {
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string cliente { get; set; }
+        public string idSucursal { get; set; }
+        public string emplid { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+    
+    public class LogAsistenciaResp
+    {
+        public int badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string SERVICIO { get; set; }
+        public string grupo_pago { get; set; }
+        public string nomCliente { get; set; }
+        public string nomSucursal { get; set; }
+        public string SN { get; set; }
+        public string fecha_origen { get; set; }
+        public TimeSpan hora_origen { get; set; }
+        public string id_tipo_logeo { get; set; }
+        public string servi { get; set; }
+        public string OrigEmpleado { get; set; }
+        public string suMarcacion { get; set; }
+    }
 }

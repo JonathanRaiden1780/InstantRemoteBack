@@ -87,7 +87,8 @@ namespace InstantRemote.Core.Helpers
         
         public const string sp_GetSucursales = "sp_GetSucursales"; 
         
-        
+        public const string IR_V2_RP_Log_Asistencia = "IR_V2_RP_Log_Asistencia"; 
+
         
 
 

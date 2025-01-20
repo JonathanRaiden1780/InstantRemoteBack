@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using InstantRemote.Services.Parameters;
 using InstantRemote.Services.Filtros;
 using InstantRemote.Services.Common;
+using InstantRemote.Services.Reports;
 
 namespace InstantRemote.Services
 {
@@ -18,6 +19,7 @@ namespace InstantRemote.Services
         private IServiceParameter serviceParameter = null;
         private IServiceFiltros serviceFiltros = null;
         private IServiceCommon serviceCommon = null;
+        private IServiceReports serviceReports = null;
 
 
         public ServiceFactory(IUnitOfWork unitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper, IConfiguration configuration)
@@ -31,5 +33,6 @@ namespace InstantRemote.Services
         public IServiceParameter ServiceParameter => serviceParameter ??= new ServiceParameter(UnitOfWork, serviceFactory, mapper);
         public IServiceFiltros ServiceFiltros => serviceFiltros ??= new ServiceFiltros(UnitOfWork, serviceFactory, mapper);
         public IServiceCommon ServiceCommon => serviceCommon ??= new ServiceCommon(UnitOfWork, serviceFactory, mapper);
+        public IServiceReports ServiceReports => serviceReports ??= new ServiceReports(UnitOfWork, serviceFactory, mapper);
     }
 }

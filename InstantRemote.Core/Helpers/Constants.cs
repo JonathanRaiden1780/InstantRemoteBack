@@ -74,6 +74,7 @@
         public const string Sucursal = "Sucursal";
         public const string DiasFestivos = "DiasFestivos";
         public const string AsignaEmpleado = "AsignaEmpleado";
+        public const string Reports = "Reportes";
 
         public const string RouteClientes = "common/clientes";
         public const string RouteSecciones = "common/secciones";
@@ -82,6 +83,7 @@
         public const string RoutePermisos = "common/permisos";
         public const string RouteEmpleados = "common/empleados";
         public const string RouteAsigna = "common/asignaEmpleados";
+        public const string RouteReports = "common/reportes";
         public const string RouteToken = "common/token";
         public const string RouteServicios = "common/servicios";
         public const string RouteSites = "common/sites";
@@ -188,12 +190,13 @@
         public const string GetEmpleadosCatalogoEstatus = "estatus";
         public const string UpdateEmpleadosCatalogo = "update";
         public const string UpdateMasivoEmpleados = "updateMasivo";
-
         
         public const string GetDiasFestivos = "getCatalogo";
         public const string UpdateDiasFestivos = "update";
         public const string AddDiaFestivo = "add";
         public const string DeleteDiasFestivos = "delete";
+
+        public const string GetLogAsistencia = "logAsistencia";
 
         
         #endregion
