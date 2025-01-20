@@ -705,4 +705,25 @@
         public string OrigEmpleado { get; set; }
         public string suMarcacion { get; set; }
     }
+
+    public class RetardosResp
+    {
+        public int numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string puesto { get; set; }
+        public string nomCliente { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string DeptName { get; set; }
+        public string SN { get; set; }
+        public string horaEntrada { get; set; }
+        public string servi { get; set; }
+        public string tolerancia { get; set; }
+        public string fecha { get; set; }
+        public string chequeo { get; set; }
+        public string horatolerancia { get; set; }
+        public string MINUTOS { get; set; }
+        
+    }
+
 }

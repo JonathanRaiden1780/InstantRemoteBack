@@ -197,6 +197,7 @@
         public const string DeleteDiasFestivos = "delete";
 
         public const string GetLogAsistencia = "logAsistencia";
+        public const string GetRetardos = "retardos";
 
         
         #endregion

@@ -21,6 +21,12 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<LogAsistenciaResp>(StoreProcedure.IR_V2_RP_Log_Asistencia, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
+        public List<RetardosResp> GetRetardos (FiltrosReq filtro)
+        {
+            var result = Connection.Query(StoreProcedure.IR_V2_RP_Retardos_Admin, filtro, commandType: CommandType.StoredProcedure);
+            var response = Connection.Query<RetardosResp>(StoreProcedure.IR_V2_RP_Retardos_Admin, filtro, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
       
     }
 }
