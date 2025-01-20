@@ -5,31 +5,31 @@ using InstantRemote.Core.Contracts.Factories.Common;
 using res = InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Dtos;
 using InstantRemote.Core.Dtos.Common.Request;
-using InstantRemote.Core.Dtos.Common.Response;
 
-namespace InstantRemote.Api.Controllers.Common
+namespace InstantRemote.Api.Controllers.Catalogos
 {
     [ApiController]
     [Produces(Constants.ContentType)]
-    [Route(Constants.RouteAsigna, Name = Constants.AsignaEmpleado)]
-    public class AsignaEmpleadoController : BaseController
+    [Route(Constants.RouteDiasFestivos, Name = Constants.DiasFestivos)]
+    public class DiasFestivosController : BaseController
     {
-        public AsignaEmpleadoController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
+        public DiasFestivosController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
         {
         }
-        
-        [HttpGet(Constants.GetHorariosAsigna)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+
+        [HttpGet(Constants.GetDiasFestivos)]
+        [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetHorariosAsigna(string cliente, string sucursal)
+        public ActionResult GetDiasFestivos()
         {
 
             ActionResult result;
             try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.GetHorariosAsigna(cliente,sucursal);
+            {       
+
+                var response = serviceFactory("IR").ServiceFiltros.GetDiasFestivos();
                 result = Ok(response);
             }
 
@@ -49,19 +49,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-
-        [HttpPost(Constants.GetAsignacion)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+      
+        [HttpPost(Constants.AddDiaFestivo)]
+        [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetListaHorariosAsigna(GetListaAsignaReq  asigna)
+        public ActionResult AddDiaFestivo([FromBody] res.DiasFestivosCatalogoReqAddDto fecha)
         {
 
             ActionResult result;
             try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.GetListaHorariosAsigna(asigna);
+            {       
+
+                var response = serviceFactory("IR").ServiceFiltros.AddDiaFestivo(fecha);
                 result = Ok(response);
             }
 
@@ -81,19 +82,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-
-        [HttpPost(Constants.GetListaHorariosAsignaEdit)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+      
+        [HttpPost(Constants.UpdateDiasFestivos)]
+        [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetListaHorariosAsignaEdit(GetListaAsignaUpReq  asigna)
+        public ActionResult UpdateDiasFestivos([FromBody] res.DiasFestivosCatalogoUpdate fecha)
         {
 
             ActionResult result;
             try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.GetListaHorariosAsignaEdit(asigna);
+            {       
+
+                var response = serviceFactory("IR").ServiceFiltros.UpdateDiasFestivos(fecha);
                 result = Ok(response);
             }
 
@@ -113,19 +115,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-
-        [HttpPost(Constants.AddAsignacion)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+      
+        [HttpGet(Constants.DeleteDiasFestivos)]
+        [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult AddAsignacionTemp(AsignacionReq  asigna)
+        public ActionResult DeleteDiasFestivos(int id)
         {
 
             ActionResult result;
             try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.AddAsignacionTemp(asigna);
+            {       
+
+                var response = serviceFactory("IR").ServiceFiltros.DeleteDiasFestivos(id);
                 result = Ok(response);
             }
 
@@ -145,71 +148,6 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-        
-        [HttpPost(Constants.UpdateAsignacion)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult UpdateAsignacionTemp(AsignacionReq  asigna)
-        {
-
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.UpdateAsignacionTemp(asigna);
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
-            }
-            finally
-            {
-
-            }
-            return result;
-        }
-        
-        [HttpPost(Constants.DeleteAsignacion)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult DeleteAsignacionTemp(AsignacionDelReq  asigna)
-        {
-
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.DeleteAsignacionTemp(asigna);
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
-            }
-            finally
-            {
-
-            }
-            return result;
-        }
-
 
     }
 }

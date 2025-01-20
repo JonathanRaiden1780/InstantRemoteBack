@@ -5,32 +5,31 @@ using InstantRemote.Core.Contracts.Factories.Common;
 using res = InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Dtos;
 using InstantRemote.Core.Dtos.Common.Request;
-using InstantRemote.Core.Dtos.Common.Response;
 
-namespace InstantRemote.Api.Controllers.Common
+namespace InstantRemote.Api.Controllers.Catalogos
 {
     [ApiController]
     [Produces(Constants.ContentType)]
-    [Route(Constants.RoutePermisos, Name = Constants.Permisos)]
-    public class PermisosController : BaseController
+    [Route(Constants.RouteHorarios, Name = Constants.Horarios)]
+    public class HorarioController : BaseController
     {
-        public PermisosController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
+        public HorarioController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
         {
         }
 
-        [HttpGet(Constants.GetEmpleadosCPermisos)]
+        [HttpGet(Constants.GetTipoHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetEmpleadosCPermisos()
+        public ActionResult GetTipoHorario()
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.GetEmpleadosCPermisos();
+                var response = serviceFactory("IR").ServiceFiltros.GetTipoHorario();
                 result = Ok(response);
             }
 
@@ -51,19 +50,19 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
       
-        [HttpGet(Constants.GetEmpleadosSNPermisos)]
+        [HttpGet(Constants.GetTipoCHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetEmpleadosSNPermisos()
+        public ActionResult GetTipoCHorario()
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.GetEmpleadosSNPermisos();
+                var response = serviceFactory("IR").ServiceFiltros.GetTipoCHorario();
                 result = Ok(response);
             }
 
@@ -84,52 +83,19 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.GetMenusPermisos)]
+        [HttpGet(Constants.GetNivelHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetMenusPermisos()
+        public ActionResult GetNivelHorario()
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.GetMenusPermisos();
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
-            }
-            finally
-            {
-
-            }
-            return result;
-        }
-
-        [HttpGet(Constants.GetMenusPermisosEmpleado)]
-        [ProducesResponseType( StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetMenusPermisosEmpleado(string numEmpleado)
-        {
-
-            ActionResult result;
-            try
-            {       
-
-                var response = serviceFactory("IR").ServiceFiltros.GetMenusPermisosEmpleado(numEmpleado);
+                var response = serviceFactory("IR").ServiceFiltros.GetNivelHorario();
                 result = Ok(response);
             }
 
@@ -150,19 +116,19 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpPost(Constants.InsertPermisosEmpleado)]
+        [HttpGet(Constants.GetServicioHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult InsertPermisosEmpleado ([FromBody] InsertPermisosEmpleadoReq permisos)
+        public ActionResult GetServicioHorario()
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.InsertPermisosEmpleado(permisos);
+                var response = serviceFactory("IR").ServiceFiltros.GetServicioHorario();
                 result = Ok(response);
             }
 
@@ -182,52 +148,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-        [HttpPost(Constants.UpdatePermisosEmpleado)]
+        
+        [HttpGet(Constants.GetCatalogoHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult UpdatePermisosEmpleado([FromBody] UpdatePermisoEmpleadoReq permisos)
+        public ActionResult GetCatalogoHorario(int cliente, int idDeptoSucursal)
         {
 
             ActionResult result;
             try
             {       
 
-                serviceFactory("IR").ServiceFiltros.UpdatePermisosEmpleado(permisos);
-                result = Ok();
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
-            }
-            finally
-            {
-
-            }
-            return result;
-        }
-
-       [HttpGet(Constants.DeletePermisosEmpleado)]
-        [ProducesResponseType( StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult DeletePermisosEmpleado(string numEmpleado)
-        {
-
-            ActionResult result;
-            try
-            {       
-
-                var response = serviceFactory("IR").ServiceFiltros.DeletePermisosEmpleado(numEmpleado);
+                var response = serviceFactory("IR").ServiceFiltros.GetCatalogoHorario(cliente,idDeptoSucursal);
                 result = Ok(response);
             }
 
@@ -247,20 +181,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-
-       [HttpGet(Constants.GetSeccionesEmpleado)]
+        
+        [HttpPost(Constants.AddHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetSeccionesEmpleado(string numEmpleado)
+        public ActionResult InsertCatHorario([FromBody] res.InsertaCatHorarioDTO horario)
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.GetSeccionesEmpleado(numEmpleado);
+                var response = serviceFactory("IR").ServiceFiltros.InsertCatHorario(horario);
                 result = Ok(response);
             }
 
@@ -280,23 +214,20 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
-
-       
-                
-    
-        [HttpPost(Constants.GetSucursalEmpleadoClientes)]
+        
+        [HttpPost(Constants.UpdateHorario)]
         [ProducesResponseType( StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetSucursalEmpleadoClientes([FromBody] GetSucursalEmpleadoClientesReq empleado)
+        public ActionResult UpdateHorario([FromBody] res.ActualizaCatHorarioDto horario)
         {
 
             ActionResult result;
             try
             {       
 
-                var response = serviceFactory("IR").ServiceFiltros.GetSucursalEmpleadoClientes(empleado);
+                var response = serviceFactory("IR").ServiceFiltros.ActualizaCatHorario(horario);
                 result = Ok(response);
             }
 
@@ -316,8 +247,40 @@ namespace InstantRemote.Api.Controllers.Common
             }
             return result;
         }
+        
+        [HttpPost(Constants.DeleteHorario)]
+        [ProducesResponseType( StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult DeleteHorario([FromQuery] string horario)
+        {
 
-       
-                
+            ActionResult result;
+            try
+            {       
+
+                var response = serviceFactory("IR").ServiceFiltros.DeleteCatHorario(horario);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { busex.Message }, Url = Redirect404, TrackingCode = trackingCode });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError, new res.CriticalErrorMessageDto { Origin = Constants.OriginService, Message = new[] { ex.ToString() }, TrackingCode = trackingCode });
+            }
+            finally
+            {
+
+            }
+            return result;
+        }
+        
+        
     }
 }

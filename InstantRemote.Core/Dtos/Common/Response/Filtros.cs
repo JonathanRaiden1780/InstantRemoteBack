@@ -685,6 +685,18 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+    public class FiltrosRepReq
+    {
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string idCliente { get; set; }
+        public string idSucursal { get; set; }
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
     
     public class LogAsistenciaResp
     {
@@ -716,12 +728,13 @@
         public string site { get; set; }
         public string DeptName { get; set; }
         public string SN { get; set; }
-        public string horaEntrada { get; set; }
+        public TimeSpan horaEntrada { get; set; }
         public string servi { get; set; }
+        public string SERVICIO { get; set; }
         public string tolerancia { get; set; }
         public string fecha { get; set; }
-        public string chequeo { get; set; }
-        public string horatolerancia { get; set; }
+        public TimeSpan chequeo { get; set; }
+        public TimeSpan horatolerancia { get; set; }
         public string MINUTOS { get; set; }
         
     }

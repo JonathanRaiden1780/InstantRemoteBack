@@ -53,15 +53,25 @@
         public const string GetTokenStatus = "status-token";
 
         #endregion
+        #region Catalogos
+        public const string Catalogs = "catalogos";
+        public const string CatalogsTitle = "Catalogos Manager";
+        public const string SwaggerPathCatalogs = "../swagger/catalogos/swagger.json";
 
-        #region Common
-        public const string Services = "common";
-
-        public const string ServicesTitle = "Services Manager";
-        public const string SwaggerPathServices = "../swagger/common/swagger.json";
-
-        public const string Common = "common";
-        public const string RouteCommon = "common/";
+        
+        public const string RouteCatalogs = "catalogos/";
+        public const string RouteClientes = "catalogos/clientes";
+        public const string RouteSecciones = "catalogos/secciones";
+        public const string RouteHorarios = "catalogos/horarios";
+        public const string RouteDiasFestivos = "catalogos/diasFestivos";
+        public const string RoutePermisos = "catalogos/permisos";
+        public const string RouteEmpleados = "catalogos/empleados";
+        public const string RouteAsigna = "catalogos/asignaEmpleados";
+        public const string RouteReports = "catalogos/reportes";
+        public const string RouteToken = "catalogos/token";
+        public const string RouteServicios = "catalogos/servicios";
+        public const string RouteSites = "catalogos/sites";
+        public const string RouteSucursal = "catalogos/sucursal";
 
         public const string Clientes = "Clientes";
         public const string Servicios = "Servicios";
@@ -74,31 +84,8 @@
         public const string Sucursal = "Sucursal";
         public const string DiasFestivos = "DiasFestivos";
         public const string AsignaEmpleado = "AsignaEmpleado";
-        public const string Reports = "Reportes";
-
-        public const string RouteClientes = "common/clientes";
-        public const string RouteSecciones = "common/secciones";
-        public const string RouteHorarios = "common/horarios";
-        public const string RouteDiasFestivos = "common/diasFestivos";
-        public const string RoutePermisos = "common/permisos";
-        public const string RouteEmpleados = "common/empleados";
-        public const string RouteAsigna = "common/asignaEmpleados";
-        public const string RouteReports = "common/reportes";
-        public const string RouteToken = "common/token";
-        public const string RouteServicios = "common/servicios";
-        public const string RouteSites = "common/sites";
-        public const string RouteSucursal = "common/sucursal";
-            
-        public const string GetReports = "reports";
-        public const string Bitacora = "bitacora";
-        public const string GetEstado = "estados";
-        public const string GetMunicipios = "municipios";
-        public const string GetColonia = "colonia";
-        public const string GetCP = "cp";
-        public const string GetZonaHoraria = "zona-horaria";
-        public const string Reportes = "REPORTES";
-
-        public const string GetCatZonaClientes = "CatZonaClientes";
+        
+         public const string GetCatZonaClientes = "CatZonaClientes";
         public const string GetResponsables = "responsables";
         public const string InsertCliente = "insert/cliente";
         public const string UpdateCliente = "update/cliente";
@@ -196,12 +183,44 @@
         public const string AddDiaFestivo = "add";
         public const string DeleteDiasFestivos = "delete";
 
+        #endregion
+
+        #region Common
+        public const string Services = "common";
+        public const string Filtros = "filtros";
+
+        public const string ServicesTitle = "Services Manager";
+        public const string SwaggerPathServices = "../swagger/common/swagger.json";
+
+        public const string RouteCommon = "common/";
+        public const string RouteFiltro = "filtro/";
+            
+        public const string GetReports = "reports";
+        public const string Bitacora = "bitacora";
+        public const string GetEstado = "estados";
+        public const string GetMunicipios = "municipios";
+        public const string GetColonia = "colonia";
+        public const string GetCP = "cp";
+        public const string GetZonaHoraria = "zona-horaria";
+       
+       
+        
+        #endregion
+
+        #region Reportes
+        public const string Reportes = "REPORTES";
+        public const string Reports = "reportes";
+        public const string SwaggerPathReports = "../swagger/reportes/swagger.json";
+        public const string RouteReportes = "reportes/";
+        public const string ReportesTitle = "Reportes Manager";
+
         public const string GetLogAsistencia = "logAsistencia";
         public const string GetRetardos = "retardos";
 
         
-        #endregion
 
+        #endregion
+        
         #endregion
 
         #region Config api

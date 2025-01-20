@@ -18,7 +18,7 @@ namespace InstantRemote.Services.Reports
             return  UnitOfWork.RepositoryReports.GetLogAsistencia(filtro);
         }
 
-        public List<RetardosResp> GetRetardos(FiltrosReq filtro)
+        public List<RetardosResp> GetRetardos(FiltrosRepReq filtro)
         {
             return UnitOfWork.RepositoryReports.GetRetardos(filtro);
         }

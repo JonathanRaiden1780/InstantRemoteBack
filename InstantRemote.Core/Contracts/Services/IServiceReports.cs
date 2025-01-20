@@ -7,6 +7,6 @@ namespace InstantRemote.Core.Contracts.Services
     public interface IServiceReports
     {
         List<LogAsistenciaResp> GetLogAsistencia(FiltrosReq filtro);
-        List<RetardosResp> GetRetardos(FiltrosReq filtro);
+        List<RetardosResp> GetRetardos(FiltrosRepReq filtro);
     }
 }

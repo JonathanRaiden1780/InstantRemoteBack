@@ -5,7 +5,7 @@ using InstantRemote.Core.Contracts.Factories.Common;
 using res = InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Dtos;
 
-namespace InstantRemote.Api.Controllers.Common
+namespace InstantRemote.Api.Controllers.Catalogos
 {
     [ApiController]
     [Produces(Constants.ContentType)]

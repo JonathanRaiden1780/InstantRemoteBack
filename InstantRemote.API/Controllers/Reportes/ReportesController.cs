@@ -7,11 +7,11 @@ using InstantRemote.Core.Dtos;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Dtos.Common.Response;
 
-namespace InstantRemote.Api.Controllers.Common
+namespace InstantRemote.Api.Controllers.Reportes
 {
     [ApiController]
     [Produces(Constants.ContentType)]
-    [Route(Constants.RouteReports, Name = Constants.Reports)]
+    [Route(Constants.RouteReportes, Name = Constants.Reports)]
     public class ReportesController : BaseController
     {
         public ReportesController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
@@ -20,7 +20,7 @@ namespace InstantRemote.Api.Controllers.Common
 
 
         [HttpPost(Constants.GetLogAsistencia)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<res.LogAsistenciaResp>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
@@ -59,11 +59,11 @@ namespace InstantRemote.Api.Controllers.Common
         }
 
         [HttpPost(Constants.GetRetardos)]
-        [ProducesResponseType(typeof(List<res.GetCatZonaClientesRespDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<res.RetardosResp>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetRetardos(FiltrosReq filtros)
+        public ActionResult GetRetardos(FiltrosRepReq filtros)
         {
             ActionResult result;
             try
