@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IZtzQrcyibw=",
+  "dgSpecHash": "OAkgyus2/t4=",
   "success": true,
-  "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/InstantRemote.API.csproj",
+  "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/InstantRemote.API.csproj",
   "expectedPackageFiles": [
     "/Users/jonathanhuerta/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",

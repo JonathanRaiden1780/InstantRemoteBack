@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xGdPC3AP1Q8=",
+  "dgSpecHash": "jbQ9sQH9qlc=",
   "success": true,
-  "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/InstantRemote.Services.csproj",
+  "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Services/InstantRemote.Services.csproj",
   "expectedPackageFiles": [
     "/Users/jonathanhuerta/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/flurl/4.0.0/flurl.4.0.0.nupkg.sha512",

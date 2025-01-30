@@ -3662,11 +3662,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/InstantRemote.Core.csproj",
+      "projectUniqueName": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/InstantRemote.Core.csproj",
       "projectName": "InstantRemote.Core",
-      "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/InstantRemote.Core.csproj",
+      "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/InstantRemote.Core.csproj",
       "packagesPath": "/Users/jonathanhuerta/.nuget/packages/",
-      "outputPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/",
+      "outputPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonathanhuerta/.nuget/NuGet/NuGet.Config"

@@ -5505,11 +5505,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/InstantRemote.API.csproj",
+      "projectUniqueName": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/InstantRemote.API.csproj",
       "projectName": "InstantRemote.API",
-      "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/InstantRemote.API.csproj",
+      "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/InstantRemote.API.csproj",
       "packagesPath": "/Users/jonathanhuerta/.nuget/packages/",
-      "outputPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/obj/",
+      "outputPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonathanhuerta/.nuget/NuGet/NuGet.Config"
@@ -5524,17 +5524,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/InstantRemote.Core.csproj": {
-              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/InstantRemote.Core.csproj"
+            "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/InstantRemote.Core.csproj": {
+              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/InstantRemote.Core.csproj"
             },
-            "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Repositories/InstantRemote.Repositories.csproj": {
-              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Repositories/InstantRemote.Repositories.csproj"
+            "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Repositories/InstantRemote.Repositories.csproj": {
+              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Repositories/InstantRemote.Repositories.csproj"
             },
-            "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Security/InstantRemote.Security.csproj": {
-              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Security/InstantRemote.Security.csproj"
+            "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Security/InstantRemote.Security.csproj": {
+              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Security/InstantRemote.Security.csproj"
             },
-            "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/InstantRemote.Services.csproj": {
-              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/InstantRemote.Services.csproj"
+            "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Services/InstantRemote.Services.csproj": {
+              "projectPath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Services/InstantRemote.Services.csproj"
             }
           }
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KPV24JXz039LkEz7OZKKU94Ku7f+7H3up8AKGNcezZw=",
+  "Hash": "RNM0gxneoLHxx6RQ66pytD3KtavKulZSxJvh/fbhp3c=",
   "Source": "InstantRemote.API",
   "BasePath": "_content/InstantRemote.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "InstantRemote.API/wwwroot",
       "Source": "InstantRemote.API",
-      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/",
       "BasePath": "_content/InstantRemote.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Identity": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
       "SourceId": "InstantRemote.API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/",
       "BasePath": "_content/InstantRemote.API",
       "RelativePath": "swagger-ui/custom-ui-came#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot/swagger-ui/custom-ui-came.css"
     },
     {
-      "Identity": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "Identity": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
       "SourceId": "InstantRemote.API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/",
       "BasePath": "_content/InstantRemote.API",
       "RelativePath": "swagger-ui/logoInstant#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -62,7 +62,7 @@
   "Endpoints": [
     {
       "Route": "swagger-ui/custom-ui-came.atu305z1xk.css",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -107,7 +107,7 @@
     },
     {
       "Route": "swagger-ui/custom-ui-came.css",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -144,7 +144,7 @@
     },
     {
       "Route": "swagger-ui/logoInstant.png",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -181,7 +181,7 @@
     },
     {
       "Route": "swagger-ui/logoInstant.s7h9x11il8.png",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
