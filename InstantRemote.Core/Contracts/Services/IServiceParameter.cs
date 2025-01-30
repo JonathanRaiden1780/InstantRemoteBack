@@ -1,6 +1,7 @@
 ﻿
 
 using InstantRemote.Core.Dtos.Common.Request;
+using InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.EntitiesStore.Common;
 
 namespace InstantRemote.Core.Contracts.Services
@@ -8,6 +9,8 @@ namespace InstantRemote.Core.Contracts.Services
     public interface IServiceParameter
     {
         void InsertBitacora(BitacoraRequestDto bitacora);
+        List<GetYearResp> GetYears();
+        List<GetWeekResp> GetWeeks (int year);
         List<GetParameter> GetParameterByGroup(string group);
         GetParameter GetParameter(ParameterDto parameter);
         GetParameter GetParameterByReference(string reference);

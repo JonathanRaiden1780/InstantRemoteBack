@@ -2,6 +2,7 @@
 using InstantRemote.Core.Contracts.Factories.Common;
 using InstantRemote.Core.Contracts.Services;
 using InstantRemote.Core.Dtos.Common.Request;
+using InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.EntitiesStore.Common;
 
 namespace InstantRemote.Services.Parameters
@@ -14,6 +15,15 @@ namespace InstantRemote.Services.Parameters
         public void InsertBitacora(BitacoraRequestDto bitacora)
         {
             UnitOfWork.RepositoryCommon.InsertBitacoraInstantRemote(bitacora);
+        }
+
+        public List<GetYearResp> GetYears()
+        {
+            return UnitOfWork.RepositoryCommon.GetYears();
+        }
+        public List<GetWeekResp> GetWeeks (int year)
+        {
+            return UnitOfWork.RepositoryCommon.GetWeeks(year);
         }
 
         public List<GetParameter> GetParameterByGroup(string group)

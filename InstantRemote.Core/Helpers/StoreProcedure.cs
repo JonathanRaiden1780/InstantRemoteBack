@@ -89,6 +89,13 @@ namespace InstantRemote.Core.Helpers
         
         public const string IR_V2_RP_Log_Asistencia = "IR_V2_RP_Log_Asistencia"; 
         public const string IR_V2_RP_Retardos_Admin = "IR_V2_RP_Retardos_Admin"; 
+        public const string IR_V2_RP_Huerfanos = "IR_V2_RP_Huerfanos"; 
+        public const string sp_ReporteCliente = "sp_ReporteCliente"; 
+        public const string IR_V2_RP_Enrolados = "IR_V2_RP_Enrolados"; 
+        
+        
+        
+        public const string sp_GetCalendariosHorasExtras = "sp_GetCalendariosHorasExtras"; 
 
         
 

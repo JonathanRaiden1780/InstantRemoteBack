@@ -22,5 +22,14 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetRetardos(filtro);
         }
+        public List<HuerfanosResp> GetHuerfanos (FiltroHuerfanos filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetHuerfanos(filtro);
+        }
+
+        public List<GetReportesClientes> GetReportClientes(int emplid)
+        {
+            return UnitOfWork.RepositoryReports.GetReportClientes(emplid);
+        }
     }
 }

@@ -6,6 +6,8 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
     {
         List<LogAsistenciaResp> GetLogAsistencia(FiltrosReq filtro);
         List<RetardosResp> GetRetardos(FiltrosRepReq filtro);
+        List<HuerfanosResp> GetHuerfanos(FiltroHuerfanos filtro);
+        List<GetReportesClientes> GetReportClientes(int emplid);
 
     }
 }

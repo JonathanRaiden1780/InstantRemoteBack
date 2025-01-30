@@ -6,6 +6,8 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
     public interface IRepositoryCommon
     {
         List<GetResponsablesRespDto> GetResponsables();
+        List<GetYearResp> GetYears();
+        List<GetWeekResp> GetWeeks (int year);
         void InsertBitacoraInstantRemote (BitacoraRequestDto  bitacora);
         List<TelefonosSucursalN> GetTelefonos(int idSucursal, string empleado);
         List<GetConstEnrolaRsp> GetConstEnrola(int tipo);

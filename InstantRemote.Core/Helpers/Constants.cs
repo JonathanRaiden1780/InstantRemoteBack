@@ -198,6 +198,8 @@
         public const string GetReports = "reports";
         public const string Bitacora = "bitacora";
         public const string GetEstado = "estados";
+        public const string GetYears = "years";
+        public const string GetWeeks = "weeks";
         public const string GetMunicipios = "municipios";
         public const string GetColonia = "colonia";
         public const string GetCP = "cp";
@@ -216,6 +218,8 @@
 
         public const string GetLogAsistencia = "logAsistencia";
         public const string GetRetardos = "retardos";
+        public const string GetHuerfanos = "huerfanos";
+        public const string GetReportClientes = "clientes";
 
         
 

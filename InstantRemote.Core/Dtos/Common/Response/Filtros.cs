@@ -53,6 +53,19 @@
         public int id { get; set; }
         public string cliente { get; set; }
     }
+  
+    public class GetWeekResp
+    {
+        public int idc { get; set; }
+        public string calendario { get; set; }
+    }
+      public class GetYearResp
+    {
+        public int id { get; set; }
+        public string year { get; set; }
+    }
+    
+    
 
     public class GetSucursalesRespDto
     {
@@ -673,10 +686,38 @@
         public string fechaFin { get; set; }
     }
     
-    public class FiltrosReq
+    public class FiltroCommon
     {
         public string fechaini { get; set; }
         public string fechafin { get; set; }
+    }
+    public class FiltroHuerfanos
+    {
+        public string fechaHu { get; set; }
+        public string fechaHufin { get; set; }
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+        public string idSucursal { get; set; }
+        public string idCliente { get; set; }
+
+    }
+    public class FiltroEdoEnrola
+    {
+        public string empleado { get; set; }
+        public string cliente { get; set; }
+        public string idDeptoSucursal { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+    
+    public class FiltrosReq :FiltroCommon
+    {
+       
         public string cliente { get; set; }
         public string idSucursal { get; set; }
         public string emplid { get; set; }
@@ -685,16 +726,15 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
-    public class FiltrosRepReq
+    public class FiltrosRepReq: FiltroCommon
     {
-        public string fechaini { get; set; }
-        public string fechafin { get; set; }
+     
         public string idCliente { get; set; }
         public string idSucursal { get; set; }
-        public string empleado { get; set; }
-        public string empleadoEspecifico { get; set; }
-        public string seccionVarchar { get; set; }
+       public string seccionVarchar { get; set; }
         public string siteVarchar { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string empleado { get; set; }
         public string servicioVarchar { get; set; }
     }
     
@@ -737,6 +777,43 @@
         public TimeSpan horatolerancia { get; set; }
         public string MINUTOS { get; set; }
         
+    }
+ public class HuerfanosResp
+    {
+      
+        public string numeroEmpleado {get; set;}
+        public string nombre {get; set;}
+        public string puesto {get; set;}
+        public string fechaAlta {get; set;}
+        public string fechaBaja {get; set;}
+        public string seccion {get; set;}
+        public string PosicionOrigen {get; set;}
+        public string site {get; set;}
+        public string desDepto {get; set;}
+        public string SERVICIO {get; set;}
+        public string shift {get; set;}
+        public string telefono {get; set;}
+        public string FECHA {get; set;}
+        public string HORA {get; set;}
+        public string estado {get; set;}
+        public string mensaje {get; set;}
+    }
+
+    public class GetReportesClientes
+    {
+        public int idDeptoSucursal {get; set;}
+        public string nomSucursal {get; set;}
+        public string nomCliente {get; set;}
+        public string responsable {get; set;}
+        public string calle {get; set;}
+        public string colonia {get; set;}
+        public string numInt {get; set;}
+        public string numExt {get; set;}
+        public string CP {get; set;}
+        public string NumSite {get; set;}
+        public string SN {get; set;}
+        public string zonHoraria {get; set;}
+
     }
 
 }

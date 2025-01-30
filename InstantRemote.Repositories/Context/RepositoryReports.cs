@@ -17,16 +17,29 @@ namespace InstantRemote.Repositories.Context
         
         public List<LogAsistenciaResp> GetLogAsistencia (FiltrosReq filtro)
         {
-            var result = Connection.Query(StoreProcedure.IR_V2_RP_Log_Asistencia, filtro, commandType: CommandType.StoredProcedure);
             var response = Connection.Query<LogAsistenciaResp>(StoreProcedure.IR_V2_RP_Log_Asistencia, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
         public List<RetardosResp> GetRetardos (FiltrosRepReq filtro)
         {
-            var result = Connection.Query(StoreProcedure.IR_V2_RP_Retardos_Admin, filtro, commandType: CommandType.StoredProcedure);
             var response = Connection.Query<RetardosResp>(StoreProcedure.IR_V2_RP_Retardos_Admin, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
+        public List<HuerfanosResp> GetHuerfanos (FiltroHuerfanos filtro)
+        {
+            var response = Connection.Query<HuerfanosResp>(StoreProcedure.IR_V2_RP_Huerfanos, filtro, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
+        public List<GetReportesClientes> GetReportClientes (int emplid)
+        {
+            var response = Connection.Query<GetReportesClientes>(StoreProcedure.sp_ReporteCliente, new{emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
+        /*public List<GetReportesClientes> GetReportClientess (int emplid)
+        {
+            var response = Connection.Query<GetReportesClientes>(StoreProcedure.IR_V2_RP_Enrolados, new{emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } */
       
     }
 }
