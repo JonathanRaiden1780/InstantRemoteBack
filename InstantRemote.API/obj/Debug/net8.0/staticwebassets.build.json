@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "KPV24JXz039LkEz7OZKKU94Ku7f+7H3up8AKGNcezZw=",
+  "Source": "InstantRemote.API",
+  "BasePath": "_content/InstantRemote.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "InstantRemote.API/wwwroot",
+      "Source": "InstantRemote.API",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "BasePath": "_content/InstantRemote.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "SourceId": "InstantRemote.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "BasePath": "_content/InstantRemote.API",
+      "RelativePath": "swagger-ui/custom-ui-came#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "atu305z1xk",
+      "Integrity": "vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/swagger-ui/custom-ui-came.css"
+    },
+    {
+      "Identity": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "SourceId": "InstantRemote.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/",
+      "BasePath": "_content/InstantRemote.API",
+      "RelativePath": "swagger-ui/logoInstant#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s7h9x11il8",
+      "Integrity": "mEuMs3cDk6DSnAdJt2PJQu8CqZhLySjO/A2Xs76115c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/swagger-ui/logoInstant.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "swagger-ui/custom-ui-came.atu305z1xk.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "atu305z1xk"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger-ui/custom-ui-came.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4="
+        }
+      ]
+    },
+    {
+      "Route": "swagger-ui/custom-ui-came.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4="
+        }
+      ]
+    },
+    {
+      "Route": "swagger-ui/logoInstant.png",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2895"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEuMs3cDk6DSnAdJt2PJQu8CqZhLySjO/A2Xs76115c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mEuMs3cDk6DSnAdJt2PJQu8CqZhLySjO/A2Xs76115c="
+        }
+      ]
+    },
+    {
+      "Route": "swagger-ui/logoInstant.s7h9x11il8.png",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2895"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mEuMs3cDk6DSnAdJt2PJQu8CqZhLySjO/A2Xs76115c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s7h9x11il8"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger-ui/logoInstant.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mEuMs3cDk6DSnAdJt2PJQu8CqZhLySjO/A2Xs76115c="
+        }
+      ]
+    }
+  ]
+}

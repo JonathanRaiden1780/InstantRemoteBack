@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InstantRemote.API</name>
+    </assembly>
+    <members>
+        <member name="M:InstantRemote.Api.Controllers.security.AuthController.SendTokenVerify(System.Int32)">
+            <summary>
+            Enviar token para cambiar contraseña
+            </summary>
+            <param name="emplid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InstantRemote.Api.Controllers.security.AuthController.UpdatePassword(InstantRemote.Core.Dtos.Common.Request.ChangePassReqDto)">
+            <summary>
+            Actualiza contraseña
+            </summary>
+            <param name="newData"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

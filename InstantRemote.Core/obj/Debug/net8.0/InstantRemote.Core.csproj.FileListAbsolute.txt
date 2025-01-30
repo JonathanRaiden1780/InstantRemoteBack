@@ -1,0 +1,16 @@
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/bin/Debug/net8.0/InstantRemote.Core.deps.json
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/bin/Debug/net8.0/InstantRemote.Core.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/bin/Debug/net8.0/InstantRemote.Core.pdb
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.csproj.AssemblyReference.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.Messages.MessagesDataAnnotations.resources
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.Messages.MessageServices.resources
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.csproj.GenerateResource.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.AssemblyInfoInputs.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.AssemblyInfo.cs
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.csproj.CoreCompileInputs.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.sourcelink.json
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/refint/InstantRemote.Core.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/InstantRemote.Core.pdb
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Core/obj/Debug/net8.0/ref/InstantRemote.Core.dll

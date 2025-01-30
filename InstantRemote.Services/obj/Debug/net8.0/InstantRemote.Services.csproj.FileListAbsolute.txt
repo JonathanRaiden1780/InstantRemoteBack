@@ -1,0 +1,16 @@
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/bin/Debug/net8.0/InstantRemote.Services.deps.json
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/bin/Debug/net8.0/InstantRemote.Services.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/bin/Debug/net8.0/InstantRemote.Services.pdb
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/bin/Debug/net8.0/InstantRemote.Core.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/bin/Debug/net8.0/InstantRemote.Core.pdb
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.csproj.AssemblyReference.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.AssemblyInfoInputs.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.AssemblyInfo.cs
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.csproj.CoreCompileInputs.cache
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.sourcelink.json
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantR.206B65B3.Up2Date
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/refint/InstantRemote.Services.dll
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/InstantRemote.Services.pdb
+/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.Services/obj/Debug/net8.0/ref/InstantRemote.Services.dll

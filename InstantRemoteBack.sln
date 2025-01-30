@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantRemote.API", "InstantRemote.API\InstantRemote.API.csproj", "{FFE581C7-2A89-424D-A6A0-9905C0C469DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantRemote.Security", "InstantRemote.Security\InstantRemote.Security.csproj", "{41C8CBB6-3EC0-403F-B453-5B76B4FB318C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantRemote.Repositories", "InstantRemote.Repositories\InstantRemote.Repositories.csproj", "{9DE1586E-0265-435E-A0DF-46EE63978282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantRemote.Core", "InstantRemote.Core\InstantRemote.Core.csproj", "{137928AB-4890-47E4-A0CA-026448DBB443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantRemote.Services", "InstantRemote.Services\InstantRemote.Services.csproj", "{08708BB6-C8BF-4896-9174-2203AC66F429}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE581C7-2A89-424D-A6A0-9905C0C469DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE581C7-2A89-424D-A6A0-9905C0C469DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE581C7-2A89-424D-A6A0-9905C0C469DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE581C7-2A89-424D-A6A0-9905C0C469DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C8CBB6-3EC0-403F-B453-5B76B4FB318C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C8CBB6-3EC0-403F-B453-5B76B4FB318C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C8CBB6-3EC0-403F-B453-5B76B4FB318C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C8CBB6-3EC0-403F-B453-5B76B4FB318C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE1586E-0265-435E-A0DF-46EE63978282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE1586E-0265-435E-A0DF-46EE63978282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE1586E-0265-435E-A0DF-46EE63978282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE1586E-0265-435E-A0DF-46EE63978282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137928AB-4890-47E4-A0CA-026448DBB443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137928AB-4890-47E4-A0CA-026448DBB443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137928AB-4890-47E4-A0CA-026448DBB443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137928AB-4890-47E4-A0CA-026448DBB443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08708BB6-C8BF-4896-9174-2203AC66F429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08708BB6-C8BF-4896-9174-2203AC66F429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08708BB6-C8BF-4896-9174-2203AC66F429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08708BB6-C8BF-4896-9174-2203AC66F429}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

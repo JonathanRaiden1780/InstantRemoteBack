@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "PackagePath": "staticwebassets/swagger-ui/custom-ui-came.css"
+    },
+    {
+      "Id": "/Users/jonathanhuerta/DEV/Dayta/InstantRemoteBack/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
+      "PackagePath": "staticwebassets/swagger-ui/logoInstant.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.InstantRemote.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.InstantRemote.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.InstantRemote.API.props",
+      "PackagePath": "build\\InstantRemote.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.InstantRemote.API.props",
+      "PackagePath": "buildMultiTargeting\\InstantRemote.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.InstantRemote.API.props",
+      "PackagePath": "buildTransitive\\InstantRemote.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
