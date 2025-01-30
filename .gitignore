@@ -482,4 +482,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 InstantRemote.API/bin/
-InstantRemote.API/obj/
+InstantRemote.API/obj
