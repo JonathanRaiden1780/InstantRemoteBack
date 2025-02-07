@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\custom-ui.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"atu305z1xk"},{"Name":"integrity","Value":"sha256-vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4="},{"Name":"label","Value":"_content/InstantRemote.API/swagger-ui/custom-ui.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54089"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 21 Dec 2024 16:22:00 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54089"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Feb 2025 20:42:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/InstantRemote.API/swagger-ui/custom-ui.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\custom-ui.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"54089"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 21 Dec 2024 16:22:00 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"54089"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 07 Feb 2025 20:42:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/InstantRemote.API/swagger-ui/logoInstant.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\swagger-ui\logoInstant.png'))</AssetFile>

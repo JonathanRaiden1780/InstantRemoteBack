@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y9r+sQL43MHVmaLcbLKVDbEzZk5Zw7gZacv8WALc434=",
+  "Hash": "HP5DGRLe/ThawxWM6O3XII2bMsG56c34y0U6azHi9p8=",
   "Source": "InstantRemote.API",
   "BasePath": "_content/InstantRemote.API",
   "Mode": "Default",
@@ -83,7 +83,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+          "Value": "Fri, 07 Feb 2025 20:42:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -128,7 +128,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Dec 2024 16:22:00 GMT"
+          "Value": "Fri, 07 Feb 2025 20:42:34 GMT"
         },
         {
           "Name": "Cache-Control",
