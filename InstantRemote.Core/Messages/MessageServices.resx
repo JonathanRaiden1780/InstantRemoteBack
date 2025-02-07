@@ -120,62 +120,21 @@
   <data name="BadHeaders" xml:space="preserve">
     <value>Bad headers</value>
   </data>
-  <data name="CommentsCore" xml:space="preserve">
-    <value>Cancelación por usuario</value>
-  </data>
-  <data name="CreateInvestmentAccountBalanceNotFound" xml:space="preserve">
-    <value>An error ocurred: Balance not found</value>
-  </data>
-  <data name="CreateInvestmentAccountInsufficientFunds" xml:space="preserve">
-    <value>An error ocurred: Insufficient funds</value>
-  </data>
-  <data name="CreateInvestmentAccountSavingsAccountNotFound" xml:space="preserve">
-    <value>An error ocurred: Savings account not found</value>
-  </data>
-  <data name="EndTask" xml:space="preserve">
-    <value>Fin Tarea cancelación autómatica solicitud de crédito, cancelados {0}</value>
-  </data>
   <data name="InvalidProcess" xml:space="preserve">
     <value>Invalid Process</value>
   </data>
   <data name="InvalidRequest" xml:space="preserve">
     <value>Invalid request</value>
   </data>
-  <data name="KOCoreBank" xml:space="preserve">
-    <value>An error ocurred: ServiceCore no content </value>
-  </data>
-  <data name="KODigipro" xml:space="preserve">
-    <value>An error ocuured: ServiceDigiPro in confilct </value>
-  </data>
-  <data name="KOOnsigna" xml:space="preserve">
-    <value>Error al hacer el depósito</value>
-  </data>
   <data name="KOResponseGenerate" xml:space="preserve">
     <value>KO</value>
-  </data>
-  <data name="KOResponseGetAddress" xml:space="preserve">
-    <value>An error ocurred: no register one address for user given</value>
-  </data>
-  <data name="KOResponseSignIn" xml:space="preserve">
-    <value>An error ocurred: EXPIRED_SEED</value>
   </data>
   <data name="KOResponseSignInNull" xml:space="preserve">
     <value>An error ocurred: empty user by entered parameters</value>
   </data>
-  <data name="KOResponseTeChreo" xml:space="preserve">
-    <value>KO</value>
-  </data>
-  <data name="KOSalesForce" xml:space="preserve">
-    <value>An error ocurred: Service Salesforce in conflict</value>
-  </data>
-  <data name="NotFoundInsuranceRequest" xml:space="preserve">
-    <value>No se encontró la solicitud del seguro</value>
-  </data>
+ 
   <data name="NotFoundPerson" xml:space="preserve">
     <value>No se encontró el cliente</value>
-  </data>
-  <data name="NotFountLoan" xml:space="preserve">
-    <value>No se encontro la cuenta</value>
   </data>
   <data name="OkResponseGenerate" xml:space="preserve">
     <value>SESSION_IN</value>
@@ -183,22 +142,5 @@
   <data name="OKResponseGenerate204" xml:space="preserve">
     <value>An error ocurred: process complete user not found</value>
   </data>
-  <data name="OKResponseTeChreo" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="PendingRequest" xml:space="preserve">
-    <value>Ya tiene un crédito activo</value>
-  </data>
-  <data name="ScudServiceErrorSearchRequest" xml:space="preserve">
-    <value>An error occurred: search_request_scud</value>
-  </data>
-  <data name="ScudServiceErrorUniqueCustomer" xml:space="preserve">
-    <value>An error occurred: invalid_unique_customer_scud</value>
-  </data>
-  <data name="StartTask" xml:space="preserve">
-    <value>Inicio Tarea cancelación autómatica solicitud de crédito</value>
-  </data>
-  <data name="WithoutActiveLoan" xml:space="preserve">
-    <value>Without active loan</value>
-  </data>
+
 </root>

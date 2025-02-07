@@ -19,7 +19,7 @@
         "SecurityManagerKey": "PuCOFRi$e=lVI4H3&hAb*Aw94+8a2l!?S"
       }
     },
-    "IntegrationService.Api": {
+    "InstantRemote.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

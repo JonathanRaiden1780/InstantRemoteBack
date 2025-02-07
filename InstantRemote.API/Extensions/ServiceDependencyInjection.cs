@@ -22,7 +22,6 @@ namespace InstantRemote.Api.Extensions
             services.AddServiceAuthApi();
             services.AddAutoMap();
             services.DependencyInjection();
-            //services.HostedService();
             services.AddServiceFactories();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();

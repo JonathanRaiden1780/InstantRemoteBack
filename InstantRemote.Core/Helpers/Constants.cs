@@ -3,7 +3,7 @@
     public static class Constants
     {
         #region StartUp
-        public const string AppNombre = "IntegrationService";
+        public const string AppNombre = "InstantRemote";
         public const string BDControl = "BDControl";
         public const string OriginsPolicy = "OriginsPolicy";
         public const string CustomSwaggerUi = "custom-swagger-ui";
@@ -37,10 +37,6 @@
 
         public const string Authentication = "Authentication";
         public const string SignIn = "signin";
-        public const string TchAccessControl = "tks-tch-access-control";
-        public const string UserAccessControl = "user-access-control";
-        public const string GenerateRedirect = "generate-redirect";
-        public const string IdentityTransfer = "identity-transfer";
         public const string QueryProductId = "productId";
         public const string Encrypt = "encrypt";
         public const string EnvironmentVariable = "environment-variable";

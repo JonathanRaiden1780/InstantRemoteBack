@@ -10,7 +10,7 @@ namespace InstantRemote.Api.SampleSwagger.Response.Security
 
             return new SignInDto
             {
-                Url = "https://came.techreo.com.mx/custom-redirect?seed=06e9dbcecdcf4960",
+                Url = "",
                 Message = "OK"
             };
         }
