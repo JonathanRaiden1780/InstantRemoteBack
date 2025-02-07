@@ -9,8 +9,6 @@ namespace InstantRemote.Core.Dtos.Common.Response
         [Required]
         public string Message { get; set; }
         [Required]
-        public string Seed { get; set; }
-        [Required]
         public long Ticks { get; set; }
     }
 }

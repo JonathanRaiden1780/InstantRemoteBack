@@ -35,11 +35,16 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetReportesClientes>(StoreProcedure.sp_ReporteCliente, new{emplid}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
-        /*public List<GetReportesClientes> GetReportClientess (int emplid)
+        public List<GetReportesEnrolados> GetReportEdoEnrola (FiltroEdoEnrola filtro)
         {
-            var response = Connection.Query<GetReportesClientes>(StoreProcedure.IR_V2_RP_Enrolados, new{emplid}, commandType: CommandType.StoredProcedure).ToList();
+            var responses = Connection.Query<GetReportesEnrolados>(StoreProcedure.IR_V2_RP_Enrolados_filtro, filtro, commandType: CommandType.StoredProcedure).ToList();
+            return responses;
+        } 
+        public List<GetReportesHrsExtras> GetReportHrsExtra (FiltroHrsExtra filtro)
+        {
+            var response = Connection.Query<GetReportesHrsExtras>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_Extras, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
-        } */
+        } 
       
     }
 }

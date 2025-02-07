@@ -22,7 +22,7 @@ namespace InstantRemote.Security.Services
             TokenRespDto response = new TokenRespDto(); 
             var userData = UnitOfWork.RepositoryAuth.Login(singIn);
             if (userData is null)
-                throw new BusinessException(MessageServices.KOResponseSignInNull);
+                throw new BusinessException(MessageServices.NotFoundPerson);
 
             var token = JwtConfig.ObtenerToken(singIn.Username, SecretKey, expiracionMinutos);
             response.User = userData;

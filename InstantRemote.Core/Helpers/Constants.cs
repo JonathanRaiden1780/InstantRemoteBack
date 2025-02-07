@@ -8,7 +8,6 @@
         public const string OriginsPolicy = "OriginsPolicy";
         public const string CustomSwaggerUi = "custom-swagger-ui";
         public const string VirtualDirectory = "VirtualDirectory";
-        public const int CoreId = 1;
         public const string Bearer = "Bearer";
         public const string BearerSpace = "Bearer ";
         public const string ExpirationMinutes = "JwtConfig:ExpiracionMinutos";
@@ -220,6 +219,8 @@
         public const string GetRetardos = "retardos";
         public const string GetHuerfanos = "huerfanos";
         public const string GetReportClientes = "clientes";
+        public const string GetReportHorasExtras = "horasExtras";
+        public const string GetReportEdoEnrola = "estadoEnrolamiento";
 
         
 
@@ -257,54 +258,15 @@
 
         #region globase
 
-        public const string CMEMBU = "CMEMBU";
-        public const string SICPalnegocio = "SICPalnegocio";
-        public const string Techreo = "Techreo";
-        public const string Freedom = "TechreoApp";
-        public const string ProductosPalNegocio = "palnegocio";
-        public const string ProductosPalNegocioM = "palnegocio_m";
-        public const string CancellationType = "Cliente";
-        public const string Fee01 = "SEG_01";
-        public const string Fee02 = "RET_01";
-        public const string TypeProductMambuPalN = "PALNEGOCIO_M";
-        public const string TypeProductMambuPLCS = "PA_LA_CASA";
-        public const string TypeProductMambuPLNC = "PALQ_TRABAJA";
-        public const string Empresa = "CME";
-
-        public const string ContratoConfigPALACASA = "DOCUMENTS_SERVICE_CONFIG_PALACASA";
-        public const string ContratoConfigPALENCA = "DOCUMENTS_SERVICE_CONFIG_PalqueTrabaja";
-        public const string ContratoConfigPALN = "DOCUMENTS_SERVICE_CONFIG";
-
-        public const string OriginService = "Integration Service";
+        public const string OriginService = "Instant Remote Service";
         public const string InternalServerError = "Internal server error";
         public const string ReferenceVirtualDirectory = "VirtualDirectory";
         public const string ReferenceRootPath = "RootPath";
-        public const string DataProtectorKey = "Wr?d!*NIcre4R#blSp?kDAv$Dex_FusplC6UPruw";
-        public const string InterpolacionCode = "{codigo}";
-        public const string InterpolacionEmail = "{Email}";
-        public const string FromFileImage = "FromFileImage";
-        public const string FromFileVideo = "FromFileVideo";
-        public const string Image = "image";
-        public const string MP4 = "mp4";
-        public const string InvalidSizeImage600 = "InvalidSizeImage600";
-        public const int MinSizeImage600 = 600;
-        public const string Token = "Bearer {0}";
         public const string Authorization = "Authorization";
-        public const string SeonXApiKey = "X-API-KEY";
-        public const string SeonContentType = "Content-Type";
-        public const string MiddleDash = "-";
-        public const string Unattended = "UNATTENDED";
         public const string SecretKey = "SecretKeyJwt";
         public const string SecurityManager = "SecurityManagerKey";
         public const string Pipe = "|";
-        public const string XBasicAuth = "x-basic-authorization";
-        public const string InvalidUserKey = "Invalid User Key";
         public const string String = "string";
-        public const string TechreoWallet = "Techreo Wallet (CITI)";
-        public const string TechreoWalletFreedom = "Techreo Wallet (Freedom)";
-        public const string EnvironmentApplication = "EnvironmentApplication";
-        public const string SubEntityOnsigna = "subEntityOnsigna";
-        public const string LadaRegion = "52";
 
         #endregion
 

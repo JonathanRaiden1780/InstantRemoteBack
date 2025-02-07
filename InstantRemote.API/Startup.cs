@@ -31,12 +31,9 @@ namespace InstantRemote.Api
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
-
             app.UseHttpsRedirection();
-         //   app.UseMiddleware<InspectorMensajesMiddleware>();
             app.UseRouting();
             app.UseCors(Constants.OriginsPolicy);
-       //     app.AddCustomsMiddelwares();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

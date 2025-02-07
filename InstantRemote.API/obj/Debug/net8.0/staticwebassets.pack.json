@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
-      "PackagePath": "staticwebassets/swagger-ui/custom-ui-came.css"
+      "Id": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui.css",
+      "PackagePath": "staticwebassets/swagger-ui/custom-ui.css"
     },
     {
       "Id": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
