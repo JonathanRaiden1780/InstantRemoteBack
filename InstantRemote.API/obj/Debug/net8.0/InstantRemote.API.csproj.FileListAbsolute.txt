@@ -156,3 +156,4 @@
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/obj/Debug/net8.0/InstantRemote.API.pdb
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/obj/Debug/net8.0/InstantRemote.API.genruntimeconfig.cache
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/obj/Debug/net8.0/ref/InstantRemote.API.dll
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/web.config

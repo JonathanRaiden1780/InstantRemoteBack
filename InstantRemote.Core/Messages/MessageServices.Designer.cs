@@ -39,7 +39,7 @@ namespace InstantRemote.Core.Messages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("IntegrationService.Core.Messages.MessageServices", typeof(MessageServices).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InstantRemote.Core.Messages.MessageServices", typeof(MessageServices).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -69,50 +69,6 @@ namespace InstantRemote.Core.Messages {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to Cancelación por usuario.
-        /// </summary>
-        public static string CommentsCore {
-            get {
-                return ResourceManager.GetString("CommentsCore", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: Balance not found.
-        /// </summary>
-        public static string CreateInvestmentAccountBalanceNotFound {
-            get {
-                return ResourceManager.GetString("CreateInvestmentAccountBalanceNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: Insufficient funds.
-        /// </summary>
-        public static string CreateInvestmentAccountInsufficientFunds {
-            get {
-                return ResourceManager.GetString("CreateInvestmentAccountInsufficientFunds", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: Savings account not found.
-        /// </summary>
-        public static string CreateInvestmentAccountSavingsAccountNotFound {
-            get {
-                return ResourceManager.GetString("CreateInvestmentAccountSavingsAccountNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fin Tarea cancelación autómatica solicitud de crédito, cancelados {0}.
-        /// </summary>
-        public static string EndTask {
-            get {
-                return ResourceManager.GetString("EndTask", resourceCulture);
-            }
-        }
         
         /// <summary>
         ///   Looks up a localized string similar to Invalid Process.
@@ -132,32 +88,7 @@ namespace InstantRemote.Core.Messages {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: ServiceCore no content .
-        /// </summary>
-        public static string KOCoreBank {
-            get {
-                return ResourceManager.GetString("KOCoreBank", resourceCulture);
-            }
-        }
         
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocuured: ServiceDigiPro in confilct .
-        /// </summary>
-        public static string KODigipro {
-            get {
-                return ResourceManager.GetString("KODigipro", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Error al hacer el depósito.
-        /// </summary>
-        public static string KOOnsigna {
-            get {
-                return ResourceManager.GetString("KOOnsigna", resourceCulture);
-            }
-        }
         
         /// <summary>
         ///   Looks up a localized string similar to KO.
@@ -168,75 +99,13 @@ namespace InstantRemote.Core.Messages {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: no register one address for user given.
-        /// </summary>
-        public static string KOResponseGetAddress {
-            get {
-                return ResourceManager.GetString("KOResponseGetAddress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: EXPIRED_SEED.
-        /// </summary>
-        public static string KOResponseSignIn {
-            get {
-                return ResourceManager.GetString("KOResponseSignIn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: empty Seed by entered parameters.
-        /// </summary>
-        public static string KOResponseSignInNull {
-            get {
-                return ResourceManager.GetString("KOResponseSignInNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to KO.
-        /// </summary>
-        public static string KOResponseTeChreo {
-            get {
-                return ResourceManager.GetString("KOResponseTeChreo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error ocurred: Service Salesforce in conflict.
-        /// </summary>
-        public static string KOSalesForce {
-            get {
-                return ResourceManager.GetString("KOSalesForce", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No se encontró la solicitud del seguro.
-        /// </summary>
-        public static string NotFoundInsuranceRequest {
-            get {
-                return ResourceManager.GetString("NotFoundInsuranceRequest", resourceCulture);
-            }
-        }
-        
+       
         /// <summary>
         ///   Looks up a localized string similar to No se encontró el cliente.
         /// </summary>
         public static string NotFoundPerson {
             get {
                 return ResourceManager.GetString("NotFoundPerson", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No se encontro la cuenta.
-        /// </summary>
-        public static string NotFountLoan {
-            get {
-                return ResourceManager.GetString("NotFountLoan", resourceCulture);
             }
         }
         
@@ -258,58 +127,6 @@ namespace InstantRemote.Core.Messages {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to OK.
-        /// </summary>
-        public static string OKResponseTeChreo {
-            get {
-                return ResourceManager.GetString("OKResponseTeChreo", resourceCulture);
-            }
-        }
         
-        /// <summary>
-        ///   Looks up a localized string similar to Ya tiene un crédito activo.
-        /// </summary>
-        public static string PendingRequest {
-            get {
-                return ResourceManager.GetString("PendingRequest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred: search_request_scud.
-        /// </summary>
-        public static string ScudServiceErrorSearchRequest {
-            get {
-                return ResourceManager.GetString("ScudServiceErrorSearchRequest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred: invalid_unique_customer_scud.
-        /// </summary>
-        public static string ScudServiceErrorUniqueCustomer {
-            get {
-                return ResourceManager.GetString("ScudServiceErrorUniqueCustomer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Inicio Tarea cancelación autómatica solicitud de crédito.
-        /// </summary>
-        public static string StartTask {
-            get {
-                return ResourceManager.GetString("StartTask", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Without active loan.
-        /// </summary>
-        public static string WithoutActiveLoan {
-            get {
-                return ResourceManager.GetString("WithoutActiveLoan", resourceCulture);
-            }
-        }
     }
 }

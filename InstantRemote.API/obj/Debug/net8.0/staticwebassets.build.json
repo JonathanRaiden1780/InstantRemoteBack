@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RNM0gxneoLHxx6RQ66pytD3KtavKulZSxJvh/fbhp3c=",
+  "Hash": "Y9r+sQL43MHVmaLcbLKVDbEzZk5Zw7gZacv8WALc434=",
   "Source": "InstantRemote.API",
   "BasePath": "_content/InstantRemote.API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Identity": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui.css",
       "SourceId": "InstantRemote.API",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/",
       "BasePath": "_content/InstantRemote.API",
-      "RelativePath": "swagger-ui/custom-ui-came#[.{fingerprint}]?.css",
+      "RelativePath": "swagger-ui/custom-ui#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35,7 +35,7 @@
       "Integrity": "vmJW5yxN2hoYHVQyhRrVgjpAJwpylaflpHpjBjMmBR4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/swagger-ui/custom-ui-came.css"
+      "OriginalItemSpec": "wwwroot/swagger-ui/custom-ui.css"
     },
     {
       "Identity": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/logoInstant.png",
@@ -61,8 +61,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "swagger-ui/custom-ui-came.atu305z1xk.css",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Route": "swagger-ui/custom-ui.atu305z1xk.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -97,7 +97,7 @@
         },
         {
           "Name": "label",
-          "Value": "swagger-ui/custom-ui-came.css"
+          "Value": "swagger-ui/custom-ui.css"
         },
         {
           "Name": "integrity",
@@ -106,8 +106,8 @@
       ]
     },
     {
-      "Route": "swagger-ui/custom-ui-came.css",
-      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui-came.css",
+      "Route": "swagger-ui/custom-ui.css",
+      "AssetFile": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui.css",
       "Selectors": [],
       "ResponseHeaders": [
         {

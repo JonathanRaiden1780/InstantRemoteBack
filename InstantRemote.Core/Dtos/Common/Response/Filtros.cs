@@ -714,6 +714,17 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+    public class FiltroHrsExtra
+    {
+        public int idCalSemanal { get; set; }
+        public string cliente { get; set; }
+        public string idDeptoSucursal { get; set; }
+        public int seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+    }
     
     public class FiltrosReq :FiltroCommon
     {
@@ -813,6 +824,66 @@
         public string NumSite {get; set;}
         public string SN {get; set;}
         public string zonHoraria {get; set;}
+
+    }
+    public class GetReportesEnrolados
+    {
+        public string numEmpleado {get; set;}
+        public string nombre {get; set;}
+        public string statusE {get; set;}
+        public string fechaAlta {get; set;}
+        public string fechaBaja {get; set;}
+        public string seccion {get; set;}
+        public string siteOrigen {get; set;}
+        public string puesto {get; set;}
+        public string tipo_servicio {get; set;}
+        public string nomSucursal {get; set;}
+        public string siteSucursal {get; set;}
+        public string biometrico {get; set;}
+        public string telefonia {get; set;}
+        public string aplicacion {get; set;}
+        public string UltimoC {get; set;}
+        public DateTime Fecha_Actualización {get; set;}
+
+
+    }
+    public class GetReportesHrsExtras
+    {
+        
+        public string badgenumber  {get; set;} 
+        public string apellidos  {get; set;} 
+        public string IMSS  {get; set;} 
+        public string Posicion  {get; set;} 
+        public string Puesto  {get; set;} 
+        public string unidad  {get; set;} 
+        public string SECCION  {get; set;} 
+        public string servicio  {get; set;} 
+        public string fecha_origen  {get; set;} 
+        public string DeptName  {get; set;} 
+        public string site  {get; set;} 
+        public string fechaAlta  {get; set;} 
+        public string fechaBaja  {get; set;} 
+        public string dife  {get; set;} 
+        public string cuantos  {get; set;} 
+        public string shift  {get; set;} 
+        public string ColorFondo  {get; set;} 
+        public string ColorLetra  {get; set;} 
+        public string altafecha  {get; set;} 
+        public string grupo_pago  {get; set;} 
+        public string entrada  {get; set;} 
+        public string salida  {get; set;} 
+        public string siteorigen  {get; set;} 
+        public TimeSpan jornada  {get; set;} 
+        public TimeSpan horaSalidaComer  {get; set;} 
+        public TimeSpan horaEntradaComer  {get; set;} 
+        public TimeSpan horas  {get; set;} 
+        public int Comida  {get; set;} 
+        public string HrsmComi  {get; set;} 
+        public string extras  {get; set;} 
+        public string minutos  {get; set;} 
+        public string horas_extras  {get; set;} 
+        public string dobles  {get; set;} 
+        public string triples  {get; set;} 
 
     }
 
