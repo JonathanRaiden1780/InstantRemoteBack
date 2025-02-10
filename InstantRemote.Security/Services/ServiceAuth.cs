@@ -70,6 +70,8 @@ namespace InstantRemote.Security.Services
                 htmlBody = htmlBody.Replace("{userName}", user.name).Replace("{nip}", token);
                 serviceFactory("IR").ServiceCommon.SendMail(user.mail, subject, htmlBody);
             }
+
+            token = token + '$' + user.mail;
             return token;
         }
 
