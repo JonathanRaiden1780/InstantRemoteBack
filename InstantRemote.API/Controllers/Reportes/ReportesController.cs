@@ -135,7 +135,7 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
-        /*[HttpPost(Constants.GetReportClientes)]
+        [HttpPost(Constants.GetReportClientes)]
         [ProducesResponseType(typeof(List<res.GetReportesClientes>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
@@ -249,6 +249,6 @@ namespace InstantRemote.Api.Controllers.Reportes
             }
 
             return result;
-        }*/
+        }
     }
 }
