@@ -725,6 +725,13 @@
         public string empleado { get; set; }
         public string empleadoEspecifico { get; set; }
     }
+    public class FiltroAsistenciaAnual
+    {
+        public int idCalSemanal { get; set; }
+        public string siteVarchar { get; set; }
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+    }
     
     public class FiltrosReq :FiltroCommon
     {
@@ -848,6 +855,45 @@
 
     }
     public class GetReportesHrsExtras
+    {
+        
+        public string badgenumber  {get; set;} 
+        public string apellidos  {get; set;} 
+        public string IMSS  {get; set;} 
+        public string Posicion  {get; set;} 
+        public string Puesto  {get; set;} 
+        public string unidad  {get; set;} 
+        public string SECCION  {get; set;} 
+        public string servicio  {get; set;} 
+        public string fecha_origen  {get; set;} 
+        public string DeptName  {get; set;} 
+        public string site  {get; set;} 
+        public string fechaAlta  {get; set;} 
+        public string fechaBaja  {get; set;} 
+        public string dife  {get; set;} 
+        public string cuantos  {get; set;} 
+        public string shift  {get; set;} 
+        public string ColorFondo  {get; set;} 
+        public string ColorLetra  {get; set;} 
+        public string altafecha  {get; set;} 
+        public string grupo_pago  {get; set;} 
+        public string entrada  {get; set;} 
+        public string salida  {get; set;} 
+        public string siteorigen  {get; set;} 
+        public TimeSpan jornada  {get; set;} 
+        public TimeSpan horaSalidaComer  {get; set;} 
+        public TimeSpan horaEntradaComer  {get; set;} 
+        public TimeSpan horas  {get; set;} 
+        public int Comida  {get; set;} 
+        public string HrsmComi  {get; set;} 
+        public string extras  {get; set;} 
+        public string minutos  {get; set;} 
+        public string horas_extras  {get; set;} 
+        public string dobles  {get; set;} 
+        public string triples  {get; set;} 
+
+    }
+ public class GetReportAsistenciaAnual
     {
         
         public string badgenumber  {get; set;} 

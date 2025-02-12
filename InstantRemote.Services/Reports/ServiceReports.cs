@@ -36,5 +36,10 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportHrsExtra(filtro);
         }
+
+        public List<GetReportAsistenciaAnual> GetReportAsistenciaAnual(FiltroAsistenciaAnual filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAsistenciaAnual(filtro);
+        }
     }
 }

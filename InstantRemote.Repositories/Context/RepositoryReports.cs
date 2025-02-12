@@ -45,6 +45,11 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetReportesHrsExtras>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_Extras, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
+        public List<GetReportAsistenciaAnual> GetReportAsistenciaAnual(FiltroAsistenciaAnual filtro)
+        {
+            var response = Connection.Query<GetReportAsistenciaAnual>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_Extras, filtro, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
       
     }
 }

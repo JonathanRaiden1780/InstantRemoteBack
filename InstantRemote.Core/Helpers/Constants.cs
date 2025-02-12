@@ -217,6 +217,7 @@
         public const string GetReportClientes = "clientes";
         public const string GetReportHorasExtras = "horasExtras";
         public const string GetReportEdoEnrola = "estadoEnrolamiento";
+        public const string GetReportAsistenciaAnual = "asistenciaAnual";
 
         
 
