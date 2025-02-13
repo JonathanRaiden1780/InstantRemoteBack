@@ -6,16 +6,22 @@ using res = InstantRemote.Core.Dtos.Common.Response;
 using InstantRemote.Core.Dtos;
 using InstantRemote.Core.Dtos.Common.Request;
 using InstantRemote.Core.Dtos.Common.Response;
+using Microsoft.Reporting.NETCore;
+
 
 namespace InstantRemote.Api.Controllers.Reportes
 {
+
     [ApiController]
     [Produces(Constants.ContentType)]
     [Route(Constants.RouteReportes, Name = Constants.Reports)]
     public class ReportesController : BaseController
     {
-        public ReportesController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
+        private readonly IWebHostEnvironment _hostEnvironment;
+
+        public ReportesController(Func<string, IServiceFactory> serviceFactory, IWebHostEnvironment hostEnvironment) : base(serviceFactory)
         {
+            _hostEnvironment = hostEnvironment;
         }
 
 
@@ -30,7 +36,16 @@ namespace InstantRemote.Api.Controllers.Reportes
             try
             {
                 var response = serviceFactory("IR").ServiceReports.GetLogAsistencia(filtros);
-                result = Ok(response);
+                //result = Ok(response);
+                LocalReport report = new LocalReport();
+                report.ReportPath = Path.Combine(_hostEnvironment.WebRootPath, "Resources", "Reporte_Record_Asistencia_resumen.rdlc");
+
+                ReportDataSource rds = new ReportDataSource("DataSet1", response.ToDataTable());
+                report.DataSources.Add(rds);
+
+                byte[] bytes = report.Render("PDF"); // También puede ser "Excel" o "Image"
+
+                return File(bytes, "application/pdf", "Reporte.pdf");
             }
 
             catch (BusinessException busex)

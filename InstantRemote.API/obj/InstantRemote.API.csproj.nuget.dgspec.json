@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "ReportViewerCore.NETCore": {
+              "target": "Package",
+              "version": "[15.1.26, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
