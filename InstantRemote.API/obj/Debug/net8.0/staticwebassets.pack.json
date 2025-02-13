@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/Resources/Reporte_Record_Asistencia_resumen.rdlc",
+      "PackagePath": "staticwebassets/Resources/Reporte_Record_Asistencia_resumen.rdlc"
+    },
+    {
       "Id": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/wwwroot/swagger-ui/custom-ui.css",
       "PackagePath": "staticwebassets/swagger-ui/custom-ui.css"
     },

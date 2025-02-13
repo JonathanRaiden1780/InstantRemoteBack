@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s4RUv1P4ahk=",
+  "dgSpecHash": "xSgnbddNLxw=",
   "success": true,
   "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.Core/InstantRemote.Core.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,7 @@
     "/Users/jonathanhuerta/.nuget/packages/microsoft.net.http.headers/2.1.1/microsoft.net.http.headers.2.1.1.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/microsoft.netcore.platforms/1.0.1/microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/microsoft.netcore.targets/1.0.1/microsoft.netcore.targets.1.0.1.nupkg.sha512",
-    "/Users/jonathanhuerta/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/jonathanhuerta/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/runtime.native.system/4.0.0/runtime.native.system.4.0.0.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/system.appcontext/4.1.0/system.appcontext.4.1.0.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",

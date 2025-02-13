@@ -207,8 +207,10 @@
         #region Reportes
         public const string Reportes = "REPORTES";
         public const string Reports = "reportes";
+        public const string ReportsViewer = "reportesViewer";
         public const string SwaggerPathReports = "../swagger/reportes/swagger.json";
         public const string RouteReportes = "reportes/";
+        public const string RouteLogAsistencia = "logAsistencia/";
         public const string ReportesTitle = "Reportes Manager";
 
         public const string GetLogAsistencia = "logAsistencia";
@@ -219,7 +221,8 @@
         public const string GetReportEdoEnrola = "estadoEnrolamiento";
         public const string GetReportAsistenciaAnual = "asistenciaAnual";
 
-        
+        public const string GetViewerLogAsistencia = "logAsistenciaViewer";
+
 
         #endregion
         

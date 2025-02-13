@@ -3,6 +3,88 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "Resources/Reporte_Record_Asistencia_resumen.gilpyhd98w.rdlc",
+      "AssetFile": "Resources/Reporte_Record_Asistencia_resumen.rdlc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "302755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2HAFYeHr2XXquGBbwyNTw+tKxtCxqyTG6VZb05y3M6c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 02:27:39 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gilpyhd98w"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2HAFYeHr2XXquGBbwyNTw+tKxtCxqyTG6VZb05y3M6c="
+        },
+        {
+          "Name": "label",
+          "Value": "Resources/Reporte_Record_Asistencia_resumen.rdlc"
+        }
+      ]
+    },
+    {
+      "Route": "Resources/Reporte_Record_Asistencia_resumen.rdlc",
+      "AssetFile": "Resources/Reporte_Record_Asistencia_resumen.rdlc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "302755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2HAFYeHr2XXquGBbwyNTw+tKxtCxqyTG6VZb05y3M6c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Jan 2025 02:27:39 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2HAFYeHr2XXquGBbwyNTw+tKxtCxqyTG6VZb05y3M6c="
+        }
+      ]
+    },
+    {
       "Route": "swagger-ui/custom-ui.atu305z1xk.css",
       "AssetFile": "swagger-ui/custom-ui.css",
       "Selectors": [],
