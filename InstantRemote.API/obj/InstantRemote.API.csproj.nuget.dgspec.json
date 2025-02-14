@@ -84,6 +84,22 @@
               "target": "Package",
               "version": "[15.1.26, )"
             },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[3.118.0-preview.2.3, )"
+            },
+            "SkiaSharp.NativeAssets.Linux": {
+              "target": "Package",
+              "version": "[3.118.0-preview.2.3, )"
+            },
+            "SkiaSharp.NativeAssets.Win32": {
+              "target": "Package",
+              "version": "[3.118.0-preview.2.3, )"
+            },
+            "SkiaSharp.NativeAssets.macOS": {
+              "target": "Package",
+              "version": "[3.118.0-preview.2.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"

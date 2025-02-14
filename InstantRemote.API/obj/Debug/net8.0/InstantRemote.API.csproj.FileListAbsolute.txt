@@ -230,3 +230,16 @@
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/zh-Hant/System.ServiceModel.Primitives.resources.dll
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
 /Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/SkiaSharp.dll
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-arm/native/libSkiaSharp.so
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-arm/native/libSkiaSharp.so.118.0.0
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-arm64/native/libSkiaSharp.so
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-arm64/native/libSkiaSharp.so.118.0.0
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-musl-x64/native/libSkiaSharp.so.118.0.0
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-x64/native/libSkiaSharp.so
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/linux-x64/native/libSkiaSharp.so.118.0.0
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/osx/native/libSkiaSharp.dylib
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/win-x64/native/libSkiaSharp.dll
+/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/bin/Debug/net8.0/runtimes/win-x86/native/libSkiaSharp.dll

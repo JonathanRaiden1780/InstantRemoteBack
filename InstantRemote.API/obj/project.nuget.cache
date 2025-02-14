@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u9d66BJndZ8=",
+  "dgSpecHash": "93kw8X6+M7o=",
   "success": true,
   "projectFilePath": "/Users/jonathanhuerta/DEV/Dayta/instant-remote-v3-backend/InstantRemote.API/InstantRemote.API.csproj",
   "expectedPackageFiles": [
@@ -77,6 +77,10 @@
     "/Users/jonathanhuerta/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/scrutor/3.3.0/scrutor.3.3.0.nupkg.sha512",
+    "/Users/jonathanhuerta/.nuget/packages/skiasharp/3.118.0-preview.2.3/skiasharp.3.118.0-preview.2.3.nupkg.sha512",
+    "/Users/jonathanhuerta/.nuget/packages/skiasharp.nativeassets.linux/3.118.0-preview.2.3/skiasharp.nativeassets.linux.3.118.0-preview.2.3.nupkg.sha512",
+    "/Users/jonathanhuerta/.nuget/packages/skiasharp.nativeassets.macos/3.118.0-preview.2.3/skiasharp.nativeassets.macos.3.118.0-preview.2.3.nupkg.sha512",
+    "/Users/jonathanhuerta/.nuget/packages/skiasharp.nativeassets.win32/3.118.0-preview.2.3/skiasharp.nativeassets.win32.3.118.0-preview.2.3.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/swashbuckle.aspnetcore.filters/8.0.2/swashbuckle.aspnetcore.filters.8.0.2.nupkg.sha512",
     "/Users/jonathanhuerta/.nuget/packages/swashbuckle.aspnetcore.filters.abstractions/8.0.2/swashbuckle.aspnetcore.filters.abstractions.8.0.2.nupkg.sha512",

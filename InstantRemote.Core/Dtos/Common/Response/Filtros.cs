@@ -727,10 +727,10 @@
     }
     public class FiltroAsistenciaAnual
     {
-        public int idCalSemanal { get; set; }
-        public string siteVarchar { get; set; }
+        public string anual { get; set; }
         public string empleado { get; set; }
         public string empleadoEspecifico { get; set; }
+        public string site { get; set; }
     }
     
     public class FiltrosReq :FiltroCommon
@@ -905,31 +905,36 @@
         public string SECCION  {get; set;} 
         public string servicio  {get; set;} 
         public string fecha_origen  {get; set;} 
+        public string id_tipo_logeo  {get; set;} 
+        public string tipofalta  {get; set;} 
         public string DeptName  {get; set;} 
         public string site  {get; set;} 
         public string fechaAlta  {get; set;} 
         public string fechaBaja  {get; set;} 
+        public int Asistencia  {get; set;} 
+        public int Descansos  {get; set;} 
+        public int Faltas  {get; set;} 
+        public int Faltas_Iss  {get; set;} 
+        public int Faltas_Incapacidad  {get; set;} 
+        public int Vacaciones  {get; set;} 
+        public int Dias  {get; set;} 
+        public int Ausencias  {get; set;} 
         public string dife  {get; set;} 
         public string cuantos  {get; set;} 
         public string shift  {get; set;} 
+        public string permisos  {get; set;} 
+        public string DiaFeriado  {get; set;} 
+        public string sa  {get; set;} 
         public string ColorFondo  {get; set;} 
         public string ColorLetra  {get; set;} 
-        public string altafecha  {get; set;} 
-        public string grupo_pago  {get; set;} 
-        public string entrada  {get; set;} 
-        public string salida  {get; set;} 
-        public string siteorigen  {get; set;} 
-        public TimeSpan jornada  {get; set;} 
-        public TimeSpan horaSalidaComer  {get; set;} 
-        public TimeSpan horaEntradaComer  {get; set;} 
-        public TimeSpan horas  {get; set;} 
-        public int Comida  {get; set;} 
-        public string HrsmComi  {get; set;} 
-        public string extras  {get; set;} 
-        public string minutos  {get; set;} 
-        public string horas_extras  {get; set;} 
-        public string dobles  {get; set;} 
-        public string triples  {get; set;} 
+        public string ValorCampo  {get; set;} 
+        public string mes  {get; set;} 
+        public string ORDENAR  {get; set;} 
+        public string dia  {get; set;} 
+        public string DiasComi  {get; set;} 
+        public string PCG  {get; set;} 
+        public string PSG  {get; set;} 
+        public string homeOffice  {get; set;} 
 
     }
 

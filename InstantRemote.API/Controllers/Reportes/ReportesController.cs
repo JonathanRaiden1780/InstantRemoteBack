@@ -11,7 +11,6 @@ using Microsoft.Reporting.NETCore;
 
 namespace InstantRemote.Api.Controllers.Reportes
 {
-
     [ApiController]
     [Produces(Constants.ContentType)]
     [Route(Constants.RouteReportes, Name = Constants.Reports)]
@@ -19,7 +18,8 @@ namespace InstantRemote.Api.Controllers.Reportes
     {
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public ReportesController(Func<string, IServiceFactory> serviceFactory, IWebHostEnvironment hostEnvironment) : base(serviceFactory)
+        public ReportesController(Func<string, IServiceFactory> serviceFactory, IWebHostEnvironment hostEnvironment) :
+            base(serviceFactory)
         {
             _hostEnvironment = hostEnvironment;
         }
@@ -36,16 +36,7 @@ namespace InstantRemote.Api.Controllers.Reportes
             try
             {
                 var response = serviceFactory("IR").ServiceReports.GetLogAsistencia(filtros);
-                //result = Ok(response);
-                LocalReport report = new LocalReport();
-                report.ReportPath = Path.Combine(_hostEnvironment.WebRootPath, "Resources", "Reporte_Record_Asistencia_resumen.rdlc");
-
-                ReportDataSource rds = new ReportDataSource("DataSet1", response.ToDataTable());
-                report.DataSources.Add(rds);
-
-                byte[] bytes = report.Render("PDF"); // También puede ser "Excel" o "Image"
-
-                return File(bytes, "application/pdf", "Reporte.pdf");
+                result = Ok(response);
             }
 
             catch (BusinessException busex)
@@ -111,7 +102,7 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
-    
+
         [HttpPost(Constants.GetHuerfanos)]
         [ProducesResponseType(typeof(List<res.HuerfanosResp>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
@@ -150,12 +141,13 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
+
         [HttpPost(Constants.GetReportClientes)]
         [ProducesResponseType(typeof(List<res.GetReportesClientes>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetReportClientes([FromBody]int emplid)
+        public ActionResult GetReportClientes([FromBody] int emplid)
         {
             ActionResult result;
             try
@@ -188,13 +180,13 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
-        
+
         [HttpPost(Constants.GetReportEdoEnrola)]
         [ProducesResponseType(typeof(List<res.GetReportesEnrolados>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetReportEdoEnrola([FromBody]FiltroEdoEnrola filtro)
+        public ActionResult GetReportEdoEnrola([FromBody] FiltroEdoEnrola filtro)
         {
             ActionResult result;
             try
@@ -227,13 +219,13 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
-        
+
         [HttpPost(Constants.GetReportHorasExtras)]
         [ProducesResponseType(typeof(List<res.GetReportesHrsExtras>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetReportHrsExtra([FromBody]FiltroHrsExtra filtro)
+        public ActionResult GetReportHrsExtra([FromBody] FiltroHrsExtra filtro)
         {
             ActionResult result;
             try
@@ -266,13 +258,13 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
-       
+
         [HttpPost(Constants.GetReportAsistenciaAnual)]
         [ProducesResponseType(typeof(List<res.GetReportAsistenciaAnual>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetReportAsistenciaAnual([FromBody]FiltroAsistenciaAnual filtro)
+        public ActionResult GetReportAsistenciaAnual([FromBody] FiltroAsistenciaAnual filtro)
         {
             ActionResult result;
             try

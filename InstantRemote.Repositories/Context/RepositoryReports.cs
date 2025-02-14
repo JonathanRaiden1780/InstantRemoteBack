@@ -47,7 +47,7 @@ namespace InstantRemote.Repositories.Context
         } 
         public List<GetReportAsistenciaAnual> GetReportAsistenciaAnual(FiltroAsistenciaAnual filtro)
         {
-            var response = Connection.Query<GetReportAsistenciaAnual>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_Extras, filtro, commandType: CommandType.StoredProcedure).ToList();
+            var response = Connection.Query<GetReportAsistenciaAnual>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_por_Anio, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
       

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore;
+using System.Drawing;
 
 
 namespace InstantRemote.Api
@@ -12,6 +13,8 @@ namespace InstantRemote.Api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
+
+            AppContext.SetSwitch("System.Drawing.EnableUnixSupport", true);
             var builder = WebHost.CreateDefaultBuilder(args).UseStartup<Startup>()
                 .ConfigureAppConfiguration((builderContext, config) =>
                 {
