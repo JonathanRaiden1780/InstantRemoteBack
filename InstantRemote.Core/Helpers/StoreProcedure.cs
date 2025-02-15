@@ -94,6 +94,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_Enrolados_filtro = "IR_V2_RP_Enrolados_filtro"; 
         public const string IR_V2_RP_Asistencia_Estandar_Hrs_Extras = "IR_V2_RP_Asistencia_Estandar_Hrs_Extras"; 
         public const string IR_V2_RP_Asistencia_Estandar_por_Anio = "IR_V2_RP_Asistencia_Estandar_por_Anio"; 
+        public const string IR_V2_RP_Asistencia_Estandar_por_Anio_Resumen = "IR_V2_RP_Asistencia_Estandar_por_Anio_Resumen"; 
         
         
         

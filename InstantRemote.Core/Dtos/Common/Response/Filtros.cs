@@ -1,6 +1,5 @@
 ﻿namespace InstantRemote.Core.Dtos.Common.Response
 {
-
     public class GetResponsablesRespDto
     {
         public int id { get; set; }
@@ -20,7 +19,7 @@
         public string cliente { get; set; }
         public string con_check { get; set; }
     }
-    
+
     public class GetDispositivosResp
     {
         public int idDeptoDispositivo { get; set; }
@@ -39,7 +38,7 @@
         public int planAuto { get; set; }
         public int deptId { get; set; }
     }
-    
+
     public class GetDispositivoDetalleResp
     {
         public int badgenumber { get; set; }
@@ -53,25 +52,26 @@
         public int id { get; set; }
         public string cliente { get; set; }
     }
-  
+
     public class GetWeekResp
     {
         public int idc { get; set; }
         public string calendario { get; set; }
     }
-      public class GetYearResp
+
+    public class GetYearResp
     {
         public int id { get; set; }
         public string year { get; set; }
     }
-    
-    
+
 
     public class GetSucursalesRespDto
     {
         public int id { get; set; }
         public string sucursal { get; set; }
     }
+
     public class UpdateSucursalMasive
     {
         public int idDeptoSucursal { get; set; }
@@ -87,6 +87,7 @@
         public string calle { get; set; }
         public string idEmpleado { get; set; }
     }
+
     public class GetAllSucursalRes
     {
         public string idDeptoSucursal { get; set; }
@@ -268,7 +269,6 @@
         public string telefono { get; set; }
         public string estado { get; set; }
         public string tipo { get; set; }
-
     }
 
     public class TokenAdd : TokenMod
@@ -317,7 +317,7 @@
         public string EntradaComida { get; set; }
         public string SalidaComida { get; set; }
     }
-    
+
     public class InsertaCatHorarioDTO
     {
         public string HE { get; set; } = "0";
@@ -358,7 +358,7 @@
         public string tipo { get; set; }
         public string baja_logica { get; set; }
     }
-    
+
     public class EmpleadoSNPermiso
     {
         public long numEmpleado { get; set; }
@@ -366,12 +366,14 @@
         public string fechaAlta { get; set; }
         public string numGrupos { get; set; }
     }
+
     public class MenusEmpleado
     {
         public string menu { get; set; }
         public string tipo { get; set; }
         public string valor { get; set; }
     }
+
     public class InsertPermisosEmpleadoReq
     {
         public string empleados { get; set; }
@@ -421,8 +423,8 @@
         public int capturaManual { get; set; }
         public int capturaMasiva { get; set; }
         public int actualizacionEmpMasiva { get; set; }
-
     }
+
     public class UpdatePermisoEmpleadoReq
     {
         public string numEmpleado { get; set; }
@@ -477,8 +479,6 @@
     }
 
 
-
-
     public class EmpleadoPermiso
     {
         public long idDRM { get; set; }
@@ -525,7 +525,7 @@
         public string cliente { get; set; }
         public string sucursal { get; set; }
     }
-    
+
     public class EmpleadosDetalleRes
     {
         public string Cliente { get; set; }
@@ -535,9 +535,8 @@
         public string horaSalida { get; set; }
         public string nombre { get; set; }
     }
-    
-    
-    
+
+
     public class EmpleadosCatalogo
     {
         public long numEmpleado { get; set; }
@@ -556,9 +555,10 @@
         public string biometrico { get; set; }
         public int TOTAL { get; set; }
         public string telefonia { get; set; }
-        public string APP { get; set; } 
-        public bool whatsapp { get; set; } 
+        public string APP { get; set; }
+        public bool whatsapp { get; set; }
     }
+
     public class EmpleadosCatalogoTelefonos
     {
         public int numEmpleado { get; set; }
@@ -569,6 +569,7 @@
         public string correo { get; set; }
         public string telefono { get; set; }
     }
+
     public class EmpleadosCatalogoEstatus
     {
         public int numEmpleado { get; set; }
@@ -589,48 +590,53 @@
         public string telefonia { get; set; }
         public string APP { get; set; }
     }
+
     public class UpdateEmpleadosCatalogo
     {
-        public int numEmpleado { get; set; } 
-        public int asisWhats { get; set; } 
-        public string correo { get; set; } 
-        public string telefono { get; set; } 
+        public int numEmpleado { get; set; }
+        public int asisWhats { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+    }
 
-    } 
     public class UpdateEmpleadosMasive
     {
         public int numempleado { get; set; }
         public string correo { get; set; }
         public string telefono { get; set; }
-        public string whatsapp { get; set; } 
+        public string whatsapp { get; set; }
     }
-    
+
     public class DiasFestivosCatalogo : DiasFestivosCatalogoReqAddDto
     {
         public int idDiaFes { get; set; }
     }
+
     public class DiasFestivosCatalogoUpdate : DiasFestivosCatalogoReqAddDto
     {
         public int idDia { get; set; }
     }
-    
+
     public class DiasFestivosCatalogoReqAddDto
     {
         public string fecha { get; set; }
         public string Descripcion { get; set; }
     }
+
     public class GetSeccionesEmpleadoRes
     {
         public int id { get; set; }
         public string descripcion { get; set; }
         public int valor { get; set; }
     }
+
     public class GetSucursalEmpleadoClientesReq
     {
         public string emplid { get; set; }
         public string cliente { get; set; }
         public string sucursales { get; set; }
     }
+
     public class GetSucursalEmpleadoClientesRes
     {
         public int id { get; set; }
@@ -646,10 +652,12 @@
         public string horario { get; set; }
         public string site { get; set; }
     }
-    public class GetListaAsignaReq:GetListaAsignaUpReq
+
+    public class GetListaAsignaReq : GetListaAsignaUpReq
     {
         public string empleado { get; set; }
     }
+
     public class GetListaAsignaUpReq
     {
         public int cliente { get; set; }
@@ -659,6 +667,7 @@
         public string fechaIni { get; set; }
         public string fechaFin { get; set; }
     }
+
     public class GetListaAsignaRes
     {
         public int numEmpleado { get; set; }
@@ -666,6 +675,7 @@
         public string fechaAlta { get; set; }
         public string numero { get; set; }
     }
+
     public class AsignacionReq
     {
         public string numEmpleado { get; set; }
@@ -676,6 +686,7 @@
         public string fechaIn { get; set; }
         public string fechaFin { get; set; }
     }
+
     public class AsignacionDelReq
     {
         public string numEmpleado { get; set; }
@@ -685,12 +696,13 @@
         public string fechaIni { get; set; }
         public string fechaFin { get; set; }
     }
-    
+
     public class FiltroCommon
     {
         public string fechaini { get; set; }
         public string fechafin { get; set; }
     }
+
     public class FiltroHuerfanos
     {
         public string fechaHu { get; set; }
@@ -702,8 +714,8 @@
         public string servicioVarchar { get; set; }
         public string idSucursal { get; set; }
         public string idCliente { get; set; }
-
     }
+
     public class FiltroEdoEnrola
     {
         public string empleado { get; set; }
@@ -714,6 +726,7 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+
     public class FiltroHrsExtra
     {
         public int idCalSemanal { get; set; }
@@ -725,6 +738,7 @@
         public string empleado { get; set; }
         public string empleadoEspecifico { get; set; }
     }
+
     public class FiltroAsistenciaAnual
     {
         public string anual { get; set; }
@@ -732,10 +746,22 @@
         public string empleadoEspecifico { get; set; }
         public string site { get; set; }
     }
-    
-    public class FiltrosReq :FiltroCommon
+
+    public class FiltroAsistenciaAnualResumen
     {
-       
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string cliente { get; set; }
+        public string idDeptoSucursal { get; set; }
+        public string seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+
+    public class FiltrosReq : FiltroCommon
+    {
         public string cliente { get; set; }
         public string idSucursal { get; set; }
         public string emplid { get; set; }
@@ -744,18 +770,18 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
-    public class FiltrosRepReq: FiltroCommon
+
+    public class FiltrosRepReq : FiltroCommon
     {
-     
         public string idCliente { get; set; }
         public string idSucursal { get; set; }
-       public string seccionVarchar { get; set; }
+        public string seccionVarchar { get; set; }
         public string siteVarchar { get; set; }
         public string empleadoEspecifico { get; set; }
         public string empleado { get; set; }
         public string servicioVarchar { get; set; }
     }
-    
+
     public class LogAsistenciaResp
     {
         public int badgenumber { get; set; }
@@ -794,148 +820,184 @@
         public TimeSpan chequeo { get; set; }
         public TimeSpan horatolerancia { get; set; }
         public string MINUTOS { get; set; }
-        
     }
- public class HuerfanosResp
+
+    public class HuerfanosResp
     {
-      
-        public string numeroEmpleado {get; set;}
-        public string nombre {get; set;}
-        public string puesto {get; set;}
-        public string fechaAlta {get; set;}
-        public string fechaBaja {get; set;}
-        public string seccion {get; set;}
-        public string PosicionOrigen {get; set;}
-        public string site {get; set;}
-        public string desDepto {get; set;}
-        public string SERVICIO {get; set;}
-        public string shift {get; set;}
-        public string telefono {get; set;}
-        public string FECHA {get; set;}
-        public string HORA {get; set;}
-        public string estado {get; set;}
-        public string mensaje {get; set;}
+        public string numeroEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string puesto { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string seccion { get; set; }
+        public string PosicionOrigen { get; set; }
+        public string site { get; set; }
+        public string desDepto { get; set; }
+        public string SERVICIO { get; set; }
+        public string shift { get; set; }
+        public string telefono { get; set; }
+        public string FECHA { get; set; }
+        public string HORA { get; set; }
+        public string estado { get; set; }
+        public string mensaje { get; set; }
     }
 
     public class GetReportesClientes
     {
-        public int idDeptoSucursal {get; set;}
-        public string nomSucursal {get; set;}
-        public string nomCliente {get; set;}
-        public string responsable {get; set;}
-        public string calle {get; set;}
-        public string colonia {get; set;}
-        public string numInt {get; set;}
-        public string numExt {get; set;}
-        public string CP {get; set;}
-        public string NumSite {get; set;}
-        public string SN {get; set;}
-        public string zonHoraria {get; set;}
-
+        public int idDeptoSucursal { get; set; }
+        public string nomSucursal { get; set; }
+        public string nomCliente { get; set; }
+        public string responsable { get; set; }
+        public string calle { get; set; }
+        public string colonia { get; set; }
+        public string numInt { get; set; }
+        public string numExt { get; set; }
+        public string CP { get; set; }
+        public string NumSite { get; set; }
+        public string SN { get; set; }
+        public string zonHoraria { get; set; }
     }
+
     public class GetReportesEnrolados
     {
-        public string numEmpleado {get; set;}
-        public string nombre {get; set;}
-        public string statusE {get; set;}
-        public string fechaAlta {get; set;}
-        public string fechaBaja {get; set;}
-        public string seccion {get; set;}
-        public string siteOrigen {get; set;}
-        public string puesto {get; set;}
-        public string tipo_servicio {get; set;}
-        public string nomSucursal {get; set;}
-        public string siteSucursal {get; set;}
-        public string biometrico {get; set;}
-        public string telefonia {get; set;}
-        public string aplicacion {get; set;}
-        public string UltimoC {get; set;}
-        public DateTime Fecha_Actualización {get; set;}
-
-
+        public string numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string statusE { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string seccion { get; set; }
+        public string siteOrigen { get; set; }
+        public string puesto { get; set; }
+        public string tipo_servicio { get; set; }
+        public string nomSucursal { get; set; }
+        public string siteSucursal { get; set; }
+        public string biometrico { get; set; }
+        public string telefonia { get; set; }
+        public string aplicacion { get; set; }
+        public string UltimoC { get; set; }
+        public DateTime Fecha_Actualización { get; set; }
     }
+
     public class GetReportesHrsExtras
     {
-        
-        public string badgenumber  {get; set;} 
-        public string apellidos  {get; set;} 
-        public string IMSS  {get; set;} 
-        public string Posicion  {get; set;} 
-        public string Puesto  {get; set;} 
-        public string unidad  {get; set;} 
-        public string SECCION  {get; set;} 
-        public string servicio  {get; set;} 
-        public string fecha_origen  {get; set;} 
-        public string DeptName  {get; set;} 
-        public string site  {get; set;} 
-        public string fechaAlta  {get; set;} 
-        public string fechaBaja  {get; set;} 
-        public string dife  {get; set;} 
-        public string cuantos  {get; set;} 
-        public string shift  {get; set;} 
-        public string ColorFondo  {get; set;} 
-        public string ColorLetra  {get; set;} 
-        public string altafecha  {get; set;} 
-        public string grupo_pago  {get; set;} 
-        public string entrada  {get; set;} 
-        public string salida  {get; set;} 
-        public string siteorigen  {get; set;} 
-        public TimeSpan jornada  {get; set;} 
-        public TimeSpan horaSalidaComer  {get; set;} 
-        public TimeSpan horaEntradaComer  {get; set;} 
-        public TimeSpan horas  {get; set;} 
-        public int Comida  {get; set;} 
-        public string HrsmComi  {get; set;} 
-        public string extras  {get; set;} 
-        public string minutos  {get; set;} 
-        public string horas_extras  {get; set;} 
-        public string dobles  {get; set;} 
-        public string triples  {get; set;} 
-
+        public string badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string IMSS { get; set; }
+        public string Posicion { get; set; }
+        public string Puesto { get; set; }
+        public string unidad { get; set; }
+        public string SECCION { get; set; }
+        public string servicio { get; set; }
+        public string fecha_origen { get; set; }
+        public string DeptName { get; set; }
+        public string site { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string dife { get; set; }
+        public string cuantos { get; set; }
+        public string shift { get; set; }
+        public string ColorFondo { get; set; }
+        public string ColorLetra { get; set; }
+        public string altafecha { get; set; }
+        public string grupo_pago { get; set; }
+        public string entrada { get; set; }
+        public string salida { get; set; }
+        public string siteorigen { get; set; }
+        public TimeSpan jornada { get; set; }
+        public TimeSpan horaSalidaComer { get; set; }
+        public TimeSpan horaEntradaComer { get; set; }
+        public TimeSpan horas { get; set; }
+        public int Comida { get; set; }
+        public string HrsmComi { get; set; }
+        public string extras { get; set; }
+        public string minutos { get; set; }
+        public string horas_extras { get; set; }
+        public string dobles { get; set; }
+        public string triples { get; set; }
     }
- public class GetReportAsistenciaAnual
+
+    public class GetReportAsistenciaAnual
     {
-        
-        public string badgenumber  {get; set;} 
-        public string apellidos  {get; set;} 
-        public string IMSS  {get; set;} 
-        public string Posicion  {get; set;} 
-        public string Puesto  {get; set;} 
-        public string unidad  {get; set;} 
-        public string SECCION  {get; set;} 
-        public string servicio  {get; set;} 
-        public string fecha_origen  {get; set;} 
-        public string id_tipo_logeo  {get; set;} 
-        public string tipofalta  {get; set;} 
-        public string DeptName  {get; set;} 
-        public string site  {get; set;} 
-        public string fechaAlta  {get; set;} 
-        public string fechaBaja  {get; set;} 
-        public int Asistencia  {get; set;} 
-        public int Descansos  {get; set;} 
-        public int Faltas  {get; set;} 
-        public int Faltas_Iss  {get; set;} 
-        public int Faltas_Incapacidad  {get; set;} 
-        public int Vacaciones  {get; set;} 
-        public int Dias  {get; set;} 
-        public int Ausencias  {get; set;} 
-        public string dife  {get; set;} 
-        public string cuantos  {get; set;} 
-        public string shift  {get; set;} 
-        public string permisos  {get; set;} 
-        public string DiaFeriado  {get; set;} 
-        public string sa  {get; set;} 
-        public string ColorFondo  {get; set;} 
-        public string ColorLetra  {get; set;} 
-        public string ValorCampo  {get; set;} 
-        public string mes  {get; set;} 
-        public string ORDENAR  {get; set;} 
-        public string dia  {get; set;} 
-        public string DiasComi  {get; set;} 
-        public string PCG  {get; set;} 
-        public string PSG  {get; set;} 
-        public string homeOffice  {get; set;} 
-
+        public string badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string IMSS { get; set; }
+        public string Posicion { get; set; }
+        public string Puesto { get; set; }
+        public string unidad { get; set; }
+        public string SECCION { get; set; }
+        public string servicio { get; set; }
+        public string fecha_origen { get; set; }
+        public string id_tipo_logeo { get; set; }
+        public string tipofalta { get; set; }
+        public string DeptName { get; set; }
+        public string site { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public int Asistencia { get; set; }
+        public int Descansos { get; set; }
+        public int Faltas { get; set; }
+        public int Faltas_Iss { get; set; }
+        public int Faltas_Incapacidad { get; set; }
+        public int Vacaciones { get; set; }
+        public int Dias { get; set; }
+        public int Ausencias { get; set; }
+        public string dife { get; set; }
+        public string cuantos { get; set; }
+        public string shift { get; set; }
+        public string permisos { get; set; }
+        public string DiaFeriado { get; set; }
+        public string sa { get; set; }
+        public string ColorFondo { get; set; }
+        public string ColorLetra { get; set; }
+        public string ValorCampo { get; set; }
+        public string mes { get; set; }
+        public string ORDENAR { get; set; }
+        public string dia { get; set; }
+        public string DiasComi { get; set; }
+        public string PCG { get; set; }
+        public string PSG { get; set; }
+        public string homeOffice { get; set; }
     }
 
+    public class GetReportAsistenciaAnualResumen
+    {
+        public int badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string IMSS { get; set; }
+        public string Posicion { get; set; }
+        public string Puesto { get; set; }
+        public string unidad { get; set; }
+        public string SECCION { get; set; }
+        public string servicio { get; set; }
+        public string a { get; set; }
+        public string a2 { get; set; }
+        public string a3 { get; set; }
+        public string DeptName { get; set; }
+        public string site { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public int Asistencia { get; set; }
+        public int Descansos { get; set; }
+        public int Faltas { get; set; }
+        public int Faltas_Iss { get; set; }
+        public int Faltas_Incapacidad { get; set; }
+        public int Vacaciones { get; set; }
+        public int Dias { get; set; }
+        public int Ausencias { get; set; }
+        public int dife { get; set; }
+        public int cuantos { get; set; }
+        public string shift { get; set; }
+        public int permisos { get; set; }
+        public int DiaFeriado { get; set; }
+        public int sa { get; set; }
+        public string a4 { get; set; }
+        public string a5 { get; set; }
+        public string a6 { get; set; }
+        public int mes { get; set; }
+        public int ORDENAR { get; set; }
+        public int dia { get; set; }
+        public int DiasComi { get; set; }
+        public int PCG { get; set; }
+        public int PSG { get; set; }
+    }
 }
