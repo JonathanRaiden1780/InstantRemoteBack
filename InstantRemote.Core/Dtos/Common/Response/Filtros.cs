@@ -1000,4 +1000,55 @@
         public int PCG { get; set; }
         public int PSG { get; set; }
     }
+    
+    public class GetReportAsistenciaEstandar
+    {
+        public int badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string IMSS { get; set; }
+        public string Posicion { get; set; }
+        public string Puesto { get; set; }
+        public string unidad { get; set; }
+        public string SECCION { get; set; }
+        public string servicio { get; set; }
+        public string fecha_origen { get; set; }
+        public string id_tipo_logeo { get; set; }
+        public string tipofalta { get; set; }
+        public string DeptName { get; set; }
+        public string site { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string division { get; set; }
+        public int Asistencia { get; set; }
+        public int Descansos { get; set; }
+        public int Faltas { get; set; }
+        public int Faltas_Iss { get; set; }
+        public int Faltas_Incapacidad { get; set; }
+        public int Vacaciones { get; set; }
+        public int Dias { get; set; }
+        public int Ausencias { get; set; }
+        public int dife { get; set; }
+        public int cuantos { get; set; }
+        public string shift { get; set; }
+        public int permisos { get; set; }
+        public int DiaFeriado { get; set; }
+        public int sa { get; set; }
+        public int sa_sinbaja { get; set; }
+        public int sa_conbaja { get; set; }
+        public string ColorFondo { get; set; }
+        public string ValorCampo { get; set; }
+        public string ColorLetra { get; set; }
+        public string altafecha { get; set; }
+        public int DiasComi { get; set; }
+        public string grupo_pago { get; set; }
+        public string entrada { get; set; }
+        public string salida { get; set; }
+        public int Ocheck { get; set; }
+        public string siteorigen { get; set; }
+        public int Faltas_PCG { get; set; }
+        public int Faltas_PSG { get; set; }
+        public int homeOffice { get; set; }
+    }
+
+
 }

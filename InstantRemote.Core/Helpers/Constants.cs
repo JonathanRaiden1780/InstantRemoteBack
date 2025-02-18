@@ -221,8 +221,8 @@
         public const string GetReportEdoEnrola = "estadoEnrolamiento";
         public const string GetReportAsistenciaAnual = "asistenciaAnual";
         public const string GetReportAsistenciaAnualResumen = "asistenciaAnualResumen";
+        public const string GetReportAsistenciaEstandar = "asistenciaEstandar";
 
-        public const string GetViewerLogAsistencia = "logAsistenciaViewer";
 
 
         #endregion

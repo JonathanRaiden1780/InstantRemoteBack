@@ -336,5 +336,44 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
+
+        [HttpPost(Constants.GetReportAsistenciaEstandar)]
+        [ProducesResponseType(typeof(List<res.GetReportAsistenciaEstandar>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetReportAsistenciaEstandar([FromBody] FiltroAsistenciaAnualResumen filtro)
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceReports.GetReportAsistenciaEstandar(filtro);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
     }
 }
