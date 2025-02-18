@@ -15,5 +15,7 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetReportAsistenciaAnual> GetReportAsistenciaAnual(FiltroAsistenciaAnual filtro);
         List<GetReportAsistenciaAnualResumen> GetReportAsistenciaAnualResumen(FiltroAsistenciaAnualResumen filtro);
         List<GetReportAsistenciaEstandar> GetReportAsistenciaEstandar(FiltroAsistenciaAnualResumen filtro);
+        List<GetReportAcumuladoAsistencia> GetReportAcumuladoAsistencia(FiltroAsistenciaAcumulado filtro);
+        List<GetReportAusentismos> GetReportAusentismos(FiltroAusentismos filtro);
     }
 }

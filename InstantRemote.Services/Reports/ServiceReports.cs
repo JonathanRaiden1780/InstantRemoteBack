@@ -49,5 +49,16 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaEstandar(filtro);
         }
+
+        public List<GetReportAcumuladoAsistencia> GetReportAcumuladoAsistencia(FiltroAsistenciaAcumulado filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAcumuladoAsistencia(filtro);
+        }
+        
+        public List<GetReportAusentismos> GetReportAusentismos(FiltroAusentismos filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAusentismos(filtro);
+        }
+        
     }
 }

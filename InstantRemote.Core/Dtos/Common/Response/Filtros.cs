@@ -760,6 +760,31 @@
         public string servicioVarchar { get; set; }
     }
 
+    public class FiltroAsistenciaAcumulado
+    {
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public int cliente { get; set; }
+        public int idDeptoSucursal { get; set; }
+        public string seccion { get; set; }
+        public int emplid { get; set; }
+        public int empleadoEspecifico { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+    public class FiltroAusentismos
+    {
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string idCliente { get; set; }
+        public string idSucursal { get; set; }
+        public string seccionVarchar { get; set; }
+        public int empleado { get; set; }
+        public int empleadoEspecifico { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+
     public class FiltrosReq : FiltroCommon
     {
         public string cliente { get; set; }
@@ -1000,7 +1025,7 @@
         public int PCG { get; set; }
         public int PSG { get; set; }
     }
-    
+
     public class GetReportAsistenciaEstandar
     {
         public int badgenumber { get; set; }
@@ -1050,5 +1075,39 @@
         public int homeOffice { get; set; }
     }
 
+    public class GetReportAcumuladoAsistencia
+    {
+        public int badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string Puesto { get; set; }
+        public string nomCliente { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string servicio { get; set; }
+        public string DeptName { get; set; }
+        public string fecha_origen { get; set; }
+        public string id_tipo_logeo { get; set; }
+        public string sn { get; set; }
+        public TimeSpan hora_origen { get; set; }
+        public string servi { get; set; }
+        public string OrigEmple { get; set; }
+    }
 
+    public class GetReportAusentismos
+    {
+            public int emplid { get; set; }
+            public string tipoAusencia { get; set; }
+            public string desde { get; set; }
+            public string hasta { get; set; }
+            public int dias { get; set; }
+            public string FolioInc { get; set; }
+            public string site { get; set; }
+            public string usuario { get; set; }
+            public int posicion { get; set; }
+            public string comentarios { get; set; }
+            public string clave { get; set; }
+            public string creacion { get; set; }
+            public string Adjunto { get; set; }
+            public string nameImage { get; set; }
+    }
 }

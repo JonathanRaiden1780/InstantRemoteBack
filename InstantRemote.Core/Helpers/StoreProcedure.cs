@@ -96,6 +96,8 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_Asistencia_Estandar_por_Anio = "IR_V2_RP_Asistencia_Estandar_por_Anio"; 
         public const string IR_V2_RP_Asistencia_Estandar_por_Anio_Resumen = "IR_V2_RP_Asistencia_Estandar_por_Anio_Resumen"; 
         public const string IR_V2_RP_Asistencia_Estandar = "IR_V2_RP_Asistencia_Estandar"; 
+        public const string IR_V2_RP_Acumulado_Asistencia = "IR_V2_RP_Acumulado_Asistencia"; 
+        public const string IR_V2_RP_Ausentismos = "IR_V2_RP_Ausentismos"; 
         
         
         

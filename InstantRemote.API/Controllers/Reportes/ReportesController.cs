@@ -375,5 +375,83 @@ namespace InstantRemote.Api.Controllers.Reportes
 
             return result;
         }
+      
+        [HttpPost(Constants.GetReportAcumuladoAsistencia)]
+        [ProducesResponseType(typeof(List<res.GetReportAcumuladoAsistencia>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetReportAcumuladoAsistencia([FromBody] FiltroAsistenciaAcumulado filtro)
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceReports.GetReportAcumuladoAsistencia(filtro);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
+        
+        [HttpPost(Constants.GetReportAusentismos)]
+        [ProducesResponseType(typeof(List<res.GetReportAusentismos>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetReportAusentismos([FromBody] FiltroAusentismos filtro)
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceReports.GetReportAusentismos(filtro);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
     }
 }
