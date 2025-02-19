@@ -772,6 +772,7 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+
     public class FiltroAusentismos
     {
         public string fechaini { get; set; }
@@ -781,6 +782,19 @@
         public string seccionVarchar { get; set; }
         public int empleado { get; set; }
         public int empleadoEspecifico { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
+
+    public class FiltroAsistencia
+    {
+        public int emplid { get; set; }
+        public int empleadoEspecifico { get; set; }
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public int cliente { get; set; }
+        public int idDeptoSucursal { get; set; }
+        public string seccion { get; set; }
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
@@ -1095,19 +1109,47 @@
 
     public class GetReportAusentismos
     {
-            public int emplid { get; set; }
-            public string tipoAusencia { get; set; }
-            public string desde { get; set; }
-            public string hasta { get; set; }
-            public int dias { get; set; }
-            public string FolioInc { get; set; }
-            public string site { get; set; }
-            public string usuario { get; set; }
-            public int posicion { get; set; }
-            public string comentarios { get; set; }
-            public string clave { get; set; }
-            public string creacion { get; set; }
-            public string Adjunto { get; set; }
-            public string nameImage { get; set; }
+        public int emplid { get; set; }
+        public string tipoAusencia { get; set; }
+        public string desde { get; set; }
+        public string hasta { get; set; }
+        public int dias { get; set; }
+        public string FolioInc { get; set; }
+        public string site { get; set; }
+        public string usuario { get; set; }
+        public int posicion { get; set; }
+        public string comentarios { get; set; }
+        public string clave { get; set; }
+        public string creacion { get; set; }
+        public string Adjunto { get; set; }
+        public string nameImage { get; set; }
+    }
+
+    public class GetReportAsistencia
+    {
+        public int numEmpleado { get; set; }
+        public string apellidos { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string SERVICIO { get; set; }
+        public string nomCliente { get; set; }
+        public string nomSucursal { get; set; }
+        public string NS { get; set; }
+        public string fechaRegistro { get; set; }
+        public TimeSpan horaEntrada { get; set; }
+        public object tempEntrada { get; set; }
+        public TimeSpan horaSalida { get; set; }
+        public string tempSalida { get; set; }
+        public TimeSpan horaSalidaComer { get; set; }
+        public TimeSpan horaEntradaComer { get; set; }
+        public int horasLaboradas { get; set; }
+        public string DispositivoSalida { get; set; }
+        public string DispositivoSalidaComer { get; set; }
+        public string DispositivoEntradaComer { get; set; }
+        public string DispositivoEntrada { get; set; }
+        public string nombre { get; set; }
+        public string servi { get; set; }
+        public string OrigEmple { get; set; }
     }
 }

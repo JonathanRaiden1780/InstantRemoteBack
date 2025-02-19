@@ -70,6 +70,11 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetReportAusentismos>(StoreProcedure.IR_V2_RP_Ausentismos, filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         } 
+        public List<GetReportAsistencia> GetReportAsistencia(FiltroAsistencia filtro)
+        {
+            var response = Connection.Query<GetReportAsistencia>(StoreProcedure.IR_V2_RP_Asistencia, filtro, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        } 
       
     }
 }

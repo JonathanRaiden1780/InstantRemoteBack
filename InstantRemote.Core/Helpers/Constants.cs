@@ -224,6 +224,7 @@
         public const string GetReportAsistenciaEstandar = "asistenciaEstandar";
         public const string GetReportAcumuladoAsistencia = "acumuladoAsistencia";
         public const string GetReportAusentismos = "ausentismos";
+        public const string GetReportAsistencia = "asistencia";
 
 
 
