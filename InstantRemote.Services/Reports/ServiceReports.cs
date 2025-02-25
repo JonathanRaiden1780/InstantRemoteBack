@@ -63,6 +63,10 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAsistencia(filtro);
         }
+        public List<GetReportAsistenciaTemp> GetReportAsistenciaTemperatura(FiltroAsistencia filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAsistenciaTemperatura(filtro);
+        }
         
     }
 }
