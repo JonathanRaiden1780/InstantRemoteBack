@@ -798,6 +798,18 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+    public class FiltroApp
+    {
+        public string empleado { get; set; }
+        public string empleadoEspecifico { get; set; }
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string cliente { get; set; }
+        public string idDeptoSucursal { get; set; }
+        public int seccionVarchar { get; set; }
+        public string siteVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+    }
 
     public class FiltrosReq : FiltroCommon
     {
@@ -1179,6 +1191,29 @@
         public string nombre { get; set; }
         public string servi { get; set; }
         public string OrigEmple { get; set; }
+    }
+
+    public class GetReportApp
+    {
+        public string nombre { get; set; }
+        public int numEmpleado { get; set; }
+        public string nomCliente { get; set; }
+        public string nomSucursal { get; set; }
+        public string latitud { get; set; }
+        public string longitud { get; set; }
+        public string calle { get; set; }
+        public string colonia { get; set; }
+        public string numExt { get; set; }
+        public string CP { get; set; }
+        public string HoraInicial { get; set; }
+        public string HoraFinal { get; set; }
+        public string HoraInicialComida { get; set; }
+        public string HoraFinalComida { get; set; }
+        public string foto_entrada { get; set; }
+        public string firma_entrada { get; set; }
+        public string Foto { get; set; }
+        public string Firma { get; set; }
+        public string ruta { get; set; }
     }
 
 

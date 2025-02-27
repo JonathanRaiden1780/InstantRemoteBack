@@ -226,6 +226,7 @@
         public const string GetReportAusentismos = "ausentismos";
         public const string GetReportAsistencia = "asistencia";
         public const string GetReportAsistenciaTemperatura = "asistenciaTemperatura";
+        public const string GetReportApp = "app";
 
 
 
