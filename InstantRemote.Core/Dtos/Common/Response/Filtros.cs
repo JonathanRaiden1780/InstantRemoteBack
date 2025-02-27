@@ -1165,13 +1165,13 @@
         public string nomSucursal { get; set; }
         public string NS { get; set; }
         public string fechaRegistro { get; set; }
-        public string horaEntrada { get; set; }
+        public TimeSpan horaEntrada { get; set; }
         public string tempEntrada { get; set; }
-        public string horaSalida { get; set; }
+        public TimeSpan horaSalida { get; set; }
         public string tempSalida { get; set; }
         public TimeSpan horaSalidaComer { get; set; }
         public TimeSpan horaEntradaComer { get; set; }
-        public string horasLaboradas { get; set; }
+        public TimeSpan horasLaboradas { get; set; }
         public string DispositivoSalida { get; set; }
         public string DispositivoSalidaComer { get; set; }
         public string DispositivoEntradaComer { get; set; }
