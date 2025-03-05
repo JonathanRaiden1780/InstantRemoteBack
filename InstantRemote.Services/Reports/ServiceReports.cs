@@ -72,5 +72,15 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportApp(filtro);
         }
+
+        public List<GetReportAsignaciones> GetReportAsignaciones(string numEmpleado)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAsignaciones(numEmpleado);
+        }
+
+        public List<GetReportAsignaciones> GetReportAsignacionesAll()
+        {
+            return UnitOfWork.RepositoryReports.GetReportAsignacionesAll();
+        }
     }
 }

@@ -960,7 +960,7 @@
         public TimeSpan horas { get; set; }
         public int Comida { get; set; }
         public string HrsmComi { get; set; }
-        public string extras { get; set; }
+        public TimeSpan extras { get; set; }
         public string minutos { get; set; }
         public string horas_extras { get; set; }
         public string dobles { get; set; }
@@ -1215,6 +1215,18 @@
         public string Firma { get; set; }
         public string ruta { get; set; }
     }
+
+    public class GetReportAsignaciones
+    {
+        public int numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string clienteAsignado { get; set; }
+        public string sucursalAsignada { get; set; }
+        public string horarioAsignado { get; set; }
+        public string inicio { get; set; }
+        public string fin { get; set; }
+    }
+
 
 
 }
