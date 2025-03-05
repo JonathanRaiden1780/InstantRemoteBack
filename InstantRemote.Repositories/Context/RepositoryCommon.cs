@@ -258,7 +258,7 @@ namespace InstantRemote.Repositories.Context
         {
             var response = Connection.Query<bool>(StoreProcedure.IR_V2_RP_Elimina_Sucursal, new
             {
-                @nomCliente = idSucursal,
+                @idSucursal = idSucursal,
             }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }

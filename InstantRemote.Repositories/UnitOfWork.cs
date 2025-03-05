@@ -12,7 +12,6 @@ namespace InstantRemote.Repositories
     {
 
         private IDbConnection connection = null;
-
         private bool _disposed;
         private IDbTransaction transaction = null;
         private readonly IMapper mapper = null;
@@ -28,9 +27,34 @@ namespace InstantRemote.Repositories
             connection = new SqlConnection(configuration.GetConnectionString("ConexionComunes"));
             if (string.IsNullOrEmpty(connection.ConnectionString))
                 connection.ConnectionString = configuration["ConexionComunes"];
+            
+            WakeUpDatabase(connection.ConnectionString).Wait();
             connection.Open();
+        }private async Task WakeUpDatabase(string connectionString)
+        {
+            int maxRetries = 2;
+            for (int attempt = 1; attempt <= maxRetries; attempt++)
+            {
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        await conn.OpenAsync();
+                        using (SqlCommand cmd = new SqlCommand("SELECT 1", conn))
+                        {
+                            await cmd.ExecuteScalarAsync();
+                        }
+                    }
+                    return; 
+                }
+                catch (SqlException ex)
+                {
+                    if (attempt == maxRetries)
+                        throw; 
+                    await Task.Delay(2000); 
+                }
+            }
         }
-
         public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction,mapper);
         public IRepositoryCommon RepositoryCommon => repositoryCommon ??= new RepositoryCommon(connection, () => transaction,mapper);
         public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction,mapper);
