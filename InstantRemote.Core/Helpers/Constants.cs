@@ -232,6 +232,7 @@
         public const string GetReportAsignaciones = "asignaciones";
         public const string GetReportAsignacionesAll = "asignaciones/all";
         public const string GetReportMatrizApro = "matrizAprobacion";
+        public const string GetReportCapturaManual = "capturaManual";
 
 
 

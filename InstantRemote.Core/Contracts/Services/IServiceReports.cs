@@ -23,5 +23,6 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetReportAsignaciones> GetReportAsignaciones(string numEmpleado);
         List<GetReportAsignaciones> GetReportAsignacionesAll();
         List<GetReportMatriz> GetReportMatrizApro(FiltroMatriz filtro);
+        List<GetReportCapturaManual> GetReportCapturaManual(string filtro);
     }
 }

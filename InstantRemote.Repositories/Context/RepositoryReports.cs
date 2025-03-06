@@ -138,6 +138,12 @@ namespace InstantRemote.Repositories.Context
                  commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
         }
+        public List<GetReportCapturaManual> GetReportCapturaManual(string filtro)
+        {
+            var response = Connection.Query<GetReportCapturaManual>(StoreProcedure.IR_V2_SP_chequeosManualesDetalle, new{idCalSemanal = filtro},
+                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+            return response;
+        }
     }
 
 }

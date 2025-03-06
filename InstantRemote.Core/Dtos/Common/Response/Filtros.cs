@@ -1276,6 +1276,25 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string nomSolicitante { get; set; }
     }
 
+    public class GetReportCapturaManual
+    {
+        public string empleadoAQuienCapturaron { get; set; }
+        public string nombreEmpleadoAQuienCapturaron { get; set; }
+        public int empleadoHizoCaptura { get; set; }
+        public string nombre { get; set; }
+        public string fechaCapturaManual { get; set; }
+        public string site { get; set; }
+        public string desDepto { get; set; }
+        public string seccion { get; set; }
+        public string unidadNegocio { get; set; }
+        public string tipoServicio { get; set; }
+        public string horaEntrada { get; set; }
+        public string horaSalida { get; set; }
+        public string biometrico { get; set; }
+        public string telefono { get; set; }
+        public string token { get; set; }
+    }
+
 
 
 }

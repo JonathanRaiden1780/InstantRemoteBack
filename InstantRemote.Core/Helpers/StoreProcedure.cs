@@ -104,6 +104,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_AsignacionesTemporales = "IR_V2_RP_AsignacionesTemporales"; 
         public const string IR_V2_RP_AsignacionesTemporalesAll = "IR_V2_RP_AsignacionesTemporalesAll"; 
         public const string sp_GetVariablesMatrizAprobacion = "sp_GetVariablesMatrizAprobacion"; 
+        public const string IR_V2_SP_chequeosManualesDetalle = "IR_V2_SP_chequeosManualesDetalle"; 
         
         
         
