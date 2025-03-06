@@ -82,5 +82,10 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAsignacionesAll();
         }
+
+        public List<GetReportMatriz> GetReportMatrizApro(FiltroMatriz filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportMatrizApro(filtro);
+        }
     }
 }

@@ -103,9 +103,11 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_Track_App = "IR_V2_RP_Track_App"; 
         public const string IR_V2_RP_AsignacionesTemporales = "IR_V2_RP_AsignacionesTemporales"; 
         public const string IR_V2_RP_AsignacionesTemporalesAll = "IR_V2_RP_AsignacionesTemporalesAll"; 
+        public const string sp_GetVariablesMatrizAprobacion = "sp_GetVariablesMatrizAprobacion"; 
         
         
         
+        public const string sp_GetCalendariosVariables = "sp_GetCalendariosVariables"; 
         public const string sp_GetCalendariosHorasExtras = "sp_GetCalendariosHorasExtras"; 
 
         

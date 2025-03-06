@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InstantRemote.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+276a9e7558d8f762a92537ec38f760cec3347659")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+775f0cee16cec57726ed1f7e3d7906ff0553b7a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("InstantRemote.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InstantRemote.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

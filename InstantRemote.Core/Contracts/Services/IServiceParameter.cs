@@ -10,6 +10,8 @@ namespace InstantRemote.Core.Contracts.Services
     {
         void InsertBitacora(BitacoraRequestDto bitacora);
         List<GetYearResp> GetYears();
+        List<GetYearMatrizResp> GetYearsMatriz();
+        List<GetCalMatrizResp> GetCalMatriz(string year);
         List<GetWeekResp> GetWeeks (int year);
         List<GetParameter> GetParameterByGroup(string group);
         GetParameter GetParameter(ParameterDto parameter);

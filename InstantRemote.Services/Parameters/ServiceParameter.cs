@@ -21,6 +21,14 @@ namespace InstantRemote.Services.Parameters
         {
             return UnitOfWork.RepositoryCommon.GetYears();
         }
+        public List<GetYearMatrizResp> GetYearsMatriz()
+        {
+            return UnitOfWork.RepositoryCommon.GetYearsMatriz();
+        }
+        public List<GetCalMatrizResp> GetCalMatriz(string year)
+        {
+            return UnitOfWork.RepositoryCommon.GetCalMatriz(year);
+        }
         public List<GetWeekResp> GetWeeks (int year)
         {
             return UnitOfWork.RepositoryCommon.GetWeeks(year);

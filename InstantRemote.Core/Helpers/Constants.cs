@@ -194,6 +194,8 @@
         public const string Bitacora = "bitacora";
         public const string GetEstado = "estados";
         public const string GetYears = "years";
+        public const string GetYearsMatriz = "years/matriz";
+        public const string GetCalMatriz = "calendario/matriz";
         public const string GetWeeks = "weeks";
         public const string GetMunicipios = "municipios";
         public const string GetColonia = "colonia";
@@ -229,6 +231,7 @@
         public const string GetReportApp = "app";
         public const string GetReportAsignaciones = "asignaciones";
         public const string GetReportAsignacionesAll = "asignaciones/all";
+        public const string GetReportMatrizApro = "matrizAprobacion";
 
 
 

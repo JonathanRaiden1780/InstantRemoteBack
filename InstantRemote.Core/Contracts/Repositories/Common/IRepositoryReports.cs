@@ -20,5 +20,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetReportApp> GetReportApp(FiltroApp filtro);
         List<GetReportAsignaciones> GetReportAsignaciones(string numEmpleado);
         List<GetReportAsignaciones> GetReportAsignacionesAll();
+        List<GetReportMatriz> GetReportMatrizApro(FiltroMatriz filtro);
     }
 }

@@ -128,7 +128,14 @@ namespace InstantRemote.Repositories.Context
         public List<GetReportAsignaciones> GetReportAsignacionesAll()
         {
             var response = Connection.Query<GetReportAsignaciones>(StoreProcedure.IR_V2_RP_AsignacionesTemporalesAll,
-                 commandType: CommandType.StoredProcedure).ToList();
+                 commandType: CommandType.StoredProcedure,commandTimeout:120).ToList();
+            return response;
+        }
+
+        public List<GetReportMatriz> GetReportMatrizApro(FiltroMatriz filtro)
+        {
+            var response = Connection.Query<GetReportMatriz>(StoreProcedure.sp_GetVariablesMatrizAprobacion, filtro,
+                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
         }
     }

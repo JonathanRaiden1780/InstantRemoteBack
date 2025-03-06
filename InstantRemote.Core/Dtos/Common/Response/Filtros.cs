@@ -1,4 +1,6 @@
-﻿namespace InstantRemote.Core.Dtos.Common.Response
+﻿using Newtonsoft.Json;
+
+namespace InstantRemote.Core.Dtos.Common.Response
 {
     public class GetResponsablesRespDto
     {
@@ -63,6 +65,16 @@
     {
         public int id { get; set; }
         public string year { get; set; }
+    }
+    public class GetCalMatrizResp
+    {
+        public int idc { get; set; }
+        public string calendario { get; set; }
+    }
+    public class GetYearMatrizResp
+    {
+        public int id { get; set; }
+        public string anio { get; set; }
     }
 
 
@@ -810,6 +822,11 @@
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+    public class FiltroMatriz
+    {
+        public string emplid { get; set; }
+        public string calendario { get; set; }
+    }
 
     public class FiltrosReq : FiltroCommon
     {
@@ -1225,6 +1242,38 @@
         public string horarioAsignado { get; set; }
         public string inicio { get; set; }
         public string fin { get; set; }
+    }
+    public class GetReportMatriz
+    {
+        public int idVariable { get; set; }
+        public string Numero { get; set; }
+        public string Nombre { get; set; }
+        public string Elemento { get; set; }
+        public string Concepto { get; set; }
+        public string Importe { get; set; }
+        [JsonProperty("NivelDeAprobacionNecesario/requerido")]
+        public string NivelDeAprobacionNecesariorequerido { get; set; }
+        public string status { get; set; }
+        public string Puesto { get; set; }
+        public string SiteCaptura { get; set; }
+        public string SeccionOrigen { get; set; }
+        public string DescripcionSiteCaptura { get; set; }
+        public string Division { get; set; }
+        public string TSOrigen { get; set; }
+        public string Periodo { get; set; }
+        public string Observaciones { get; set; }
+        public string PosicionCaptura { get; set; }
+        public int Caducada { get; set; }
+        public string EmpAutorizador { get; set; }
+        public string fechaAutorizador { get; set; }
+        public string numempModificacionCon { get; set; }
+        public string fechaModificacionCon { get; set; }
+        public string camConc { get; set; }
+        public string numEmpModificacionImp { get; set; }
+        public string fechaModificacionImp { get; set; }
+        public string camImpo { get; set; }
+        public string idSolicitante { get; set; }
+        public string nomSolicitante { get; set; }
     }
 
 

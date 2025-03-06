@@ -31,6 +31,20 @@ namespace InstantRemote.Repositories.Context
             return Connection.Query<GetYearResp>(query, commandType: CommandType.Text).ToList();
         }
 
+        public List<GetYearMatrizResp> GetYearsMatriz()
+        {
+            var query =
+                "SELECT idCalen AS id,año AS anio   from tblCalendarios_anual WHERE año IN (SELECT DISTINCT CONCAT('20', RIGHT(CAST(Periodo AS VARCHAR(10)), 2)) AS NuevoPeriodo FROM variables )";
+            return Connection.Query<GetYearMatrizResp>(query, commandType: CommandType.Text).ToList();
+        }
+
+        public List<GetCalMatrizResp> GetCalMatriz(string year)
+        {
+            var response = Connection.Query<GetCalMatrizResp>(StoreProcedure.sp_GetCalendariosVariables, new{ @year = year},
+                commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+
         public List<GetWeekResp> GetWeeks(int year)
         {
             var response = Connection.Query<GetWeekResp>(StoreProcedure.sp_GetCalendariosHorasExtras, new {

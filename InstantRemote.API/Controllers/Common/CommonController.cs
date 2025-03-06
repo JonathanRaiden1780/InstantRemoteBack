@@ -180,6 +180,86 @@ namespace InstantRemote.Api.Controllers.Common
         }
         
         [AllowAnonymous]
+        [HttpGet(Constants.GetYearsMatriz)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetYearsMatriz()
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceParameter.GetYearsMatriz();
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
+        
+        [AllowAnonymous]
+        [HttpGet(Constants.GetCalMatriz)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetCalMatriz(string year)
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServiceParameter.GetCalMatriz(year);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
+        
+        [AllowAnonymous]
         [HttpGet(Constants.GetWeeks)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
