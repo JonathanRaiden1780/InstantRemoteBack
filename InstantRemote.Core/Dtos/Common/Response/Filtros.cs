@@ -1210,6 +1210,31 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string OrigEmple { get; set; }
     }
 
+    public class GetReportAsistenciaTempAll
+    {
+        public int numEmpleado { get; set; }
+        public string apellidos { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string site { get; set; }
+        public string SERVICIO { get; set; }
+        public string nomCliente { get; set; }
+        public string nomSucursal { get; set; }
+        public string NS { get; set; }
+        public string fechaRegistro { get; set; }
+        public TimeSpan horaEntrada { get; set; }
+        public TimeSpan horaSalida { get; set; }
+        public TimeSpan horaSalidaComer { get; set; }
+        public TimeSpan horaEntradaComer { get; set; }
+        public TimeSpan horasLaboradas { get; set; }
+        public string nombre { get; set; }
+        public string servi { get; set; }
+        public string OrigEmple { get; set; }
+        public string tempEntrada { get; set; }
+        public string tempSalida { get; set; }
+    }
+
+
     public class GetReportApp
     {
         public string nombre { get; set; }

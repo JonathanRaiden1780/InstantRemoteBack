@@ -9,30 +9,37 @@ namespace InstantRemote.Services.Reports
 {
     public class ServiceReports : BaseService, IServiceReports
     {
-        public ServiceReports(IUnitOfWork UnitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper) : base(UnitOfWork, serviceFactory, mapper)
+        public ServiceReports(IUnitOfWork UnitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper) :
+            base(UnitOfWork, serviceFactory, mapper)
         {
         }
-        public List<LogAsistenciaResp> GetLogAsistencia (FiltrosReq filtro)
+
+        public List<LogAsistenciaResp> GetLogAsistencia(FiltrosReq filtro)
         {
-            return  UnitOfWork.RepositoryReports.GetLogAsistencia(filtro);
+            return UnitOfWork.RepositoryReports.GetLogAsistencia(filtro);
         }
+
         public List<RetardosResp> GetRetardos(FiltrosRepReq filtro)
         {
             return UnitOfWork.RepositoryReports.GetRetardos(filtro);
         }
-        public List<HuerfanosResp> GetHuerfanos (FiltroHuerfanos filtro)
+
+        public List<HuerfanosResp> GetHuerfanos(FiltroHuerfanos filtro)
         {
             return UnitOfWork.RepositoryReports.GetHuerfanos(filtro);
         }
+
         public List<GetReportesClientes> GetReportClientes(int emplid)
         {
             return UnitOfWork.RepositoryReports.GetReportClientes(emplid);
         }
+
         public List<GetReportesEnrolados> GetReportEdoEnrola(FiltroEdoEnrola filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportEdoEnrola(filtro);
         }
-        public List<GetReportesHrsExtras> GetReportHrsExtra (FiltroHrsExtra filtro)
+
+        public List<GetReportesHrsExtras> GetReportHrsExtra(FiltroHrsExtra filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportHrsExtra(filtro);
         }
@@ -41,10 +48,13 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaAnual(filtro);
         }
-        public List<GetReportAsistenciaAnualResumen> GetReportAsistenciaAnualResumen(FiltroAsistenciaAnualResumen filtro)
+
+        public List<GetReportAsistenciaAnualResumen> GetReportAsistenciaAnualResumen(
+            FiltroAsistenciaAnualResumen filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaAnualResumen(filtro);
         }
+
         public List<GetReportAsistenciaEstandar> GetReportAsistenciaEstandar(FiltroAsistenciaAnualResumen filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaEstandar(filtro);
@@ -54,15 +64,17 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAcumuladoAsistencia(filtro);
         }
-        
+
         public List<GetReportAusentismos> GetReportAusentismos(FiltroAusentismos filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportAusentismos(filtro);
         }
+
         public List<GetReportAsistencia> GetReportAsistencia(FiltroAsistencia filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportAsistencia(filtro);
         }
+
         public List<GetReportAsistenciaTemp> GetReportAsistenciaTemperatura(FiltroAsistencia filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaTemperatura(filtro);
@@ -87,9 +99,15 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportMatrizApro(filtro);
         }
+
         public List<GetReportCapturaManual> GetReportCapturaManual(string filtro)
         {
             return UnitOfWork.RepositoryReports.GetReportCapturaManual(filtro);
         }
-    }
+
+        public List<GetReportAsistenciaTempAll> GetReportAsistenciaTemperaturaAll(FiltroAsistencia filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAsistenciaTemperaturaAll(filtro);
+        }
+}
 }

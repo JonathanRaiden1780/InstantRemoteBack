@@ -144,6 +144,12 @@ namespace InstantRemote.Repositories.Context
                  commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
         }
+        public List<GetReportAsistenciaTempAll> GetReportAsistenciaTemperaturaAll(FiltroAsistencia filtro)
+        {
+            var response = Connection.Query<GetReportAsistenciaTempAll>(StoreProcedure.IR_V2_RP_Asistencia_Temperatura_All_Days,   filtro,
+                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+            return response;
+        }
     }
 
 }
