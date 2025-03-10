@@ -1320,6 +1320,20 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string token { get; set; }
     }
 
+    public class GetReportAusenOmis
+    {
+        public string emplid { get; set; }
+        public string tipoAusencia { get; set; }
+        public string desde { get; set; }
+        public string hasta { get; set; }
+        public int dias { get; set; }
+        public string FolioInc { get; set; }
+        public string site { get; set; }
+        public string usuario { get; set; }
+        public string posicion { get; set; }
+        public string comentarios { get; set; }
+    }
+
 
 
 }

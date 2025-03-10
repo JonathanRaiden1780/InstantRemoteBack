@@ -106,6 +106,7 @@ namespace InstantRemote.Core.Helpers
         public const string sp_GetVariablesMatrizAprobacion = "sp_GetVariablesMatrizAprobacion"; 
         public const string IR_V2_SP_chequeosManualesDetalle = "IR_V2_SP_chequeosManualesDetalle"; 
         public const string IR_V2_RP_Asistencia_Temperatura_All_Days = "IR_V2_RP_Asistencia_Temperatura_All_Days"; 
+        public const string IR_V2_RP_Asistencia_Estandar_Blancos = "IR_V2_RP_Asistencia_Estandar_Blancos"; 
         
         
         

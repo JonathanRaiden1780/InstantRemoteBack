@@ -109,5 +109,9 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAsistenciaTemperaturaAll(filtro);
         }
+        public List<GetReportAusenOmis> GetReportAusenOmision(FiltroAsistenciaAnualResumen filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportAusenOmision(filtro);
+        }
 }
 }
