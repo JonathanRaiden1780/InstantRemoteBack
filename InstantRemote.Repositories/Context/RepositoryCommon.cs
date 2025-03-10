@@ -17,12 +17,12 @@ namespace InstantRemote.Repositories.Context
 
         public void InsertBitacoraInstantRemote(BitacoraRequestDto bitacora)
         {
-            var query = "INSERT INTO tblBitacoraInstanRemote values ('"
+            var query = "INSERT INTO tblBitacoraInstanRemote (numeroEmpleado, accion, resumen, pantalla, fecha, empleadoEditado ) values ('"
                         + bitacora.Usuario + "' ,'"
                         + bitacora.Accion + "','"
                         + bitacora.Descripcion + "','"
                         + bitacora.Pantalla + "',GETDATE(),'')";
-            Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault();
+                Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault();
         }
 
         public List<GetYearResp> GetYears()
