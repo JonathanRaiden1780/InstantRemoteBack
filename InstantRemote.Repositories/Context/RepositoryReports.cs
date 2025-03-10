@@ -147,25 +147,25 @@ namespace InstantRemote.Repositories.Context
         public List<GetReportAsistenciaTempAll> GetReportAsistenciaTemperaturaAll(FiltroAsistencia filtro)
         {
             var response = Connection.Query<GetReportAsistenciaTempAll>(StoreProcedure.IR_V2_RP_Asistencia_Temperatura_All_Days,   filtro,
-                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+                 commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         }
         public List<GetReportAusenOmis> GetReportAusenOmision(FiltroAsistenciaAnualResumen filtro)
         {
             var response = Connection.Query<GetReportAusenOmis>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Blancos,   filtro,
-                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+                 commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         }   
         public List<GetReportesHrsExtrasComp> GetReportHrsExtrasComp(FiltroHrsExtra filtro)
         {
             var response = Connection.Query<GetReportesHrsExtrasComp>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal,   filtro,
-                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+                 commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         } 
         public List<GetReportesHrsExtrasNoProc> GetReportHrsExtrasNoProcs(FiltroHrsExtra filtro)
         {
             var response = Connection.Query<GetReportesHrsExtrasNoProc>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago,   filtro,
-                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+                 commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         }
     }
