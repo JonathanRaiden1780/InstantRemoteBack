@@ -20,7 +20,8 @@ namespace InstantRemote.Services
         private IServiceFiltros serviceFiltros = null;
         private IServiceCommon serviceCommon = null;
         private IServiceReports serviceReports = null;
-
+        private IServicePrincipal servicePrincipal = null;
+    
 
         public ServiceFactory(IUnitOfWork unitOfWork, Func<string, IServiceFactory> serviceFactory, IMapper mapper, IConfiguration configuration)
         {
@@ -34,5 +35,6 @@ namespace InstantRemote.Services
         public IServiceFiltros ServiceFiltros => serviceFiltros ??= new ServiceFiltros(UnitOfWork, serviceFactory, mapper);
         public IServiceCommon ServiceCommon => serviceCommon ??= new ServiceCommon(UnitOfWork, serviceFactory, mapper);
         public IServiceReports ServiceReports => serviceReports ??= new ServiceReports(UnitOfWork, serviceFactory, mapper);
+        public IServicePrincipal ServicePrincipal => servicePrincipal ??= new ServicePrincipal(UnitOfWork, serviceFactory, mapper);
     }
 }

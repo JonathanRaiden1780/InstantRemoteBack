@@ -8,6 +8,7 @@ namespace InstantRemote.Core.Contracts.Factories.Common
         IRepositoryParameter RepositoryParameter{ get; }
         IRepositoryCommon RepositoryCommon{ get; }
         IRepositoryReports RepositoryReports{ get; }
+        IRepositoryPrincipal RepositoryPrincipal{ get; }
         void BeginTransaction();
         void CommitChanges();
         void RollbackChanges();

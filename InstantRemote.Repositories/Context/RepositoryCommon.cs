@@ -91,17 +91,7 @@ namespace InstantRemote.Repositories.Context
             }, commandType: CommandType.StoredProcedure,commandTimeout:120).ToList();
             return response;
         }
-
-        public List<GetDispositivoDetalleResp> GetDispositivoDetalle(string serie)
-        {
-            var response = ConnectionSQL.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new
-            {
-                @serie = serie
-            }, commandType: CommandType.StoredProcedure).ToList();
-            return response;
-        }
-
-
+        
         #region sucursales
 
         //listaSucursalesCombo / listaSucursalesComboBJ admin

@@ -29,7 +29,7 @@ namespace InstantRemote.Api.Controllers.Principal
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetConstEnrola(tipo);
+                var response = serviceFactory("IR").ServicePrincipal.GetConstEnrola(tipo);
                 result = Ok(response);
             }
 
@@ -57,6 +57,7 @@ namespace InstantRemote.Api.Controllers.Principal
 
             return result;
         }
+        
         [HttpGet(Constants.GetDispositivos)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
@@ -67,7 +68,7 @@ namespace InstantRemote.Api.Controllers.Principal
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetDispositivos(emplid);
+                var response = serviceFactory("IR").ServicePrincipal.GetDispositivos(emplid);
                 result = Ok(response);
             }
 
@@ -106,7 +107,7 @@ namespace InstantRemote.Api.Controllers.Principal
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetDispositivoDetalle(serie);
+                var response = serviceFactory("IR").ServicePrincipal.GetDispositivoDetalle(serie);
                 result = Ok(response);
             }
 
