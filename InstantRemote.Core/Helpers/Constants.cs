@@ -236,6 +236,7 @@
         public const string GetReportCapturaManual = "capturaManual";
         public const string GetReportAusenOmision = "ausentismoOmision";
         public const string GetReportHrsExtrasComp = "horasExtrasComparativo";
+        public const string GetReportHrsExtrasNoProcs = "horasExtrasNoProcede";
 
 
 

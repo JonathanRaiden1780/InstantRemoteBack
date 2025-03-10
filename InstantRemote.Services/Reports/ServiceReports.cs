@@ -117,5 +117,9 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportHrsExtrasComp(filtro);
         }
+        public List<GetReportesHrsExtrasNoProc> GetReportHrsExtrasNoProcs(FiltroHrsExtra filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportHrsExtrasNoProcs(filtro);
+        }
 }
 }

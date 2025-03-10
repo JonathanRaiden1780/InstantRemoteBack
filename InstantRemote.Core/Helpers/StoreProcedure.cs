@@ -108,6 +108,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_Asistencia_Temperatura_All_Days = "IR_V2_RP_Asistencia_Temperatura_All_Days"; 
         public const string IR_V2_RP_Asistencia_Estandar_Blancos = "IR_V2_RP_Asistencia_Estandar_Blancos"; 
         public const string IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal = "IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal"; 
+        public const string IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago = "IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago"; 
         
         
         
