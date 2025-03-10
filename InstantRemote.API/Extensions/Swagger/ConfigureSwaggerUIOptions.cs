@@ -15,6 +15,7 @@ namespace InstantRemote.Api.Extensions.Swagger
             c.SwaggerEndpoint(Constants.SwaggerPathServices, Constants.ServicesTitle);
             c.SwaggerEndpoint(Constants.SwaggerPathCatalogs, Constants.CatalogsTitle);
             c.SwaggerEndpoint(Constants.SwaggerPathReports, Constants.ReportesTitle);
+            c.SwaggerEndpoint(Constants.SwaggerPathPrincipal, Constants.PrincipalTitle);
 
             pahtCssSwagger = pahtCssSwagger.Replace(virtualDirectory, string.Empty);
             c.InjectStylesheet(pahtCssSwagger);

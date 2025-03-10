@@ -50,23 +50,23 @@
         #endregion
         #region Catalogos
         public const string Catalogs = "catalogos";
-        public const string CatalogsTitle = "Catalogos Manager";
+        public const string CatalogsTitle = "Catalogs Manager";
         public const string SwaggerPathCatalogs = "../swagger/catalogos/swagger.json";
 
         
-        public const string RouteCatalogs = "catalogos/";
-        public const string RouteClientes = "catalogos/clientes";
-        public const string RouteSecciones = "catalogos/secciones";
-        public const string RouteHorarios = "catalogos/horarios";
-        public const string RouteDiasFestivos = "catalogos/diasFestivos";
-        public const string RoutePermisos = "catalogos/permisos";
-        public const string RouteEmpleados = "catalogos/empleados";
-        public const string RouteAsigna = "catalogos/asignaEmpleados";
-        public const string RouteReports = "catalogos/reportes";
-        public const string RouteToken = "catalogos/token";
-        public const string RouteServicios = "catalogos/servicios";
-        public const string RouteSites = "catalogos/sites";
-        public const string RouteSucursal = "catalogos/sucursal";
+        public const string RouteCatalogs = "catalogs/";
+        public const string RouteClientes = "catalogs/clientes";
+        public const string RouteSecciones = "catalogs/secciones";
+        public const string RouteHorarios = "catalogs/horarios";
+        public const string RouteDiasFestivos = "catalogs/diasFestivos";
+        public const string RoutePermisos = "catalogs/permisos";
+        public const string RouteEmpleados = "catalogs/empleados";
+        public const string RouteAsigna = "catalogs/asignaEmpleados";
+        public const string RouteReports = "catalogs/reportes";
+        public const string RouteToken = "catalogs/token";
+        public const string RouteServicios = "catalogs/servicios";
+        public const string RouteSites = "catalogs/sites";
+        public const string RouteSucursal = "catalogs/sucursal";
 
         public const string Clientes = "Clientes";
         public const string Servicios = "Servicios";
@@ -82,11 +82,11 @@
         
          public const string GetCatZonaClientes = "CatZonaClientes";
         public const string GetResponsables = "responsables";
-        public const string InsertCliente = "insert/cliente";
-        public const string UpdateCliente = "update/cliente";
-        public const string DeleteCliente = "delete/cliente";
+        public const string InsertCliente = "insert";
+        public const string UpdateCliente = "update";
+        public const string DeleteCliente = "delete";
 
-        public const string GetHorariosAsigna = "horarios";
+        public const string GetHorariosAsigna = "schedule";
         public const string GetAsignacion = "get";
         public const string GetListaHorariosAsignaEdit = "get/edit";
         public const string AddAsignacion = "temp/add";
@@ -120,26 +120,26 @@
         public const string DeleteSucursal = "delete";
         
         
-        public const string GetSecciones = "secciones";
+        public const string GetSecciones = "get";
         public const string GetSeccion = "seccion";
         public const string GetSeccionSucursal = "seccion-sucursal";
         
 
-        public const string GetSites = "sites";
+        public const string GetSites = "get";
         public const string GetSitesCliente = "sites-cliente";
         public const string GetSitesSucursal = "sites-sucursal";
 
-        public const string GetServicio = "servicio";
+        public const string GetServicio = "get";
         public const string GetServicioSucursal = "servicio-sucursal";
         public const string GetServicioSeccion = "servicio-seccion";
         
         
-        public const string GetCatalogoHorario = "catalogo";
+        public const string GetCatalogoHorario = "catalog";
         public const string GetConstEnrola = "constantes/enrolado";
-        public const string GetDispositivos = "dispositivos";
-        public const string GetDispositivoDetalle = "dispositivos/detalles";
-        public const string GetParameterByReference = "parametros";
-        public const string UpdateParameter = "parametros/update";
+        public const string GetDispositivos = "devices";
+        public const string GetDispositivoDetalle = "devices/details";
+        public const string GetParameterByReference = "parameters";
+        public const string UpdateParameter = "parameters/update";
         public const string GetTipoHorario = "tipo";
         public const string GetTipoCHorario = "tipo-comida";
         public const string GetNivelHorario = "nivel";
@@ -182,38 +182,47 @@
 
         #region Common
         public const string Services = "common";
-        public const string Filtros = "filtros";
+        public const string Filtros = "filters";
 
         public const string ServicesTitle = "Services Manager";
         public const string SwaggerPathServices = "../swagger/common/swagger.json";
 
         public const string RouteCommon = "common/";
-        public const string RouteFiltro = "filtro/";
+        public const string RouteFiltro = "filters/";
             
         public const string GetReports = "reports";
-        public const string Bitacora = "bitacora";
-        public const string GetEstado = "estados";
+        public const string Bitacora = "log";
+        public const string GetEstado = "states";
         public const string GetYears = "years";
         public const string GetYearsMatriz = "years/matriz";
-        public const string GetCalMatriz = "calendario/matriz";
+        public const string GetCalMatriz = "calendar/matriz";
         public const string GetWeeks = "weeks";
-        public const string GetMunicipios = "municipios";
-        public const string GetColonia = "colonia";
+        public const string GetMunicipios = "municipality";
+        public const string GetColonia = "suburb";
         public const string GetCP = "cp";
-        public const string GetZonaHoraria = "zona-horaria";
+        public const string GetZonaHoraria = "time-zone";
        
        
         
         #endregion
+        
+        #region Principal
+        public const string SwaggerPathPrincipal = "../swagger/principal/swagger.json";
+        public const string Principal = "PRINCIPAL";
+        public const string Principals = "principal";
+        public const string RoutePrincipal = "principal/";
+        public const string PrincipalTitle = "Principal Manager";
 
-        #region Reportes
+        #endregion
+
+        #region Reports
         public const string Reportes = "REPORTES";
-        public const string Reports = "reportes";
+        public const string Reports = "reports";
         public const string ReportsViewer = "reportesViewer";
-        public const string SwaggerPathReports = "../swagger/reportes/swagger.json";
-        public const string RouteReportes = "reportes/";
+        public const string SwaggerPathReports = "../swagger/reports/swagger.json";
+        public const string RouteReportes = "reports/";
         public const string RouteLogAsistencia = "logAsistencia/";
-        public const string ReportesTitle = "Reportes Manager";
+        public const string ReportesTitle = "Reports Manager";
 
         public const string GetLogAsistencia = "logAsistencia";
         public const string GetRetardos = "retardos";

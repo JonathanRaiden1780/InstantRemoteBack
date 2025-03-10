@@ -9,16 +9,16 @@ using InstantRemote.Core.Dtos.Common.Response;
 using Microsoft.Reporting.NETCore;
 
 
-namespace InstantRemote.Api.Controllers.Reportes
+namespace InstantRemote.Api.Controllers.Reports
 {
     [ApiController]
     [Produces(Constants.ContentType)]
     [Route(Constants.RouteReportes, Name = Constants.Reports)]
-    public class ReportesController : BaseController
+    public class ReportsController : BaseController
     {
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public ReportesController(Func<string, IServiceFactory> serviceFactory, IWebHostEnvironment hostEnvironment) :
+        public ReportsController(Func<string, IServiceFactory> serviceFactory, IWebHostEnvironment hostEnvironment) :
             base(serviceFactory)
         {
             _hostEnvironment = hostEnvironment;

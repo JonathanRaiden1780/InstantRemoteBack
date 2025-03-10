@@ -85,16 +85,16 @@ namespace InstantRemote.Repositories.Context
 
         public List<GetDispositivosResp> GetDispositivos(int emplid)
         {
-            var response = Connection.Query<GetDispositivosResp>(StoreProcedure.sp_GetDispositivos, new
+            var response = ConnectionSQL.Query<GetDispositivosResp>(StoreProcedure.sp_GetDispositivos, new
             {
                 @emplid = emplid
-            }, commandType: CommandType.StoredProcedure).ToList();
+            }, commandType: CommandType.StoredProcedure,commandTimeout:120).ToList();
             return response;
         }
 
         public List<GetDispositivoDetalleResp> GetDispositivoDetalle(string serie)
         {
-            var response = Connection.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new
+            var response = ConnectionSQL.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new
             {
                 @serie = serie
             }, commandType: CommandType.StoredProcedure).ToList();
