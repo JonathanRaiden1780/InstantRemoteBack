@@ -113,5 +113,9 @@ namespace InstantRemote.Services.Reports
         {
             return UnitOfWork.RepositoryReports.GetReportAusenOmision(filtro);
         }
+        public List<GetReportesHrsExtrasComp> GetReportHrsExtrasComp(FiltroHrsExtra filtro)
+        {
+            return UnitOfWork.RepositoryReports.GetReportHrsExtrasComp(filtro);
+        }
 }
 }

@@ -983,6 +983,40 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string dobles { get; set; }
         public string triples { get; set; }
     }
+    public class GetReportesHrsExtrasComp
+    {
+        public string badgenumber { get; set; }
+        public string apellidos { get; set; }
+        public string IMSS { get; set; }
+        public string Posicion { get; set; }
+        public string Puesto { get; set; }
+        public string unidad { get; set; }
+        public string SECCION { get; set; }
+        public string servicio { get; set; }
+        public string fecha_origen { get; set; }
+        public string DeptName { get; set; }
+        public string site { get; set; }
+        public string fechaAlta { get; set; }
+        public string fechaBaja { get; set; }
+        public string dife { get; set; }
+        public string cuantos { get; set; }
+        public string shift { get; set; }
+        public string ColorFondo { get; set; }
+        public string ColorLetra { get; set; }
+        public string altafecha { get; set; }
+        public string grupo_pago { get; set; }
+        public string siteorigen { get; set; }
+        public TimeSpan jornada { get; set; }
+        public string HrsmComi { get; set; }
+        public string dobles { get; set; }
+        public string triples { get; set; }
+        public string sinCalculo { get; set; }
+        public int totalHrasAutori { get; set; }
+        public string totalHrasDobleTriple { get; set; }
+        public int horasFinal { get; set; }
+        public string dobles2 { get; set; }
+        public string triples2 { get; set; }
+    }
 
     public class GetReportAsistenciaAnual
     {

@@ -24,5 +24,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetReportCapturaManual> GetReportCapturaManual(string filtro);
         List<GetReportAsistenciaTempAll> GetReportAsistenciaTemperaturaAll(FiltroAsistencia filtro);
         List<GetReportAusenOmis> GetReportAusenOmision(FiltroAsistenciaAnualResumen filtro);
+        List<GetReportesHrsExtrasComp> GetReportHrsExtrasComp(FiltroHrsExtra filtro);
     }
 }

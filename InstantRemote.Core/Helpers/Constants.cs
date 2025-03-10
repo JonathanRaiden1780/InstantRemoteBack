@@ -235,6 +235,7 @@
         public const string GetReportMatrizApro = "matrizAprobacion";
         public const string GetReportCapturaManual = "capturaManual";
         public const string GetReportAusenOmision = "ausentismoOmision";
+        public const string GetReportHrsExtrasComp = "horasExtrasComparativo";
 
 
 

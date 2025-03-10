@@ -155,6 +155,12 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetReportAusenOmis>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Blancos,   filtro,
                  commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
+        }   
+        public List<GetReportesHrsExtrasComp> GetReportHrsExtrasComp(FiltroHrsExtra filtro)
+        {
+            var response = Connection.Query<GetReportesHrsExtrasComp>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal,   filtro,
+                 commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
+            return response;
         }
     }
 

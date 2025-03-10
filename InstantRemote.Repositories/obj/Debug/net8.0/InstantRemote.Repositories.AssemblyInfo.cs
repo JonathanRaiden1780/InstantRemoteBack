@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InstantRemote.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f74bc1f3e9609457f612f7a25a7c027adb150315")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05044168e47da967e7c2f81cf0ea54b5d5eb1b91")]
 [assembly: System.Reflection.AssemblyProductAttribute("InstantRemote.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InstantRemote.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
