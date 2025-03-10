@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InstantRemote.Security")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f688de43574502a6eadc4b57b7ca105061cef23e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e83990edac4a177f9a4dcf372ed6bc33dfb4e487")]
 [assembly: System.Reflection.AssemblyProductAttribute("InstantRemote.Security")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InstantRemote.Security")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

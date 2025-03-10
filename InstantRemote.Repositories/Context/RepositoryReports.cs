@@ -11,8 +11,8 @@ namespace InstantRemote.Repositories.Context
 {
     public class RepositoryReports : BaseRepository, IRepositoryReports
     {
-        public RepositoryReports(IDbConnection connection, Func<IDbTransaction> transaction, IMapper mapper) : base(
-            connection, transaction, mapper)
+        public RepositoryReports(IDbConnection connection, Func<IDbTransaction> transaction,IDbConnection connectionSQL, Func<IDbTransaction> transactionSQL, IMapper mapper) : base(
+            connection, transaction, connectionSQL,transactionSQL, mapper)
         {
         }
 
@@ -78,7 +78,7 @@ namespace InstantRemote.Repositories.Context
 
         public List<GetReportAsistenciaEstandar> GetReportAsistenciaEstandar(FiltroAsistenciaAnualResumen filtro)
         {
-            var response = Connection.Query<GetReportAsistenciaEstandar>(StoreProcedure.IR_V2_RP_Asistencia_Estandar,
+            var response = ConnectionSQL.Query<GetReportAsistenciaEstandar>(StoreProcedure.IR_V2_RP_Asistencia_Estandar,
                 filtro, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
@@ -86,7 +86,7 @@ namespace InstantRemote.Repositories.Context
         public List<GetReportAcumuladoAsistencia> GetReportAcumuladoAsistencia(FiltroAsistenciaAcumulado filtro)
         {
             var response = Connection.Query<GetReportAcumuladoAsistencia>(StoreProcedure.IR_V2_RP_Acumulado_Asistencia,
-                filtro, commandType: CommandType.StoredProcedure).ToList();
+                filtro, commandType: CommandType.StoredProcedure, commandTimeout:160).ToList();
             return response;
         }
 
@@ -100,14 +100,14 @@ namespace InstantRemote.Repositories.Context
         public List<GetReportAsistencia> GetReportAsistencia(FiltroAsistencia filtro)
         {
             var response = Connection.Query<GetReportAsistencia>(StoreProcedure.IR_V2_RP_Asistencia, filtro,
-                commandType: CommandType.StoredProcedure).ToList();
+                commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
         }
 
         public List<GetReportAsistenciaTemp> GetReportAsistenciaTemperatura(FiltroAsistencia filtro)
         {
             var response = Connection.Query<GetReportAsistenciaTemp>(StoreProcedure.IR_V2_RP_Asistencia_Temperatura,
-                filtro, commandType: CommandType.StoredProcedure).ToList();
+                filtro, commandType: CommandType.StoredProcedure, commandTimeout:120).ToList();
             return response;
         }
 
@@ -152,19 +152,19 @@ namespace InstantRemote.Repositories.Context
         }
         public List<GetReportAusenOmis> GetReportAusenOmision(FiltroAsistenciaAnualResumen filtro)
         {
-            var response = Connection.Query<GetReportAusenOmis>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Blancos,   filtro,
+            var response = ConnectionSQL.Query<GetReportAusenOmis>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Blancos,   filtro,
                  commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         }   
         public List<GetReportesHrsExtrasComp> GetReportHrsExtrasComp(FiltroHrsExtra filtro)
         {
-            var response = Connection.Query<GetReportesHrsExtrasComp>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal,   filtro,
+            var response = ConnectionSQL.Query<GetReportesHrsExtrasComp>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal,   filtro,
                  commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         } 
         public List<GetReportesHrsExtrasNoProc> GetReportHrsExtrasNoProcs(FiltroHrsExtra filtro)
         {
-            var response = Connection.Query<GetReportesHrsExtrasNoProc>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago,   filtro,
+            var response = ConnectionSQL.Query<GetReportesHrsExtrasNoProc>(StoreProcedure.IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago,   filtro,
                  commandType: CommandType.StoredProcedure, commandTimeout:500).ToList();
             return response;
         }

@@ -9,7 +9,8 @@ namespace InstantRemote.Repositories.Context
 {
     public class RepositoryAuth : BaseRepository, IRepositoryAuth
     {
-        public RepositoryAuth(IDbConnection connection, Func<IDbTransaction> transaction, IMapper mapper) : base(connection, transaction, mapper)
+        public RepositoryAuth(IDbConnection connection, Func<IDbTransaction> transaction,IDbConnection connectionSQL, Func<IDbTransaction> transactionSQL, IMapper mapper) : base(
+            connection, transaction, connectionSQL,transactionSQL, mapper)
         {
 
         }

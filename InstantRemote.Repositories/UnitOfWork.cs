@@ -12,8 +12,10 @@ namespace InstantRemote.Repositories
     {
 
         private IDbConnection connection = null;
+        private IDbConnection connectionSQL = null;
         private bool _disposed;
         private IDbTransaction transaction = null;
+        private IDbTransaction transactionSQL = null;
         private readonly IMapper mapper = null;
 
         private IRepositoryParameter repositoryParameter = null;
@@ -25,12 +27,17 @@ namespace InstantRemote.Repositories
         {
             this.mapper = mapper;
             connection = new SqlConnection(configuration.GetConnectionString("ConexionComunes"));
+            connectionSQL = new SqlConnection(configuration.GetConnectionString("ConexionComunesSQL"));
             if (string.IsNullOrEmpty(connection.ConnectionString))
                 connection.ConnectionString = configuration["ConexionComunes"];
+            if (string.IsNullOrEmpty(connectionSQL.ConnectionString))
+                connectionSQL.ConnectionString = configuration["ConexionComunesSQL"];
             
             WakeUpDatabase(connection.ConnectionString).Wait();
             connection.Open();
-        }private async Task WakeUpDatabase(string connectionString)
+            connectionSQL.Open();
+        }
+        private async Task WakeUpDatabase(string connectionString)
         {
             int maxRetries = 2;
             for (int attempt = 1; attempt <= maxRetries; attempt++)
@@ -55,10 +62,11 @@ namespace InstantRemote.Repositories
                 }
             }
         }
-        public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction,mapper);
-        public IRepositoryCommon RepositoryCommon => repositoryCommon ??= new RepositoryCommon(connection, () => transaction,mapper);
-        public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction,mapper);
-        public IRepositoryReports RepositoryReports => repositoryReports ??= new RepositoryReports(connection, () => transaction,mapper);
+        public IRepositoryAuth RepositoryAuth => repositoryAuth ??= new RepositoryAuth(connection, () => transaction,connectionSQL, () => transactionSQL
+            ,mapper);
+        public IRepositoryCommon RepositoryCommon => repositoryCommon ??= new RepositoryCommon(connection, () => transaction,connectionSQL, () => transactionSQL,mapper);
+        public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
+        public IRepositoryReports RepositoryReports => repositoryReports ??= new RepositoryReports(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
 
         protected virtual void Dispose(bool disposing)
         {
@@ -71,10 +79,20 @@ namespace InstantRemote.Repositories
                         transaction.Dispose();
                         transaction = null;
                     }
+                    if (transactionSQL != null)
+                    {
+                        transactionSQL.Dispose();
+                        transactionSQL = null;
+                    }
                     if (connection != null)
                     {
                         connection.Dispose();
                         connection = null;
+                    }
+                    if (connectionSQL != null)
+                    {
+                        connectionSQL.Dispose();
+                        connectionSQL = null;
                     }
                 }
                 _disposed = true;
@@ -88,18 +106,23 @@ namespace InstantRemote.Repositories
         public void BeginTransaction()
         {
             transaction = connection.BeginTransaction();
+            transactionSQL = connectionSQL.BeginTransaction();
         }
 
         public void CommitChanges()
         {
             transaction.Commit();
             transaction = null;
+            transactionSQL.Commit();
+            transactionSQL = null;
         }
 
         public void RollbackChanges()
         {
             transaction.Rollback();
             transaction = null;
+            transactionSQL.Rollback();
+            transactionSQL = null;
         }
         public void Dispose()
         {

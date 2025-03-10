@@ -10,8 +10,8 @@ namespace InstantRemote.Repositories.Context
 {
     public class RepositoryCommon : BaseRepository, IRepositoryCommon
     {
-        public RepositoryCommon(IDbConnection connection, Func<IDbTransaction> transaction, IMapper mapper) : base(
-            connection, transaction, mapper)
+        public RepositoryCommon(IDbConnection connection, Func<IDbTransaction> transaction,IDbConnection connectionSQL, Func<IDbTransaction> transactionSQL, IMapper mapper) : base(
+            connection, transaction, connectionSQL,transactionSQL, mapper)
         {
         }
 
@@ -793,21 +793,21 @@ namespace InstantRemote.Repositories.Context
 
         public int AddAsignacionTemp(AsignacionReq asigna)
         {
-            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal, asigna,
+            var response = ConnectionSQL.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal, asigna,
                 commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
 
         public int UpdateAsignacionTemp(AsignacionReq asigna)
         {
-            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal_Edit, asigna,
+            var response = ConnectionSQL.Query<int>(StoreProcedure.IR_V2_SP_Asigna_Empleado_Temporal_Edit, asigna,
                 commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
 
         public int DeleteAsignacionTemp(AsignacionDelReq asigna)
         {
-            var response = Connection.Query<int>(StoreProcedure.IR_V2_SP_Desasigna_Empleado_Temporal, asigna,
+            var response = ConnectionSQL.Query<int>(StoreProcedure.IR_V2_SP_Desasigna_Empleado_Temporal, asigna,
                 commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
