@@ -66,11 +66,13 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public int id { get; set; }
         public string year { get; set; }
     }
+
     public class GetCalMatrizResp
     {
         public int idc { get; set; }
         public string calendario { get; set; }
     }
+
     public class GetYearMatrizResp
     {
         public int id { get; set; }
@@ -810,6 +812,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+
     public class FiltroApp
     {
         public string empleado { get; set; }
@@ -822,6 +825,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string siteVarchar { get; set; }
         public string servicioVarchar { get; set; }
     }
+
     public class FiltroMatriz
     {
         public string emplid { get; set; }
@@ -983,6 +987,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string dobles { get; set; }
         public string triples { get; set; }
     }
+
     public class GetReportesHrsExtrasComp
     {
         public string badgenumber { get; set; }
@@ -1017,6 +1022,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string dobles2 { get; set; }
         public string triples2 { get; set; }
     }
+
     public class GetReportesHrsExtrasNoProc
     {
         public string badgenumber { get; set; }
@@ -1055,6 +1061,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string statusA2 { get; set; }
         public string NOTA { get; set; }
     }
+
     public class GetReportAsistenciaAnual
     {
         public string badgenumber { get; set; }
@@ -1252,7 +1259,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string servi { get; set; }
         public string OrigEmple { get; set; }
     }
-    
+
     public class GetReportAsistenciaTemp
     {
         public int numEmpleado { get; set; }
@@ -1339,6 +1346,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string inicio { get; set; }
         public string fin { get; set; }
     }
+
     public class GetReportMatriz
     {
         public int idVariable { get; set; }
@@ -1347,8 +1355,10 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string Elemento { get; set; }
         public string Concepto { get; set; }
         public string Importe { get; set; }
+
         [JsonProperty("NivelDeAprobacionNecesario/requerido")]
         public string NivelDeAprobacionNecesariorequerido { get; set; }
+
         public string status { get; set; }
         public string Puesto { get; set; }
         public string SiteCaptura { get; set; }
@@ -1405,6 +1415,170 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string comentarios { get; set; }
     }
 
+    public class GetSolHrsExtras
+    {
+        public int id { get; set; }
+        public string numEmpleado { get; set; }
+        public string name { get; set; }
+        public string fecha { get; set; }
+        public int horas { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string statusA1 { get; set; }
+        public string statusA2 { get; set; }
+        public string caduca { get; set; }
+    }
+
+    public class GetSolHrsExtrasDetalle
+    {
+        public int id { get; set; }
+        public string numEmpleado { get; set; }
+        public string name { get; set; }
+        public string siteOrigen { get; set; }
+        public string descDeptoOrigen { get; set; }
+        public string posicionOrigen { get; set; }
+        public string siteHExtras { get; set; }
+        public int idSite { get; set; }
+        public string servicioHExtras { get; set; }
+        public int idTipoSer { get; set; }
+        public string posicionHExtras { get; set; }
+        public string jobtask { get; set; }
+        public string division { get; set; }
+        public string seccion { get; set; }
+        public string fecha { get; set; }
+        public int horas { get; set; }
+        public string autorizador1 { get; set; }
+        public string nameAutorizador1 { get; set; }
+        public string autorizador2 { get; set; }
+        public string nameAutorizador2 { get; set; }
+        public string notas { get; set; }
+        public string numEmpSolicitante { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string statusA1 { get; set; }
+        public string namImage { get; set; }
+        public string statusA2 { get; set; }
+        public string fechaAutorizador1 { get; set; }
+        public string fechaAutorizador2 { get; set; }
+        public string autor1 { get; set; }
+        public string autor2 { get; set; }
+    }
+
+    public class GetSolHrsExtrasAll
+    {
+        public string numEmpleado { get; set; }
+        public string name { get; set; }
+        public string seccionOrigen { get; set; }
+        public string siteOrigen { get; set; }
+        public string descDeptoOrigen { get; set; }
+        public string posicionOrigen { get; set; }
+        public string divisionOrigen { get; set; }
+        public string tipoServicioOrigen { get; set; }
+        public string siteHExtras { get; set; }
+        public string descSiteHExtras { get; set; }
+        public string servicioHExtras { get; set; }
+        public string posicionHExtras { get; set; }
+        public string seccionHExtras { get; set; }
+        public string divisionHExtras { get; set; }
+        public string fecha { get; set; }
+        public int horas { get; set; }
+        public string numEmpSolicitante { get; set; }
+        public string nomEmpSolicitante { get; set; }
+        public string fechaSolicitud { get; set; }
+        public string autorizador1 { get; set; }
+        public string nomAutorizador1 { get; set; }
+        public string statusA1 { get; set; }
+        public string fechaAutorizacion1 { get; set; }
+        public string autorizador2 { get; set; }
+        public string nomAutorizador2 { get; set; }
+        public string statusA2 { get; set; }
+        public string fechaAutorizacion2 { get; set; }
+        public string caduca { get; set; }
+    }
+
+    public class CaducarVigenciaReq
+    {
+        public string desde { get; set; }
+        public string hasta { get; set; }
+        public int empleado { get; set; }
+
+    }
+
+    public class GetEmpleadosActivos
+    {
+        public string nombre { get; set; }
+        public string completo { get; set; }
+        public int numEmpleado { get; set; }
+
+    }
+
+    public class GetInfoEmpleados
+    {
+        public string nomCompleto { get; set; }
+        public string site { get; set; }
+        public string desDepto { get; set; }
+        public string PosicionOrigen { get; set; }
+        public string puesto { get; set; }
+        public string seccion { get; set; }
+        public string SERVICIO { get; set; }
+        public string status { get; set; }
+        public int numEmpleado { get; set; }
+
+    }
+
+    public class GetJobTaskRequest
+    {
+        public string Site { get; set; }
+        public string Servicio { get; set; }
+        public string posicion { get; set; }
+    }
+    
+    public class GetJobTask
+    {
+        public string jobTask { get; set; }
+        public string division { get; set; }
+        public string seccion { get; set; }
+    }
+    public class GetMotivos
+    {
+        public int id { get; set; }
+        public string descripcion { get; set; }
+    }
+    public class GetServiciosBySite
+    {
+        public string SERVICIO { get; set; }
+        public string idTipoSer { get; set; }
+    }
+    public class GetPosiciones
+    {
+        public string PosicionOrigen { get; set; }
+    }
+    public class GetPosicionesReq
+    {
+        public string Servicio { get; set; }
+        public string Site { get; set; }
+    }
+    
+    public class GetEmpleadoInfo
+    {
+        public int numEmpleado { get; set; }
+        public string nomCompleto { get; set; }
+    }
+    
+    public class SaveSolicitudHrsReq
+    {
+        public string numEmpleado { get; set; }
+        public string site { get; set; }
+        public string servicio { get; set; }
+        public string posicion { get; set; }
+        public string fecha { get; set; }
+        public string hras { get; set; }
+        public string autorizador1 { get; set; }
+        public string autorizador2 { get; set; }
+        public string notas { get; set; }
+        public string empSolicitante { get; set; }
+        public string nameImag { get; set; }
+        public string retorno { get; set; }
+    }
+    
 
 
 }

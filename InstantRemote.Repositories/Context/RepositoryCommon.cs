@@ -721,6 +721,16 @@ namespace InstantRemote.Repositories.Context
                 commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
 
+        public List<GetEmpleadosActivos> GetEmpleadosActivos (int emplid)
+        {
+            var response = Connection.Query<GetEmpleadosActivos>(StoreProcedure.sp_EmpleadosActivos,new{emplid = emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetInfoEmpleados> GetInfoEmpleados (string emplid)
+        {
+            var response = Connection.Query<GetInfoEmpleados>(StoreProcedure.sp_InfoEmpleado,new{emplid = emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
         #endregion
 
         #region Dias Festivos
@@ -799,6 +809,35 @@ namespace InstantRemote.Repositories.Context
         {
             var response = ConnectionSQL.Query<int>(StoreProcedure.IR_V2_SP_Desasigna_Empleado_Temporal, asigna,
                 commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+
+        #endregion
+
+        #region  HrsExtras
+
+        public List<GetJobTask> GetJobTask(GetJobTaskRequest request)
+        {
+            var response = ConnectionSQL.Query<GetJobTask>(StoreProcedure.IR_V2_SP_Get_jobtaskDivByPosicionesAndSiteAndServicio, request,
+                commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetMotivos> GetMotivos()
+        {
+            var response = ConnectionSQL.Query<GetMotivos>(StoreProcedure.sp_GetMotivos,
+                commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetServiciosBySite> GetServicioSite (string site)
+        {
+            var response = ConnectionSQL.Query<GetServiciosBySite>(StoreProcedure.IR_V2_SP_Get_ServiciosBySite, new{ Site= site},
+                commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetPosiciones> GetPosiciones (GetPosicionesReq request)
+        {
+            var response = ConnectionSQL.Query<GetPosiciones>(StoreProcedure.IR_V2_SP_Get_PosicionesBySiteAndServicio, request,
+                commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
 

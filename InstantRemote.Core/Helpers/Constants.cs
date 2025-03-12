@@ -135,9 +135,6 @@
         
         
         public const string GetCatalogoHorario = "catalog";
-        public const string GetConstEnrola = "constantes/enrolado";
-        public const string GetDispositivos = "devices";
-        public const string GetDispositivoDetalle = "devices/details";
         public const string GetParameterByReference = "parameters";
         public const string UpdateParameter = "parameters/update";
         public const string GetTipoHorario = "tipo";
@@ -202,22 +199,51 @@
         public const string GetCP = "cp";
         public const string GetZonaHoraria = "time-zone";
        
-       
+        public const string GetEmpleadosActivos = "empleados/get";
+        public const string GetInfoEmpleados = "empleados/info";
+        public const string GetJobTask = "jobtask/get";
+        public const string GetMotivos = "motivos/get";
+        public const string GetServicioSite = "servicios/site";
+        public const string GetPosiciones = "posiciones/get";
         
         #endregion
         
         #region Principal
         public const string SwaggerPathPrincipal = "../swagger/principal/swagger.json";
-        public const string Principal = "PRINCIPAL";
+        public const string Principal = "Principal";
         public const string Principals = "principal";
         public const string RoutePrincipal = "principal/";
         public const string PrincipalTitle = "Principal Manager";
+        public const string GetConstEnrola = "constantes/enrolado";
+
+        #endregion
+        
+        #region Devices
+        public const string Devices = "Devices";
+        public const string RouteDevices = "devices/";
+        public const string GetDispositivos = "get";
+        public const string GetDispositivoDetalle = "details";
+
+        #endregion
+        
+        #region Hrs Extras
+        public const string HrsExtras = "HrsExtras";
+        public const string RouteHrsExtras = "hrsExtras/";
+        public const string GetSolHrsExtras = "solicitud/get";
+        public const string GetSolHrsExtrasDetalle = "solicitud/detalle";
+        public const string GetSolHrsExtrasAll = "solicitud/all";
+        public const string CaducarVigencia = "guardar/caducidad";
+        public const string QuitarVigencia = "quitar/caducidad";
+        public const string GetInfoName = "info/employee";
+        public const string validaCalendar = "calendar/review";
+        public const string SaveHrsExtra = "save/solicitud";
+        
 
         #endregion
 
         #region Reports
         public const string Reportes = "REPORTES";
-        public const string Reports = "reports";
+        public const string Reports = "Reports";
         public const string ReportsViewer = "reportesViewer";
         public const string SwaggerPathReports = "../swagger/reports/swagger.json";
         public const string RouteReportes = "reports/";

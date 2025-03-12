@@ -427,7 +427,15 @@ namespace InstantRemote.Services.Filtros
             
             UnitOfWork.RepositoryCommon.UpdateMasivoEmpleados(empleadosXML);
         }
+        public List<GetEmpleadosActivos> GetEmpleadosActivos(int emplid)
+        {
+            return UnitOfWork.RepositoryCommon.GetEmpleadosActivos(emplid);
+        }
 
+        public List<GetInfoEmpleados> GetInfoEmpleados(string emplid)
+        {
+            return UnitOfWork.RepositoryCommon.GetInfoEmpleados(emplid);
+        }
         public List<DiasFestivosCatalogo> GetDiasFestivos()
         {
             return UnitOfWork.RepositoryCommon.GetDiasFestivos();
@@ -469,8 +477,26 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryCommon.DeleteAsignacionTemp(asigna);
         }
-       
-        
+
+        public List<GetJobTask> GetJobTask(GetJobTaskRequest request)
+        {
+            return UnitOfWork.RepositoryCommon.GetJobTask(request);
+        }
+
+        public List<GetMotivos> GetMotivos()
+        {
+            return UnitOfWork.RepositoryCommon.GetMotivos();
+        }
+
+        public List<GetServiciosBySite> GetServicioSite(string site)
+        {
+            return UnitOfWork.RepositoryCommon.GetServicioSite(site);
+        }
+
+        public List<GetPosiciones> GetPosiciones(GetPosicionesReq request)
+        {
+            return UnitOfWork.RepositoryCommon.GetPosiciones(request);
+        }
         
     }
 }

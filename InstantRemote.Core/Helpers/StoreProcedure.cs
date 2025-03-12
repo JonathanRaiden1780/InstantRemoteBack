@@ -110,11 +110,25 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal = "IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinal"; 
         public const string IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago = "IR_V2_RP_Asistencia_Estandar_Hrs_ExtrasV5_comparativoVFinalNoPago"; 
         
+        public const string sp_getRegistrosHrasExtras = "sp_getRegistrosHrasExtras"; 
+        public const string sp_getRegistrosHrasExtrasDetalle = "sp_getRegistrosHrasExtrasDetalle"; 
+        public const string IR_V2_SP_Get_AllSolicitudesHrasExtras = "IR_V2_SP_Get_AllSolicitudesHrasExtras"; 
+        public const string uspQuitarVigencia = "uspQuitarVigencia"; 
+        public const string uspGuardaVigencia = "uspGuardaVigencia"; 
+        public const string sp_EmpleadosActivos = "sp_EmpleadosActivos"; 
+        public const string sp_InfoEmpleado = "sp_InfoEmpleado"; 
         
         
         public const string sp_GetCalendariosVariables = "sp_GetCalendariosVariables"; 
         public const string sp_GetCalendariosHorasExtras = "sp_GetCalendariosHorasExtras"; 
-
+        public const string IR_V2_SP_Get_jobtaskDivByPosicionesAndSiteAndServicio = "IR_V2_SP_Get_jobtaskDivByPosicionesAndSiteAndServicio"; 
+        public const string sp_GetMotivos = "sp_GetMotivos"; 
+        public const string IR_V2_SP_Get_ServiciosBySite = "IR_V2_SP_Get_ServiciosBySite"; 
+        public const string IR_V2_SP_Get_PosicionesBySiteAndServicio = "IR_V2_SP_Get_PosicionesBySiteAndServicio"; 
+        public const string sp_InfoNameEmpleado = "sp_InfoNameEmpleado"; 
+        public const string sp_validaCalendario = "sp_validaCalendario"; 
+        public const string sp_guardaSolicitudHrasExtras = "sp_guardaSolicitudHrasExtras"; 
+    
         
 
 

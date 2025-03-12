@@ -88,6 +88,9 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
         int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado);
+        List<GetEmpleadosActivos> GetEmpleadosActivos(int emplid);
+        List<GetInfoEmpleados> GetInfoEmpleados(string emplid);
+        
         
         void UpdateMasivoEmpleados(string empleado);
         List<DiasFestivosCatalogo> GetDiasFestivos();
@@ -101,5 +104,10 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         int AddAsignacionTemp(AsignacionReq asigna);
         int UpdateAsignacionTemp(AsignacionReq asigna);
         int DeleteAsignacionTemp(AsignacionDelReq asigna);
+        List<GetJobTask> GetJobTask(GetJobTaskRequest request);
+        List<GetMotivos> GetMotivos();
+        List<GetServiciosBySite> GetServicioSite(string site);
+        List<GetPosiciones> GetPosiciones(GetPosicionesReq request);
+
     }
 }

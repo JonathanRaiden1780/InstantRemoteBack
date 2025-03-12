@@ -78,6 +78,9 @@ namespace InstantRemote.Core.Contracts.Services
         List<EmpleadosCatalogoTelefonos> GetEmpleadosCatalogoTelefonos(string telefono);
         List<EmpleadosCatalogoEstatus> GetEmpleadosCatalogoEstatus(string numEmpleado, string estatus);
         int UpdateEmpleadosCatalogo(UpdateEmpleadosCatalogo empleado);
+        List<GetEmpleadosActivos> GetEmpleadosActivos(int emplid);
+        List<GetInfoEmpleados> GetInfoEmpleados(string emplid);
+        
         void UpdateMasivoEmpleados(List<UpdateEmpleadosMasive> empleados);
         List<DiasFestivosCatalogo> GetDiasFestivos();
         bool AddDiaFestivo(DiasFestivosCatalogoReqAddDto fecha);
@@ -91,5 +94,9 @@ namespace InstantRemote.Core.Contracts.Services
         int UpdateAsignacionTemp(AsignacionReq asigna);
         int DeleteAsignacionTemp(AsignacionDelReq asigna);
 
+        List<GetJobTask> GetJobTask(GetJobTaskRequest request);
+        List<GetMotivos> GetMotivos();
+        List<GetServiciosBySite> GetServicioSite(string site);
+        List<GetPosiciones> GetPosiciones(GetPosicionesReq request);
     }
 }

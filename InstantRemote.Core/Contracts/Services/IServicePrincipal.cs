@@ -9,6 +9,13 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetConstEnrolaRsp> GetConstEnrola(int tipo);
         List<GetDispositivosResp> GetDispositivos(int emplid);
         List<GetDispositivoDetalleResp> GetDispositivoDetalle(string serie);
-
+        List<GetSolHrsExtras> GetSolHrsExtras(string emplid);
+        List<GetSolHrsExtrasDetalle> GetSolHrsExtrasDetalle(string id);
+        List<GetSolHrsExtrasAll> GetSolHrsExtrasAll();
+        string CaducarVigencia(CaducarVigenciaReq request);
+        string QuitarVigencia(CaducarVigenciaReq request);
+        List<GetEmpleadoInfo> GetInfoName(string emplid);
+        string validaCalendar(string desde);
+        string SaveHrsExtra(SaveSolicitudHrsReq request);
     }
 }

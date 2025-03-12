@@ -10,37 +10,73 @@ namespace InstantRemote.Repositories.Context
 {
     public class RepositoryPrincipal : BaseRepository, IRepositoryPrincipal
     {
-        public RepositoryPrincipal(IDbConnection connection, Func<IDbTransaction> transaction,IDbConnection connectionSQL, Func<IDbTransaction> transactionSQL, IMapper mapper) : base(
-            connection, transaction, connectionSQL,transactionSQL, mapper)
+        public RepositoryPrincipal(IDbConnection connection, Func<IDbTransaction> transaction, IDbConnection connectionSQL, Func<IDbTransaction> transactionSQL, IMapper mapper) : base(
+            connection, transaction, connectionSQL, transactionSQL, mapper)
         {
         }
-        
+
+        #region Constantes y Enrolados
         public List<GetConstEnrolaRsp> GetConstEnrola(int tipo)
         {
-            var response = Connection.Query<GetConstEnrolaRsp>(StoreProcedure.IR_V2_RP_ConstantesEnrolados, new
-            {
-                @numEmpleado = "",
-                @tipo = tipo
-            }, commandType: CommandType.StoredProcedure).ToList();
+            var response = Connection.Query<GetConstEnrolaRsp>(StoreProcedure.IR_V2_RP_ConstantesEnrolados, new { @numEmpleado = "", @tipo = tipo }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        #endregion
+        #region Devices
+        public List<GetDispositivosResp> GetDispositivos(int emplid)
+        {
+            var response = ConnectionSQL.Query<GetDispositivosResp>(StoreProcedure.sp_GetDispositivos, new { @emplid = emplid }, commandType: CommandType.StoredProcedure, commandTimeout: 120).ToList();
             return response;
         }
 
-        public List<GetDispositivosResp> GetDispositivos(int emplid)
-        {
-            var response = ConnectionSQL.Query<GetDispositivosResp>(StoreProcedure.sp_GetDispositivos, new
-            {
-                @emplid = emplid
-            }, commandType: CommandType.StoredProcedure,commandTimeout:120).ToList();
-            return response;
-        }
-        
         public List<GetDispositivoDetalleResp> GetDispositivoDetalle(string serie)
         {
-            var response = ConnectionSQL.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new
-            {
-                @serie = serie
-            }, commandType: CommandType.StoredProcedure).ToList();
+            var response = ConnectionSQL.Query<GetDispositivoDetalleResp>(StoreProcedure.sp_GetEmpleadosPorDispositivo, new { @serie = serie }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        #endregion
+        #region Horas Extras
+        public List<GetSolHrsExtras> GetSolHrsExtras(string emplid)
+        {
+            var response = Connection.Query<GetSolHrsExtras>(StoreProcedure.sp_getRegistrosHrasExtras, new { @emplid = emplid }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetSolHrsExtrasDetalle> GetSolHrsExtrasDetalle(string id)
+        {
+            var response = Connection.Query<GetSolHrsExtrasDetalle>(StoreProcedure.sp_getRegistrosHrasExtrasDetalle, new { @id = id }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetSolHrsExtrasAll> GetSolHrsExtrasAll()
+        {
+            var response = Connection.Query<GetSolHrsExtrasAll>(StoreProcedure.IR_V2_SP_Get_AllSolicitudesHrasExtras, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public string CaducarVigencia(CaducarVigenciaReq request)
+        {
+            var response = Connection.Query<string>(StoreProcedure.uspGuardaVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public string QuitarVigencia(CaducarVigenciaReq request)
+        {
+            var response = Connection.Query<string>(StoreProcedure.uspQuitarVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public List<GetEmpleadoInfo> GetInfoName(string emplid)
+        {
+            var response = Connection.Query<GetEmpleadoInfo>(StoreProcedure.sp_InfoNameEmpleado, new { emplid = emplid }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public string ValidaCalendar(string desde)
+        {
+            var response = Connection.Query<string>(StoreProcedure.sp_validaCalendario, new { desde = desde }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public string SaveHrsExtra(SaveSolicitudHrsReq request)
+        {
+            var response = ConnectionSQL.Query<string>(StoreProcedure.sp_guardaSolicitudHrasExtras, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+
+        #endregion
     }
 }

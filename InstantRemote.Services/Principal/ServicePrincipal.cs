@@ -27,5 +27,40 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryPrincipal.GetDispositivoDetalle(serie);
         }
+        public List<GetSolHrsExtras> GetSolHrsExtras(string emplid)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetSolHrsExtras(emplid);
+        }
+        public List<GetSolHrsExtrasDetalle> GetSolHrsExtrasDetalle(string id)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetSolHrsExtrasDetalle(id);
+        }
+        public List<GetSolHrsExtrasAll> GetSolHrsExtrasAll()
+        {
+            return UnitOfWork.RepositoryPrincipal.GetSolHrsExtrasAll();
+        }
+
+        public string CaducarVigencia(CaducarVigenciaReq request)
+        {
+            return UnitOfWork.RepositoryPrincipal.CaducarVigencia(request);
+        }
+
+        public string QuitarVigencia(CaducarVigenciaReq request)
+        {
+            return UnitOfWork.RepositoryPrincipal.QuitarVigencia(request);
+        }
+        public List<GetEmpleadoInfo> GetInfoName(string emplid)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoName(emplid);
+        }
+        public string validaCalendar(string desde)
+        {
+            return UnitOfWork.RepositoryPrincipal.ValidaCalendar(desde);
+        }
+        public string SaveHrsExtra(SaveSolicitudHrsReq request)
+        {
+            return UnitOfWork.RepositoryPrincipal.SaveHrsExtra(request);
+        }
+        
     }
 }

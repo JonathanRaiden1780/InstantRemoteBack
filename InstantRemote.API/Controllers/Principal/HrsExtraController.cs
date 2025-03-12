@@ -8,185 +8,28 @@ using InstantRemote.Core.Dtos;
 using InstantRemote.Core.EntitiesStore.Common;
 using Microsoft.AspNetCore.Authorization;
 
-namespace InstantRemote.Api.Controllers.Common
+namespace InstantRemote.Api.Controllers.Principal
 {
     [ApiController]
     [Produces(Constants.ContentType)]
-    [Route(Constants.RouteCommon, Name = Constants.Services)]
-    public class CommonController : BaseController
+    [Route(Constants.RouteHrsExtras, Name = Constants.HrsExtras)]
+    public class HrsExtraController : BaseController
     {
-        public CommonController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
+        public HrsExtraController(Func<string, IServiceFactory> serviceFactory) : base(serviceFactory)
         {
         }
         
-        [HttpGet(Constants.GetReports)]
-        [ProducesResponseType(typeof(List<GetParameter>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetReports()
-        {
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceParameter.GetParameterByGroup(Constants.Reportes);
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto
-                {
-                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
-                    TrackingCode = trackingCode
-                });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError,
-                    new res.CriticalErrorMessageDto
-                    {
-                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
-                    });
-            }
-            finally
-            {
-            }
-
-            return result;
-        }
-
-        [AllowAnonymous]
-        [HttpPost(Constants.Bitacora)]
+        [HttpGet(Constants.GetSolHrsExtras)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult InsertBitacora([FromBodyAttribute] req.BitacoraRequestDto bitacora)
+        public ActionResult GetSolHrsExtras(string emplid)
         {
             ActionResult result;
             try
             {
-                serviceFactory("IR").ServiceParameter.InsertBitacora(bitacora);
-                result = Ok();
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto
-                {
-                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
-                    TrackingCode = trackingCode
-                });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError,
-                    new res.CriticalErrorMessageDto
-                    {
-                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
-                    });
-            }
-            finally
-            {
-            }
-
-            return result;
-        }
-
-        [HttpGet(Constants.GetCatalogoHorario)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetCatalogoHorario(int cliente, int idDeptoSucursal)
-        {
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceFiltros.GetCatalogoHorario(cliente, idDeptoSucursal);
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto
-                {
-                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
-                    TrackingCode = trackingCode
-                });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError,
-                    new res.CriticalErrorMessageDto
-                    {
-                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
-                    });
-            }
-            finally
-            {
-            }
-
-            return result;
-        }
-
-        [HttpGet(Constants.GetParameterByReference)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetParameterByReference(string reference)
-        {
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceParameter.GetParameterByReference(reference);
-                result = Ok(response);
-            }
-
-            catch (BusinessException busex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = Conflict(new res.FunctionalErrorMessageDto
-                {
-                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
-                    TrackingCode = trackingCode
-                });
-            }
-            catch (Exception ex)
-            {
-                var trackingCode = new Guid().ToString();
-                result = StatusCode(StatusCodes.Status500InternalServerError,
-                    new res.CriticalErrorMessageDto
-                    {
-                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
-                    });
-            }
-            finally
-            {
-            }
-
-            return result;
-        }
-
-        [HttpPost(Constants.UpdateParameter)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult UpdateParameter([FromQuery] string reference, string value)
-        {
-            ActionResult result;
-            try
-            {
-                var response = serviceFactory("IR").ServiceParameter.UpdateParameter(reference, value);
+                var response = serviceFactory("IR").ServicePrincipal.GetSolHrsExtras(emplid);
                 result = Ok(response);
             }
 
@@ -215,17 +58,56 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.GetEmpleadosActivos)]
+        [HttpGet(Constants.GetSolHrsExtrasDetalle)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetEmpleadosActivos(int emplid)
+        public ActionResult GetSolHrsExtrasDetalle(string id)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetEmpleadosActivos(emplid);
+                var response = serviceFactory("IR").ServicePrincipal.GetSolHrsExtrasDetalle(id);
+                result = Ok(response);
+            }
+
+            catch (BusinessException busex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = Conflict(new res.FunctionalErrorMessageDto
+                {
+                    Origin = Constants.OriginService, Message = new[] {busex.Message}, Url = Redirect404,
+                    TrackingCode = trackingCode
+                });
+            }
+            catch (Exception ex)
+            {
+                var trackingCode = new Guid().ToString();
+                result = StatusCode(StatusCodes.Status500InternalServerError,
+                    new res.CriticalErrorMessageDto
+                    {
+                        Origin = Constants.OriginService, Message = new[] {ex.ToString()}, TrackingCode = trackingCode
+                    });
+            }
+            finally
+            {
+            }
+
+            return result;
+        }
+         
+        [HttpGet(Constants.GetSolHrsExtrasAll)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
+        public ActionResult GetSolHrsExtrasAll()
+        {
+            ActionResult result;
+            try
+            {
+                var response = serviceFactory("IR").ServicePrincipal.GetSolHrsExtrasAll();
                 result = Ok(response);
             }
 
@@ -254,17 +136,17 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.GetInfoEmpleados)]
+        [HttpPost(Constants.QuitarVigencia)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetInfoEmpleados(string emplid)
+        public ActionResult QuitarVigencia([FromBody] res.CaducarVigenciaReq request)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetInfoEmpleados(emplid);
+                var response = serviceFactory("IR").ServicePrincipal.QuitarVigencia(request);
                 result = Ok(response);
             }
 
@@ -293,17 +175,17 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpPost(Constants.GetJobTask)]
+        [HttpPost(Constants.CaducarVigencia)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetJobTask([FromBody] res.GetJobTaskRequest request)
+        public ActionResult CaducarVigencia ([FromBody] res.CaducarVigenciaReq request)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetJobTask(request);
+                var response = serviceFactory("IR").ServicePrincipal.CaducarVigencia(request);
                 result = Ok(response);
             }
 
@@ -332,17 +214,17 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.GetMotivos)]
+        [HttpGet(Constants.GetInfoName)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetMotivos()
+        public ActionResult GetInfoName (string emplid)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetMotivos();
+                var response = serviceFactory("IR").ServicePrincipal.GetInfoName(emplid);
                 result = Ok(response);
             }
 
@@ -371,17 +253,17 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpGet(Constants.GetServicioSite)]
+        [HttpGet(Constants.validaCalendar)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetServicioSite(string site)
+        public ActionResult ValidaCalendar (string desde)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetServicioSite(site);
+                var response = serviceFactory("IR").ServicePrincipal.validaCalendar(desde);
                 result = Ok(response);
             }
 
@@ -410,17 +292,17 @@ namespace InstantRemote.Api.Controllers.Common
             return result;
         }
         
-        [HttpPost(Constants.GetPosiciones)]
+        [HttpPost(Constants.SaveHrsExtra)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BadRequestDto), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(res.FunctionalErrorMessageDto), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(res.CriticalErrorMessageDto), StatusCodes.Status500InternalServerError)]
-        public ActionResult GetPosiciones(res.GetPosicionesReq request)
+        public ActionResult SaveHrsExtra ([FromBody] res.SaveSolicitudHrsReq request)
         {
             ActionResult result;
             try
             {
-                var response = serviceFactory("IR").ServiceFiltros.GetPosiciones(request);
+                var response = serviceFactory("IR").ServicePrincipal.SaveHrsExtra(request);
                 result = Ok(response);
             }
 
@@ -448,5 +330,7 @@ namespace InstantRemote.Api.Controllers.Common
 
             return result;
         }
+        
+       
     }
 }
