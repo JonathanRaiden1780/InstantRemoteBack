@@ -1499,7 +1499,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string desde { get; set; }
         public string hasta { get; set; }
         public int empleado { get; set; }
-
+        public string retorno { get; set; }
     }
 
     public class GetEmpleadosActivos
@@ -1579,6 +1579,31 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string retorno { get; set; }
     }
     
+    public class GetAutHrsExtras
+    {
+        public int id { get; set; }
+        public string numEmpSolicitante { get; set; }
+        public string nomEmpSolicitante { get; set; }
+        public string numEmpleado { get; set; }
+        public string name { get; set; }
+        public string siteOrigen { get; set; }
+        public string descDeptoOrigen { get; set; }
+        public string statusA1 { get; set; }
+        public string fecha { get; set; }
+        public int horas { get; set; }
+        public string siteHExtras { get; set; }
+        public string posicionHExtras { get; set; }
+        public string servicioHExtras { get; set; }
+        public string jobtask { get; set; }
+        public string caduca { get; set; }
+        public string namImage { get; set; }
+        public string statusA2 { get; set; }
+        public string autorizador1 { get; set; }
+        public string autorizador2 { get; set; }
+        public string detalleA1 { get; set; }
+        public string detalleA2 { get; set; }
+    }
+
 
 
 }

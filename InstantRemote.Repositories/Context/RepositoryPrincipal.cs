@@ -38,27 +38,27 @@ namespace InstantRemote.Repositories.Context
         #region Horas Extras
         public List<GetSolHrsExtras> GetSolHrsExtras(string emplid)
         {
-            var response = Connection.Query<GetSolHrsExtras>(StoreProcedure.sp_getRegistrosHrasExtras, new { @emplid = emplid }, commandType: CommandType.StoredProcedure).ToList();
+            var response = ConnectionSQL.Query<GetSolHrsExtras>(StoreProcedure.sp_getRegistrosHrasExtras, new { @emplid = emplid }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
         public List<GetSolHrsExtrasDetalle> GetSolHrsExtrasDetalle(string id)
         {
-            var response = Connection.Query<GetSolHrsExtrasDetalle>(StoreProcedure.sp_getRegistrosHrasExtrasDetalle, new { @id = id }, commandType: CommandType.StoredProcedure).ToList();
+            var response = ConnectionSQL.Query<GetSolHrsExtrasDetalle>(StoreProcedure.sp_getRegistrosHrasExtrasDetalle, new { @id = id }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
         public List<GetSolHrsExtrasAll> GetSolHrsExtrasAll()
         {
-            var response = Connection.Query<GetSolHrsExtrasAll>(StoreProcedure.IR_V2_SP_Get_AllSolicitudesHrasExtras, commandType: CommandType.StoredProcedure).ToList();
+            var response = ConnectionSQL.Query<GetSolHrsExtrasAll>(StoreProcedure.IR_V2_SP_Get_AllSolicitudesHrasExtras,new{emplid=0}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
         public string CaducarVigencia(CaducarVigenciaReq request)
         {
-            var response = Connection.Query<string>(StoreProcedure.uspGuardaVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            var response = ConnectionSQL.Query<string>(StoreProcedure.uspGuardaVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
         public string QuitarVigencia(CaducarVigenciaReq request)
         {
-            var response = Connection.Query<string>(StoreProcedure.uspQuitarVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            var response = ConnectionSQL.Query<string>(StoreProcedure.uspQuitarVigencia, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
         public List<GetEmpleadoInfo> GetInfoName(string emplid)
@@ -68,12 +68,17 @@ namespace InstantRemote.Repositories.Context
         }
         public string ValidaCalendar(string desde)
         {
-            var response = Connection.Query<string>(StoreProcedure.sp_validaCalendario, new { desde = desde }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            var response = ConnectionSQL.Query<string>(StoreProcedure.sp_validaCalendario, new { desde = desde, empleado = "", retorno = "0"}, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
         public string SaveHrsExtra(SaveSolicitudHrsReq request)
         {
             var response = ConnectionSQL.Query<string>(StoreProcedure.sp_guardaSolicitudHrasExtras, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
+        public List<GetAutHrsExtras> GetAutHrsExtras(string emplid)
+        {
+            var response = ConnectionSQL.Query<GetAutHrsExtras>(StoreProcedure.sp_getSolicitudesParaAutorizarHrasExtras, new {emplid=emplid}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
 

@@ -237,6 +237,7 @@
         public const string GetInfoName = "info/employee";
         public const string validaCalendar = "calendar/review";
         public const string SaveHrsExtra = "save/solicitud";
+        public const string GetAutHrsExtras = "aprobaciones/get";
         
 
         #endregion
