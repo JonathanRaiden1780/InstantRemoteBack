@@ -18,5 +18,6 @@ namespace InstantRemote.Core.Contracts.Services
         string validaCalendar(string desde);
         string SaveHrsExtra(SaveSolicitudHrsReq request);
         List<GetAutHrsExtras> GetAutHrsExtras(string emplid);
+        string AutHrsExtras(AutHrsExtrasReq request);
     }
 }

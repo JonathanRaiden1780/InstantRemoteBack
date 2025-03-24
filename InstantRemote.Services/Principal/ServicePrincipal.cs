@@ -65,6 +65,10 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryPrincipal.GetAutHrsExtras(emplid);
         }
+        public string AutHrsExtras(AutHrsExtrasReq request)
+        {
+            return UnitOfWork.RepositoryPrincipal.AutHrsExtras(request);
+        }
         
     }
 }

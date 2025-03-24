@@ -81,6 +81,11 @@ namespace InstantRemote.Repositories.Context
             var response = ConnectionSQL.Query<GetAutHrsExtras>(StoreProcedure.sp_getSolicitudesParaAutorizarHrasExtras, new {emplid=emplid}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public string AutHrsExtras(AutHrsExtrasReq request)
+        {
+            var response = ConnectionSQL.Query<string>(StoreProcedure.sp_AutorizarHrasExtras, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return response;
+        }
 
         #endregion
     }

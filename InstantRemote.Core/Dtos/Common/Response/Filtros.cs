@@ -1604,6 +1604,17 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string detalleA2 { get; set; }
     }
 
+    public class AutHrsExtrasReq
+    {
+        public int id { get; set; }
+        public int evento { get; set; }
+        public int horas { get; set; }
+        public string site { get; set; }
+        public string servicio { get; set; }
+        public string posicion { get; set; }
+        public string retorno { get; set; }
+        public string numEmpleado { get; set; }
 
+    }
 
 }

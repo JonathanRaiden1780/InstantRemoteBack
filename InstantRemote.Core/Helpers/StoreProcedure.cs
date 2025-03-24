@@ -129,6 +129,7 @@ namespace InstantRemote.Core.Helpers
         public const string sp_validaCalendario = "sp_validaCalendario"; 
         public const string sp_guardaSolicitudHrasExtras = "sp_guardaSolicitudHrasExtras"; 
         public const string sp_getSolicitudesParaAutorizarHrasExtras = "sp_getSolicitudesParaAutorizarHrasExtras"; 
+        public const string sp_AutorizarHrasExtras = "sp_AutorizarHrasExtras"; 
     
         
 
