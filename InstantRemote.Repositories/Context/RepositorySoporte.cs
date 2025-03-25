@@ -41,5 +41,11 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetBitComMan>(StoreProcedure.sp_GetBitacoraMovimientos, new {fechaIni = fechaIni, fechaFin= fechaFin }, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public List<GetTipoTel> GetTipoTel(string numTelefonico)
+        {
+            var query = "select c.numTel, upper (c.tipo)as tipo, 0 as numeroEmpleado, '' as nombre, '' as fecha from cattelefono c where c.numTel='"+numTelefonico+"'";
+            return Connection.Query<GetTipoTel>(query, commandType: CommandType.Text).ToList();
+            
+        }
     }
 }

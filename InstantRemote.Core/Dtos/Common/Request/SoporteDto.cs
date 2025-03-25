@@ -63,5 +63,13 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string numAquienLeRealizan { get; set; }
         public int total { get; set; }
     }
+    public class GetTipoTel
+    {
+        public string numTel { get; set; }
+        public string tipo { get; set; }
+        public int numeroEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string fecha { get; set; }
+    }
 
 }

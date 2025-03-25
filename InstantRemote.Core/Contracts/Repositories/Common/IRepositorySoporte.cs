@@ -11,5 +11,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetPass> GetPass(string req);
         List<GetAltasMan> GetAltasMan();
         List<GetBitComMan> GetBitComMan(string fechaIni, string fechaFin);
+        List<GetTipoTel> GetTipoTel(string numTelefonico);
     }
 }

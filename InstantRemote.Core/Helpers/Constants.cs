@@ -228,6 +228,7 @@
         public const string GetPass = "pass/get";
         public const string GetAltasMan = "altasMan/get";
         public const string GetBitComMan = "bitacoraComMan/get";
+        public const string GetTipoTel = "tipoTel/get";
 
         #endregion
         

@@ -34,5 +34,10 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetBitComMan(fechaIni,fechaFin);
         }
+
+        public List<GetTipoTel> GetTipoTel(string numTelefonico)
+        {
+            return UnitOfWork.RepositorySoporte.GetTipoTel(numTelefonico);
+        }
     }
 }
