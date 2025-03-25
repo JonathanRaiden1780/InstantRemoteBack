@@ -9,5 +9,6 @@ namespace InstantRemote.Core.Contracts.Services
     public interface IServiceSoporte
     {
         List<GetRegSms> GetRegSms(GetRegSmsReq req);
+        List<GetRegTel> GetRegTel(string req);
     }
 }

@@ -7,5 +7,6 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
     public interface IRepositorySoporte
     {
         List<GetRegSms> GetRegSms(GetRegSmsReq req);
+        List<GetRegTel> GetRegTel(string req);
     }
 }

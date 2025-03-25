@@ -18,5 +18,9 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetRegSms(req);
         }
+        public List<GetRegTel> GetRegTel(string req)
+        {
+            return UnitOfWork.RepositorySoporte.GetRegTel(req);
+        }
     }
 }

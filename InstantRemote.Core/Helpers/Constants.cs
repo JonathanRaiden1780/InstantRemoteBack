@@ -224,6 +224,7 @@
         public const string Soporte = "Soporte";
         public const string RouteSoporte = "soporte/";
         public const string GetRegSms = "registrosSms/get";
+        public const string GetRegTel = "registrosTel/get";
 
         #endregion
         

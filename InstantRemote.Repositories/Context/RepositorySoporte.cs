@@ -21,5 +21,10 @@ namespace InstantRemote.Repositories.Context
             var response = ConnectionSQL.Query<GetRegSms>(StoreProcedure.sp_getRegistrosSMS, req, commandType: CommandType.StoredProcedure).ToList();
             return response;        
         }
+        public List<GetRegTel> GetRegTel(string req)
+        {
+            var response = ConnectionSQL.Query<GetRegTel>(StoreProcedure.IR_V2_RP_RegistrosTelefonicos, new {dispositivo = req}, commandType: CommandType.StoredProcedure).ToList();
+            return response;        
+        }
     }
 }

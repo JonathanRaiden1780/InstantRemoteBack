@@ -23,6 +23,17 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string nomsucursal { get; set; }
         public string mensaje { get; set; }
     }
+    public class GetRegTel
+    {
+        public int numEmpleado { get; set; }
+        public string nombre { get; set; }
+        public string site { get; set; }
+        public string tipoDispositivo { get; set; }
+        public string serieDispositivo { get; set; }
+        public string estado { get; set; }
+        public string checktime { get; set; }
+        public string sucursalTelefono { get; set; }
+    }
 
 
 }
