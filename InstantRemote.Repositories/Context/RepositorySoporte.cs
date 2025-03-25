@@ -31,5 +31,10 @@ namespace InstantRemote.Repositories.Context
             var query = "select convert(varchar, t.numEmpleado) as usuario,t.nombre,t.status,t.site,t.desDepto,l.pass from tblLoguinInicio l join tblEmpleados t on t.numEmpleado=l.usuario where usuario='"+ req + "'";
             return Connection.Query<GetPass>(query, commandType: CommandType.Text).ToList();
         }
+        public List<GetAltasMan> GetAltasMan()
+        {
+            var response = ConnectionSQL.Query<GetAltasMan>(StoreProcedure.IR_V2_RP_Altas_Manuales, new {numEmpleado = ""}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
     }
 }

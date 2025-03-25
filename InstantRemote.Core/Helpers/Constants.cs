@@ -226,6 +226,7 @@
         public const string GetRegSms = "registrosSms/get";
         public const string GetRegTel = "registrosTel/get";
         public const string GetPass = "pass/get";
+        public const string GetAltasMan = "altasMan/get";
 
         #endregion
         

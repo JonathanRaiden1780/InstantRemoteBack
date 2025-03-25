@@ -44,5 +44,16 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string pass { get; set; }
     }
 
+    public class GetAltasMan
+    {
+        public string badgenumber { get; set; }
+        public string name { get; set; }
+        public string status { get; set; }
+        public string site { get; set; }
+        public string desDepto { get; set; }
+        public string ns { get; set; }
+        public string nomSucursal { get; set; }
+        public string TipoAlta { get; set; }
+    }
 
 }

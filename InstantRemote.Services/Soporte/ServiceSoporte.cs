@@ -26,5 +26,9 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetPass(req);
         }
+        public List<GetAltasMan> GetAltasMan()
+        {
+            return UnitOfWork.RepositorySoporte.GetAltasMan();
+        }
     }
 }
