@@ -72,4 +72,31 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string fecha { get; set; }
     }
 
+    public class GetPantalla
+    {
+        public int id { get; set; }
+        public string pantalla { get; set; }
+    }
+    public class GetPanAccion
+    {
+        public int id { get; set; }
+        public string accion { get; set; }
+    }
+    public class GetBitacoraReq
+    {
+        public string pantalla { get; set; }
+        public string accion { get; set; }
+        public string fechaIn { get; set; }
+        public string fechaFin { get; set; }
+    }
+    public class GetBitacora
+    {
+        public int id { get; set; }
+        public int numeroEmpleado { get; set; }
+        public string accion { get; set; }
+        public string resumen { get; set; }
+        public string pantalla { get; set; }
+        public string fecha { get; set; }
+    }
+
 }

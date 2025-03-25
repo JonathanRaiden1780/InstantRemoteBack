@@ -14,5 +14,8 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetAltasMan> GetAltasMan();
         List<GetBitComMan> GetBitComMan(string fechaIni, string fechaFin);
         List<GetTipoTel> GetTipoTel(string numTelefonico);
+        List<GetPantalla> GetPantallas();
+        List<GetPanAccion> GetPantAccion(string pantalla);
+        List<GetBitacora> GetBitacora(GetBitacoraReq req);
     }
 }

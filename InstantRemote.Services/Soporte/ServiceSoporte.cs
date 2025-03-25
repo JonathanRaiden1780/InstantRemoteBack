@@ -39,5 +39,17 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetTipoTel(numTelefonico);
         }
+        public List<GetPantalla> GetPantallas()
+        {
+            return UnitOfWork.RepositorySoporte.GetPantallas();
+        }
+        public List<GetPanAccion> GetPantAccion(string pantalla)
+        {
+            return UnitOfWork.RepositorySoporte.GetPantAccion(pantalla);
+        }
+        public List<GetBitacora> GetBitacora(GetBitacoraReq req)
+        {
+            return UnitOfWork.RepositorySoporte.GetBitacora(req);
+        }
     }
 }

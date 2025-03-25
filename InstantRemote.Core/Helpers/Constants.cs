@@ -229,6 +229,9 @@
         public const string GetAltasMan = "altasMan/get";
         public const string GetBitComMan = "bitacoraComMan/get";
         public const string GetTipoTel = "tipoTel/get";
+        public const string GetPantallas = "pantallas/get";
+        public const string GetPantAccion = "pantallasAccion/get";
+        public const string GetBitacora = "bitacora/get";
 
         #endregion
         

@@ -47,5 +47,20 @@ namespace InstantRemote.Repositories.Context
             return Connection.Query<GetTipoTel>(query, commandType: CommandType.Text).ToList();
             
         }
+        public List<GetPantalla> GetPantallas()
+        {
+            var response = Connection.Query<GetPantalla>(StoreProcedure.sp_GetPantallas,  commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetPanAccion> GetPantAccion(string pantalla)
+        {
+            var response = Connection.Query<GetPanAccion>(StoreProcedure.sp_GetPantallaAccion, new { pantalla=pantalla},  commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetBitacora> GetBitacora(GetBitacoraReq req)
+        {
+            var response = Connection.Query<GetBitacora>(StoreProcedure.sp_GetBitacora, req,  commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
     }
 }
