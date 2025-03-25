@@ -219,6 +219,14 @@
 
         #endregion
         
+        #region Soporte
+        public const string SwaggerPathSoporte = "../swagger/principal/swagger.json";
+        public const string Soporte = "Soporte";
+        public const string RouteSoporte = "soporte/";
+        public const string GetRegSms = "registrosSms/get";
+
+        #endregion
+        
         #region Devices
         public const string Devices = "Devices";
         public const string RouteDevices = "devices/";

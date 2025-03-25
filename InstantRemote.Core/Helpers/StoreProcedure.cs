@@ -138,6 +138,7 @@ namespace InstantRemote.Core.Helpers
         public const string IR_V2_SP_UpdateConceptoImporteVariables = "IR_V2_SP_UpdateConceptoImporteVariables"; 
     
         
+        public const string sp_getRegistrosSMS = "sp_getRegistrosSMS"; 
 
 
 

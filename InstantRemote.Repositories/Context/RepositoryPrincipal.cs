@@ -87,7 +87,6 @@ namespace InstantRemote.Repositories.Context
             return response;
         }
         #endregion
-
         #region Autorizar Variables
         public List<AutVarInd> GetAutVarInd(string emplid)
         {

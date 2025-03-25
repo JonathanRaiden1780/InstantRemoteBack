@@ -23,6 +23,7 @@ namespace InstantRemote.Repositories
         private IRepositoryAuth repositoryAuth = null;
         private IRepositoryReports repositoryReports = null;
         private IRepositoryPrincipal repositoryPrincipal = null;
+        private IRepositorySoporte repositorySoporte = null;
      
         public UnitOfWork(IConfiguration configuration, IMapper mapper)
         {
@@ -69,6 +70,7 @@ namespace InstantRemote.Repositories
         public IRepositoryParameter RepositoryParameter => repositoryParameter ??= new RepositoryParameter(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
         public IRepositoryReports RepositoryReports => repositoryReports ??= new RepositoryReports(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
         public IRepositoryPrincipal RepositoryPrincipal => repositoryPrincipal ??= new RepositoryPrincipal(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
+        public IRepositorySoporte RepositorySoporte => repositorySoporte ??= new RepositorySoporte(connection, () => transaction,connectionSQL, () => transactionSQL, mapper);
 
         protected virtual void Dispose(bool disposing)
         {

@@ -9,6 +9,7 @@ namespace InstantRemote.Core.Contracts.Factories.Common
         public IServiceCommon ServiceCommon { get; }
         public IServiceReports ServiceReports { get; }
         public IServicePrincipal ServicePrincipal { get; }
+        public IServiceSoporte ServiceSoporte { get; }
 
 
     }
