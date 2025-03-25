@@ -30,5 +30,9 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetAltasMan();
         }
+        public List<GetBitComMan> GetBitComMan(string fechaIni, string fechaFin)
+        {
+            return UnitOfWork.RepositorySoporte.GetBitComMan(fechaIni,fechaFin);
+        }
     }
 }

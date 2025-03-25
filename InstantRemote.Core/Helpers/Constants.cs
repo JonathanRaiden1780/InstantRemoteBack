@@ -227,6 +227,7 @@
         public const string GetRegTel = "registrosTel/get";
         public const string GetPass = "pass/get";
         public const string GetAltasMan = "altasMan/get";
+        public const string GetBitComMan = "bitacoraComMan/get";
 
         #endregion
         

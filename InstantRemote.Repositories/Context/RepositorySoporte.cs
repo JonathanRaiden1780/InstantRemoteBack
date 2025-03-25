@@ -36,5 +36,10 @@ namespace InstantRemote.Repositories.Context
             var response = ConnectionSQL.Query<GetAltasMan>(StoreProcedure.IR_V2_RP_Altas_Manuales, new {numEmpleado = ""}, commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public List<GetBitComMan> GetBitComMan(string fechaIni, string fechaFin)
+        {
+            var response = Connection.Query<GetBitComMan>(StoreProcedure.sp_GetBitacoraMovimientos, new {fechaIni = fechaIni, fechaFin= fechaFin }, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
     }
 }

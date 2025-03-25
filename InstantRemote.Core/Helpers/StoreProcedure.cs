@@ -141,6 +141,7 @@ namespace InstantRemote.Core.Helpers
         public const string sp_getRegistrosSMS = "sp_getRegistrosSMS"; 
         public const string IR_V2_RP_RegistrosTelefonicos = "IR_V2_RP_RegistrosTelefonicos"; 
         public const string IR_V2_RP_Altas_Manuales = "IR_V2_RP_Altas_Manuales"; 
+        public const string sp_GetBitacoraMovimientos = "sp_GetBitacoraMovimientos"; 
 
 
 

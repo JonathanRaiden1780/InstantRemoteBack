@@ -55,5 +55,13 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string nomSucursal { get; set; }
         public string TipoAlta { get; set; }
     }
+    
+    public class GetBitComMan
+    {
+        public int numeroEmpleado { get; set; }
+        public string nombreUsuario { get; set; }
+        public string numAquienLeRealizan { get; set; }
+        public int total { get; set; }
+    }
 
 }
