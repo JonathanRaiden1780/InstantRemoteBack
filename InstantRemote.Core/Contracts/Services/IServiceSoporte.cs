@@ -10,5 +10,6 @@ namespace InstantRemote.Core.Contracts.Services
     {
         List<GetRegSms> GetRegSms(GetRegSmsReq req);
         List<GetRegTel> GetRegTel(string req);
+        List<GetPass> GetPass(string req);
     }
 }

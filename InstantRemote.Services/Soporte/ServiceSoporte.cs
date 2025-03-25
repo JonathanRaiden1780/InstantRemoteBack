@@ -22,5 +22,9 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetRegTel(req);
         }
+        public List<GetPass> GetPass(string req)
+        {
+            return UnitOfWork.RepositorySoporte.GetPass(req);
+        }
     }
 }

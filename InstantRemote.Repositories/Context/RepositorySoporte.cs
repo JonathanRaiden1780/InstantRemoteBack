@@ -26,5 +26,10 @@ namespace InstantRemote.Repositories.Context
             var response = ConnectionSQL.Query<GetRegTel>(StoreProcedure.IR_V2_RP_RegistrosTelefonicos, new {dispositivo = req}, commandType: CommandType.StoredProcedure).ToList();
             return response;        
         }
+        public List<GetPass> GetPass(string req)
+        {
+            var query = "select convert(varchar, t.numEmpleado) as usuario,t.nombre,t.status,t.site,t.desDepto,l.pass from tblLoguinInicio l join tblEmpleados t on t.numEmpleado=l.usuario where usuario='"+ req + "'";
+            return Connection.Query<GetPass>(query, commandType: CommandType.Text).ToList();
+        }
     }
 }

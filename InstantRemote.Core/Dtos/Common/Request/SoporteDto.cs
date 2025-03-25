@@ -34,6 +34,15 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string checktime { get; set; }
         public string sucursalTelefono { get; set; }
     }
+    public class GetPass
+    {
+        public string usuario { get; set; }
+        public string nombre { get; set; }
+        public string status { get; set; }
+        public string site { get; set; }
+        public string desDepto { get; set; }
+        public string pass { get; set; }
+    }
 
 
 }
