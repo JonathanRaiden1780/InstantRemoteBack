@@ -205,6 +205,7 @@
         public const string GetMotivos = "motivos/get";
         public const string GetServicioSite = "servicios/site";
         public const string GetPosiciones = "posiciones/get";
+   
         
         #endregion
         
@@ -241,6 +242,19 @@
         public const string AutHrsExtras = "autorizar";
         
 
+        #endregion
+        
+        #region Variables
+        public const string Variables = "Variables";
+        public const string RouteVariables = "variables/";
+        public const string GetVarInd = "individual/get";
+        public const string GetVarJer = "jerarquia/get";
+        public const string GetVarAut = "autorizar/get";
+        public const string AutVariable = "autorizar";
+        public const string GetVigencia = "vigencia/get";
+        public const string VigenciaVar = "vigencia";
+        public const string GetConcepto = "concepto";
+        public const string UpdateVar = "update";
         #endregion
 
         #region Reports

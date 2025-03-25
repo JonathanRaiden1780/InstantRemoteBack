@@ -1616,5 +1616,84 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string numEmpleado { get; set; }
 
     }
+    
+    public class AutVarInd
+    {
+        public string requiereAprobacion { get; set; }
+        public string nivelApro { get; set; }
+        public double pma { get; set; }
+        public int comisiones { get; set; }
+        public double comp { get; set; }
+        public int viaticos { get; set; }
+        public double servEsp { get; set; }
+        public double ayudaTr { get; set; }
+        public int retBas { get; set; }
+        public int pagCaj { get; set; }
+        public int bonoPerm { get; set; }
+    }
+
+    public class GetVarAut
+    {
+        public int id { get; set; }
+        public string numero { get; set; }
+        public string nombre { get; set; }
+        public string elemento { get; set; }
+        public string concepto { get; set; }
+        public int Importe { get; set; }
+        public string nivelAprobacion { get; set; }
+        public string status { get; set; }
+        public string puesto { get; set; }
+        public string SiteCaptura { get; set; }
+        public string SeccionOrigen { get; set; }
+        public string DescripcionSiteCaptura { get; set; }
+        public string Division { get; set; }
+        public string TSOrigen { get; set; }
+        public string bum { get; set; }
+        public string subdirector { get; set; }
+        public string direOp { get; set; }
+        public string direPC { get; set; }
+        public string Periodo { get; set; }
+        public string generalista { get; set; }
+        public string Observaciones { get; set; }
+        public string cooNomina { get; set; }
+        public string PosicionCaptura { get; set; }
+        public int edit { get; set; }
+        public string numEmpModificacionCon { get; set; }
+        public string fechaModificacionCon { get; set; }
+        public string camConc { get; set; }
+        public string descCon { get; set; }
+        public string numEmpModificacionImp { get; set; }
+        public string fechaModificacionImp { get; set; }
+        public string camImpo { get; set; }
+        public string despIm { get; set; }
+    }
+
+    public class AutVarReq
+    {
+        public string numEmpleado { get; set; }
+        public string variables { get; set; }
+        public string flag { get; set; }
+    }
+    public class VigenciaVarReq
+    {
+        public string numEmpleado { get; set; }
+        public string calendario { get; set; }
+        public string caducidad { get; set; }
+    }
+    public class GetConcepto
+    {
+        public int idConcepto { get; set; }
+        public string Concepto { get; set; }
+        public string Elemento { get; set; }
+    }
+    
+    public class UpdateVarReq
+    {
+        public int id { get; set; }
+        public string concepto { get; set; }
+        public string importe { get; set; }
+        public string numEmpleado { get; set; }
+    }
+
 
 }

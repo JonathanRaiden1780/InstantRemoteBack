@@ -17,5 +17,13 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         string SaveHrsExtra(SaveSolicitudHrsReq request);
         List<GetAutHrsExtras> GetAutHrsExtras(string emplid);
         string AutHrsExtras(AutHrsExtrasReq request);
+        List<AutVarInd> GetAutVarInd(string emplid);
+        List<AutVarInd> GetAutVarJer(string emplid);
+        List<GetVarAut> GetVarAutorizar(string numeroEmpleado, string calendario);
+        void AutVariable(AutVarReq req);
+        string GetVigencia(string cal);
+        string VigenciaVar(VigenciaVarReq req);
+        List<GetConcepto> GetConcepto();
+        void UpdateVar(UpdateVarReq req);
     }
 }

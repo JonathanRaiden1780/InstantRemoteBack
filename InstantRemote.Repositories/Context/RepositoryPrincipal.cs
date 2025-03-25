@@ -86,7 +86,48 @@ namespace InstantRemote.Repositories.Context
             var response = ConnectionSQL.Query<string>(StoreProcedure.sp_AutorizarHrasExtras, request, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return response;
         }
+        #endregion
 
+        #region Autorizar Variables
+        public List<AutVarInd> GetAutVarInd(string emplid)
+        {
+            var response = Connection.Query<AutVarInd>(StoreProcedure.sp_GetDetalleVariableInd, new{emplid=emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<AutVarInd> GetAutVarJer(string emplid)
+        {
+            var response = Connection.Query<AutVarInd>(StoreProcedure.sp_GetDetalleVariableJerar, new{emplid=emplid}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public List<GetVarAut> GetVarAutorizar(string numeroEmpleado, string calendario)
+        {
+            var response = Connection.Query<GetVarAut>(StoreProcedure.sp_GetVariablesAutorizar, new{numeroEmpleado=numeroEmpleado,calendario=calendario}, commandType: CommandType.StoredProcedure).ToList();
+            return response;
+        }
+        public void AutVariable(AutVarReq req)
+        {
+            Connection.Query<GetVarAut>(StoreProcedure.sp_UpdateStatusVariable, req, commandType: CommandType.StoredProcedure);
+        }
+
+        public string GetVigencia (string cal)
+        {
+            var query = "SELECT DISTINCT Caducada FROM variables WHERE Periodo='" + cal+ "'";
+            return Connection.Query<string>(query, commandType: CommandType.Text).FirstOrDefault();
+        }
+
+        public string VigenciaVar(VigenciaVarReq req)
+        {
+            return Connection.Query<string>(StoreProcedure.uspGuardaVigenciaVariables, req, commandType: CommandType.StoredProcedure).FirstOrDefault();
+        }
+        public List<GetConcepto> GetConcepto ()
+        {
+            var query = "select idConcepto,Concepto,Elemento from catConceptoVariable";
+            return Connection.Query<GetConcepto>(query, commandType: CommandType.Text).ToList();
+        }
+        public void UpdateVar(UpdateVarReq req)
+        {
+            Connection.Query<string>(StoreProcedure.IR_V2_SP_UpdateConceptoImporteVariables, req, commandType: CommandType.StoredProcedure);
+        }
         #endregion
     }
 }

@@ -108,6 +108,5 @@ namespace InstantRemote.Core.Contracts.Repositories.Common
         List<GetMotivos> GetMotivos();
         List<GetServiciosBySite> GetServicioSite(string site);
         List<GetPosiciones> GetPosiciones(GetPosicionesReq request);
-
     }
 }

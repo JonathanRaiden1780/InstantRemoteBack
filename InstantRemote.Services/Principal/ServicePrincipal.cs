@@ -69,6 +69,40 @@ namespace InstantRemote.Services.Filtros
         {
             return UnitOfWork.RepositoryPrincipal.AutHrsExtras(request);
         }
+        public List<AutVarInd> GetAutVarInd(string emplid)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetAutVarInd(emplid);
+        }
+        public List<AutVarInd> GetAutVarJer(string emplid)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetAutVarJer(emplid);
+        }
+        public List<GetVarAut> GetVarAutorizar(string numeroEmpleado, string calendario)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetVarAutorizar(numeroEmpleado,calendario);
+        }
+        
+        public void AutVariable(AutVarReq req)
+        {
+            UnitOfWork.RepositoryPrincipal.AutVariable(req);
+        }
+        public string GetVigencia (string cal)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetVigencia(cal);
+        }
+        public string VigenciaVar(VigenciaVarReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.VigenciaVar(req);
+        }
+        public List<GetConcepto> GetConcepto ()
+        {
+            return UnitOfWork.RepositoryPrincipal.GetConcepto();
+        }
+        public void UpdateVar(UpdateVarReq req)
+        {
+            UnitOfWork.RepositoryPrincipal.UpdateVar(req);
+        }
+        
         
     }
 }

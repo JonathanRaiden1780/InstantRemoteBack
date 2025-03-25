@@ -130,6 +130,12 @@ namespace InstantRemote.Core.Helpers
         public const string sp_guardaSolicitudHrasExtras = "sp_guardaSolicitudHrasExtras"; 
         public const string sp_getSolicitudesParaAutorizarHrasExtras = "sp_getSolicitudesParaAutorizarHrasExtras"; 
         public const string sp_AutorizarHrasExtras = "sp_AutorizarHrasExtras"; 
+        public const string sp_GetDetalleVariableInd = "sp_GetDetalleVariableInd"; 
+        public const string sp_GetDetalleVariableJerar = "sp_GetDetalleVariableJerar"; 
+        public const string sp_GetVariablesAutorizar = "sp_GetVariablesAutorizar"; 
+        public const string sp_UpdateStatusVariable = "sp_UpdateStatusVariable"; 
+        public const string uspGuardaVigenciaVariables = "uspGuardaVigenciaVariables"; 
+        public const string IR_V2_SP_UpdateConceptoImporteVariables = "IR_V2_SP_UpdateConceptoImporteVariables"; 
     
         
 
