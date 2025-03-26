@@ -232,6 +232,7 @@
         public const string GetPantallas = "pantallas/get";
         public const string GetPantAccion = "pantallasAccion/get";
         public const string GetBitacora = "bitacora/get";
+        public const string Reprocess = "reprocess";
 
         #endregion
         

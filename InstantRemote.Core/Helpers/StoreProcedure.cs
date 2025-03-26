@@ -145,6 +145,7 @@ namespace InstantRemote.Core.Helpers
         public const string sp_GetPantallas = "sp_GetPantallas"; 
         public const string sp_GetPantallaAccion = "sp_GetPantallaAccion"; 
         public const string sp_GetBitacora = "sp_GetBitacora"; 
+        public const string reProcesaDescansosFBE = "reProcesaDescansosFBE"; 
 
 
 

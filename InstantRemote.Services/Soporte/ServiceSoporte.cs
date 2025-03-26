@@ -51,5 +51,9 @@ namespace InstantRemote.Services.Soporte
         {
             return UnitOfWork.RepositorySoporte.GetBitacora(req);
         }
+        public void Reprocess(Reprocess req)
+        {
+            UnitOfWork.RepositorySoporte.Reprocess(req);
+        }
     }
 }

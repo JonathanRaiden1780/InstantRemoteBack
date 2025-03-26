@@ -98,5 +98,11 @@ namespace InstantRemote.Core.Dtos.Common.Request
         public string pantalla { get; set; }
         public string fecha { get; set; }
     }
-
+    public class Reprocess
+    {
+        public int numEmpleado { get; set; }
+        public int horGenerico { get; set; }
+        public string inicio { get; set; }
+        public string fin { get; set; }
+    }
 }

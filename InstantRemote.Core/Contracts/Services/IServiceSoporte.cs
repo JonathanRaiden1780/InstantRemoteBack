@@ -17,5 +17,6 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetPantalla> GetPantallas();
         List<GetPanAccion> GetPantAccion(string pantalla);
         List<GetBitacora> GetBitacora(GetBitacoraReq req);
+        void Reprocess(Reprocess req);
     }
 }

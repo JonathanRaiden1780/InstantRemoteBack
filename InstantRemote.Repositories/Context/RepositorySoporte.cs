@@ -62,5 +62,10 @@ namespace InstantRemote.Repositories.Context
             var response = Connection.Query<GetBitacora>(StoreProcedure.sp_GetBitacora, req,  commandType: CommandType.StoredProcedure).ToList();
             return response;
         }
+        public void Reprocess(Reprocess req)
+        {
+            ConnectionSQL.Query<GetBitacora>(StoreProcedure.reProcesaDescansosFBE, req,  commandType: CommandType.StoredProcedure);
+            
+        }
     }
 }
