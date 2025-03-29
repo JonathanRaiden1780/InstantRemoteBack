@@ -1507,7 +1507,6 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string nombre { get; set; }
         public string completo { get; set; }
         public int numEmpleado { get; set; }
-
     }
 
     public class GetInfoEmpleados
@@ -1521,7 +1520,6 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string SERVICIO { get; set; }
         public string status { get; set; }
         public int numEmpleado { get; set; }
-
     }
 
     public class GetJobTaskRequest
@@ -1530,39 +1528,43 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string Servicio { get; set; }
         public string posicion { get; set; }
     }
-    
+
     public class GetJobTask
     {
         public string jobTask { get; set; }
         public string division { get; set; }
         public string seccion { get; set; }
     }
+
     public class GetMotivos
     {
         public int id { get; set; }
         public string descripcion { get; set; }
     }
+
     public class GetServiciosBySite
     {
         public string SERVICIO { get; set; }
         public string idTipoSer { get; set; }
     }
+
     public class GetPosiciones
     {
         public string PosicionOrigen { get; set; }
     }
+
     public class GetPosicionesReq
     {
         public string Servicio { get; set; }
         public string Site { get; set; }
     }
-    
+
     public class GetEmpleadoInfo
     {
         public int numEmpleado { get; set; }
         public string nomCompleto { get; set; }
     }
-    
+
     public class SaveSolicitudHrsReq
     {
         public string numEmpleado { get; set; }
@@ -1578,7 +1580,7 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string nameImag { get; set; }
         public string retorno { get; set; }
     }
-    
+
     public class GetAutHrsExtras
     {
         public int id { get; set; }
@@ -1614,9 +1616,8 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string posicion { get; set; }
         public string retorno { get; set; }
         public string numEmpleado { get; set; }
-
     }
-    
+
     public class AutVarInd
     {
         public string requiereAprobacion { get; set; }
@@ -1674,19 +1675,21 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string variables { get; set; }
         public string flag { get; set; }
     }
+
     public class VigenciaVarReq
     {
         public string numEmpleado { get; set; }
         public string calendario { get; set; }
         public string caducidad { get; set; }
     }
+
     public class GetConcepto
     {
         public int idConcepto { get; set; }
         public string Concepto { get; set; }
         public string Elemento { get; set; }
     }
-    
+
     public class UpdateVarReq
     {
         public int id { get; set; }
@@ -1695,5 +1698,154 @@ namespace InstantRemote.Core.Dtos.Common.Response
         public string numEmpleado { get; set; }
     }
 
+    public class GetLibAsis
+    {
+        public string hnt { get; set; }
+        public string DeptName { get; set; }
+        public string Fecha { get; set; }
+        public string apellidos { get; set; }
+        public int idCliente { get; set; }
+        public string nomCliente { get; set; }
+        public int idSucursal { get; set; }
+        public string nomSucursal { get; set; }
+        public string nomHorario { get; set; }
+        public int numeroEmpleado { get; set; }
+        public string badgenumber { get; set; }
+        public string dia { get; set; }
+        public string entradas { get; set; }
+        public string salida { get; set; }
+        public string salidac { get; set; }
+        public string entradac { get; set; }
+        public string tt { get; set; }
+        public string ausencia { get; set; }
+        public string comentarioAusencia { get; set; }
+        public string tipoChequeo { get; set; }
+        public string fechaFormato { get; set; }
+        public string id { get; set; }
+        public string tipoDia { get; set; }
+        public int idBitacoraDiariaChequeoNormal { get; set; }
+        public string retraso { get; set; }
+        public bool existeChequeo { get; set; }
+        public string codigoAusencia { get; set; }
+        public string nameImage { get; set; }
+        public int idHorarioEncontrado { get; set; }
+        public int idHorarioChequeo { get; set; }
+        public string horaEntrada { get; set; }
+        public string themp { get; set; }
+        public string tipoEntrada { get; set; }
+        public string tipoSalida { get; set; }
+        public string subtipo_registro_entrada { get; set; }
+        public string subtipo_registro_salida { get; set; }
+        public bool isDuplicate { get; set; }
+        public bool isError { get; set; }
+        public string tipoScomida { get; set; }
+        public string tipoEcomida { get; set; }
+    }
+
+    public class GetLibAsisReq
+    {
+        public string emplid { get; set; }
+        public string fechaini { get; set; }
+        public string fechafin { get; set; }
+        public string cliente { get; set; }
+        public string idDeptoSucursal { get; set; }
+        public string numEmpleadoEspecifico { get; set; }
+        public string siteVarchar { get; set; }
+        public string seccionVarchar { get; set; }
+        public string servicioVarchar { get; set; }
+        public string horarioVarchar { get; set; }
+        public int checks { get; set; }
+    }
+
+    public class GetInfoCheckAppVReq
+    {
+        public string numEmpleado { get; set; }
+        public string fecha { get; set; }
+        public string tipo { get; set; }
+    }
+    public class GetInfoCheckAppReq
+    {
+        public string pEmpleadoIdSel { get; set; }
+        public string pfecha { get; set; }
+    }
+    public class GetInfoCheckBioReq
+    {
+        public int idBitacora { get; set; }
+        public string tipo { get; set; }
+    }
+    public class GetInfoCheckManReq
+    {
+        public int idBitacora { get; set; }
+        public string numEmpleado { get; set; }
+        public string tipo { get; set; }
+    }
+    public class GetInfoCheckAudioReq
+    {
+        public int numEmpleado { get; set; }
+        public int idBitacora { get; set; }
+        public string tipoRegistro { get; set; }
+        public int retorno { get; set; }
+    }
+    public class UpdateCheckReq
+    {
+        public int idBitacoraDiariaChequeoNormal { get; set; }
+        public string tipoChequeo { get; set; }
+        public string hora { get; set; }
+        public string nameImagEdit { get; set; }
+    }
+    
+    public class GetInfoCheckMan
+    {
+        public int idBitacora { get; set; }
+        public string comentario { get; set; }
+        public string numEmpResponsable { get; set; }
+        public string nombreEmpResponsable { get; set; }
+        public string numEmpleado { get; set; }
+        public string fecha { get; set; }
+        public string tipo { get; set; }
+        public string movimiento { get; set; }
+        public string nameImag { get; set; }
+    }
+    public class GetInfoCheckBio
+    {
+        public string nomDispositvo { get; set; }
+        public string numSerie { get; set; }
+    }
+    public class GetInfoCheckApp
+    {
+        public int Idemplid { get; set; }
+        public string Foto { get; set; }
+        public string foto_entrada { get; set; }
+        public string Firma { get; set; }
+        public string dirma_entrada { get; set; }
+    }
+    public class GetInfoCheckAppV
+    {
+        public int id { get; set; }
+        public string nombreArchivo { get; set; }
+        public int numEmpleado { get; set; }
+        public string estatus { get; set; }
+        public string inserted_date { get; set; }
+    }
+    
+    public class SaveCheckReq
+    {
+        public int numEmpleado { get; set; }
+        public string fecha { get; set; }
+        public string hora { get; set; }
+        public string dispositivo { get; set; }
+        public string horaAnterior { get; set; }
+    }
+    public class SaveCheckManReq
+    {
+        public int idBitacora { get; set; }
+        public string comentario { get; set; }
+        public string numResponsable { get; set; }
+        public string nomResponsable { get; set; }
+        public string numEmpleado { get; set; }
+        public string fecha { get; set; }
+        public string tipo { get; set; }
+    }
+    
 
 }

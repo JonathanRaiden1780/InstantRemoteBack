@@ -28,5 +28,14 @@ namespace InstantRemote.Core.Contracts.Services
         List<GetConcepto> GetConcepto();
         void UpdateVar(UpdateVarReq req);
 
+        List<GetLibAsis>GetLibroAsis(GetLibAsisReq req);
+        List<GetInfoCheckAppV> GetInfoCheckAppV(GetInfoCheckAppVReq req);
+        List<GetInfoCheckApp> GetInfoCheckApp(GetInfoCheckAppReq req);
+        List<GetInfoCheckBio> GetInfoCheckBio(GetInfoCheckBioReq req);
+        List<GetInfoCheckMan> GetInfoCheckMan(GetInfoCheckManReq req);
+        string GetInfoCheckAudio(GetInfoCheckAudioReq req);
+        string UpdateCheckAsis(UpdateCheckReq req);
+        bool SaveCheckMan(SaveCheckReq req);
+        bool SaveCheckComMan(SaveCheckManReq req);
     }
 }

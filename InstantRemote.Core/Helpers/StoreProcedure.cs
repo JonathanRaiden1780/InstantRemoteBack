@@ -146,6 +146,16 @@ namespace InstantRemote.Core.Helpers
         public const string sp_GetPantallaAccion = "sp_GetPantallaAccion"; 
         public const string sp_GetBitacora = "sp_GetBitacora"; 
         public const string reProcesaDescansosFBE = "reProcesaDescansosFBE"; 
+        public const string IR_V2_SP_GET_LibroAsignaciones = "IR_V2_SP_GET_LibroAsignaciones"; 
+        public const string IR_V2_SP_GET_InfoChequeoAppVideo = "IR_V2_SP_GET_InfoChequeoAppVideo"; 
+        public const string IR_V2_SP_Get_InfoChequeoApp = "IR_V2_SP_Get_InfoChequeoApp"; 
+        public const string IR_V2_SP_Get_InfoBiometricoChequeo = "IR_V2_SP_Get_InfoBiometricoChequeo"; 
+        public const string IR_V2_SP_Get_ChequeoComentManual = "IR_V2_SP_Get_ChequeoComentManual"; 
+        public const string IR_V2_SP_ObtienAudioEmpleado = "IR_V2_SP_ObtienAudioEmpleado"; 
+        public const string IR_V2_SP_UPDATE_BitacoraChequeoNormalImage = "IR_V2_SP_UPDATE_BitacoraChequeoNormalImage"; 
+        public const string IR_V2_SP_Add_ChequeoManual = "IR_V2_SP_Add_ChequeoManual"; 
+        public const string IR_V2_SP_Add_ChequeoComentManual = "IR_V2_SP_Add_ChequeoComentManual"; 
+        public const string IR_V2_SP_GET_SiteSecEmpAusencia = "IR_V2_SP_GET_SiteSecEmpAusencia"; 
 
 
 

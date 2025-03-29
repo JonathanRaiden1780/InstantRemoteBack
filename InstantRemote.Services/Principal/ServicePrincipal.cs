@@ -102,7 +102,48 @@ namespace InstantRemote.Services.Filtros
         {
             UnitOfWork.RepositoryPrincipal.UpdateVar(req);
         }
-        
+
+        public List<GetLibAsis> GetLibroAsis(GetLibAsisReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetLibroAsis(req);
+        }
+
+        public List<GetInfoCheckAppV> GetInfoCheckAppV(GetInfoCheckAppVReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoCheckAppV(req);
+        }
+
+        public List<GetInfoCheckApp> GetInfoCheckApp(GetInfoCheckAppReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoCheckApp(req);
+        }
+
+        public List<GetInfoCheckBio> GetInfoCheckBio(GetInfoCheckBioReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoCheckBio(req);
+        }
+
+        public List<GetInfoCheckMan> GetInfoCheckMan(GetInfoCheckManReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoCheckMan(req);
+        }
+
+        public string GetInfoCheckAudio(GetInfoCheckAudioReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.GetInfoCheckAudio(req);
+        }
+        public string UpdateCheckAsis(UpdateCheckReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.UpdateCheckAsis(req);
+        }
+        public bool SaveCheckMan(SaveCheckReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.SaveCheckMan(req);
+        }
+        public bool SaveCheckComMan(SaveCheckManReq req)
+        {
+            return UnitOfWork.RepositoryPrincipal.SaveCheckComMan(req);
+        }
         
     }
 }

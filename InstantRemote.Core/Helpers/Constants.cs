@@ -235,6 +235,22 @@
         public const string Reprocess = "reprocess";
 
         #endregion
+
+        #region Libro Asistencia
+
+        public const string LibroAsis = "Libro de Asistencia";
+        public const string RouteLibroAsis = "libroAsis/";
+        public const string GetLibroAsis = "get";
+        public const string GetInfoCheckAppV = "check/app/video";
+        public const string GetInfoCheckApp = "check/app";
+        public const string GetInfoCheckBio = "check/biometrico";
+        public const string GetInfoCheckMan = "check/manual";
+        public const string GetInfoCheckAudio = "check/audio";
+        public const string UpdateCheckAsis = "update/check";
+        public const string SaveCheckMan = "save/check";
+        public const string SaveCheckComMan = "save/comment";
+
+        #endregion
         
         #region Devices
         public const string Devices = "Devices";

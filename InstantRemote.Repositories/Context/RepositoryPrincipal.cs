@@ -128,5 +128,63 @@ namespace InstantRemote.Repositories.Context
             Connection.Query<string>(StoreProcedure.IR_V2_SP_UpdateConceptoImporteVariables, req, commandType: CommandType.StoredProcedure);
         }
         #endregion
+
+        #region Libro Asistencia
+
+        public List<GetLibAsis> GetLibroAsis(GetLibAsisReq req)
+        {
+            return ConnectionSQL.Query<GetLibAsis>(StoreProcedure.IR_V2_SP_GET_LibroAsignaciones, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+        }
+        
+        public List<GetInfoCheckAppV> GetInfoCheckAppV(GetInfoCheckAppVReq req)
+        {
+            return ConnectionSQL.Query<GetInfoCheckAppV>(StoreProcedure.IR_V2_SP_GET_InfoChequeoAppVideo, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+        }
+        public List<GetInfoCheckApp> GetInfoCheckApp(GetInfoCheckAppReq req)
+        {
+            var res = ConnectionSQL.Query(StoreProcedure.IR_V2_SP_Get_InfoChequeoApp, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+            return ConnectionSQL.Query<GetInfoCheckApp>(StoreProcedure.IR_V2_SP_Get_InfoChequeoApp, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+        }
+        public List<GetInfoCheckBio> GetInfoCheckBio(GetInfoCheckBioReq req)
+        {
+            return ConnectionSQL.Query<GetInfoCheckBio>(StoreProcedure.IR_V2_SP_Get_InfoBiometricoChequeo, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+        }
+        public List<GetInfoCheckMan> GetInfoCheckMan(GetInfoCheckManReq req)
+        {
+            return ConnectionSQL.Query<GetInfoCheckMan>(StoreProcedure.IR_V2_SP_Get_ChequeoComentManual, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).ToList();
+        }
+        public string GetInfoCheckAudio(GetInfoCheckAudioReq req)
+        {
+            return ConnectionSQL.Query<string>(StoreProcedure.IR_V2_SP_ObtienAudioEmpleado, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).FirstOrDefault();
+        }
+        public string UpdateCheckAsis(UpdateCheckReq req)
+        {
+            return ConnectionSQL.Query<string>(StoreProcedure.IR_V2_SP_UPDATE_BitacoraChequeoNormalImage, req, commandType: CommandType.StoredProcedure, commandTimeout:3000).FirstOrDefault();
+        }
+        public bool SaveCheckMan(SaveCheckReq req)
+        {
+            int rowsAffected = ConnectionSQL.Execute(
+                StoreProcedure.IR_V2_SP_Add_ChequeoManual, 
+                req, 
+                commandType: CommandType.StoredProcedure, 
+                commandTimeout: 3000
+            );
+
+            return rowsAffected > 0;        }
+        public bool SaveCheckComMan(SaveCheckManReq req)
+        {
+            int rowsAffected = ConnectionSQL.Execute(
+                StoreProcedure.IR_V2_SP_Add_ChequeoComentManual, 
+                req, 
+                commandType: CommandType.StoredProcedure, 
+                commandTimeout: 3000
+            );
+
+            return rowsAffected > 0;
+            
+        }
+        
+
+        #endregion
     }
 }
